@@ -8,10 +8,39 @@
     <version>1.0</version>
     <packaging>pom</packaging>
 
+	<properties>
+        <java.version>1.8</java.version>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+    </properties>
+
     <modules>
-        <module>frameCommon</module>
+        <module>dynatrace-ws-xmlbeans</module>
+        <module>remedy-ws-xmlbeans</module>
+		<module>frameCommon</module>
         <module>frameEngineCore</module>
+		 <module>dynatrace2RemedyEngine</module>
         <module>DynatraceConnector</module>
     </modules>
 
+<!-- 
+	<repositories>
+		<repository>
+			<id>spring-snapshots</id>
+			<name>Spring Snapshots</name>
+			<url>https://repo.spring.io/snapshot</url>
+			<snapshots>
+				<enabled>true</enabled>
+			</snapshots>
+		</repository>
+		<repository>
+			<id>spring-milestones</id>
+			<name>Spring Milestones</name>
+			<url>https://repo.spring.io/milestone</url>
+			<snapshots>
+				<enabled>false</enabled>
+			</snapshots>
+		</repository>
+	</repositories>
+-->	
+			
 </project>

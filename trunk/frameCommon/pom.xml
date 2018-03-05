@@ -6,7 +6,7 @@
     <groupId>it.reply.sytel.adr</groupId>
     <artifactId>frameCommon</artifactId>
     <version>1.0</version>
-	<name>ADR: frameCommon</name>
+	<name>ADR : frameCommon</name>
 	
 	
     <parent>
