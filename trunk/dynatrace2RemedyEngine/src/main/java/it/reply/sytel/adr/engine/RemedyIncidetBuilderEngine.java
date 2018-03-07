@@ -15,8 +15,9 @@ package it.reply.sytel.adr.engine;
 
 import java.util.Date;
 
-import org.apache.log4j.Logger;
 import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
+import org.apache.logging.log4j.ThreadContext;
 
 import it.reply.sytel.adr.constants.ADRConstants;
 import it.reply.sytel.adr.core.services.enviromnent.Enviromnent;
@@ -34,20 +35,22 @@ import it.reply.sytel.flowapp.logging.NMDC;
 public class RemedyIncidetBuilderEngine {
     
     
-	private org.apache.logging.log4j.Logger log = LogManager.getLogger(getClass());
+	private Logger log = LogManager.getLogger(getClass());
     private CoreService getDynatraceIncident;
     private CoreService createRemedyIncident;
     private CoreService closeRemedyIncident;
      
     public Enviromnent executeFlow(Enviromnent env) throws EngineException{
     	
-    	NMDC.push();
-    	
+    	//NMDC.push();
+
     	try{
 
     		TID tid = new TID();
-			NMDC.put(ADRConstants.TID, tid);
-			
+			//NMDC.put(ADRConstants.TID, tid);
+	    	ThreadContext.put(ADRConstants.TID, tid.toString());
+	    	
+	    	
     		Date begin=new Date();
 	    	
 	    	if(log.isInfoEnabled())
@@ -78,7 +81,8 @@ public class RemedyIncidetBuilderEngine {
 			return env;
 			
 		}finally{
-			NMDC.pop();
+			//NMDC.pop();
+			ThreadContext.clearMap();
 		}
     }
 
