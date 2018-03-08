@@ -3,7 +3,10 @@ package it.reply.sytel.adr.web.rest;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
 import it.reply.sytel.adr.core.services.enviromnent.Enviromnent;
@@ -32,93 +35,30 @@ public class ConnectorManager {
     	log.info("Calling connector ONE SHOT... DONE");
     }
       
-    @RequestMapping("/startConnectorScheduled")
-    public String startScheduler() {
-    	
-//    	try{
-//
-//    		log.info("Starting Connector Scheduler...");
-//    		
-//			String schedulatorTime="0/5 * * * * ?";
-//
-//			Scheduler scheduler = QuartzSchedulerBean.getInstance().getSched();
-//
-//			JobKey jobKey = new JobKey(ADRConstants.JOB_NAME_CONNECTOR,ADRConstants.JOB_NAME_GROUP_CONNECTOR);
-//
-//			JobDetail job = JobBuilder.newJob(ConnectorExecutor.class).withIdentity(jobKey).build();
-//
-//			TriggerKey triggerKey = new TriggerKey(ADRConstants.TRIGGER_NAME_CONNECTOR,ADRConstants.TRIGGER_NAME_GROUP_CONNECTOR);
-//
-//			Trigger trigger = TriggerBuilder
-//					.newTrigger()
-//					.withIdentity(triggerKey).startNow()
-//					.withSchedule(CronScheduleBuilder.cronSchedule(schedulatorTime)).build();
-//
-//			scheduler.scheduleJob(job,trigger);
-//			
-//			log.info("Starting Connector Scheduler...DONE");
-//			
-//			return "started";
-//			
-//		}catch(Exception e){
-//			log.error("Exception on scheduling connector job",e);
-//			return "not started";
-//		}
-    	//createTrigger(jobDetail, pollFrequencyMs);
-    	return "";
+    @RequestMapping(value ="/startConnectorScheduled",method = RequestMethod.GET)
+    public String startScheduler(@RequestParam("schedulatorTime") String schedulatorTime) {
+    	if(schedulerConfig.startConnector(schedulatorTime))
+    		return "STARTED";
+    	return "NOT STARTED";
     }
 
     @RequestMapping("/stopConnectorScheduled")
     public String stopScheduler() {
-//    	try
-//		{
-//    		log.info("Stopping Connector Scheduler...");
-//			Scheduler scheduler = QuartzSchedulerBean.getInstance().getSched();
-//
-//			TriggerKey triggerKey = new TriggerKey(ADRConstants.TRIGGER_NAME_CONNECTOR,ADRConstants.TRIGGER_NAME_GROUP_CONNECTOR);
-//
-//			scheduler.unscheduleJob(triggerKey);
-//			
-//			log.info("Stopping Connector Scheduler... DONE");
-//			
-//			return "stopped";
-//		}
-//		catch (Exception e)
-//		{
-//			log.error("Exception on unscheduling connector job", e);
-//			return "not stopped";
-//		}
-    	return "";
+    	if(schedulerConfig.stopConnector())
+    		return "STOPPED";
+    	return "NOT STARTED";
 	}
     
     @RequestMapping("/checkStatusSchedulator")
-    public String checkStatusSchedulator()
-	{
-//		try
-//		{
-//			GroupMatcher<TriggerKey> groupMatcher = GroupMatcher.triggerGroupStartsWith(ADRConstants.TRIGGER_NAME_GROUP_CONNECTOR);
-//
-//			Scheduler sched = QuartzSchedulerBean.getInstance().getSched();
-//
-//			Set<TriggerKey> triggerKeySet = sched.getTriggerKeys(groupMatcher);
-//			if (triggerKeySet.size() > 0) {
-//				return "ACTIVE";
-//			}
-//			return "NOTACTIVE";
-//		}
-//		catch (Exception e)
-//		{
-//			log.error("Exception on getting the connector job status",e);
-//			return "ERROR";
-//		}
-    	
-    	if(schedulerConfig.checkStatusTrigger())
-    		return "RUNNING";
-    	else
-    		return "NOT RUNNING";
-    		
+    public String checkStatusSchedulator(){
+	   	try {
+	   		if(schedulerConfig.isJobStarted())
+	    		return "RUNNING";
+	    	return "NOT RUNNING";
+    	}catch (Exception e) {
+			log.error("Exception in checking the status");
+			return "ERROR";
+		}
 	}
-
-    
     
 }
