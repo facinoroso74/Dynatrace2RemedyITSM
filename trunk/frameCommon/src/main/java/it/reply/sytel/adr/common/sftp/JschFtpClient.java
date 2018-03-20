@@ -17,7 +17,7 @@ public class JschFtpClient {
 
 	private Logger log = LogManager.getLogger(getClass());
     private ChannelSftp channelSftp;
-    private String id;
+//    private String id;
     private String homeDir;
     private String localHomeDir;
 //    private String session;

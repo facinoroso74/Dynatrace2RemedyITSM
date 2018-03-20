@@ -7,8 +7,6 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.annotation.ImportResource;
 
-import it.reply.sytel.adr.web.quartz.SchedulerConfig;
-
 @SpringBootApplication
 @ImportResource({"classpath*:applicationContext.xml"})
 public class Application {

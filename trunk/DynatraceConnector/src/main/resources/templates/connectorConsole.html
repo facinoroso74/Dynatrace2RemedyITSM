@@ -10,32 +10,92 @@
 <link rel="stylesheet" th:href="@{/css/main.css}"
 	href="../../css/main.css" />
 
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script>
+$(document).ready(function(){
+    $("#ActiveConnector").click(function(){
+    	$("#Connector").show();
+    	$("#Configuration").hide();
+        $("#IncidentView").hide();
+    });
+    $("#ActiveConfiguration").click(function(){
+    	$("#Connector").hide();
+    	$("#Configuration").show();
+        $("#IncidentView").hide();
+    });
+    $("#ActiveIncidentView").click(function(){
+        $("#Connector").hide();
+        $("#Configuration").hide();
+        $("#IncidentView").show();
+    });
+});
+
+
+$(document).ready(function(){
+    $("#CheckConnectorStatus").click(function(){
+        $.get("/checkStatusSchedulator", function(data, status){
+            alert("Data: " + data + "\nStatus: " + status);
+        });
+    });
+});
+
+</script>
+
+
 </head>
 <body>
 
 	<nav class="navbar navbar-inverse">
 		<div class="container">
 			<div class="navbar-header">
-				<a class="navbar-brand" href="#">Spring Boot</a>
+				<a class="navbar-brand" href="#"><img src="../img/logo_adr.png"></img></a>
 			</div>
 			<div id="navbar" class="collapse navbar-collapse">
 				<ul class="nav navbar-nav">
-					<li class="active"><a href="#">Home</a></li>
-					<li><a href="#about">About</a></li>
+					<li class="active"><a href="#"><span id="ActiveConnector">Connector</span></a></li>
+					<li class="active"><a href="#"><span id="ActiveConfiguration">Configuration</span></a></li>
+					<li class="active"><a href="#"><span id="ActiveIncidentView">Incident</span></a></li>
+					
 				</ul>
 			</div>
 		</div>
 	</nav>
 
 	<div class="container">
+<br></br><br></br><br></br>
+		<div class="starter-template" id="Connector">
+			<h1>Spring Boot Web Thymeleaf Example</h1>
+	
+<!-- 				<span th:text="'Message: ' + ${message}"></span> -->
+<!-- 				<span th:text="ConnectorView"></span> -->
+<!-- 				<a href="#"><span id="CheckConnectorStatus">CheckConnectorStatus</span></a> -->
+			<form action="#" th:action="@{/seedstartermng}" th:object="${seedStarter}" method="post">
+    			<table id="Connector" border="1">
+					<tr>
+						<td>PollingTime</td>
+ 						<td><input type="text" id="" value="da valorizzare con il risultato della chiamata"></input></td> 
+					</tr>
+				</table>
+			</form>
+	
+		</div>
 
-		<div class="starter-template">
+		<div class="starter-template" id="Configuration" hidden="true">
 			<h1>Spring Boot Web Thymeleaf Example</h1>
 			<h2>
 				<span th:text="'Message: ' + ${message}"></span>
+				<span th:text="ConfigurationView"></span>
 			</h2>
 		</div>
-
+		
+		<div class="starter-template" id="IncidentView" hidden="true">
+			<h1>Spring Boot Web Thymeleaf Example</h1>
+			<h2>
+				<span th:text="'Message: ' + ${message}"></span>
+				<span th:text="IncidentView"></span>
+			</h2>
+		</div>
+		
 	</div>
 	<!-- /.container -->
 
