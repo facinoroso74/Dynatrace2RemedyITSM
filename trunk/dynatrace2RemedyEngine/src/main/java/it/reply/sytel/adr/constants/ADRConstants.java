@@ -35,5 +35,8 @@ public interface ADRConstants {
 
 
 	public static final String TRIGGER_NAME_CONNECTOR = "TRIGGER_NAME_CONNECTOR";
+
+
+	public static final String DASH_BOARD_CONFIG_LIST = "DASH_BOARD_CONFIG_LIST";
 	
 }

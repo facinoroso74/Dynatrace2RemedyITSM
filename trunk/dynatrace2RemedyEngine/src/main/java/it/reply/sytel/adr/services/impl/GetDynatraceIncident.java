@@ -2,6 +2,7 @@ package it.reply.sytel.adr.services.impl;
 
 import java.sql.Timestamp;
 import java.util.Iterator;
+import java.util.List;
 import java.util.Map;
 import java.util.Set;
 
@@ -11,6 +12,7 @@ import it.reply.sytel.adr.constants.ADRConstants;
 import it.reply.sytel.adr.core.services.enviromnent.Enviromnent;
 import it.reply.sytel.adr.core.services.service.AbstractService;
 import it.reply.sytel.adr.dao.IncidentDAO;
+import it.reply.sytel.adr.domain.Dashboard;
 import it.reply.sytel.adr.dynatraceClient.DynatraceClient;
 import it.reply.sytel.adr.services.exc.GetDynatraceIncidentException;
 import it.reply.sytel.adr.vo.AppProperty;
@@ -35,20 +37,19 @@ public class GetDynatraceIncident extends AbstractService {
 			Timestamp now = new Timestamp(System.currentTimeMillis());
 			
 			Map<String , Object> configMap = (Map<String , Object>)getContext().getConfigMap();
-			Map<String,Map<String,AppProperty>> dashboardAppPropertyMap= (Map<String,Map<String,AppProperty>>)configMap.get(ADRConstants.DASHBOARD_NAMES);
-			Set<String> appNames = dashboardAppPropertyMap.keySet();
+			List<Dashboard> dashboardconfigList = (List<Dashboard>)configMap.get(ADRConstants.DASH_BOARD_CONFIG_LIST);
 			
-			for (Iterator<String> iterator = appNames.iterator(); iterator.hasNext();) {
-				String appName = (String) iterator.next();
+			for (Iterator<Dashboard> iterator = dashboardconfigList.iterator(); iterator.hasNext();) {
+				Dashboard dashboard = (Dashboard) iterator.next();
 				
 				if(log.isDebugEnabled()) {
-					log.debug("the Name for app:["+appName+"] is ["+((AppProperty)dashboardAppPropertyMap.get(appName)).getAppName()+"]");
-					log.debug("the URL for app:["+appName+"] is ["+((AppProperty)dashboardAppPropertyMap.get(appName)).getAppUrl()+"]");
-					log.debug("the USR for app:["+appName+"] is ["+((AppProperty)dashboardAppPropertyMap.get(appName)).getAppUsr()+"]");
-					log.debug("the PWD for app:["+appName+"] is ["+((AppProperty)dashboardAppPropertyMap.get(appName)).getAppPwd()+"]");
+					log.debug("the Name for app:["+dashboard.getName()+"]");
+					log.debug("the URL for app:["+dashboard.getAppUrl()+"]");
+					log.debug("the USR for app:["+dashboard.getAppUser()+"]");
+					log.debug("the PWD for app:["+dashboard.getAppPwd()+"]");
 				}
 				
-				Map<DynatraceIncidentKey, DynatraceIncident> map= dynatraceClient.getDynatraceIncidents(appName,((AppProperty)dashboardAppPropertyMap.get(appName)).getAppUrl(), ((AppProperty)dashboardAppPropertyMap.get(appName)).getAppUsr(), ((AppProperty)dashboardAppPropertyMap.get(appName)).getAppPwd());
+				Map<DynatraceIncidentKey, DynatraceIncident> map= dynatraceClient.getDynatraceIncidents(dashboard.getName(),dashboard.getAppUrl(),dashboard.getAppUser(),dashboard.getAppPwd());
 				
 				Set<DynatraceIncidentKey> dynatraceIncidentKeys = map.keySet();
 				
@@ -66,7 +67,9 @@ public class GetDynatraceIncident extends AbstractService {
 						incidentDAO.updateDynatraceIncidentDateUpdate(dynatraceIncidentKey,now);
 					}
 				}
+				
 			}
+			
 			env.put(ADRConstants.SYSDATE, now);
 			return env;
 		

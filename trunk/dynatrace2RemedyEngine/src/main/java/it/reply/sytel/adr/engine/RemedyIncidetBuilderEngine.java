@@ -24,7 +24,6 @@ import it.reply.sytel.adr.core.services.enviromnent.Enviromnent;
 import it.reply.sytel.adr.core.services.service.CoreService;
 import it.reply.sytel.adr.engine.exc.EngineException;
 import it.reply.sytel.flowapp.data.TID;
-import it.reply.sytel.flowapp.logging.NMDC;
 
 
 /**
@@ -57,7 +56,7 @@ public class RemedyIncidetBuilderEngine {
 	    		log.info("Flow RemedyIncidentdBuilder Engine Called...");
 	 	    	
 
-	    	//getDynatraceIncident.execute(env);
+	    	getDynatraceIncident.execute(env);
 	    	
 
 	    	//createRemedyIncident.execute(env);

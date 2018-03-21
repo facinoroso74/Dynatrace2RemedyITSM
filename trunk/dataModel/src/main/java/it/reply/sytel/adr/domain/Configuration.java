@@ -56,7 +56,9 @@ public class Configuration implements Serializable {
 	@Column
 	String assignedSupportCompany;
 	@Column
-	String assignedSupportOrganizzation;
+	String assignedSupportOrganization;
+	
+	
 	public Long getConfigurationId() {
 		return configurationId;
 	}
@@ -160,10 +162,10 @@ public class Configuration implements Serializable {
 		this.assignedSupportCompany = assignedSupportCompany;
 	}
 	public String getAssignedSupportOrganizzation() {
-		return assignedSupportOrganizzation;
+		return assignedSupportOrganization;
 	}
-	public void setAssignedSupportOrganizzation(String assignedSupportOrganizzation) {
-		this.assignedSupportOrganizzation = assignedSupportOrganizzation;
+	public void setAssignedSupportOrganizzation(String assignedSupportOrganization) {
+		this.assignedSupportOrganization = assignedSupportOrganization;
 	}
 	@Override
 	public int hashCode() {
@@ -173,7 +175,7 @@ public class Configuration implements Serializable {
 		result = prime * result + ((assignedGroup == null) ? 0 : assignedGroup.hashCode());
 		result = prime * result + ((assignedSupportCompany == null) ? 0 : assignedSupportCompany.hashCode());
 		result = prime * result
-				+ ((assignedSupportOrganizzation == null) ? 0 : assignedSupportOrganizzation.hashCode());
+				+ ((assignedSupportOrganization == null) ? 0 : assignedSupportOrganization.hashCode());
 		result = prime * result + ((configurationId == null) ? 0 : configurationId.hashCode());
 		result = prime * result + ((createRequest == null) ? 0 : createRequest.hashCode());
 		result = prime * result + ((dashboard == null) ? 0 : dashboard.hashCode());
@@ -214,10 +216,10 @@ public class Configuration implements Serializable {
 				return false;
 		} else if (!assignedSupportCompany.equals(other.assignedSupportCompany))
 			return false;
-		if (assignedSupportOrganizzation == null) {
-			if (other.assignedSupportOrganizzation != null)
+		if (assignedSupportOrganization == null) {
+			if (other.assignedSupportOrganization != null)
 				return false;
-		} else if (!assignedSupportOrganizzation.equals(other.assignedSupportOrganizzation))
+		} else if (!assignedSupportOrganization.equals(other.assignedSupportOrganization))
 			return false;
 		if (configurationId == null) {
 			if (other.configurationId != null)
@@ -299,8 +301,8 @@ public class Configuration implements Serializable {
 				+ ", serviceType=" + serviceType + ", status=" + status + ", impact=" + impact + ", urgency=" + urgency
 				+ ", reportedSource=" + reportedSource + ", action=" + action + ", createRequest=" + createRequest
 				+ ", summary=" + summary + ", sorgenteSistema=" + sorgenteSistema + ", assignedGroup=" + assignedGroup
-				+ ", assignedSupportCompany=" + assignedSupportCompany + ", assignedSupportOrganizzation="
-				+ assignedSupportOrganizzation + "]";
+				+ ", assignedSupportCompany=" + assignedSupportCompany + ", assignedSupportOrganization="
+				+ assignedSupportOrganization + "]";
 	}
 	
 	

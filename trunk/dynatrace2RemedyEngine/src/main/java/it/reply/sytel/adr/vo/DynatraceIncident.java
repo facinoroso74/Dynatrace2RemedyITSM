@@ -35,6 +35,7 @@ public class DynatraceIncident implements Serializable{
 	private DynatraceIncidentKey dynatraceIncidentKey;
 	
 	private String heatfield;
+	private String incidentType;
 	private String state;
 	private String duration;
 	private Timestamp endEvent;
@@ -176,15 +177,11 @@ public class DynatraceIncident implements Serializable{
 	public void setRemedyTicketCreateDate(Timestamp remedyTicketCreateDate) {
 		this.remedyTicketCreateDate = remedyTicketCreateDate;
 	}
-	@Override
-	public String toString() {
-		return "DynatraceIncident [id=" + id + ", dynatraceIncidentKey=" + dynatraceIncidentKey + ", heatfield="
-				+ heatfield + ", state=" + state + ", duration=" + duration + ", endEvent=" + endEvent + ", source="
-				+ source + ", session=" + session + ", confimed_by=" + confimed_by + ", confirmation=" + confirmation
-				+ ", sensitivity=" + sensitivity + ", conditions=" + conditions + ", thresholds=" + thresholds
-				+ ", actions=" + actions + ", measures=" + measures + ", dataIns=" + dataIns + ", dataUpdate="
-				+ dataUpdate + ", remedyTicketID=" + remedyTicketID + ", remedyTicketIDStatus=" + remedyTicketIDStatus
-				+ ", remedyTicketCreateDate=" + remedyTicketCreateDate + "]";
+	public String getIncidentType() {
+		return incidentType;
+	}
+	public void setIncidentType(String incidentType) {
+		this.incidentType = incidentType;
 	}
 	@Override
 	public int hashCode() {
@@ -201,6 +198,7 @@ public class DynatraceIncident implements Serializable{
 		result = prime * result + ((endEvent == null) ? 0 : endEvent.hashCode());
 		result = prime * result + ((heatfield == null) ? 0 : heatfield.hashCode());
 		result = prime * result + id;
+		result = prime * result + ((incidentType == null) ? 0 : incidentType.hashCode());
 		result = prime * result + ((measures == null) ? 0 : measures.hashCode());
 		result = prime * result + ((remedyTicketCreateDate == null) ? 0 : remedyTicketCreateDate.hashCode());
 		result = prime * result + ((remedyTicketID == null) ? 0 : remedyTicketID.hashCode());
@@ -273,6 +271,11 @@ public class DynatraceIncident implements Serializable{
 			return false;
 		if (id != other.id)
 			return false;
+		if (incidentType == null) {
+			if (other.incidentType != null)
+				return false;
+		} else if (!incidentType.equals(other.incidentType))
+			return false;
 		if (measures == null) {
 			if (other.measures != null)
 				return false;
@@ -320,6 +323,18 @@ public class DynatraceIncident implements Serializable{
 			return false;
 		return true;
 	}
+	@Override
+	public String toString() {
+		return "DynatraceIncident [id=" + id + ", dynatraceIncidentKey=" + dynatraceIncidentKey + ", heatfield="
+				+ heatfield + ", incidentType=" + incidentType + ", state=" + state + ", duration=" + duration
+				+ ", endEvent=" + endEvent + ", source=" + source + ", session=" + session + ", confimed_by="
+				+ confimed_by + ", confirmation=" + confirmation + ", sensitivity=" + sensitivity + ", conditions="
+				+ conditions + ", thresholds=" + thresholds + ", actions=" + actions + ", measures=" + measures
+				+ ", dataIns=" + dataIns + ", dataUpdate=" + dataUpdate + ", remedyTicketID=" + remedyTicketID
+				+ ", remedyTicketIDStatus=" + remedyTicketIDStatus + ", remedyTicketCreateDate="
+				+ remedyTicketCreateDate + "]";
+	}
+	
 	
 	
 	

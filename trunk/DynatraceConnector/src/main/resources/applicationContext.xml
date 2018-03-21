@@ -192,9 +192,13 @@
 		</property>
 	</bean>
 		
+	<bean id="configServicesDb" class="it.reply.sytel.adr.configuration.ConfigServicesDB" init-method="init">
+	</bean>
+	
 	<bean id="serviceContext" class="it.reply.sytel.adr.core.services.context.impl.ServiceContextImpl">
 		<property name="daoConfig">
-			<ref bean="configServicesFile" />
+<!-- 			<ref bean="configServicesFile" /> -->
+ 			<ref bean="configServicesDb" />
 		</property>
 	</bean>
 	
