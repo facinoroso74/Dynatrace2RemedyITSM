@@ -41,9 +41,11 @@ public class DynatraceClientImpl implements DynatraceClient{
 		for (int i = 0; i < incidentoverviewrecordArray.length; i++) {
 			
 			if(checkIncidentoverviewrecordToWork(incidentoverviewrecordArray[i])) {
-				if(log.isDebugEnabled())
-					log.debug("------ALLARME-----:["+incidentoverviewrecordArray[i].xmlText()+"]");
-				DynatraceIncident dynatraceIncident = buildDynatraceIncident(dashboardName,incidentoverviewrecordArray[i]);
+				
+				if(log.isDebugEnabled()) {
+					log.debug("------ALLARME-----:["+incidentoverviewrecordArray[i].xmlText()+"] incidentType:["+incidentTypeFather+"]");
+				}
+				DynatraceIncident dynatraceIncident = buildDynatraceIncident(dashboardName,incidentoverviewrecordArray[i],incidentTypeFather);
 				dynatraceIncidentMap.put(dynatraceIncident.getDynatraceIncidentKey(), dynatraceIncident);
 			}
 			
@@ -61,7 +63,7 @@ public class DynatraceClientImpl implements DynatraceClient{
 	}
 
 	
-	private DynatraceIncident buildDynatraceIncident(String dashboardName, noNamespace.IncidentoverviewrecordDocument.Incidentoverviewrecord incidentoverviewrecord) {
+	private DynatraceIncident buildDynatraceIncident(String dashboardName, noNamespace.IncidentoverviewrecordDocument.Incidentoverviewrecord incidentoverviewrecord,String incidentTypeFather) {
 		DynatraceIncidentKey dynatraceIncidentKey = new DynatraceIncidentKey();
 		dynatraceIncidentKey.setName(incidentoverviewrecord.getName());
 		dynatraceIncidentKey.setStartEvent(new Timestamp(incidentoverviewrecord.getStart().getTimeInMillis()));
@@ -83,13 +85,12 @@ public class DynatraceClientImpl implements DynatraceClient{
 		dynatraceIncident.setThresholds(incidentoverviewrecord.getThresholds());
 		dynatraceIncident.setActions(incidentoverviewrecord.getActions());
 		dynatraceIncident.setMeasures(incidentoverviewrecord.getMeasures());
-		dynatraceIncident.setMeasures(incidentoverviewrecord.getMeasures());
-	
+		dynatraceIncident.setIncidentType(incidentTypeFather);
 		
 		return dynatraceIncident;
 	}
 	
-	private Map<DynatraceIncidentKey, DynatraceIncident> buildMapDynatraceIncidentFromDashboardreport(String dashboardName,String dashboardreportBuffer) {
+	public Map<DynatraceIncidentKey, DynatraceIncident> buildMapDynatraceIncidentFromDashboardreport(String dashboardName,String dashboardreportBuffer) {
 		try {
 			
 			Map<DynatraceIncidentKey, DynatraceIncident> dynatraceIncidentMap = new HashMap<DynatraceIncidentKey, DynatraceIncident>();
@@ -103,10 +104,11 @@ public class DynatraceClientImpl implements DynatraceClient{
 				//quando li trovo devo popolare la mappa
 				
 				String incidentType=incidentsoverviewdashletsArr[0].getName();
+				
 				if(log.isDebugEnabled())
 					log.debug("---------FirstIncidentType:["+incidentType+"]----------------");
 				
-				loopOverIncidentoverviewrecordArray(dashboardName,"",dynatraceIncidentMap,incidentoverviewrecordArray[0].getIncidentoverviewrecordArray());
+				loopOverIncidentoverviewrecordArray(dashboardName,incidentType,dynatraceIncidentMap,incidentoverviewrecordArray[0].getIncidentoverviewrecordArray());
 			}
 
 			return dynatraceIncidentMap;
@@ -238,7 +240,10 @@ public class DynatraceClientImpl implements DynatraceClient{
 		"          <incidentoverviewrecord name=\"Response time degraded for slow requests\"></incidentoverviewrecord>\r\n" + 
 		"          <incidentoverviewrecord name=\"Status of the QM\"></incidentoverviewrecord>\r\n" + 
 		"          <incidentoverviewrecord name=\"Thread Declared Hung\"></incidentoverviewrecord>\r\n" + 
-		"          <incidentoverviewrecord name=\"Total GC Collection Time\"></incidentoverviewrecord>\r\n" + 
+		"          <incidentoverviewrecord name=\"Total GC Collection Time\">\r\n" + 
+		"                <incidentoverviewrecord name=\"Java Virtual Machine/Total GC Collection Time: Total GC Collection Time (WebSphere_ADBM_TEST[arappx03Cell01-app_adbm_mercuriox2]@mercurio) upper bound exceeded\" start=\"2018-03-23T03:00:20.000+01:00\" duration=\"10000\" end=\"2018-03-23T03:00:30.000+01:00\" source=\"WebSphere_ADBM_TEST[arappx03Cell01-app_adbm_mercuriox2]@mercurio all-applications\">"+
+		"                </incidentoverviewrecord>\r\n" +
+		"          </incidentoverviewrecord>\r\n" +
 		"        </incidentoverviewrecord>\r\n" + 
 		"      </incidentoverviewrecords>\r\n" + 
 		"    </incidentsoverviewdashlet>\r\n" + 
@@ -247,6 +252,9 @@ public class DynatraceClientImpl implements DynatraceClient{
 		
 		try {
 			DashboardreportDocument dashboardreportDocument = DashboardreportDocument.Factory.parse(dashboardreportBuffer);
+			DynatraceClientImpl dynatraceClient = new DynatraceClientImpl();
+			dynatraceClient.buildMapDynatraceIncidentFromDashboardreport("ADBM", dashboardreportBuffer);
+			System.out.println("DONE");
 		} catch (XmlException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();

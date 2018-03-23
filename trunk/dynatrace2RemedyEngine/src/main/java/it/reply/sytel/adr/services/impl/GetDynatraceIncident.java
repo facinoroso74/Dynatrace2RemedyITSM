@@ -2,7 +2,6 @@ package it.reply.sytel.adr.services.impl;
 
 import java.sql.Timestamp;
 import java.util.Iterator;
-import java.util.List;
 import java.util.Map;
 import java.util.Set;
 
@@ -15,7 +14,6 @@ import it.reply.sytel.adr.dao.IncidentDAO;
 import it.reply.sytel.adr.domain.Dashboard;
 import it.reply.sytel.adr.dynatraceClient.DynatraceClient;
 import it.reply.sytel.adr.services.exc.GetDynatraceIncidentException;
-import it.reply.sytel.adr.vo.AppProperty;
 import it.reply.sytel.adr.vo.DynatraceIncident;
 import it.reply.sytel.adr.vo.DynatraceIncidentKey;
 
@@ -37,10 +35,9 @@ public class GetDynatraceIncident extends AbstractService {
 			Timestamp now = new Timestamp(System.currentTimeMillis());
 			
 			Map<String , Object> configMap = (Map<String , Object>)getContext().getConfigMap();
-			List<Dashboard> dashboardconfigList = (List<Dashboard>)configMap.get(ADRConstants.DASH_BOARD_CONFIG_LIST);
+			Iterable<Dashboard> dashboardconfigList = (Iterable<Dashboard>)configMap.get(ADRConstants.DASH_BOARD_CONFIG_LIST);
 			
-			for (Iterator<Dashboard> iterator = dashboardconfigList.iterator(); iterator.hasNext();) {
-				Dashboard dashboard = (Dashboard) iterator.next();
+			for (Dashboard dashboard : dashboardconfigList) {
 				
 				if(log.isDebugEnabled()) {
 					log.debug("the Name for app:["+dashboard.getName()+"]");
@@ -67,7 +64,6 @@ public class GetDynatraceIncident extends AbstractService {
 						incidentDAO.updateDynatraceIncidentDateUpdate(dynatraceIncidentKey,now);
 					}
 				}
-				
 			}
 			
 			env.put(ADRConstants.SYSDATE, now);

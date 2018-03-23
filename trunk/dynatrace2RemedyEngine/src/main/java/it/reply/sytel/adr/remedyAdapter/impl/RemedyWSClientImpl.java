@@ -22,12 +22,12 @@ import hpdIncidentInterfaceCreateWSVIP.ServiceTypeType;
 import hpdIncidentInterfaceCreateWSVIP.StatusType;
 import hpdIncidentInterfaceCreateWSVIP.UrgencyType;
 import it.reply.sytel.adr.common.ws.HTTPClient;
+import it.reply.sytel.adr.domain.Configuration;
+import it.reply.sytel.adr.domain.RemedyConfiguration;
 import it.reply.sytel.adr.remedyAdapter.RemedyClient;
 import it.reply.sytel.adr.remedyAdapter.exc.RemedyBadValueFieldException;
 import it.reply.sytel.adr.remedyAdapter.exc.RemedyWSClientException;
-import it.reply.sytel.adr.vo.AppProperty;
 import it.reply.sytel.adr.vo.DynatraceIncident;
-import it.reply.sytel.adr.vo.RemedyAutenticationInfo;
 
 public class RemedyWSClientImpl implements RemedyClient{
 
@@ -36,35 +36,33 @@ public class RemedyWSClientImpl implements RemedyClient{
 	private String userToken="";
 	private String soapAction="";
 
-	//private Logger log = EtlLogger.getLogger("ASSET_PROVISIONING_LOGGER_WS");
-	
 	private org.apache.logging.log4j.Logger log = LogManager.getLogger(getClass());
 
 	@Override
-	public String createIncident(DynatraceIncident dynatraceIncident,RemedyAutenticationInfo remedyAutenticationInfo,AppProperty appProperty){
+	public String createIncident(DynatraceIncident dynatraceIncident,RemedyConfiguration remedyAutenticationInfo,Configuration incidentTypeconfiguration){
 		
 		AuthenticationInfoDocument authenticationInfoDocument = AuthenticationInfoDocument.Factory.newInstance();
 		AuthenticationInfo authenticationInfo = authenticationInfoDocument.addNewAuthenticationInfo();
-		authenticationInfo.setUserName(remedyAutenticationInfo.getUser());
-		authenticationInfo.setPassword(remedyAutenticationInfo.getPwd());
+		authenticationInfo.setUserName(remedyAutenticationInfo.getUsername());
+		authenticationInfo.setPassword(remedyAutenticationInfo.getPassword());
 		
 		HelpDeskSubmitServiceDocument helpDeskSubmitServiceDocument = HelpDeskSubmitServiceDocument.Factory.newInstance();
 		CreateInputMap createInputMap = helpDeskSubmitServiceDocument.addNewHelpDeskSubmitService();
-		createInputMap.setFirstName(appProperty.getFirstName());
-		createInputMap.setLastName(appProperty.getLastName());
+		createInputMap.setFirstName(incidentTypeconfiguration.getFirstName());
+		createInputMap.setLastName(incidentTypeconfiguration.getLastName());
 		
 		
-		createInputMap.setImpact(ImpactType.Enum.forString(appProperty.getImpact()));
-		checkNullValueImpact(ImpactType.Enum.forString(appProperty.getImpact()),appProperty.getImpact());
+		createInputMap.setImpact(ImpactType.Enum.forString(incidentTypeconfiguration.getImpact()));
+		checkNullValueImpact(ImpactType.Enum.forString(incidentTypeconfiguration.getImpact()),incidentTypeconfiguration.getImpact());
 		
-		createInputMap.setReportedSource(ReportedSourceType.Enum.forString(appProperty.getReportedSource()));
-		checkNullValueReportedSource(ReportedSourceType.Enum.forString(appProperty.getReportedSource()),appProperty.getReportedSource());
+		createInputMap.setReportedSource(ReportedSourceType.Enum.forString(incidentTypeconfiguration.getReportedSource()));
+		checkNullValueReportedSource(ReportedSourceType.Enum.forString(incidentTypeconfiguration.getReportedSource()),incidentTypeconfiguration.getReportedSource());
 		
-		createInputMap.setServiceType(ServiceTypeType.Enum.forString(appProperty.getServiceType()));
-		checkNullValueServiceType(ServiceTypeType.Enum.forString(appProperty.getServiceType()),appProperty.getServiceType());
+		createInputMap.setServiceType(ServiceTypeType.Enum.forString(incidentTypeconfiguration.getServiceType()));
+		checkNullValueServiceType(ServiceTypeType.Enum.forString(incidentTypeconfiguration.getServiceType()),incidentTypeconfiguration.getServiceType());
 		
-		createInputMap.setStatus(StatusType.Enum.forString(appProperty.getTicketStatus()));
-		checkNullValueStatus(StatusType.Enum.forString(appProperty.getTicketStatus()),appProperty.getTicketStatus());
+		createInputMap.setStatus(StatusType.Enum.forString(incidentTypeconfiguration.getStatus()));
+		checkNullValueStatus(StatusType.Enum.forString(incidentTypeconfiguration.getStatus()),incidentTypeconfiguration.getStatus());
 		
 		createInputMap.setSummary(".........SUMNMARY..........");
 		createInputMap.setUrgency(UrgencyType.X_1_CRITICAL);

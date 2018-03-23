@@ -38,5 +38,11 @@ public interface ADRConstants {
 
 
 	public static final String DASH_BOARD_CONFIG_LIST = "DASH_BOARD_CONFIG_LIST";
+
+
+	public static final String INCIDENT_CONFIGURATION_CONFIG_MAP = "INCIDENT_CONFIGURATION_CONFIG_MAP";
+
+
+	public static final String REMEDY_CONFIGURATION = "REMEDY_CONFIGURATION";
 	
 }
