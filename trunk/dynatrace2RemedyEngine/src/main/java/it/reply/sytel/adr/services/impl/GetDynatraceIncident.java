@@ -2,6 +2,7 @@ package it.reply.sytel.adr.services.impl;
 
 import java.sql.Timestamp;
 import java.util.Iterator;
+import java.util.List;
 import java.util.Map;
 import java.util.Set;
 
@@ -36,6 +37,8 @@ public class GetDynatraceIncident extends AbstractService {
 			
 			Map<String , Object> configMap = (Map<String , Object>)getContext().getConfigMap();
 			Iterable<Dashboard> dashboardconfigList = (Iterable<Dashboard>)configMap.get(ADRConstants.DASH_BOARD_CONFIG_LIST);
+			
+			log.info("Number of DashBoard to call:["+((List<Dashboard>)dashboardconfigList).size()+"]");
 			
 			for (Dashboard dashboard : dashboardconfigList) {
 				

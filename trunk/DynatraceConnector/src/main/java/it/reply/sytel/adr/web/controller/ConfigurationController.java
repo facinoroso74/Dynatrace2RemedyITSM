@@ -3,6 +3,8 @@
  */
 package it.reply.sytel.adr.web.controller;
 
+import java.util.List;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
@@ -10,6 +12,7 @@ import org.springframework.web.bind.annotation.RestController;
 
 import it.reply.sytel.adr.domain.Configuration;
 import it.reply.sytel.adr.repositories.ConfigurationRepository;
+import it.reply.sytel.adr.web.dto.ConfigurationTableResponse;
 
 /**
  * @author Michele Pantaleone
@@ -37,6 +40,14 @@ public class ConfigurationController {
 	public Configuration read(@RequestParam String tipoIncident,@RequestParam String sorgenteSistema) {
 		Configuration configuration= configurationRepository.findByTipoIncidentAndSorgenteSistema(tipoIncident, sorgenteSistema);
 	    return configuration;
+	}
+	
+	@RequestMapping("/readAll")
+	public ConfigurationTableResponse readAll() {
+		Iterable<Configuration> data= configurationRepository.findAll();
+		int size = ((List<Configuration>)data).size();
+		return new ConfigurationTableResponse(size,data);
+		
 	}
 	
 	/**

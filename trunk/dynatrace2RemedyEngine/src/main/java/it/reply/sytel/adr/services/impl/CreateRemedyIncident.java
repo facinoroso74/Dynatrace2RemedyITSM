@@ -80,16 +80,25 @@ public class CreateRemedyIncident extends AbstractService {
 		}
 	}
 	
+	private boolean checkConfiguration(DynatraceIncident dynatraceIncident,Configuration configuration) {
+		try {
+			if(log.isDebugEnabled())
+				log.debug("checking for dynatraceIncident["+dynatraceIncident.getDynatraceIncidentKey().getName()+"] into configuration:["+configuration+"]");
+			return (dynatraceIncident.getDynatraceIncidentKey().getName().indexOf(configuration.getTipoIncident()) != -1);
+		}catch (Exception e) {
+			throw new IncidentTypeConfigurationException("There is an error on checking the dynatraceIncident:["+dynatraceIncident+"] configuration:["+configuration+"]",e);
+		}
+	}
 	
 	private Configuration getConfigurationByIncidentType(DynatraceIncident dynatraceIncident,List<Configuration> incidentConfigurationList) {
 		
-		String incidentType= dynatraceIncident.getIncidentType();
+		
 		for (Iterator<Configuration> iterator = incidentConfigurationList.iterator(); iterator.hasNext();) {
 			Configuration configuration = (Configuration) iterator.next();
-			if(configuration.getTipoIncident().indexOf(incidentType) != -1)
-					return configuration;
+			if(checkConfiguration(dynatraceIncident,configuration))
+				return configuration;
 		}
-		throw new IncidentTypeConfigurationException("There isn't any configuration for incidentType:["+incidentType+"]");
+		throw new IncidentTypeConfigurationException("There isn't any configuration for incidentType:["+dynatraceIncident.getIncidentType()+"]");
 	}
 
 	private void createTicketRemedy(DynatraceIncident dynatraceIncident,RemedyConfiguration remedyConfiguration,List<Configuration> incidentConfigurationList) {
