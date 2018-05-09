@@ -1,40 +1,87 @@
 <html>
 <!-- <script type="text/javascript" src="./js/jquery-3.3.1.js"></script> -->
 
+<link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.16/css/jquery.dataTables.min.css">
 <script type="text/javascript" src="https://code.jquery.com/jquery-1.12.4.js"></script>
 <script type="text/javascript" src="https://cdn.datatables.net/1.10.16/js/jquery.dataTables.min.js"></script>
-<script type="text/javascript" src="https://cdn.datatables.net/1.10.16/css/jquery.dataTables.min.css"></script>
+ 
+<link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/select/1.2.5/css/select.dataTables.min.css">
+<script type="text/javascript" src="https://cdn.datatables.net/select/1.2.5/js/dataTables.select.min.js"></script>
 
 <script type="text/javascript">
+
+
 $(document).ready(function() {
-    $('#example').DataTable( {
-        "ajax": '../ajax/data/arrays.txt'
-    } );
+	
+	$('#example').DataTable( {
+	     "ajax": '../ajax/data/arrays.txt',
+	    	 "pageLength": 20,
+				
+				"columnDefs" : [ {
+					"orderable" : false,
+					"className" : 'select-checkbox',
+					"targets" : 0
+				} ],
+				"select" : {
+					"style" : 'os',
+					"selector" : 'td:first-child'
+				},
+				"order" : [ [ 4, 'desc' ] ],
+				"lengthMenu" : [ [ 5, 10, 20, 50, -1 ],
+					[ 5, 10, 20, 50, "All" ] ],
+					"sort": [2]
+	} );
+	
+	
+	
+    $('#addbutton').click(function() {
+    	alert('hello world');
+//      console.log($("#example tr.selected"));
+//     	$("#example tr.selected td").each(function(index){
+//     		if(index==1)
+//     			alert("Valore:["+$(this).text()+"]");
+//     	});
+		console.log($("#example tr.selected td")[1].innerText);
+    });
+    
 } );
+
+
+
 </script>
 
 <body>
 <table id="example" class="display" style="width:100%">
         <thead>
             <tr>
+                <th></th>
                 <th>Name</th>
                 <th>Position</th>
                 <th>Office</th>
                 <th>Extn.</th>
                 <th>Start date</th>
                 <th>Salary</th>
+                
             </tr>
         </thead>
         <tfoot>
             <tr>
+            <th></th>
                 <th>Name</th>
                 <th>Position</th>
                 <th>Office</th>
                 <th>Extn.</th>
                 <th>Start date</th>
                 <th>Salary</th>
+                
             </tr>
         </tfoot>
     </table>
+    
+    <div id="addbuttonDiv">
+    	<span id="addbuttonSpan">
+    		<input type="button" id="addbutton" value="ADD"></input>
+    	</span>
+    </div>
 </body>
 </html>
