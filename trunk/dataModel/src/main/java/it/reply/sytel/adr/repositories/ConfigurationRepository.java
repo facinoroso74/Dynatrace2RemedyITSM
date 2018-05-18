@@ -13,6 +13,8 @@ public interface ConfigurationRepository extends CrudRepository<Configuration, L
 	   * Note that this method is not implemented and its working code will be
 	   * automatically generated from its signature by Spring Data JPA.
 	   */
-	  public Configuration findByTipoIncidentAndSorgenteSistema(String tipoIncident,String sorgenteSistema);
+	public Configuration findByTipoIncidentAndSorgenteSistema(String tipoIncident,String sorgenteSistema);
+
+	public Configuration findByconfigurationId(Long configurationId);
 	  
 }

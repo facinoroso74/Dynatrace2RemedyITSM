@@ -1,179 +1,205 @@
-package it.reply.sytel.adr.domain;
+package it.reply.sytel.adr.dto;
 
 import java.io.Serializable;
 
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
-import javax.persistence.Table;
+public class ConfigurationForTable implements Serializable{
 
-@Entity
-@Table(name = "CONFIGURATION")
-public class Configuration implements Serializable {
-
+	
 	/**
 	 * 
 	 */
-	private static final long serialVersionUID = -5886381252212107730L;
+	private static final long serialVersionUID = 4530885422464761592L;
 
-	@Id
-	@GeneratedValue(strategy = GenerationType.AUTO)
+	String checkbox="";
+	
 	Long configurationId;
 	
-	@Column
 	String tipoIncident;
-	@Column
+	
 	String descrizione;
-	@Column
+	
 	String dashboard;
-	@Column
+	
 	String firstName;
-	@Column
+	
 	String lastName;
-	@Column
+	
 	String serviceType;
-	@Column
+	
 	String status;
-	@Column
+	
 	String impact;
-	@Column
+	
 	String urgency;
-	@Column
+	
 	String reportedSource;
-	@Column
+	
 	String action;
-	@Column
+	
 	String createRequest;
-	@Column
+	
 	String summary;
-	@Column
+	
 	String sorgenteSistema;
-	@Column
+	
 	String assignedGroup;
-	@Column
+	
 	String assignedSupportCompany;
-	@Column
+	
 	String assignedSupportOrganization;
-	
-	
+
+	public String getCheckbox() {
+		return checkbox;
+	}
+
+	public void setCheckbox(String checkbox) {
+		this.checkbox = checkbox;
+	}
+
 	public Long getConfigurationId() {
 		return configurationId;
 	}
+
 	public void setConfigurationId(Long configurationId) {
 		this.configurationId = configurationId;
 	}
+
 	public String getTipoIncident() {
 		return tipoIncident;
 	}
+
 	public void setTipoIncident(String tipoIncident) {
 		this.tipoIncident = tipoIncident;
 	}
+
 	public String getDescrizione() {
 		return descrizione;
 	}
+
 	public void setDescrizione(String descrizione) {
 		this.descrizione = descrizione;
 	}
+
 	public String getDashboard() {
 		return dashboard;
 	}
+
 	public void setDashboard(String dashboard) {
 		this.dashboard = dashboard;
 	}
+
 	public String getFirstName() {
 		return firstName;
 	}
+
 	public void setFirstName(String firstName) {
 		this.firstName = firstName;
 	}
+
 	public String getLastName() {
 		return lastName;
 	}
+
 	public void setLastName(String lastName) {
 		this.lastName = lastName;
 	}
+
 	public String getServiceType() {
 		return serviceType;
 	}
+
 	public void setServiceType(String serviceType) {
 		this.serviceType = serviceType;
 	}
+
 	public String getStatus() {
 		return status;
 	}
+
 	public void setStatus(String status) {
 		this.status = status;
 	}
+
 	public String getImpact() {
 		return impact;
 	}
+
 	public void setImpact(String impact) {
 		this.impact = impact;
 	}
+
 	public String getUrgency() {
 		return urgency;
 	}
+
 	public void setUrgency(String urgency) {
 		this.urgency = urgency;
 	}
+
 	public String getReportedSource() {
 		return reportedSource;
 	}
+
 	public void setReportedSource(String reportedSource) {
 		this.reportedSource = reportedSource;
 	}
+
 	public String getAction() {
 		return action;
 	}
+
 	public void setAction(String action) {
 		this.action = action;
 	}
+
 	public String getCreateRequest() {
 		return createRequest;
 	}
+
 	public void setCreateRequest(String createRequest) {
 		this.createRequest = createRequest;
 	}
+
 	public String getSummary() {
 		return summary;
 	}
+
 	public void setSummary(String summary) {
 		this.summary = summary;
 	}
+
 	public String getSorgenteSistema() {
 		return sorgenteSistema;
 	}
+
 	public void setSorgenteSistema(String sorgenteSistema) {
 		this.sorgenteSistema = sorgenteSistema;
 	}
+
 	public String getAssignedGroup() {
 		return assignedGroup;
 	}
+
 	public void setAssignedGroup(String assignedGroup) {
 		this.assignedGroup = assignedGroup;
 	}
+
 	public String getAssignedSupportCompany() {
 		return assignedSupportCompany;
 	}
+
 	public void setAssignedSupportCompany(String assignedSupportCompany) {
 		this.assignedSupportCompany = assignedSupportCompany;
 	}
-	public String getAssignedSupportOrganizzation() {
-		return assignedSupportOrganization;
-	}
-	public void setAssignedSupportOrganizzation(String assignedSupportOrganization) {
-		this.assignedSupportOrganization = assignedSupportOrganization;
-	}
-	
+
 	public String getAssignedSupportOrganization() {
 		return assignedSupportOrganization;
 	}
+
 	public void setAssignedSupportOrganization(String assignedSupportOrganization) {
 		this.assignedSupportOrganization = assignedSupportOrganization;
 	}
-	
+
 	@Override
 	public int hashCode() {
 		final int prime = 31;
@@ -182,7 +208,7 @@ public class Configuration implements Serializable {
 		result = prime * result + ((assignedGroup == null) ? 0 : assignedGroup.hashCode());
 		result = prime * result + ((assignedSupportCompany == null) ? 0 : assignedSupportCompany.hashCode());
 		result = prime * result + ((assignedSupportOrganization == null) ? 0 : assignedSupportOrganization.hashCode());
-		
+		result = prime * result + ((checkbox == null) ? 0 : checkbox.hashCode());
 		result = prime * result + ((configurationId == null) ? 0 : configurationId.hashCode());
 		result = prime * result + ((createRequest == null) ? 0 : createRequest.hashCode());
 		result = prime * result + ((dashboard == null) ? 0 : dashboard.hashCode());
@@ -199,7 +225,7 @@ public class Configuration implements Serializable {
 		result = prime * result + ((urgency == null) ? 0 : urgency.hashCode());
 		return result;
 	}
-	
+
 	@Override
 	public boolean equals(Object obj) {
 		if (this == obj)
@@ -208,7 +234,7 @@ public class Configuration implements Serializable {
 			return false;
 		if (getClass() != obj.getClass())
 			return false;
-		Configuration other = (Configuration) obj;
+		ConfigurationForTable other = (ConfigurationForTable) obj;
 		if (action == null) {
 			if (other.action != null)
 				return false;
@@ -229,7 +255,11 @@ public class Configuration implements Serializable {
 				return false;
 		} else if (!assignedSupportOrganization.equals(other.assignedSupportOrganization))
 			return false;
-		
+		if (checkbox == null) {
+			if (other.checkbox != null)
+				return false;
+		} else if (!checkbox.equals(other.checkbox))
+			return false;
 		if (configurationId == null) {
 			if (other.configurationId != null)
 				return false;
@@ -302,17 +332,17 @@ public class Configuration implements Serializable {
 			return false;
 		return true;
 	}
-	
+
 	@Override
 	public String toString() {
-		return "Configuration [configurationId=" + configurationId + ", tipoIncident="
-				+ tipoIncident + ", descrizione=" + descrizione + ", dashboard=" + dashboard + ", firstName="
-				+ firstName + ", lastName=" + lastName + ", serviceType=" + serviceType + ", status=" + status
-				+ ", impact=" + impact + ", urgency=" + urgency + ", reportedSource=" + reportedSource + ", action="
-				+ action + ", createRequest=" + createRequest + ", summary=" + summary + ", sorgenteSistema="
-				+ sorgenteSistema + ", assignedGroup=" + assignedGroup + ", assignedSupportCompany="
-				+ assignedSupportCompany + ", assignedSupportOrganization=" + assignedSupportOrganization + "]";
+		return "ConfigurationForTable [checkbox=" + checkbox + ", configurationId=" + configurationId
+				+ ", tipoIncident=" + tipoIncident + ", descrizione=" + descrizione + ", dashboard=" + dashboard
+				+ ", firstName=" + firstName + ", lastName=" + lastName + ", serviceType=" + serviceType + ", status="
+				+ status + ", impact=" + impact + ", urgency=" + urgency + ", reportedSource=" + reportedSource
+				+ ", action=" + action + ", createRequest=" + createRequest + ", summary=" + summary
+				+ ", sorgenteSistema=" + sorgenteSistema + ", assignedGroup=" + assignedGroup
+				+ ", assignedSupportCompany=" + assignedSupportCompany + ", assignedSupportOrganization="
+				+ assignedSupportOrganization + "]";
 	}
-	
 	
 }

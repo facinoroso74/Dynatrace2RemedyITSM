@@ -21,6 +21,7 @@
         <module>dataModel</module>
 		<module>dynatrace2RemedyEngine</module>
         <module>DynatraceConnector</module>
+        <module>dynatraceConnetorApp</module>
     </modules>
 
 <!-- 
