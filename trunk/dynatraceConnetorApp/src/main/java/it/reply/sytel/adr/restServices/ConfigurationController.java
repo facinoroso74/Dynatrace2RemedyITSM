@@ -72,4 +72,21 @@ public class ConfigurationController
     this.log.debug("Deleting the ConfigurationId:[" + configurationId + "]");
     this.configurationRepository.delete(configurationId);
   }
+  
+  
+  @RequestMapping(value={"/put"}, method={org.springframework.web.bind.annotation.RequestMethod.POST})
+  public Configuration put(Configuration configuration)
+  {
+    try
+    {
+      this.log.info("configuration to edit:[" + configuration + "]");
+      
+      return (Configuration)this.configurationRepository.save(configuration);
+    }
+    catch (Exception e)
+    {
+      this.log.error("Exception on editConfiguration", e);
+      throw new RuntimeException("Exception on editConfiguration", e);
+    }
+  }
 }

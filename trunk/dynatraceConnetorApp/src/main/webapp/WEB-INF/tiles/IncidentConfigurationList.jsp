@@ -9,10 +9,8 @@
 $(document).ready(function() {
 	
 	$('#example').DataTable( {
-	     //"ajax": '../ajax/data/arrays.txt',
 	     "ajax": '/ticketconfiguration/readAll',
-	     //"ajax": '../ajax/data/arrays3.txt',
-             "columns": [
+         "columns": [
             	{ "data": "checkbox" },
             	{ "data": "configurationId" },
             	{ "data": "tipoIncident" },
@@ -49,18 +47,8 @@ $(document).ready(function() {
 	                    ],
 	     "sort": [2]
 	} );
-	
-	
-	
-    $('#addbutton').click(function() {
-    	alert('hello world');
-//      console.log($("#example tr.selected"));
-//     	$("#example tr.selected td").each(function(index){
-//     		if(index==1)
-//     			alert("Valore:["+$(this).text()+"]");
-//     	});
-//		console.log($("#example tr.selected td")[1].innerText);
 		
+    $('#addbutton').click(function() {
 		$(location).attr("href",function() {
 			  return "/addIncidentConfiguration/";
 		});
@@ -68,19 +56,77 @@ $(document).ready(function() {
     
     $('#editbuttonSpan').click(function() {
     	alert('hello world edit');
-//      console.log($("#example tr.selected"));
-//     	$("#example tr.selected td").each(function(index){
-//     		if(index==1)
-//     			alert("Valore:["+$(this).text()+"]");
-//     	});
-//		console.log($("#example tr.selected td")[1].innerText);
+      
+		var idToEdit=0;
+		
+    	$("#example tr.selected td").each(function(index){
+    		if(index==1){
+    			alert("Valore:["+$(this).text()+"]");
+    			idToEdit= $(this).text();
+    		}
+    	});
+		
+		if(idToEdit==0){
+			alert("Please, select a row!");	
+			return;
+		}
 		
 		$(location).attr("href",function() {
-			  return "/editIncidentConfiguration/";
+			  return "/editIncidentConfiguration?idToEdit="+idToEdit;
 		});
+		
     });
     
-    
+    $('#removebuttonSpan').click(function() {
+    	
+		var idToDelete=0;
+		
+    	$("#example tr.selected td").each(function(index){
+    		if(index==1){
+    			alert("Valore:["+$(this).text()+"]");
+    			idToDelete= $(this).text();
+    		}
+    	});
+		
+		if(idToDelete==0){
+			alert("Please, select a row!");	
+			return;
+		}
+		request = $.ajax({
+		        url: "/ticketconfiguration/delete",
+		        type: "get",
+		        data: { configurationId: idToDelete}
+		})
+				
+		// Callback handler that will be called on success
+		 request.done(function (response, textStatus, jqXHR){
+		        // Log a message to the console
+		        console.log("Hooray, it worked!");
+		        $(location).attr("href",function() {
+					  return "/incidentConfiguration/";
+				});
+		 });
+		
+		 // Callback handler that will be called on failure
+		 request.fail(function (jqXHR, textStatus, errorThrown){
+		        // Log the error to the console
+		        alert("error");
+		        console.error(
+		            "The following error occurred: "+
+		            textStatus, errorThrown
+		        );
+		        
+		 });
+		
+		 // Callback handler that will be called regardless
+		 // if the request failed or succeeded
+		 request.always(function () {
+		        // Reenable the inputs
+		        //$inputs.prop("disabled", false);
+		        
+		 });
+    }); 
+	
     //evidenzia menu
     $('#incidentConfigurationID').addClass("active");
     $('#schedulerManagerLinkId').removeClass("active");
