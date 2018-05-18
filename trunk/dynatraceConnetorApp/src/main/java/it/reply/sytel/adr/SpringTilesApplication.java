@@ -7,10 +7,11 @@ import org.springframework.context.annotation.ImportResource;
 
 @SpringBootApplication
 @ImportResource({"classpath*:applicationContext.xml"})
-public class SpringTilesApplication extends SpringBootServletInitializer {
-
-	public static void main(String[] args) {
-		SpringApplication.run(SpringTilesApplication.class, args);
-	}
-
+public class SpringTilesApplication
+  extends SpringBootServletInitializer
+{
+  public static void main(String[] args)
+  {
+    SpringApplication.run(SpringTilesApplication.class, args);
+  }
 }
