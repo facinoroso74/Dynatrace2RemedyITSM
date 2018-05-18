@@ -30,7 +30,7 @@ public class WebController
     return "app.editIncidentConfiguration";
   }
   
-  @RequestMapping({"/dashboard"})
+  @RequestMapping({"/dashboardList"})
   String dashboard()
   {
     return "app.dashboardConfiguration";

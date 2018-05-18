@@ -28,11 +28,12 @@ li a:hover {
     background-color: navy;
 }
 </style>
-
+<div id="menuId">
 <ul>
   <li><a id="schedulerManagerLinkId" href="/schedulerManager" class="active">SchedulerManager</a></li>
-  <li><a id="incidentConfigurationID" href="/incidentConfiguration">IncidentConfiguration</a></li>
-  <li><a href="/dashboard">DashboardConfiguration</a></li>
-  <li><a href="/remedyConfiguration">RemedyConfiguration</a></li>
-  <li><a href="/dynatraceIncidents">DynatraceIncidents</a></li>
+  <li><a id="incidentConfigurationId" href="/incidentConfiguration">IncidentConfiguration</a></li>
+  <li><a id="dashboardConfigurationId" href="/dashboardList">DashboardConfiguration</a></li>
+  <li><a id="remedyConfigurationId" href="/remedyConfiguration">RemedyConfiguration</a></li>
+  <li><a id="dynatraceIncidentConfigurationId" href="/dynatraceIncidents">DynatraceIncidents</a></li>
 </ul>
+</div>

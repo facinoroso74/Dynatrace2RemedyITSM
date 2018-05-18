@@ -2,9 +2,15 @@
 <script type="text/javascript">
 $(document).ready(function() {
     //evidenzia menu
-    $('#incidentConfigurationID').addClass("active");
-    $('#schedulerManagerLinkId').removeClass("active");
+//     $('#incidentConfigurationID').addClass("active");
+//     $('#schedulerManagerLinkId').removeClass("active");
 
+    $('#menuId').find('a').each(function() {
+        console.log($(this).removeClass("active"));
+    });
+    $('#incidentConfigurationId').addClass("active");
+    
+    
     $('#saveId').click(function() {
     
 	    // Let's select and cache all the fields

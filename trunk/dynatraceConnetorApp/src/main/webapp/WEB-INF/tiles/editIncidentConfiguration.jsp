@@ -2,8 +2,13 @@
 <script type="text/javascript">
 $(document).ready(function() {
     //evidenzia menu
-    $('#incidentConfigurationID').addClass("active");
-    $('#schedulerManagerLinkId').removeClass("active");
+//     $('#incidentConfigurationID').addClass("active");
+//     $('#schedulerManagerLinkId').removeClass("active");
+    
+    $('#menuId').find('a').each(function() {
+        console.log($(this).removeClass("active"));
+    });
+    $('#incidentConfigurationId').addClass("active");
     
     var idToEdit = <%= request.getParameter("idToEdit") %>;
     //alert("idToEdit:["+idToEdit+"]");

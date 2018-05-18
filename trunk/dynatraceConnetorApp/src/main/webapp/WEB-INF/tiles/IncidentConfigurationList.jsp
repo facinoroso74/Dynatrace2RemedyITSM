@@ -7,7 +7,14 @@
 <script type="text/javascript" src="https://cdn.datatables.net/select/1.2.5/js/dataTables.select.min.js"></script>
 <script type="text/javascript">
 $(document).ready(function() {
-	
+ 
+	//evidenzia menu
+    $('#menuId').find('a').each(function() {
+        console.log($(this).removeClass("active"));
+    });
+    $('#incidentConfigurationId').addClass("active");
+    
+    
 	$('#example').DataTable( {
 	     "ajax": '/ticketconfiguration/readAll',
          "columns": [
@@ -127,9 +134,8 @@ $(document).ready(function() {
 		 });
     }); 
 	
-    //evidenzia menu
-    $('#incidentConfigurationID').addClass("active");
-    $('#schedulerManagerLinkId').removeClass("active");
+   
+    
     
 } );
 

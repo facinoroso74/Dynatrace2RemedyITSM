@@ -1,410 +1,123 @@
-2018-05-18 10:41:05.800 - [][restartedMain] INFO  it.reply.sytel.adr.common.ws.GKConnectionKeepAliveStrategy - Using a custom ConnectionKeepAliveStrategy with default duration = 'infinite'
-2018-05-18 10:41:05.815 - [][restartedMain] INFO  it.reply.sytel.adr.common.ws.GKConnectionReuseStrategy - Using a custom ConnectionReuseStrategy based on peer HTTP headers/version
-2018-05-18 10:41:05.831 - [][restartedMain] INFO  it.reply.sytel.adr.common.ws.GKHttpRequestRetryHandler - Using a custom HttpRequestRetryHandler to delegate retry logic to JMS redelivery mechanism
-2018-05-18 10:41:05.831 - [][restartedMain] DEBUG it.reply.sytel.adr.common.ws.SharedHTTPSClient - Creating shared HTTP client
-2018-05-18 10:41:05.831 - [][restartedMain] DEBUG it.reply.sytel.adr.common.ws.SharedHTTPSClient - httpsClientProperties.getTrustURLString():[file:///D:/MyGitRepo/Dynatrace2RemedyLocalRepo/parent/dynatrace2RemedyEngine/src/main/resources/truststore.jks]
-2018-05-18 10:41:05.831 - [][restartedMain] DEBUG it.reply.sytel.adr.common.ws.AuthSSLProtocolSocketFactory - createTrustManagers - Initializing trust manager: dynatracetest
-2018-05-18 10:41:05.831 - [][restartedMain] DEBUG it.reply.sytel.adr.common.ws.AuthSSLProtocolSocketFactory - Initializing trust manager
-2018-05-18 10:41:05.847 - [][restartedMain] DEBUG it.reply.sytel.adr.common.ws.AuthSSLProtocolSocketFactory - --------- protocolHandShake:[TLSv1.2]--------
-2018-05-18 10:41:05.940 - [][restartedMain] DEBUG it.reply.sytel.adr.common.ws.SharedHTTPSClient - Shared HTTP client created successfully!
-2018-05-18 10:41:05.940 - [][Thread-6] INFO  it.reply.sytel.adr.common.ws.IdleHTTPConnectionEvictor - Starting IdleHTTPConnectionEvictor task (evictionPeriod=5000)
-2018-05-18 10:41:06.003 - [][restartedMain] INFO  it.reply.sytel.adr.common.ws.GKConnectionKeepAliveStrategy - Using a custom ConnectionKeepAliveStrategy with default duration = 'infinite'
-2018-05-18 10:41:06.009 - [][restartedMain] INFO  it.reply.sytel.adr.common.ws.GKConnectionReuseStrategy - Using a custom ConnectionReuseStrategy based on peer HTTP headers/version
-2018-05-18 10:41:06.009 - [][restartedMain] INFO  it.reply.sytel.adr.common.ws.GKHttpRequestRetryHandler - Using a custom HttpRequestRetryHandler to delegate retry logic to JMS redelivery mechanism
-2018-05-18 10:41:06.009 - [][restartedMain] DEBUG it.reply.sytel.adr.common.ws.SharedHTTPSClient - Creating shared HTTP client
-2018-05-18 10:41:06.009 - [][restartedMain] DEBUG it.reply.sytel.adr.common.ws.SharedHTTPSClient - httpsClientProperties.getTrustURLString():[file:///D:/MyGitRepo/Dynatrace2RemedyLocalRepo/parent/dynatrace2RemedyEngine/src/main/resources/truststore.jks]
-2018-05-18 10:41:06.009 - [][restartedMain] DEBUG it.reply.sytel.adr.common.ws.AuthSSLProtocolSocketFactory - createTrustManagers - Initializing trust manager: dynatracetest
-2018-05-18 10:41:06.009 - [][restartedMain] DEBUG it.reply.sytel.adr.common.ws.AuthSSLProtocolSocketFactory - Initializing trust manager
-2018-05-18 10:41:06.009 - [][restartedMain] DEBUG it.reply.sytel.adr.common.ws.AuthSSLProtocolSocketFactory - --------- protocolHandShake:[TLSv1.2]--------
-2018-05-18 10:41:06.025 - [][restartedMain] DEBUG it.reply.sytel.adr.common.ws.SharedHTTPSClient - Shared HTTP client created successfully!
-2018-05-18 10:41:06.025 - [][Thread-7] INFO  it.reply.sytel.adr.common.ws.IdleHTTPConnectionEvictor - Starting IdleHTTPConnectionEvictor task (evictionPeriod=5000)
-2018-05-18 10:41:06.056 - [][restartedMain] DEBUG it.reply.sytel.adr.common.resource.imp.ResourceFile - getting the inputStream from fileName:[ADR.properties]
-2018-05-18 10:41:06.056 - [][restartedMain] DEBUG it.reply.sytel.adr.configuration.ConfigServicesFile - propertyValue:[ADBM] for propertyName:[DASHBOARD_NAMES]
-2018-05-18 10:41:06.056 - [][restartedMain] DEBUG it.reply.sytel.adr.configuration.ConfigServicesFile - propertyValue:[RemedyUsr] for propertyName:[REMEDY_AUTH_INFO_USER]
-2018-05-18 10:41:06.056 - [][restartedMain] DEBUG it.reply.sytel.adr.configuration.ConfigServicesFile - propertyValue:[RemedyPwd         ] for propertyName:[REMEDY_AUTH_INFO_PWD]
-2018-05-18 10:41:06.056 - [][restartedMain] DEBUG it.reply.sytel.adr.configuration.ConfigServicesFile - propertyValue:[https://dynatrace-sub-CA:8021/rest/management/dashboard/ADBM_TEST_REMEDY_INTEGRATION] for propertyName:[ADBM_URL]
-2018-05-18 10:41:06.056 - [][restartedMain] DEBUG it.reply.sytel.adr.configuration.ConfigServicesFile - propertyValue:[admin] for propertyName:[ADBM_USER]
-2018-05-18 10:41:06.056 - [][restartedMain] DEBUG it.reply.sytel.adr.configuration.ConfigServicesFile - propertyValue:[adradmin01] for propertyName:[ADBM_PWD]
-2018-05-18 10:41:06.056 - [][restartedMain] DEBUG it.reply.sytel.adr.configuration.ConfigServicesFile - propertyValue:[Dynatrace] for propertyName:[ADBM_FIRSTNAME]
-2018-05-18 10:41:06.056 - [][restartedMain] DEBUG it.reply.sytel.adr.configuration.ConfigServicesFile - propertyValue:[2-Significant/Large] for propertyName:[ADBM_IMPACT]
-2018-05-18 10:41:06.056 - [][restartedMain] DEBUG it.reply.sytel.adr.configuration.ConfigServicesFile - propertyValue:[Dynatrace] for propertyName:[ADBM_LASTNAME]
-2018-05-18 10:41:06.056 - [][restartedMain] DEBUG it.reply.sytel.adr.configuration.ConfigServicesFile - propertyValue:[Systems Management] for propertyName:[ADBM_REPORTED_SOURCE]
-2018-05-18 10:41:06.056 - [][restartedMain] DEBUG it.reply.sytel.adr.configuration.ConfigServicesFile - propertyValue:[Infrastructure Event] for propertyName:[ADBM_SERVICE_TYPE]
-2018-05-18 10:41:06.056 - [][restartedMain] DEBUG it.reply.sytel.adr.configuration.ConfigServicesFile - propertyValue:[New] for propertyName:[ADBM_TICKET_STATUS]
-2018-05-18 10:41:06.056 - [][restartedMain] DEBUG it.reply.sytel.adr.configuration.ConfigServicesFile - propertyValue:[2-High] for propertyName:[ADBM_URGENCY]
-2018-05-18 10:41:06.056 - [][restartedMain] DEBUG it.reply.sytel.adr.configuration.ConfigServicesFile - Configuration DONE
-2018-05-18 10:41:06.118 - [][restartedMain] INFO  it.reply.sytel.adr.configuration.ConfigServicesDB - connecting to DB for getting the configuration...
-2018-05-18 10:41:06.978 - [][restartedMain] INFO  it.reply.sytel.adr.configuration.ConfigServicesDB - connecting to DB for getting the configuration...DONE
-2018-05-18 10:42:30.533 - [][Thread-9] INFO  it.reply.sytel.adr.common.ws.SharedHTTPSClient - Shutting down shared HTTP client connection manager
-2018-05-18 10:42:30.533 - [][Thread-7] INFO  it.reply.sytel.adr.common.ws.IdleHTTPConnectionEvictor - IdleHTTPConnectionEvictor task stopped
-2018-05-18 10:42:30.533 - [][Thread-9] INFO  it.reply.sytel.adr.common.ws.SharedHTTPSClient - Shutting down shared HTTP client connection manager
-2018-05-18 10:42:30.533 - [][Thread-6] INFO  it.reply.sytel.adr.common.ws.IdleHTTPConnectionEvictor - IdleHTTPConnectionEvictor task stopped
-2018-05-18 10:42:37.074 - [][restartedMain] INFO  it.reply.sytel.adr.common.ws.GKConnectionKeepAliveStrategy - Using a custom ConnectionKeepAliveStrategy with default duration = 'infinite'
-2018-05-18 10:42:37.074 - [][restartedMain] INFO  it.reply.sytel.adr.common.ws.GKConnectionReuseStrategy - Using a custom ConnectionReuseStrategy based on peer HTTP headers/version
-2018-05-18 10:42:37.089 - [][restartedMain] INFO  it.reply.sytel.adr.common.ws.GKHttpRequestRetryHandler - Using a custom HttpRequestRetryHandler to delegate retry logic to JMS redelivery mechanism
-2018-05-18 10:42:37.089 - [][restartedMain] DEBUG it.reply.sytel.adr.common.ws.SharedHTTPSClient - Creating shared HTTP client
-2018-05-18 10:42:37.089 - [][restartedMain] DEBUG it.reply.sytel.adr.common.ws.SharedHTTPSClient - httpsClientProperties.getTrustURLString():[file:///D:/MyGitRepo/Dynatrace2RemedyLocalRepo/parent/dynatrace2RemedyEngine/src/main/resources/truststore.jks]
-2018-05-18 10:42:37.105 - [][restartedMain] DEBUG it.reply.sytel.adr.common.ws.AuthSSLProtocolSocketFactory - createTrustManagers - Initializing trust manager: dynatracetest
-2018-05-18 10:42:37.105 - [][restartedMain] DEBUG it.reply.sytel.adr.common.ws.AuthSSLProtocolSocketFactory - Initializing trust manager
-2018-05-18 10:42:37.105 - [][restartedMain] DEBUG it.reply.sytel.adr.common.ws.AuthSSLProtocolSocketFactory - --------- protocolHandShake:[TLSv1.2]--------
-2018-05-18 10:42:37.120 - [][restartedMain] DEBUG it.reply.sytel.adr.common.ws.SharedHTTPSClient - Shared HTTP client created successfully!
-2018-05-18 10:42:37.120 - [][Thread-17] INFO  it.reply.sytel.adr.common.ws.IdleHTTPConnectionEvictor - Starting IdleHTTPConnectionEvictor task (evictionPeriod=5000)
-2018-05-18 10:42:37.167 - [][restartedMain] INFO  it.reply.sytel.adr.common.ws.GKConnectionKeepAliveStrategy - Using a custom ConnectionKeepAliveStrategy with default duration = 'infinite'
-2018-05-18 10:42:37.167 - [][restartedMain] INFO  it.reply.sytel.adr.common.ws.GKConnectionReuseStrategy - Using a custom ConnectionReuseStrategy based on peer HTTP headers/version
-2018-05-18 10:42:37.167 - [][restartedMain] INFO  it.reply.sytel.adr.common.ws.GKHttpRequestRetryHandler - Using a custom HttpRequestRetryHandler to delegate retry logic to JMS redelivery mechanism
-2018-05-18 10:42:37.167 - [][restartedMain] DEBUG it.reply.sytel.adr.common.ws.SharedHTTPSClient - Creating shared HTTP client
-2018-05-18 10:42:37.167 - [][restartedMain] DEBUG it.reply.sytel.adr.common.ws.SharedHTTPSClient - httpsClientProperties.getTrustURLString():[file:///D:/MyGitRepo/Dynatrace2RemedyLocalRepo/parent/dynatrace2RemedyEngine/src/main/resources/truststore.jks]
-2018-05-18 10:42:37.167 - [][restartedMain] DEBUG it.reply.sytel.adr.common.ws.AuthSSLProtocolSocketFactory - createTrustManagers - Initializing trust manager: dynatracetest
-2018-05-18 10:42:37.167 - [][restartedMain] DEBUG it.reply.sytel.adr.common.ws.AuthSSLProtocolSocketFactory - Initializing trust manager
-2018-05-18 10:42:37.167 - [][restartedMain] DEBUG it.reply.sytel.adr.common.ws.AuthSSLProtocolSocketFactory - --------- protocolHandShake:[TLSv1.2]--------
-2018-05-18 10:42:37.183 - [][restartedMain] DEBUG it.reply.sytel.adr.common.ws.SharedHTTPSClient - Shared HTTP client created successfully!
-2018-05-18 10:42:37.183 - [][Thread-18] INFO  it.reply.sytel.adr.common.ws.IdleHTTPConnectionEvictor - Starting IdleHTTPConnectionEvictor task (evictionPeriod=5000)
-2018-05-18 10:42:37.214 - [][restartedMain] DEBUG it.reply.sytel.adr.common.resource.imp.ResourceFile - getting the inputStream from fileName:[ADR.properties]
-2018-05-18 10:42:37.214 - [][restartedMain] DEBUG it.reply.sytel.adr.configuration.ConfigServicesFile - propertyValue:[ADBM] for propertyName:[DASHBOARD_NAMES]
-2018-05-18 10:42:37.214 - [][restartedMain] DEBUG it.reply.sytel.adr.configuration.ConfigServicesFile - propertyValue:[RemedyUsr] for propertyName:[REMEDY_AUTH_INFO_USER]
-2018-05-18 10:42:37.230 - [][restartedMain] DEBUG it.reply.sytel.adr.configuration.ConfigServicesFile - propertyValue:[RemedyPwd         ] for propertyName:[REMEDY_AUTH_INFO_PWD]
-2018-05-18 10:42:37.230 - [][restartedMain] DEBUG it.reply.sytel.adr.configuration.ConfigServicesFile - propertyValue:[https://dynatrace-sub-CA:8021/rest/management/dashboard/ADBM_TEST_REMEDY_INTEGRATION] for propertyName:[ADBM_URL]
-2018-05-18 10:42:37.230 - [][restartedMain] DEBUG it.reply.sytel.adr.configuration.ConfigServicesFile - propertyValue:[admin] for propertyName:[ADBM_USER]
-2018-05-18 10:42:37.230 - [][restartedMain] DEBUG it.reply.sytel.adr.configuration.ConfigServicesFile - propertyValue:[adradmin01] for propertyName:[ADBM_PWD]
-2018-05-18 10:42:37.230 - [][restartedMain] DEBUG it.reply.sytel.adr.configuration.ConfigServicesFile - propertyValue:[Dynatrace] for propertyName:[ADBM_FIRSTNAME]
-2018-05-18 10:42:37.230 - [][restartedMain] DEBUG it.reply.sytel.adr.configuration.ConfigServicesFile - propertyValue:[2-Significant/Large] for propertyName:[ADBM_IMPACT]
-2018-05-18 10:42:37.230 - [][restartedMain] DEBUG it.reply.sytel.adr.configuration.ConfigServicesFile - propertyValue:[Dynatrace] for propertyName:[ADBM_LASTNAME]
-2018-05-18 10:42:37.230 - [][restartedMain] DEBUG it.reply.sytel.adr.configuration.ConfigServicesFile - propertyValue:[Systems Management] for propertyName:[ADBM_REPORTED_SOURCE]
-2018-05-18 10:42:37.230 - [][restartedMain] DEBUG it.reply.sytel.adr.configuration.ConfigServicesFile - propertyValue:[Infrastructure Event] for propertyName:[ADBM_SERVICE_TYPE]
-2018-05-18 10:42:37.230 - [][restartedMain] DEBUG it.reply.sytel.adr.configuration.ConfigServicesFile - propertyValue:[New] for propertyName:[ADBM_TICKET_STATUS]
-2018-05-18 10:42:37.230 - [][restartedMain] DEBUG it.reply.sytel.adr.configuration.ConfigServicesFile - propertyValue:[2-High] for propertyName:[ADBM_URGENCY]
-2018-05-18 10:42:37.230 - [][restartedMain] DEBUG it.reply.sytel.adr.configuration.ConfigServicesFile - Configuration DONE
-2018-05-18 10:42:37.277 - [][restartedMain] INFO  it.reply.sytel.adr.configuration.ConfigServicesDB - connecting to DB for getting the configuration...
-2018-05-18 10:42:37.339 - [][restartedMain] INFO  it.reply.sytel.adr.configuration.ConfigServicesDB - connecting to DB for getting the configuration...DONE
-2018-05-18 10:48:56.621 - [][Thread-13] INFO  it.reply.sytel.adr.common.ws.SharedHTTPSClient - Shutting down shared HTTP client connection manager
-2018-05-18 10:48:56.621 - [][Thread-18] INFO  it.reply.sytel.adr.common.ws.IdleHTTPConnectionEvictor - IdleHTTPConnectionEvictor task stopped
-2018-05-18 10:48:56.621 - [][Thread-13] INFO  it.reply.sytel.adr.common.ws.SharedHTTPSClient - Shutting down shared HTTP client connection manager
-2018-05-18 10:48:56.621 - [][Thread-17] INFO  it.reply.sytel.adr.common.ws.IdleHTTPConnectionEvictor - IdleHTTPConnectionEvictor task stopped
-2018-05-18 10:49:01.153 - [][restartedMain] INFO  it.reply.sytel.adr.common.ws.GKConnectionKeepAliveStrategy - Using a custom ConnectionKeepAliveStrategy with default duration = 'infinite'
-2018-05-18 10:49:01.169 - [][restartedMain] INFO  it.reply.sytel.adr.common.ws.GKConnectionReuseStrategy - Using a custom ConnectionReuseStrategy based on peer HTTP headers/version
-2018-05-18 10:49:01.181 - [][restartedMain] INFO  it.reply.sytel.adr.common.ws.GKHttpRequestRetryHandler - Using a custom HttpRequestRetryHandler to delegate retry logic to JMS redelivery mechanism
-2018-05-18 10:49:01.181 - [][restartedMain] DEBUG it.reply.sytel.adr.common.ws.SharedHTTPSClient - Creating shared HTTP client
-2018-05-18 10:49:01.181 - [][restartedMain] DEBUG it.reply.sytel.adr.common.ws.SharedHTTPSClient - httpsClientProperties.getTrustURLString():[file:///D:/MyGitRepo/Dynatrace2RemedyLocalRepo/parent/dynatrace2RemedyEngine/src/main/resources/truststore.jks]
-2018-05-18 10:49:01.197 - [][restartedMain] DEBUG it.reply.sytel.adr.common.ws.AuthSSLProtocolSocketFactory - createTrustManagers - Initializing trust manager: dynatracetest
-2018-05-18 10:49:01.197 - [][restartedMain] DEBUG it.reply.sytel.adr.common.ws.AuthSSLProtocolSocketFactory - Initializing trust manager
-2018-05-18 10:49:01.197 - [][restartedMain] DEBUG it.reply.sytel.adr.common.ws.AuthSSLProtocolSocketFactory - --------- protocolHandShake:[TLSv1.2]--------
-2018-05-18 10:49:01.212 - [][restartedMain] DEBUG it.reply.sytel.adr.common.ws.SharedHTTPSClient - Shared HTTP client created successfully!
-2018-05-18 10:49:01.212 - [][Thread-26] INFO  it.reply.sytel.adr.common.ws.IdleHTTPConnectionEvictor - Starting IdleHTTPConnectionEvictor task (evictionPeriod=5000)
-2018-05-18 10:49:01.244 - [][restartedMain] INFO  it.reply.sytel.adr.common.ws.GKConnectionKeepAliveStrategy - Using a custom ConnectionKeepAliveStrategy with default duration = 'infinite'
-2018-05-18 10:49:01.244 - [][restartedMain] INFO  it.reply.sytel.adr.common.ws.GKConnectionReuseStrategy - Using a custom ConnectionReuseStrategy based on peer HTTP headers/version
-2018-05-18 10:49:01.244 - [][restartedMain] INFO  it.reply.sytel.adr.common.ws.GKHttpRequestRetryHandler - Using a custom HttpRequestRetryHandler to delegate retry logic to JMS redelivery mechanism
-2018-05-18 10:49:01.244 - [][restartedMain] DEBUG it.reply.sytel.adr.common.ws.SharedHTTPSClient - Creating shared HTTP client
-2018-05-18 10:49:01.244 - [][restartedMain] DEBUG it.reply.sytel.adr.common.ws.SharedHTTPSClient - httpsClientProperties.getTrustURLString():[file:///D:/MyGitRepo/Dynatrace2RemedyLocalRepo/parent/dynatrace2RemedyEngine/src/main/resources/truststore.jks]
-2018-05-18 10:49:01.244 - [][restartedMain] DEBUG it.reply.sytel.adr.common.ws.AuthSSLProtocolSocketFactory - createTrustManagers - Initializing trust manager: dynatracetest
-2018-05-18 10:49:01.244 - [][restartedMain] DEBUG it.reply.sytel.adr.common.ws.AuthSSLProtocolSocketFactory - Initializing trust manager
-2018-05-18 10:49:01.244 - [][restartedMain] DEBUG it.reply.sytel.adr.common.ws.AuthSSLProtocolSocketFactory - --------- protocolHandShake:[TLSv1.2]--------
-2018-05-18 10:49:01.259 - [][restartedMain] DEBUG it.reply.sytel.adr.common.ws.SharedHTTPSClient - Shared HTTP client created successfully!
-2018-05-18 10:49:01.259 - [][Thread-27] INFO  it.reply.sytel.adr.common.ws.IdleHTTPConnectionEvictor - Starting IdleHTTPConnectionEvictor task (evictionPeriod=5000)
-2018-05-18 10:49:01.291 - [][restartedMain] DEBUG it.reply.sytel.adr.common.resource.imp.ResourceFile - getting the inputStream from fileName:[ADR.properties]
-2018-05-18 10:49:01.291 - [][restartedMain] DEBUG it.reply.sytel.adr.configuration.ConfigServicesFile - propertyValue:[ADBM] for propertyName:[DASHBOARD_NAMES]
-2018-05-18 10:49:01.291 - [][restartedMain] DEBUG it.reply.sytel.adr.configuration.ConfigServicesFile - propertyValue:[RemedyUsr] for propertyName:[REMEDY_AUTH_INFO_USER]
-2018-05-18 10:49:01.291 - [][restartedMain] DEBUG it.reply.sytel.adr.configuration.ConfigServicesFile - propertyValue:[RemedyPwd         ] for propertyName:[REMEDY_AUTH_INFO_PWD]
-2018-05-18 10:49:01.291 - [][restartedMain] DEBUG it.reply.sytel.adr.configuration.ConfigServicesFile - propertyValue:[https://dynatrace-sub-CA:8021/rest/management/dashboard/ADBM_TEST_REMEDY_INTEGRATION] for propertyName:[ADBM_URL]
-2018-05-18 10:49:01.291 - [][restartedMain] DEBUG it.reply.sytel.adr.configuration.ConfigServicesFile - propertyValue:[admin] for propertyName:[ADBM_USER]
-2018-05-18 10:49:01.291 - [][restartedMain] DEBUG it.reply.sytel.adr.configuration.ConfigServicesFile - propertyValue:[adradmin01] for propertyName:[ADBM_PWD]
-2018-05-18 10:49:01.291 - [][restartedMain] DEBUG it.reply.sytel.adr.configuration.ConfigServicesFile - propertyValue:[Dynatrace] for propertyName:[ADBM_FIRSTNAME]
-2018-05-18 10:49:01.291 - [][restartedMain] DEBUG it.reply.sytel.adr.configuration.ConfigServicesFile - propertyValue:[2-Significant/Large] for propertyName:[ADBM_IMPACT]
-2018-05-18 10:49:01.291 - [][restartedMain] DEBUG it.reply.sytel.adr.configuration.ConfigServicesFile - propertyValue:[Dynatrace] for propertyName:[ADBM_LASTNAME]
-2018-05-18 10:49:01.291 - [][restartedMain] DEBUG it.reply.sytel.adr.configuration.ConfigServicesFile - propertyValue:[Systems Management] for propertyName:[ADBM_REPORTED_SOURCE]
-2018-05-18 10:49:01.291 - [][restartedMain] DEBUG it.reply.sytel.adr.configuration.ConfigServicesFile - propertyValue:[Infrastructure Event] for propertyName:[ADBM_SERVICE_TYPE]
-2018-05-18 10:49:01.291 - [][restartedMain] DEBUG it.reply.sytel.adr.configuration.ConfigServicesFile - propertyValue:[New] for propertyName:[ADBM_TICKET_STATUS]
-2018-05-18 10:49:01.291 - [][restartedMain] DEBUG it.reply.sytel.adr.configuration.ConfigServicesFile - propertyValue:[2-High] for propertyName:[ADBM_URGENCY]
-2018-05-18 10:49:01.291 - [][restartedMain] DEBUG it.reply.sytel.adr.configuration.ConfigServicesFile - Configuration DONE
-2018-05-18 10:49:01.322 - [][restartedMain] INFO  it.reply.sytel.adr.configuration.ConfigServicesDB - connecting to DB for getting the configuration...
-2018-05-18 10:49:01.353 - [][restartedMain] INFO  it.reply.sytel.adr.configuration.ConfigServicesDB - connecting to DB for getting the configuration...DONE
-2018-05-18 11:02:04.361 - [][Thread-22] INFO  it.reply.sytel.adr.common.ws.SharedHTTPSClient - Shutting down shared HTTP client connection manager
-2018-05-18 11:02:04.361 - [][Thread-27] INFO  it.reply.sytel.adr.common.ws.IdleHTTPConnectionEvictor - IdleHTTPConnectionEvictor task stopped
-2018-05-18 11:02:04.361 - [][Thread-22] INFO  it.reply.sytel.adr.common.ws.SharedHTTPSClient - Shutting down shared HTTP client connection manager
-2018-05-18 11:02:04.361 - [][Thread-26] INFO  it.reply.sytel.adr.common.ws.IdleHTTPConnectionEvictor - IdleHTTPConnectionEvictor task stopped
-2018-05-18 11:02:08.536 - [][restartedMain] INFO  it.reply.sytel.adr.common.ws.GKConnectionKeepAliveStrategy - Using a custom ConnectionKeepAliveStrategy with default duration = 'infinite'
-2018-05-18 11:02:08.552 - [][restartedMain] INFO  it.reply.sytel.adr.common.ws.GKConnectionReuseStrategy - Using a custom ConnectionReuseStrategy based on peer HTTP headers/version
-2018-05-18 11:02:08.552 - [][restartedMain] INFO  it.reply.sytel.adr.common.ws.GKHttpRequestRetryHandler - Using a custom HttpRequestRetryHandler to delegate retry logic to JMS redelivery mechanism
-2018-05-18 11:02:08.552 - [][restartedMain] DEBUG it.reply.sytel.adr.common.ws.SharedHTTPSClient - Creating shared HTTP client
-2018-05-18 11:02:08.552 - [][restartedMain] DEBUG it.reply.sytel.adr.common.ws.SharedHTTPSClient - httpsClientProperties.getTrustURLString():[file:///D:/MyGitRepo/Dynatrace2RemedyLocalRepo/parent/dynatrace2RemedyEngine/src/main/resources/truststore.jks]
-2018-05-18 11:02:08.552 - [][restartedMain] DEBUG it.reply.sytel.adr.common.ws.AuthSSLProtocolSocketFactory - createTrustManagers - Initializing trust manager: dynatracetest
-2018-05-18 11:02:08.552 - [][restartedMain] DEBUG it.reply.sytel.adr.common.ws.AuthSSLProtocolSocketFactory - Initializing trust manager
-2018-05-18 11:02:08.568 - [][restartedMain] DEBUG it.reply.sytel.adr.common.ws.AuthSSLProtocolSocketFactory - --------- protocolHandShake:[TLSv1.2]--------
-2018-05-18 11:02:08.568 - [][restartedMain] DEBUG it.reply.sytel.adr.common.ws.SharedHTTPSClient - Shared HTTP client created successfully!
-2018-05-18 11:02:08.568 - [][Thread-35] INFO  it.reply.sytel.adr.common.ws.IdleHTTPConnectionEvictor - Starting IdleHTTPConnectionEvictor task (evictionPeriod=5000)
-2018-05-18 11:02:08.599 - [][restartedMain] INFO  it.reply.sytel.adr.common.ws.GKConnectionKeepAliveStrategy - Using a custom ConnectionKeepAliveStrategy with default duration = 'infinite'
-2018-05-18 11:02:08.599 - [][restartedMain] INFO  it.reply.sytel.adr.common.ws.GKConnectionReuseStrategy - Using a custom ConnectionReuseStrategy based on peer HTTP headers/version
-2018-05-18 11:02:08.599 - [][restartedMain] INFO  it.reply.sytel.adr.common.ws.GKHttpRequestRetryHandler - Using a custom HttpRequestRetryHandler to delegate retry logic to JMS redelivery mechanism
-2018-05-18 11:02:08.599 - [][restartedMain] DEBUG it.reply.sytel.adr.common.ws.SharedHTTPSClient - Creating shared HTTP client
-2018-05-18 11:02:08.599 - [][restartedMain] DEBUG it.reply.sytel.adr.common.ws.SharedHTTPSClient - httpsClientProperties.getTrustURLString():[file:///D:/MyGitRepo/Dynatrace2RemedyLocalRepo/parent/dynatrace2RemedyEngine/src/main/resources/truststore.jks]
-2018-05-18 11:02:08.599 - [][restartedMain] DEBUG it.reply.sytel.adr.common.ws.AuthSSLProtocolSocketFactory - createTrustManagers - Initializing trust manager: dynatracetest
-2018-05-18 11:02:08.599 - [][restartedMain] DEBUG it.reply.sytel.adr.common.ws.AuthSSLProtocolSocketFactory - Initializing trust manager
-2018-05-18 11:02:08.599 - [][restartedMain] DEBUG it.reply.sytel.adr.common.ws.AuthSSLProtocolSocketFactory - --------- protocolHandShake:[TLSv1.2]--------
-2018-05-18 11:02:08.615 - [][restartedMain] DEBUG it.reply.sytel.adr.common.ws.SharedHTTPSClient - Shared HTTP client created successfully!
-2018-05-18 11:02:08.615 - [][Thread-36] INFO  it.reply.sytel.adr.common.ws.IdleHTTPConnectionEvictor - Starting IdleHTTPConnectionEvictor task (evictionPeriod=5000)
-2018-05-18 11:02:08.630 - [][restartedMain] DEBUG it.reply.sytel.adr.common.resource.imp.ResourceFile - getting the inputStream from fileName:[ADR.properties]
-2018-05-18 11:02:08.630 - [][restartedMain] DEBUG it.reply.sytel.adr.configuration.ConfigServicesFile - propertyValue:[ADBM] for propertyName:[DASHBOARD_NAMES]
-2018-05-18 11:02:08.630 - [][restartedMain] DEBUG it.reply.sytel.adr.configuration.ConfigServicesFile - propertyValue:[RemedyUsr] for propertyName:[REMEDY_AUTH_INFO_USER]
-2018-05-18 11:02:08.630 - [][restartedMain] DEBUG it.reply.sytel.adr.configuration.ConfigServicesFile - propertyValue:[RemedyPwd         ] for propertyName:[REMEDY_AUTH_INFO_PWD]
-2018-05-18 11:02:08.630 - [][restartedMain] DEBUG it.reply.sytel.adr.configuration.ConfigServicesFile - propertyValue:[https://dynatrace-sub-CA:8021/rest/management/dashboard/ADBM_TEST_REMEDY_INTEGRATION] for propertyName:[ADBM_URL]
-2018-05-18 11:02:08.630 - [][restartedMain] DEBUG it.reply.sytel.adr.configuration.ConfigServicesFile - propertyValue:[admin] for propertyName:[ADBM_USER]
-2018-05-18 11:02:08.630 - [][restartedMain] DEBUG it.reply.sytel.adr.configuration.ConfigServicesFile - propertyValue:[adradmin01] for propertyName:[ADBM_PWD]
-2018-05-18 11:02:08.630 - [][restartedMain] DEBUG it.reply.sytel.adr.configuration.ConfigServicesFile - propertyValue:[Dynatrace] for propertyName:[ADBM_FIRSTNAME]
-2018-05-18 11:02:08.630 - [][restartedMain] DEBUG it.reply.sytel.adr.configuration.ConfigServicesFile - propertyValue:[2-Significant/Large] for propertyName:[ADBM_IMPACT]
-2018-05-18 11:02:08.630 - [][restartedMain] DEBUG it.reply.sytel.adr.configuration.ConfigServicesFile - propertyValue:[Dynatrace] for propertyName:[ADBM_LASTNAME]
-2018-05-18 11:02:08.630 - [][restartedMain] DEBUG it.reply.sytel.adr.configuration.ConfigServicesFile - propertyValue:[Systems Management] for propertyName:[ADBM_REPORTED_SOURCE]
-2018-05-18 11:02:08.630 - [][restartedMain] DEBUG it.reply.sytel.adr.configuration.ConfigServicesFile - propertyValue:[Infrastructure Event] for propertyName:[ADBM_SERVICE_TYPE]
-2018-05-18 11:02:08.630 - [][restartedMain] DEBUG it.reply.sytel.adr.configuration.ConfigServicesFile - propertyValue:[New] for propertyName:[ADBM_TICKET_STATUS]
-2018-05-18 11:02:08.630 - [][restartedMain] DEBUG it.reply.sytel.adr.configuration.ConfigServicesFile - propertyValue:[2-High] for propertyName:[ADBM_URGENCY]
-2018-05-18 11:02:08.630 - [][restartedMain] DEBUG it.reply.sytel.adr.configuration.ConfigServicesFile - Configuration DONE
-2018-05-18 11:02:08.661 - [][restartedMain] INFO  it.reply.sytel.adr.configuration.ConfigServicesDB - connecting to DB for getting the configuration...
-2018-05-18 11:02:08.708 - [][restartedMain] INFO  it.reply.sytel.adr.configuration.ConfigServicesDB - connecting to DB for getting the configuration...DONE
-2018-05-18 11:02:21.142 - [][Thread-31] INFO  it.reply.sytel.adr.common.ws.SharedHTTPSClient - Shutting down shared HTTP client connection manager
-2018-05-18 11:02:21.142 - [][Thread-36] INFO  it.reply.sytel.adr.common.ws.IdleHTTPConnectionEvictor - IdleHTTPConnectionEvictor task stopped
-2018-05-18 11:02:21.142 - [][Thread-31] INFO  it.reply.sytel.adr.common.ws.SharedHTTPSClient - Shutting down shared HTTP client connection manager
-2018-05-18 11:02:21.142 - [][Thread-35] INFO  it.reply.sytel.adr.common.ws.IdleHTTPConnectionEvictor - IdleHTTPConnectionEvictor task stopped
-2018-05-18 11:02:25.164 - [][restartedMain] INFO  it.reply.sytel.adr.common.ws.GKConnectionKeepAliveStrategy - Using a custom ConnectionKeepAliveStrategy with default duration = 'infinite'
-2018-05-18 11:02:25.164 - [][restartedMain] INFO  it.reply.sytel.adr.common.ws.GKConnectionReuseStrategy - Using a custom ConnectionReuseStrategy based on peer HTTP headers/version
-2018-05-18 11:02:25.180 - [][restartedMain] INFO  it.reply.sytel.adr.common.ws.GKHttpRequestRetryHandler - Using a custom HttpRequestRetryHandler to delegate retry logic to JMS redelivery mechanism
-2018-05-18 11:02:25.180 - [][restartedMain] DEBUG it.reply.sytel.adr.common.ws.SharedHTTPSClient - Creating shared HTTP client
-2018-05-18 11:02:25.180 - [][restartedMain] DEBUG it.reply.sytel.adr.common.ws.SharedHTTPSClient - httpsClientProperties.getTrustURLString():[file:///D:/MyGitRepo/Dynatrace2RemedyLocalRepo/parent/dynatrace2RemedyEngine/src/main/resources/truststore.jks]
-2018-05-18 11:02:25.180 - [][restartedMain] DEBUG it.reply.sytel.adr.common.ws.AuthSSLProtocolSocketFactory - createTrustManagers - Initializing trust manager: dynatracetest
-2018-05-18 11:02:25.180 - [][restartedMain] DEBUG it.reply.sytel.adr.common.ws.AuthSSLProtocolSocketFactory - Initializing trust manager
-2018-05-18 11:02:25.180 - [][restartedMain] DEBUG it.reply.sytel.adr.common.ws.AuthSSLProtocolSocketFactory - --------- protocolHandShake:[TLSv1.2]--------
-2018-05-18 11:02:25.195 - [][restartedMain] DEBUG it.reply.sytel.adr.common.ws.SharedHTTPSClient - Shared HTTP client created successfully!
-2018-05-18 11:02:25.195 - [][Thread-44] INFO  it.reply.sytel.adr.common.ws.IdleHTTPConnectionEvictor - Starting IdleHTTPConnectionEvictor task (evictionPeriod=5000)
-2018-05-18 11:02:25.227 - [][restartedMain] INFO  it.reply.sytel.adr.common.ws.GKConnectionKeepAliveStrategy - Using a custom ConnectionKeepAliveStrategy with default duration = 'infinite'
-2018-05-18 11:02:25.227 - [][restartedMain] INFO  it.reply.sytel.adr.common.ws.GKConnectionReuseStrategy - Using a custom ConnectionReuseStrategy based on peer HTTP headers/version
-2018-05-18 11:02:25.227 - [][restartedMain] INFO  it.reply.sytel.adr.common.ws.GKHttpRequestRetryHandler - Using a custom HttpRequestRetryHandler to delegate retry logic to JMS redelivery mechanism
-2018-05-18 11:02:25.227 - [][restartedMain] DEBUG it.reply.sytel.adr.common.ws.SharedHTTPSClient - Creating shared HTTP client
-2018-05-18 11:02:25.227 - [][restartedMain] DEBUG it.reply.sytel.adr.common.ws.SharedHTTPSClient - httpsClientProperties.getTrustURLString():[file:///D:/MyGitRepo/Dynatrace2RemedyLocalRepo/parent/dynatrace2RemedyEngine/src/main/resources/truststore.jks]
-2018-05-18 11:02:25.227 - [][restartedMain] DEBUG it.reply.sytel.adr.common.ws.AuthSSLProtocolSocketFactory - createTrustManagers - Initializing trust manager: dynatracetest
-2018-05-18 11:02:25.227 - [][restartedMain] DEBUG it.reply.sytel.adr.common.ws.AuthSSLProtocolSocketFactory - Initializing trust manager
-2018-05-18 11:02:25.227 - [][restartedMain] DEBUG it.reply.sytel.adr.common.ws.AuthSSLProtocolSocketFactory - --------- protocolHandShake:[TLSv1.2]--------
-2018-05-18 11:02:25.227 - [][restartedMain] DEBUG it.reply.sytel.adr.common.ws.SharedHTTPSClient - Shared HTTP client created successfully!
-2018-05-18 11:02:25.227 - [][Thread-45] INFO  it.reply.sytel.adr.common.ws.IdleHTTPConnectionEvictor - Starting IdleHTTPConnectionEvictor task (evictionPeriod=5000)
-2018-05-18 11:02:25.258 - [][restartedMain] DEBUG it.reply.sytel.adr.common.resource.imp.ResourceFile - getting the inputStream from fileName:[ADR.properties]
-2018-05-18 11:02:25.258 - [][restartedMain] DEBUG it.reply.sytel.adr.configuration.ConfigServicesFile - propertyValue:[ADBM] for propertyName:[DASHBOARD_NAMES]
-2018-05-18 11:02:25.258 - [][restartedMain] DEBUG it.reply.sytel.adr.configuration.ConfigServicesFile - propertyValue:[RemedyUsr] for propertyName:[REMEDY_AUTH_INFO_USER]
-2018-05-18 11:02:25.258 - [][restartedMain] DEBUG it.reply.sytel.adr.configuration.ConfigServicesFile - propertyValue:[RemedyPwd         ] for propertyName:[REMEDY_AUTH_INFO_PWD]
-2018-05-18 11:02:25.258 - [][restartedMain] DEBUG it.reply.sytel.adr.configuration.ConfigServicesFile - propertyValue:[https://dynatrace-sub-CA:8021/rest/management/dashboard/ADBM_TEST_REMEDY_INTEGRATION] for propertyName:[ADBM_URL]
-2018-05-18 11:02:25.258 - [][restartedMain] DEBUG it.reply.sytel.adr.configuration.ConfigServicesFile - propertyValue:[admin] for propertyName:[ADBM_USER]
-2018-05-18 11:02:25.258 - [][restartedMain] DEBUG it.reply.sytel.adr.configuration.ConfigServicesFile - propertyValue:[adradmin01] for propertyName:[ADBM_PWD]
-2018-05-18 11:02:25.258 - [][restartedMain] DEBUG it.reply.sytel.adr.configuration.ConfigServicesFile - propertyValue:[Dynatrace] for propertyName:[ADBM_FIRSTNAME]
-2018-05-18 11:02:25.258 - [][restartedMain] DEBUG it.reply.sytel.adr.configuration.ConfigServicesFile - propertyValue:[2-Significant/Large] for propertyName:[ADBM_IMPACT]
-2018-05-18 11:02:25.258 - [][restartedMain] DEBUG it.reply.sytel.adr.configuration.ConfigServicesFile - propertyValue:[Dynatrace] for propertyName:[ADBM_LASTNAME]
-2018-05-18 11:02:25.258 - [][restartedMain] DEBUG it.reply.sytel.adr.configuration.ConfigServicesFile - propertyValue:[Systems Management] for propertyName:[ADBM_REPORTED_SOURCE]
-2018-05-18 11:02:25.258 - [][restartedMain] DEBUG it.reply.sytel.adr.configuration.ConfigServicesFile - propertyValue:[Infrastructure Event] for propertyName:[ADBM_SERVICE_TYPE]
-2018-05-18 11:02:25.258 - [][restartedMain] DEBUG it.reply.sytel.adr.configuration.ConfigServicesFile - propertyValue:[New] for propertyName:[ADBM_TICKET_STATUS]
-2018-05-18 11:02:25.258 - [][restartedMain] DEBUG it.reply.sytel.adr.configuration.ConfigServicesFile - propertyValue:[2-High] for propertyName:[ADBM_URGENCY]
-2018-05-18 11:02:25.258 - [][restartedMain] DEBUG it.reply.sytel.adr.configuration.ConfigServicesFile - Configuration DONE
-2018-05-18 11:02:25.273 - [][restartedMain] INFO  it.reply.sytel.adr.configuration.ConfigServicesDB - connecting to DB for getting the configuration...
-2018-05-18 11:02:25.305 - [][restartedMain] INFO  it.reply.sytel.adr.configuration.ConfigServicesDB - connecting to DB for getting the configuration...DONE
-2018-05-18 11:06:21.956 - [][Thread-40] INFO  it.reply.sytel.adr.common.ws.SharedHTTPSClient - Shutting down shared HTTP client connection manager
-2018-05-18 11:06:21.956 - [][Thread-45] INFO  it.reply.sytel.adr.common.ws.IdleHTTPConnectionEvictor - IdleHTTPConnectionEvictor task stopped
-2018-05-18 11:06:21.956 - [][Thread-40] INFO  it.reply.sytel.adr.common.ws.SharedHTTPSClient - Shutting down shared HTTP client connection manager
-2018-05-18 11:06:21.956 - [][Thread-44] INFO  it.reply.sytel.adr.common.ws.IdleHTTPConnectionEvictor - IdleHTTPConnectionEvictor task stopped
-2018-05-18 11:06:25.961 - [][restartedMain] INFO  it.reply.sytel.adr.common.ws.GKConnectionKeepAliveStrategy - Using a custom ConnectionKeepAliveStrategy with default duration = 'infinite'
-2018-05-18 11:06:25.961 - [][restartedMain] INFO  it.reply.sytel.adr.common.ws.GKConnectionReuseStrategy - Using a custom ConnectionReuseStrategy based on peer HTTP headers/version
-2018-05-18 11:06:25.961 - [][restartedMain] INFO  it.reply.sytel.adr.common.ws.GKHttpRequestRetryHandler - Using a custom HttpRequestRetryHandler to delegate retry logic to JMS redelivery mechanism
-2018-05-18 11:06:25.977 - [][restartedMain] DEBUG it.reply.sytel.adr.common.ws.SharedHTTPSClient - Creating shared HTTP client
-2018-05-18 11:06:25.977 - [][restartedMain] DEBUG it.reply.sytel.adr.common.ws.SharedHTTPSClient - httpsClientProperties.getTrustURLString():[file:///D:/MyGitRepo/Dynatrace2RemedyLocalRepo/parent/dynatrace2RemedyEngine/src/main/resources/truststore.jks]
-2018-05-18 11:06:25.977 - [][restartedMain] DEBUG it.reply.sytel.adr.common.ws.AuthSSLProtocolSocketFactory - createTrustManagers - Initializing trust manager: dynatracetest
-2018-05-18 11:06:25.977 - [][restartedMain] DEBUG it.reply.sytel.adr.common.ws.AuthSSLProtocolSocketFactory - Initializing trust manager
-2018-05-18 11:06:25.977 - [][restartedMain] DEBUG it.reply.sytel.adr.common.ws.AuthSSLProtocolSocketFactory - --------- protocolHandShake:[TLSv1.2]--------
-2018-05-18 11:06:25.993 - [][restartedMain] DEBUG it.reply.sytel.adr.common.ws.SharedHTTPSClient - Shared HTTP client created successfully!
-2018-05-18 11:06:25.993 - [][Thread-53] INFO  it.reply.sytel.adr.common.ws.IdleHTTPConnectionEvictor - Starting IdleHTTPConnectionEvictor task (evictionPeriod=5000)
-2018-05-18 11:06:26.008 - [][restartedMain] INFO  it.reply.sytel.adr.common.ws.GKConnectionKeepAliveStrategy - Using a custom ConnectionKeepAliveStrategy with default duration = 'infinite'
-2018-05-18 11:06:26.008 - [][restartedMain] INFO  it.reply.sytel.adr.common.ws.GKConnectionReuseStrategy - Using a custom ConnectionReuseStrategy based on peer HTTP headers/version
-2018-05-18 11:06:26.008 - [][restartedMain] INFO  it.reply.sytel.adr.common.ws.GKHttpRequestRetryHandler - Using a custom HttpRequestRetryHandler to delegate retry logic to JMS redelivery mechanism
-2018-05-18 11:06:26.024 - [][restartedMain] DEBUG it.reply.sytel.adr.common.ws.SharedHTTPSClient - Creating shared HTTP client
-2018-05-18 11:06:26.024 - [][restartedMain] DEBUG it.reply.sytel.adr.common.ws.SharedHTTPSClient - httpsClientProperties.getTrustURLString():[file:///D:/MyGitRepo/Dynatrace2RemedyLocalRepo/parent/dynatrace2RemedyEngine/src/main/resources/truststore.jks]
-2018-05-18 11:06:26.024 - [][restartedMain] DEBUG it.reply.sytel.adr.common.ws.AuthSSLProtocolSocketFactory - createTrustManagers - Initializing trust manager: dynatracetest
-2018-05-18 11:06:26.024 - [][restartedMain] DEBUG it.reply.sytel.adr.common.ws.AuthSSLProtocolSocketFactory - Initializing trust manager
-2018-05-18 11:06:26.024 - [][restartedMain] DEBUG it.reply.sytel.adr.common.ws.AuthSSLProtocolSocketFactory - --------- protocolHandShake:[TLSv1.2]--------
-2018-05-18 11:06:26.024 - [][restartedMain] DEBUG it.reply.sytel.adr.common.ws.SharedHTTPSClient - Shared HTTP client created successfully!
-2018-05-18 11:06:26.024 - [][Thread-54] INFO  it.reply.sytel.adr.common.ws.IdleHTTPConnectionEvictor - Starting IdleHTTPConnectionEvictor task (evictionPeriod=5000)
-2018-05-18 11:06:26.039 - [][restartedMain] DEBUG it.reply.sytel.adr.common.resource.imp.ResourceFile - getting the inputStream from fileName:[ADR.properties]
-2018-05-18 11:06:26.039 - [][restartedMain] DEBUG it.reply.sytel.adr.configuration.ConfigServicesFile - propertyValue:[ADBM] for propertyName:[DASHBOARD_NAMES]
-2018-05-18 11:06:26.055 - [][restartedMain] DEBUG it.reply.sytel.adr.configuration.ConfigServicesFile - propertyValue:[RemedyUsr] for propertyName:[REMEDY_AUTH_INFO_USER]
-2018-05-18 11:06:26.055 - [][restartedMain] DEBUG it.reply.sytel.adr.configuration.ConfigServicesFile - propertyValue:[RemedyPwd         ] for propertyName:[REMEDY_AUTH_INFO_PWD]
-2018-05-18 11:06:26.055 - [][restartedMain] DEBUG it.reply.sytel.adr.configuration.ConfigServicesFile - propertyValue:[https://dynatrace-sub-CA:8021/rest/management/dashboard/ADBM_TEST_REMEDY_INTEGRATION] for propertyName:[ADBM_URL]
-2018-05-18 11:06:26.055 - [][restartedMain] DEBUG it.reply.sytel.adr.configuration.ConfigServicesFile - propertyValue:[admin] for propertyName:[ADBM_USER]
-2018-05-18 11:06:26.055 - [][restartedMain] DEBUG it.reply.sytel.adr.configuration.ConfigServicesFile - propertyValue:[adradmin01] for propertyName:[ADBM_PWD]
-2018-05-18 11:06:26.055 - [][restartedMain] DEBUG it.reply.sytel.adr.configuration.ConfigServicesFile - propertyValue:[Dynatrace] for propertyName:[ADBM_FIRSTNAME]
-2018-05-18 11:06:26.055 - [][restartedMain] DEBUG it.reply.sytel.adr.configuration.ConfigServicesFile - propertyValue:[2-Significant/Large] for propertyName:[ADBM_IMPACT]
-2018-05-18 11:06:26.055 - [][restartedMain] DEBUG it.reply.sytel.adr.configuration.ConfigServicesFile - propertyValue:[Dynatrace] for propertyName:[ADBM_LASTNAME]
-2018-05-18 11:06:26.055 - [][restartedMain] DEBUG it.reply.sytel.adr.configuration.ConfigServicesFile - propertyValue:[Systems Management] for propertyName:[ADBM_REPORTED_SOURCE]
-2018-05-18 11:06:26.055 - [][restartedMain] DEBUG it.reply.sytel.adr.configuration.ConfigServicesFile - propertyValue:[Infrastructure Event] for propertyName:[ADBM_SERVICE_TYPE]
-2018-05-18 11:06:26.055 - [][restartedMain] DEBUG it.reply.sytel.adr.configuration.ConfigServicesFile - propertyValue:[New] for propertyName:[ADBM_TICKET_STATUS]
-2018-05-18 11:06:26.055 - [][restartedMain] DEBUG it.reply.sytel.adr.configuration.ConfigServicesFile - propertyValue:[2-High] for propertyName:[ADBM_URGENCY]
-2018-05-18 11:06:26.055 - [][restartedMain] DEBUG it.reply.sytel.adr.configuration.ConfigServicesFile - Configuration DONE
-2018-05-18 11:06:26.071 - [][restartedMain] INFO  it.reply.sytel.adr.configuration.ConfigServicesDB - connecting to DB for getting the configuration...
-2018-05-18 11:06:26.102 - [][restartedMain] INFO  it.reply.sytel.adr.configuration.ConfigServicesDB - connecting to DB for getting the configuration...DONE
-2018-05-18 11:06:49.850 - [][Thread-49] INFO  it.reply.sytel.adr.common.ws.SharedHTTPSClient - Shutting down shared HTTP client connection manager
-2018-05-18 11:06:49.850 - [][Thread-54] INFO  it.reply.sytel.adr.common.ws.IdleHTTPConnectionEvictor - IdleHTTPConnectionEvictor task stopped
-2018-05-18 11:06:49.850 - [][Thread-49] INFO  it.reply.sytel.adr.common.ws.SharedHTTPSClient - Shutting down shared HTTP client connection manager
-2018-05-18 11:06:49.850 - [][Thread-53] INFO  it.reply.sytel.adr.common.ws.IdleHTTPConnectionEvictor - IdleHTTPConnectionEvictor task stopped
-2018-05-18 11:06:53.865 - [][restartedMain] INFO  it.reply.sytel.adr.common.ws.GKConnectionKeepAliveStrategy - Using a custom ConnectionKeepAliveStrategy with default duration = 'infinite'
-2018-05-18 11:06:53.880 - [][restartedMain] INFO  it.reply.sytel.adr.common.ws.GKConnectionReuseStrategy - Using a custom ConnectionReuseStrategy based on peer HTTP headers/version
-2018-05-18 11:06:53.880 - [][restartedMain] INFO  it.reply.sytel.adr.common.ws.GKHttpRequestRetryHandler - Using a custom HttpRequestRetryHandler to delegate retry logic to JMS redelivery mechanism
-2018-05-18 11:06:53.880 - [][restartedMain] DEBUG it.reply.sytel.adr.common.ws.SharedHTTPSClient - Creating shared HTTP client
-2018-05-18 11:06:53.880 - [][restartedMain] DEBUG it.reply.sytel.adr.common.ws.SharedHTTPSClient - httpsClientProperties.getTrustURLString():[file:///D:/MyGitRepo/Dynatrace2RemedyLocalRepo/parent/dynatrace2RemedyEngine/src/main/resources/truststore.jks]
-2018-05-18 11:06:53.896 - [][restartedMain] DEBUG it.reply.sytel.adr.common.ws.AuthSSLProtocolSocketFactory - createTrustManagers - Initializing trust manager: dynatracetest
-2018-05-18 11:06:53.896 - [][restartedMain] DEBUG it.reply.sytel.adr.common.ws.AuthSSLProtocolSocketFactory - Initializing trust manager
-2018-05-18 11:06:53.896 - [][restartedMain] DEBUG it.reply.sytel.adr.common.ws.AuthSSLProtocolSocketFactory - --------- protocolHandShake:[TLSv1.2]--------
-2018-05-18 11:06:53.912 - [][restartedMain] DEBUG it.reply.sytel.adr.common.ws.SharedHTTPSClient - Shared HTTP client created successfully!
-2018-05-18 11:06:53.912 - [][Thread-62] INFO  it.reply.sytel.adr.common.ws.IdleHTTPConnectionEvictor - Starting IdleHTTPConnectionEvictor task (evictionPeriod=5000)
-2018-05-18 11:06:53.927 - [][restartedMain] INFO  it.reply.sytel.adr.common.ws.GKConnectionKeepAliveStrategy - Using a custom ConnectionKeepAliveStrategy with default duration = 'infinite'
-2018-05-18 11:06:53.927 - [][restartedMain] INFO  it.reply.sytel.adr.common.ws.GKConnectionReuseStrategy - Using a custom ConnectionReuseStrategy based on peer HTTP headers/version
-2018-05-18 11:06:53.927 - [][restartedMain] INFO  it.reply.sytel.adr.common.ws.GKHttpRequestRetryHandler - Using a custom HttpRequestRetryHandler to delegate retry logic to JMS redelivery mechanism
-2018-05-18 11:06:53.927 - [][restartedMain] DEBUG it.reply.sytel.adr.common.ws.SharedHTTPSClient - Creating shared HTTP client
-2018-05-18 11:06:53.927 - [][restartedMain] DEBUG it.reply.sytel.adr.common.ws.SharedHTTPSClient - httpsClientProperties.getTrustURLString():[file:///D:/MyGitRepo/Dynatrace2RemedyLocalRepo/parent/dynatrace2RemedyEngine/src/main/resources/truststore.jks]
-2018-05-18 11:06:53.927 - [][restartedMain] DEBUG it.reply.sytel.adr.common.ws.AuthSSLProtocolSocketFactory - createTrustManagers - Initializing trust manager: dynatracetest
-2018-05-18 11:06:53.927 - [][restartedMain] DEBUG it.reply.sytel.adr.common.ws.AuthSSLProtocolSocketFactory - Initializing trust manager
-2018-05-18 11:06:53.927 - [][restartedMain] DEBUG it.reply.sytel.adr.common.ws.AuthSSLProtocolSocketFactory - --------- protocolHandShake:[TLSv1.2]--------
-2018-05-18 11:06:53.943 - [][restartedMain] DEBUG it.reply.sytel.adr.common.ws.SharedHTTPSClient - Shared HTTP client created successfully!
-2018-05-18 11:06:53.943 - [][Thread-63] INFO  it.reply.sytel.adr.common.ws.IdleHTTPConnectionEvictor - Starting IdleHTTPConnectionEvictor task (evictionPeriod=5000)
-2018-05-18 11:06:53.958 - [][restartedMain] DEBUG it.reply.sytel.adr.common.resource.imp.ResourceFile - getting the inputStream from fileName:[ADR.properties]
-2018-05-18 11:06:53.958 - [][restartedMain] DEBUG it.reply.sytel.adr.configuration.ConfigServicesFile - propertyValue:[ADBM] for propertyName:[DASHBOARD_NAMES]
-2018-05-18 11:06:53.958 - [][restartedMain] DEBUG it.reply.sytel.adr.configuration.ConfigServicesFile - propertyValue:[RemedyUsr] for propertyName:[REMEDY_AUTH_INFO_USER]
-2018-05-18 11:06:53.958 - [][restartedMain] DEBUG it.reply.sytel.adr.configuration.ConfigServicesFile - propertyValue:[RemedyPwd         ] for propertyName:[REMEDY_AUTH_INFO_PWD]
-2018-05-18 11:06:53.958 - [][restartedMain] DEBUG it.reply.sytel.adr.configuration.ConfigServicesFile - propertyValue:[https://dynatrace-sub-CA:8021/rest/management/dashboard/ADBM_TEST_REMEDY_INTEGRATION] for propertyName:[ADBM_URL]
-2018-05-18 11:06:53.958 - [][restartedMain] DEBUG it.reply.sytel.adr.configuration.ConfigServicesFile - propertyValue:[admin] for propertyName:[ADBM_USER]
-2018-05-18 11:06:53.958 - [][restartedMain] DEBUG it.reply.sytel.adr.configuration.ConfigServicesFile - propertyValue:[adradmin01] for propertyName:[ADBM_PWD]
-2018-05-18 11:06:53.958 - [][restartedMain] DEBUG it.reply.sytel.adr.configuration.ConfigServicesFile - propertyValue:[Dynatrace] for propertyName:[ADBM_FIRSTNAME]
-2018-05-18 11:06:53.958 - [][restartedMain] DEBUG it.reply.sytel.adr.configuration.ConfigServicesFile - propertyValue:[2-Significant/Large] for propertyName:[ADBM_IMPACT]
-2018-05-18 11:06:53.958 - [][restartedMain] DEBUG it.reply.sytel.adr.configuration.ConfigServicesFile - propertyValue:[Dynatrace] for propertyName:[ADBM_LASTNAME]
-2018-05-18 11:06:53.958 - [][restartedMain] DEBUG it.reply.sytel.adr.configuration.ConfigServicesFile - propertyValue:[Systems Management] for propertyName:[ADBM_REPORTED_SOURCE]
-2018-05-18 11:06:53.958 - [][restartedMain] DEBUG it.reply.sytel.adr.configuration.ConfigServicesFile - propertyValue:[Infrastructure Event] for propertyName:[ADBM_SERVICE_TYPE]
-2018-05-18 11:06:53.958 - [][restartedMain] DEBUG it.reply.sytel.adr.configuration.ConfigServicesFile - propertyValue:[New] for propertyName:[ADBM_TICKET_STATUS]
-2018-05-18 11:06:53.958 - [][restartedMain] DEBUG it.reply.sytel.adr.configuration.ConfigServicesFile - propertyValue:[2-High] for propertyName:[ADBM_URGENCY]
-2018-05-18 11:06:53.958 - [][restartedMain] DEBUG it.reply.sytel.adr.configuration.ConfigServicesFile - Configuration DONE
-2018-05-18 11:06:53.990 - [][restartedMain] INFO  it.reply.sytel.adr.configuration.ConfigServicesDB - connecting to DB for getting the configuration...
-2018-05-18 11:06:54.005 - [][restartedMain] INFO  it.reply.sytel.adr.configuration.ConfigServicesDB - connecting to DB for getting the configuration...DONE
-2018-05-18 11:07:27.101 - [][Thread-58] INFO  it.reply.sytel.adr.common.ws.SharedHTTPSClient - Shutting down shared HTTP client connection manager
-2018-05-18 11:07:27.101 - [][Thread-63] INFO  it.reply.sytel.adr.common.ws.IdleHTTPConnectionEvictor - IdleHTTPConnectionEvictor task stopped
-2018-05-18 11:07:27.101 - [][Thread-58] INFO  it.reply.sytel.adr.common.ws.SharedHTTPSClient - Shutting down shared HTTP client connection manager
-2018-05-18 11:07:27.101 - [][Thread-62] INFO  it.reply.sytel.adr.common.ws.IdleHTTPConnectionEvictor - IdleHTTPConnectionEvictor task stopped
-2018-05-18 11:07:31.235 - [][restartedMain] INFO  it.reply.sytel.adr.common.ws.GKConnectionKeepAliveStrategy - Using a custom ConnectionKeepAliveStrategy with default duration = 'infinite'
-2018-05-18 11:07:31.251 - [][restartedMain] INFO  it.reply.sytel.adr.common.ws.GKConnectionReuseStrategy - Using a custom ConnectionReuseStrategy based on peer HTTP headers/version
-2018-05-18 11:07:31.251 - [][restartedMain] INFO  it.reply.sytel.adr.common.ws.GKHttpRequestRetryHandler - Using a custom HttpRequestRetryHandler to delegate retry logic to JMS redelivery mechanism
-2018-05-18 11:07:31.251 - [][restartedMain] DEBUG it.reply.sytel.adr.common.ws.SharedHTTPSClient - Creating shared HTTP client
-2018-05-18 11:07:31.251 - [][restartedMain] DEBUG it.reply.sytel.adr.common.ws.SharedHTTPSClient - httpsClientProperties.getTrustURLString():[file:///D:/MyGitRepo/Dynatrace2RemedyLocalRepo/parent/dynatrace2RemedyEngine/src/main/resources/truststore.jks]
-2018-05-18 11:07:31.251 - [][restartedMain] DEBUG it.reply.sytel.adr.common.ws.AuthSSLProtocolSocketFactory - createTrustManagers - Initializing trust manager: dynatracetest
-2018-05-18 11:07:31.251 - [][restartedMain] DEBUG it.reply.sytel.adr.common.ws.AuthSSLProtocolSocketFactory - Initializing trust manager
-2018-05-18 11:07:31.251 - [][restartedMain] DEBUG it.reply.sytel.adr.common.ws.AuthSSLProtocolSocketFactory - --------- protocolHandShake:[TLSv1.2]--------
-2018-05-18 11:07:31.267 - [][restartedMain] DEBUG it.reply.sytel.adr.common.ws.SharedHTTPSClient - Shared HTTP client created successfully!
-2018-05-18 11:07:31.267 - [][Thread-71] INFO  it.reply.sytel.adr.common.ws.IdleHTTPConnectionEvictor - Starting IdleHTTPConnectionEvictor task (evictionPeriod=5000)
-2018-05-18 11:07:31.298 - [][restartedMain] INFO  it.reply.sytel.adr.common.ws.GKConnectionKeepAliveStrategy - Using a custom ConnectionKeepAliveStrategy with default duration = 'infinite'
-2018-05-18 11:07:31.298 - [][restartedMain] INFO  it.reply.sytel.adr.common.ws.GKConnectionReuseStrategy - Using a custom ConnectionReuseStrategy based on peer HTTP headers/version
-2018-05-18 11:07:31.298 - [][restartedMain] INFO  it.reply.sytel.adr.common.ws.GKHttpRequestRetryHandler - Using a custom HttpRequestRetryHandler to delegate retry logic to JMS redelivery mechanism
-2018-05-18 11:07:31.298 - [][restartedMain] DEBUG it.reply.sytel.adr.common.ws.SharedHTTPSClient - Creating shared HTTP client
-2018-05-18 11:07:31.298 - [][restartedMain] DEBUG it.reply.sytel.adr.common.ws.SharedHTTPSClient - httpsClientProperties.getTrustURLString():[file:///D:/MyGitRepo/Dynatrace2RemedyLocalRepo/parent/dynatrace2RemedyEngine/src/main/resources/truststore.jks]
-2018-05-18 11:07:31.298 - [][restartedMain] DEBUG it.reply.sytel.adr.common.ws.AuthSSLProtocolSocketFactory - createTrustManagers - Initializing trust manager: dynatracetest
-2018-05-18 11:07:31.298 - [][restartedMain] DEBUG it.reply.sytel.adr.common.ws.AuthSSLProtocolSocketFactory - Initializing trust manager
-2018-05-18 11:07:31.298 - [][restartedMain] DEBUG it.reply.sytel.adr.common.ws.AuthSSLProtocolSocketFactory - --------- protocolHandShake:[TLSv1.2]--------
-2018-05-18 11:07:31.298 - [][restartedMain] DEBUG it.reply.sytel.adr.common.ws.SharedHTTPSClient - Shared HTTP client created successfully!
-2018-05-18 11:07:31.298 - [][Thread-72] INFO  it.reply.sytel.adr.common.ws.IdleHTTPConnectionEvictor - Starting IdleHTTPConnectionEvictor task (evictionPeriod=5000)
-2018-05-18 11:07:31.314 - [][restartedMain] DEBUG it.reply.sytel.adr.common.resource.imp.ResourceFile - getting the inputStream from fileName:[ADR.properties]
-2018-05-18 11:07:31.329 - [][restartedMain] DEBUG it.reply.sytel.adr.configuration.ConfigServicesFile - propertyValue:[ADBM] for propertyName:[DASHBOARD_NAMES]
-2018-05-18 11:07:31.329 - [][restartedMain] DEBUG it.reply.sytel.adr.configuration.ConfigServicesFile - propertyValue:[RemedyUsr] for propertyName:[REMEDY_AUTH_INFO_USER]
-2018-05-18 11:07:31.329 - [][restartedMain] DEBUG it.reply.sytel.adr.configuration.ConfigServicesFile - propertyValue:[RemedyPwd         ] for propertyName:[REMEDY_AUTH_INFO_PWD]
-2018-05-18 11:07:31.329 - [][restartedMain] DEBUG it.reply.sytel.adr.configuration.ConfigServicesFile - propertyValue:[https://dynatrace-sub-CA:8021/rest/management/dashboard/ADBM_TEST_REMEDY_INTEGRATION] for propertyName:[ADBM_URL]
-2018-05-18 11:07:31.329 - [][restartedMain] DEBUG it.reply.sytel.adr.configuration.ConfigServicesFile - propertyValue:[admin] for propertyName:[ADBM_USER]
-2018-05-18 11:07:31.329 - [][restartedMain] DEBUG it.reply.sytel.adr.configuration.ConfigServicesFile - propertyValue:[adradmin01] for propertyName:[ADBM_PWD]
-2018-05-18 11:07:31.329 - [][restartedMain] DEBUG it.reply.sytel.adr.configuration.ConfigServicesFile - propertyValue:[Dynatrace] for propertyName:[ADBM_FIRSTNAME]
-2018-05-18 11:07:31.329 - [][restartedMain] DEBUG it.reply.sytel.adr.configuration.ConfigServicesFile - propertyValue:[2-Significant/Large] for propertyName:[ADBM_IMPACT]
-2018-05-18 11:07:31.329 - [][restartedMain] DEBUG it.reply.sytel.adr.configuration.ConfigServicesFile - propertyValue:[Dynatrace] for propertyName:[ADBM_LASTNAME]
-2018-05-18 11:07:31.329 - [][restartedMain] DEBUG it.reply.sytel.adr.configuration.ConfigServicesFile - propertyValue:[Systems Management] for propertyName:[ADBM_REPORTED_SOURCE]
-2018-05-18 11:07:31.329 - [][restartedMain] DEBUG it.reply.sytel.adr.configuration.ConfigServicesFile - propertyValue:[Infrastructure Event] for propertyName:[ADBM_SERVICE_TYPE]
-2018-05-18 11:07:31.329 - [][restartedMain] DEBUG it.reply.sytel.adr.configuration.ConfigServicesFile - propertyValue:[New] for propertyName:[ADBM_TICKET_STATUS]
-2018-05-18 11:07:31.329 - [][restartedMain] DEBUG it.reply.sytel.adr.configuration.ConfigServicesFile - propertyValue:[2-High] for propertyName:[ADBM_URGENCY]
-2018-05-18 11:07:31.329 - [][restartedMain] DEBUG it.reply.sytel.adr.configuration.ConfigServicesFile - Configuration DONE
-2018-05-18 11:07:31.345 - [][restartedMain] INFO  it.reply.sytel.adr.configuration.ConfigServicesDB - connecting to DB for getting the configuration...
-2018-05-18 11:07:31.376 - [][restartedMain] INFO  it.reply.sytel.adr.configuration.ConfigServicesDB - connecting to DB for getting the configuration...DONE
-2018-05-18 11:07:50.809 - [][Thread-67] INFO  it.reply.sytel.adr.common.ws.SharedHTTPSClient - Shutting down shared HTTP client connection manager
-2018-05-18 11:07:50.809 - [][Thread-72] INFO  it.reply.sytel.adr.common.ws.IdleHTTPConnectionEvictor - IdleHTTPConnectionEvictor task stopped
-2018-05-18 11:07:50.809 - [][Thread-67] INFO  it.reply.sytel.adr.common.ws.SharedHTTPSClient - Shutting down shared HTTP client connection manager
-2018-05-18 11:07:50.809 - [][Thread-71] INFO  it.reply.sytel.adr.common.ws.IdleHTTPConnectionEvictor - IdleHTTPConnectionEvictor task stopped
-2018-05-18 11:07:54.843 - [][restartedMain] INFO  it.reply.sytel.adr.common.ws.GKConnectionKeepAliveStrategy - Using a custom ConnectionKeepAliveStrategy with default duration = 'infinite'
-2018-05-18 11:07:54.843 - [][restartedMain] INFO  it.reply.sytel.adr.common.ws.GKConnectionReuseStrategy - Using a custom ConnectionReuseStrategy based on peer HTTP headers/version
-2018-05-18 11:07:54.843 - [][restartedMain] INFO  it.reply.sytel.adr.common.ws.GKHttpRequestRetryHandler - Using a custom HttpRequestRetryHandler to delegate retry logic to JMS redelivery mechanism
-2018-05-18 11:07:54.859 - [][restartedMain] DEBUG it.reply.sytel.adr.common.ws.SharedHTTPSClient - Creating shared HTTP client
-2018-05-18 11:07:54.859 - [][restartedMain] DEBUG it.reply.sytel.adr.common.ws.SharedHTTPSClient - httpsClientProperties.getTrustURLString():[file:///D:/MyGitRepo/Dynatrace2RemedyLocalRepo/parent/dynatrace2RemedyEngine/src/main/resources/truststore.jks]
-2018-05-18 11:07:54.859 - [][restartedMain] DEBUG it.reply.sytel.adr.common.ws.AuthSSLProtocolSocketFactory - createTrustManagers - Initializing trust manager: dynatracetest
-2018-05-18 11:07:54.859 - [][restartedMain] DEBUG it.reply.sytel.adr.common.ws.AuthSSLProtocolSocketFactory - Initializing trust manager
-2018-05-18 11:07:54.859 - [][restartedMain] DEBUG it.reply.sytel.adr.common.ws.AuthSSLProtocolSocketFactory - --------- protocolHandShake:[TLSv1.2]--------
-2018-05-18 11:07:54.874 - [][restartedMain] DEBUG it.reply.sytel.adr.common.ws.SharedHTTPSClient - Shared HTTP client created successfully!
-2018-05-18 11:07:54.874 - [][Thread-80] INFO  it.reply.sytel.adr.common.ws.IdleHTTPConnectionEvictor - Starting IdleHTTPConnectionEvictor task (evictionPeriod=5000)
-2018-05-18 11:07:54.890 - [][restartedMain] INFO  it.reply.sytel.adr.common.ws.GKConnectionKeepAliveStrategy - Using a custom ConnectionKeepAliveStrategy with default duration = 'infinite'
-2018-05-18 11:07:54.890 - [][restartedMain] INFO  it.reply.sytel.adr.common.ws.GKConnectionReuseStrategy - Using a custom ConnectionReuseStrategy based on peer HTTP headers/version
-2018-05-18 11:07:54.890 - [][restartedMain] INFO  it.reply.sytel.adr.common.ws.GKHttpRequestRetryHandler - Using a custom HttpRequestRetryHandler to delegate retry logic to JMS redelivery mechanism
-2018-05-18 11:07:54.890 - [][restartedMain] DEBUG it.reply.sytel.adr.common.ws.SharedHTTPSClient - Creating shared HTTP client
-2018-05-18 11:07:54.890 - [][restartedMain] DEBUG it.reply.sytel.adr.common.ws.SharedHTTPSClient - httpsClientProperties.getTrustURLString():[file:///D:/MyGitRepo/Dynatrace2RemedyLocalRepo/parent/dynatrace2RemedyEngine/src/main/resources/truststore.jks]
-2018-05-18 11:07:54.890 - [][restartedMain] DEBUG it.reply.sytel.adr.common.ws.AuthSSLProtocolSocketFactory - createTrustManagers - Initializing trust manager: dynatracetest
-2018-05-18 11:07:54.890 - [][restartedMain] DEBUG it.reply.sytel.adr.common.ws.AuthSSLProtocolSocketFactory - Initializing trust manager
-2018-05-18 11:07:54.890 - [][restartedMain] DEBUG it.reply.sytel.adr.common.ws.AuthSSLProtocolSocketFactory - --------- protocolHandShake:[TLSv1.2]--------
-2018-05-18 11:07:54.906 - [][restartedMain] DEBUG it.reply.sytel.adr.common.ws.SharedHTTPSClient - Shared HTTP client created successfully!
-2018-05-18 11:07:54.906 - [][Thread-81] INFO  it.reply.sytel.adr.common.ws.IdleHTTPConnectionEvictor - Starting IdleHTTPConnectionEvictor task (evictionPeriod=5000)
-2018-05-18 11:07:54.921 - [][restartedMain] DEBUG it.reply.sytel.adr.common.resource.imp.ResourceFile - getting the inputStream from fileName:[ADR.properties]
-2018-05-18 11:07:54.921 - [][restartedMain] DEBUG it.reply.sytel.adr.configuration.ConfigServicesFile - propertyValue:[ADBM] for propertyName:[DASHBOARD_NAMES]
-2018-05-18 11:07:54.921 - [][restartedMain] DEBUG it.reply.sytel.adr.configuration.ConfigServicesFile - propertyValue:[RemedyUsr] for propertyName:[REMEDY_AUTH_INFO_USER]
-2018-05-18 11:07:54.921 - [][restartedMain] DEBUG it.reply.sytel.adr.configuration.ConfigServicesFile - propertyValue:[RemedyPwd         ] for propertyName:[REMEDY_AUTH_INFO_PWD]
-2018-05-18 11:07:54.921 - [][restartedMain] DEBUG it.reply.sytel.adr.configuration.ConfigServicesFile - propertyValue:[https://dynatrace-sub-CA:8021/rest/management/dashboard/ADBM_TEST_REMEDY_INTEGRATION] for propertyName:[ADBM_URL]
-2018-05-18 11:07:54.921 - [][restartedMain] DEBUG it.reply.sytel.adr.configuration.ConfigServicesFile - propertyValue:[admin] for propertyName:[ADBM_USER]
-2018-05-18 11:07:54.921 - [][restartedMain] DEBUG it.reply.sytel.adr.configuration.ConfigServicesFile - propertyValue:[adradmin01] for propertyName:[ADBM_PWD]
-2018-05-18 11:07:54.921 - [][restartedMain] DEBUG it.reply.sytel.adr.configuration.ConfigServicesFile - propertyValue:[Dynatrace] for propertyName:[ADBM_FIRSTNAME]
-2018-05-18 11:07:54.921 - [][restartedMain] DEBUG it.reply.sytel.adr.configuration.ConfigServicesFile - propertyValue:[2-Significant/Large] for propertyName:[ADBM_IMPACT]
-2018-05-18 11:07:54.921 - [][restartedMain] DEBUG it.reply.sytel.adr.configuration.ConfigServicesFile - propertyValue:[Dynatrace] for propertyName:[ADBM_LASTNAME]
-2018-05-18 11:07:54.921 - [][restartedMain] DEBUG it.reply.sytel.adr.configuration.ConfigServicesFile - propertyValue:[Systems Management] for propertyName:[ADBM_REPORTED_SOURCE]
-2018-05-18 11:07:54.921 - [][restartedMain] DEBUG it.reply.sytel.adr.configuration.ConfigServicesFile - propertyValue:[Infrastructure Event] for propertyName:[ADBM_SERVICE_TYPE]
-2018-05-18 11:07:54.921 - [][restartedMain] DEBUG it.reply.sytel.adr.configuration.ConfigServicesFile - propertyValue:[New] for propertyName:[ADBM_TICKET_STATUS]
-2018-05-18 11:07:54.921 - [][restartedMain] DEBUG it.reply.sytel.adr.configuration.ConfigServicesFile - propertyValue:[2-High] for propertyName:[ADBM_URGENCY]
-2018-05-18 11:07:54.921 - [][restartedMain] DEBUG it.reply.sytel.adr.configuration.ConfigServicesFile - Configuration DONE
-2018-05-18 11:07:54.953 - [][restartedMain] INFO  it.reply.sytel.adr.configuration.ConfigServicesDB - connecting to DB for getting the configuration...
-2018-05-18 11:07:54.968 - [][restartedMain] INFO  it.reply.sytel.adr.configuration.ConfigServicesDB - connecting to DB for getting the configuration...DONE
-2018-05-18 11:10:00.275 - [][Thread-76] INFO  it.reply.sytel.adr.common.ws.SharedHTTPSClient - Shutting down shared HTTP client connection manager
-2018-05-18 11:10:00.275 - [][Thread-81] INFO  it.reply.sytel.adr.common.ws.IdleHTTPConnectionEvictor - IdleHTTPConnectionEvictor task stopped
-2018-05-18 11:10:00.275 - [][Thread-76] INFO  it.reply.sytel.adr.common.ws.SharedHTTPSClient - Shutting down shared HTTP client connection manager
-2018-05-18 11:10:00.275 - [][Thread-80] INFO  it.reply.sytel.adr.common.ws.IdleHTTPConnectionEvictor - IdleHTTPConnectionEvictor task stopped
-2018-05-18 11:10:04.453 - [][restartedMain] INFO  it.reply.sytel.adr.common.ws.GKConnectionKeepAliveStrategy - Using a custom ConnectionKeepAliveStrategy with default duration = 'infinite'
-2018-05-18 11:10:04.469 - [][restartedMain] INFO  it.reply.sytel.adr.common.ws.GKConnectionReuseStrategy - Using a custom ConnectionReuseStrategy based on peer HTTP headers/version
-2018-05-18 11:10:04.469 - [][restartedMain] INFO  it.reply.sytel.adr.common.ws.GKHttpRequestRetryHandler - Using a custom HttpRequestRetryHandler to delegate retry logic to JMS redelivery mechanism
-2018-05-18 11:10:04.469 - [][restartedMain] DEBUG it.reply.sytel.adr.common.ws.SharedHTTPSClient - Creating shared HTTP client
-2018-05-18 11:10:04.469 - [][restartedMain] DEBUG it.reply.sytel.adr.common.ws.SharedHTTPSClient - httpsClientProperties.getTrustURLString():[file:///D:/MyGitRepo/Dynatrace2RemedyLocalRepo/parent/dynatrace2RemedyEngine/src/main/resources/truststore.jks]
-2018-05-18 11:10:04.469 - [][restartedMain] DEBUG it.reply.sytel.adr.common.ws.AuthSSLProtocolSocketFactory - createTrustManagers - Initializing trust manager: dynatracetest
-2018-05-18 11:10:04.469 - [][restartedMain] DEBUG it.reply.sytel.adr.common.ws.AuthSSLProtocolSocketFactory - Initializing trust manager
-2018-05-18 11:10:04.469 - [][restartedMain] DEBUG it.reply.sytel.adr.common.ws.AuthSSLProtocolSocketFactory - --------- protocolHandShake:[TLSv1.2]--------
-2018-05-18 11:10:04.484 - [][restartedMain] DEBUG it.reply.sytel.adr.common.ws.SharedHTTPSClient - Shared HTTP client created successfully!
-2018-05-18 11:10:04.484 - [][Thread-89] INFO  it.reply.sytel.adr.common.ws.IdleHTTPConnectionEvictor - Starting IdleHTTPConnectionEvictor task (evictionPeriod=5000)
-2018-05-18 11:10:04.516 - [][restartedMain] INFO  it.reply.sytel.adr.common.ws.GKConnectionKeepAliveStrategy - Using a custom ConnectionKeepAliveStrategy with default duration = 'infinite'
-2018-05-18 11:10:04.516 - [][restartedMain] INFO  it.reply.sytel.adr.common.ws.GKConnectionReuseStrategy - Using a custom ConnectionReuseStrategy based on peer HTTP headers/version
-2018-05-18 11:10:04.516 - [][restartedMain] INFO  it.reply.sytel.adr.common.ws.GKHttpRequestRetryHandler - Using a custom HttpRequestRetryHandler to delegate retry logic to JMS redelivery mechanism
-2018-05-18 11:10:04.516 - [][restartedMain] DEBUG it.reply.sytel.adr.common.ws.SharedHTTPSClient - Creating shared HTTP client
-2018-05-18 11:10:04.516 - [][restartedMain] DEBUG it.reply.sytel.adr.common.ws.SharedHTTPSClient - httpsClientProperties.getTrustURLString():[file:///D:/MyGitRepo/Dynatrace2RemedyLocalRepo/parent/dynatrace2RemedyEngine/src/main/resources/truststore.jks]
-2018-05-18 11:10:04.516 - [][restartedMain] DEBUG it.reply.sytel.adr.common.ws.AuthSSLProtocolSocketFactory - createTrustManagers - Initializing trust manager: dynatracetest
-2018-05-18 11:10:04.516 - [][restartedMain] DEBUG it.reply.sytel.adr.common.ws.AuthSSLProtocolSocketFactory - Initializing trust manager
-2018-05-18 11:10:04.516 - [][restartedMain] DEBUG it.reply.sytel.adr.common.ws.AuthSSLProtocolSocketFactory - --------- protocolHandShake:[TLSv1.2]--------
-2018-05-18 11:10:04.531 - [][restartedMain] DEBUG it.reply.sytel.adr.common.ws.SharedHTTPSClient - Shared HTTP client created successfully!
-2018-05-18 11:10:04.531 - [][Thread-90] INFO  it.reply.sytel.adr.common.ws.IdleHTTPConnectionEvictor - Starting IdleHTTPConnectionEvictor task (evictionPeriod=5000)
-2018-05-18 11:10:04.562 - [][restartedMain] DEBUG it.reply.sytel.adr.common.resource.imp.ResourceFile - getting the inputStream from fileName:[ADR.properties]
-2018-05-18 11:10:04.562 - [][restartedMain] DEBUG it.reply.sytel.adr.configuration.ConfigServicesFile - propertyValue:[ADBM] for propertyName:[DASHBOARD_NAMES]
-2018-05-18 11:10:04.562 - [][restartedMain] DEBUG it.reply.sytel.adr.configuration.ConfigServicesFile - propertyValue:[RemedyUsr] for propertyName:[REMEDY_AUTH_INFO_USER]
-2018-05-18 11:10:04.562 - [][restartedMain] DEBUG it.reply.sytel.adr.configuration.ConfigServicesFile - propertyValue:[RemedyPwd         ] for propertyName:[REMEDY_AUTH_INFO_PWD]
-2018-05-18 11:10:04.562 - [][restartedMain] DEBUG it.reply.sytel.adr.configuration.ConfigServicesFile - propertyValue:[https://dynatrace-sub-CA:8021/rest/management/dashboard/ADBM_TEST_REMEDY_INTEGRATION] for propertyName:[ADBM_URL]
-2018-05-18 11:10:04.562 - [][restartedMain] DEBUG it.reply.sytel.adr.configuration.ConfigServicesFile - propertyValue:[admin] for propertyName:[ADBM_USER]
-2018-05-18 11:10:04.562 - [][restartedMain] DEBUG it.reply.sytel.adr.configuration.ConfigServicesFile - propertyValue:[adradmin01] for propertyName:[ADBM_PWD]
-2018-05-18 11:10:04.562 - [][restartedMain] DEBUG it.reply.sytel.adr.configuration.ConfigServicesFile - propertyValue:[Dynatrace] for propertyName:[ADBM_FIRSTNAME]
-2018-05-18 11:10:04.562 - [][restartedMain] DEBUG it.reply.sytel.adr.configuration.ConfigServicesFile - propertyValue:[2-Significant/Large] for propertyName:[ADBM_IMPACT]
-2018-05-18 11:10:04.562 - [][restartedMain] DEBUG it.reply.sytel.adr.configuration.ConfigServicesFile - propertyValue:[Dynatrace] for propertyName:[ADBM_LASTNAME]
-2018-05-18 11:10:04.562 - [][restartedMain] DEBUG it.reply.sytel.adr.configuration.ConfigServicesFile - propertyValue:[Systems Management] for propertyName:[ADBM_REPORTED_SOURCE]
-2018-05-18 11:10:04.562 - [][restartedMain] DEBUG it.reply.sytel.adr.configuration.ConfigServicesFile - propertyValue:[Infrastructure Event] for propertyName:[ADBM_SERVICE_TYPE]
-2018-05-18 11:10:04.562 - [][restartedMain] DEBUG it.reply.sytel.adr.configuration.ConfigServicesFile - propertyValue:[New] for propertyName:[ADBM_TICKET_STATUS]
-2018-05-18 11:10:04.562 - [][restartedMain] DEBUG it.reply.sytel.adr.configuration.ConfigServicesFile - propertyValue:[2-High] for propertyName:[ADBM_URGENCY]
-2018-05-18 11:10:04.562 - [][restartedMain] DEBUG it.reply.sytel.adr.configuration.ConfigServicesFile - Configuration DONE
-2018-05-18 11:10:04.594 - [][restartedMain] INFO  it.reply.sytel.adr.configuration.ConfigServicesDB - connecting to DB for getting the configuration...
-2018-05-18 11:10:04.609 - [][restartedMain] INFO  it.reply.sytel.adr.configuration.ConfigServicesDB - connecting to DB for getting the configuration...DONE
-2018-05-18 11:10:26.296 - [][Thread-85] INFO  it.reply.sytel.adr.common.ws.SharedHTTPSClient - Shutting down shared HTTP client connection manager
-2018-05-18 11:10:26.296 - [][Thread-90] INFO  it.reply.sytel.adr.common.ws.IdleHTTPConnectionEvictor - IdleHTTPConnectionEvictor task stopped
-2018-05-18 11:10:26.296 - [][Thread-85] INFO  it.reply.sytel.adr.common.ws.SharedHTTPSClient - Shutting down shared HTTP client connection manager
-2018-05-18 11:10:26.296 - [][Thread-89] INFO  it.reply.sytel.adr.common.ws.IdleHTTPConnectionEvictor - IdleHTTPConnectionEvictor task stopped
+2018-05-18 16:31:18.231 - [][restartedMain] INFO  it.reply.sytel.adr.common.ws.GKConnectionKeepAliveStrategy - Using a custom ConnectionKeepAliveStrategy with default duration = 'infinite'
+2018-05-18 16:31:18.243 - [][restartedMain] INFO  it.reply.sytel.adr.common.ws.GKConnectionReuseStrategy - Using a custom ConnectionReuseStrategy based on peer HTTP headers/version
+2018-05-18 16:31:18.258 - [][restartedMain] INFO  it.reply.sytel.adr.common.ws.GKHttpRequestRetryHandler - Using a custom HttpRequestRetryHandler to delegate retry logic to JMS redelivery mechanism
+2018-05-18 16:31:18.258 - [][restartedMain] DEBUG it.reply.sytel.adr.common.ws.SharedHTTPSClient - Creating shared HTTP client
+2018-05-18 16:31:18.258 - [][restartedMain] DEBUG it.reply.sytel.adr.common.ws.SharedHTTPSClient - httpsClientProperties.getTrustURLString():[file:///D:/MyGitRepo/Dynatrace2RemedyLocalRepo/parent/dynatrace2RemedyEngine/src/main/resources/truststore.jks]
+2018-05-18 16:31:18.258 - [][restartedMain] DEBUG it.reply.sytel.adr.common.ws.AuthSSLProtocolSocketFactory - createTrustManagers - Initializing trust manager: dynatracetest
+2018-05-18 16:31:18.258 - [][restartedMain] DEBUG it.reply.sytel.adr.common.ws.AuthSSLProtocolSocketFactory - Initializing trust manager
+2018-05-18 16:31:18.274 - [][restartedMain] DEBUG it.reply.sytel.adr.common.ws.AuthSSLProtocolSocketFactory - --------- protocolHandShake:[TLSv1.2]--------
+2018-05-18 16:31:18.337 - [][restartedMain] DEBUG it.reply.sytel.adr.common.ws.SharedHTTPSClient - Shared HTTP client created successfully!
+2018-05-18 16:31:18.337 - [][Thread-6] INFO  it.reply.sytel.adr.common.ws.IdleHTTPConnectionEvictor - Starting IdleHTTPConnectionEvictor task (evictionPeriod=5000)
+2018-05-18 16:31:18.415 - [][restartedMain] INFO  it.reply.sytel.adr.common.ws.GKConnectionKeepAliveStrategy - Using a custom ConnectionKeepAliveStrategy with default duration = 'infinite'
+2018-05-18 16:31:18.415 - [][restartedMain] INFO  it.reply.sytel.adr.common.ws.GKConnectionReuseStrategy - Using a custom ConnectionReuseStrategy based on peer HTTP headers/version
+2018-05-18 16:31:18.415 - [][restartedMain] INFO  it.reply.sytel.adr.common.ws.GKHttpRequestRetryHandler - Using a custom HttpRequestRetryHandler to delegate retry logic to JMS redelivery mechanism
+2018-05-18 16:31:18.415 - [][restartedMain] DEBUG it.reply.sytel.adr.common.ws.SharedHTTPSClient - Creating shared HTTP client
+2018-05-18 16:31:18.415 - [][restartedMain] DEBUG it.reply.sytel.adr.common.ws.SharedHTTPSClient - httpsClientProperties.getTrustURLString():[file:///D:/MyGitRepo/Dynatrace2RemedyLocalRepo/parent/dynatrace2RemedyEngine/src/main/resources/truststore.jks]
+2018-05-18 16:31:18.415 - [][restartedMain] DEBUG it.reply.sytel.adr.common.ws.AuthSSLProtocolSocketFactory - createTrustManagers - Initializing trust manager: dynatracetest
+2018-05-18 16:31:18.415 - [][restartedMain] DEBUG it.reply.sytel.adr.common.ws.AuthSSLProtocolSocketFactory - Initializing trust manager
+2018-05-18 16:31:18.415 - [][restartedMain] DEBUG it.reply.sytel.adr.common.ws.AuthSSLProtocolSocketFactory - --------- protocolHandShake:[TLSv1.2]--------
+2018-05-18 16:31:18.430 - [][restartedMain] DEBUG it.reply.sytel.adr.common.ws.SharedHTTPSClient - Shared HTTP client created successfully!
+2018-05-18 16:31:18.430 - [][Thread-7] INFO  it.reply.sytel.adr.common.ws.IdleHTTPConnectionEvictor - Starting IdleHTTPConnectionEvictor task (evictionPeriod=5000)
+2018-05-18 16:31:18.446 - [][restartedMain] DEBUG it.reply.sytel.adr.common.resource.imp.ResourceFile - getting the inputStream from fileName:[ADR.properties]
+2018-05-18 16:31:18.462 - [][restartedMain] DEBUG it.reply.sytel.adr.configuration.ConfigServicesFile - propertyValue:[ADBM] for propertyName:[DASHBOARD_NAMES]
+2018-05-18 16:31:18.462 - [][restartedMain] DEBUG it.reply.sytel.adr.configuration.ConfigServicesFile - propertyValue:[RemedyUsr] for propertyName:[REMEDY_AUTH_INFO_USER]
+2018-05-18 16:31:18.462 - [][restartedMain] DEBUG it.reply.sytel.adr.configuration.ConfigServicesFile - propertyValue:[RemedyPwd         ] for propertyName:[REMEDY_AUTH_INFO_PWD]
+2018-05-18 16:31:18.462 - [][restartedMain] DEBUG it.reply.sytel.adr.configuration.ConfigServicesFile - propertyValue:[https://dynatrace-sub-CA:8021/rest/management/dashboard/ADBM_TEST_REMEDY_INTEGRATION] for propertyName:[ADBM_URL]
+2018-05-18 16:31:18.462 - [][restartedMain] DEBUG it.reply.sytel.adr.configuration.ConfigServicesFile - propertyValue:[admin] for propertyName:[ADBM_USER]
+2018-05-18 16:31:18.462 - [][restartedMain] DEBUG it.reply.sytel.adr.configuration.ConfigServicesFile - propertyValue:[adradmin01] for propertyName:[ADBM_PWD]
+2018-05-18 16:31:18.462 - [][restartedMain] DEBUG it.reply.sytel.adr.configuration.ConfigServicesFile - propertyValue:[Dynatrace] for propertyName:[ADBM_FIRSTNAME]
+2018-05-18 16:31:18.462 - [][restartedMain] DEBUG it.reply.sytel.adr.configuration.ConfigServicesFile - propertyValue:[2-Significant/Large] for propertyName:[ADBM_IMPACT]
+2018-05-18 16:31:18.462 - [][restartedMain] DEBUG it.reply.sytel.adr.configuration.ConfigServicesFile - propertyValue:[Dynatrace] for propertyName:[ADBM_LASTNAME]
+2018-05-18 16:31:18.462 - [][restartedMain] DEBUG it.reply.sytel.adr.configuration.ConfigServicesFile - propertyValue:[Systems Management] for propertyName:[ADBM_REPORTED_SOURCE]
+2018-05-18 16:31:18.462 - [][restartedMain] DEBUG it.reply.sytel.adr.configuration.ConfigServicesFile - propertyValue:[Infrastructure Event] for propertyName:[ADBM_SERVICE_TYPE]
+2018-05-18 16:31:18.462 - [][restartedMain] DEBUG it.reply.sytel.adr.configuration.ConfigServicesFile - propertyValue:[New] for propertyName:[ADBM_TICKET_STATUS]
+2018-05-18 16:31:18.462 - [][restartedMain] DEBUG it.reply.sytel.adr.configuration.ConfigServicesFile - propertyValue:[2-High] for propertyName:[ADBM_URGENCY]
+2018-05-18 16:31:18.462 - [][restartedMain] DEBUG it.reply.sytel.adr.configuration.ConfigServicesFile - Configuration DONE
+2018-05-18 16:31:18.493 - [][restartedMain] INFO  it.reply.sytel.adr.configuration.ConfigServicesDB - connecting to DB for getting the configuration...
+2018-05-18 16:31:18.758 - [][restartedMain] INFO  it.reply.sytel.adr.configuration.ConfigServicesDB - connecting to DB for getting the configuration...DONE
+2018-05-18 17:31:34.745 - [][Thread-9] INFO  it.reply.sytel.adr.common.ws.SharedHTTPSClient - Shutting down shared HTTP client connection manager
+2018-05-18 17:31:34.745 - [][Thread-7] INFO  it.reply.sytel.adr.common.ws.IdleHTTPConnectionEvictor - IdleHTTPConnectionEvictor task stopped
+2018-05-18 17:31:34.761 - [][Thread-9] INFO  it.reply.sytel.adr.common.ws.SharedHTTPSClient - Shutting down shared HTTP client connection manager
+2018-05-18 17:31:34.761 - [][Thread-6] INFO  it.reply.sytel.adr.common.ws.IdleHTTPConnectionEvictor - IdleHTTPConnectionEvictor task stopped
+2018-05-18 17:31:42.832 - [][restartedMain] INFO  it.reply.sytel.adr.common.ws.GKConnectionKeepAliveStrategy - Using a custom ConnectionKeepAliveStrategy with default duration = 'infinite'
+2018-05-18 17:31:42.832 - [][restartedMain] INFO  it.reply.sytel.adr.common.ws.GKConnectionReuseStrategy - Using a custom ConnectionReuseStrategy based on peer HTTP headers/version
+2018-05-18 17:31:42.848 - [][restartedMain] INFO  it.reply.sytel.adr.common.ws.GKHttpRequestRetryHandler - Using a custom HttpRequestRetryHandler to delegate retry logic to JMS redelivery mechanism
+2018-05-18 17:31:42.848 - [][restartedMain] DEBUG it.reply.sytel.adr.common.ws.SharedHTTPSClient - Creating shared HTTP client
+2018-05-18 17:31:42.848 - [][restartedMain] DEBUG it.reply.sytel.adr.common.ws.SharedHTTPSClient - httpsClientProperties.getTrustURLString():[file:///D:/MyGitRepo/Dynatrace2RemedyLocalRepo/parent/dynatrace2RemedyEngine/src/main/resources/truststore.jks]
+2018-05-18 17:31:42.863 - [][restartedMain] DEBUG it.reply.sytel.adr.common.ws.AuthSSLProtocolSocketFactory - createTrustManagers - Initializing trust manager: dynatracetest
+2018-05-18 17:31:42.863 - [][restartedMain] DEBUG it.reply.sytel.adr.common.ws.AuthSSLProtocolSocketFactory - Initializing trust manager
+2018-05-18 17:31:42.863 - [][restartedMain] DEBUG it.reply.sytel.adr.common.ws.AuthSSLProtocolSocketFactory - --------- protocolHandShake:[TLSv1.2]--------
+2018-05-18 17:31:42.910 - [][Thread-17] INFO  it.reply.sytel.adr.common.ws.IdleHTTPConnectionEvictor - Starting IdleHTTPConnectionEvictor task (evictionPeriod=5000)
+2018-05-18 17:31:42.910 - [][restartedMain] DEBUG it.reply.sytel.adr.common.ws.SharedHTTPSClient - Shared HTTP client created successfully!
+2018-05-18 17:31:42.957 - [][restartedMain] INFO  it.reply.sytel.adr.common.ws.GKConnectionKeepAliveStrategy - Using a custom ConnectionKeepAliveStrategy with default duration = 'infinite'
+2018-05-18 17:31:42.957 - [][restartedMain] INFO  it.reply.sytel.adr.common.ws.GKConnectionReuseStrategy - Using a custom ConnectionReuseStrategy based on peer HTTP headers/version
+2018-05-18 17:31:42.957 - [][restartedMain] INFO  it.reply.sytel.adr.common.ws.GKHttpRequestRetryHandler - Using a custom HttpRequestRetryHandler to delegate retry logic to JMS redelivery mechanism
+2018-05-18 17:31:42.957 - [][restartedMain] DEBUG it.reply.sytel.adr.common.ws.SharedHTTPSClient - Creating shared HTTP client
+2018-05-18 17:31:42.957 - [][restartedMain] DEBUG it.reply.sytel.adr.common.ws.SharedHTTPSClient - httpsClientProperties.getTrustURLString():[file:///D:/MyGitRepo/Dynatrace2RemedyLocalRepo/parent/dynatrace2RemedyEngine/src/main/resources/truststore.jks]
+2018-05-18 17:31:42.957 - [][restartedMain] DEBUG it.reply.sytel.adr.common.ws.AuthSSLProtocolSocketFactory - createTrustManagers - Initializing trust manager: dynatracetest
+2018-05-18 17:31:42.957 - [][restartedMain] DEBUG it.reply.sytel.adr.common.ws.AuthSSLProtocolSocketFactory - Initializing trust manager
+2018-05-18 17:31:42.957 - [][restartedMain] DEBUG it.reply.sytel.adr.common.ws.AuthSSLProtocolSocketFactory - --------- protocolHandShake:[TLSv1.2]--------
+2018-05-18 17:31:42.988 - [][Thread-18] INFO  it.reply.sytel.adr.common.ws.IdleHTTPConnectionEvictor - Starting IdleHTTPConnectionEvictor task (evictionPeriod=5000)
+2018-05-18 17:31:42.988 - [][restartedMain] DEBUG it.reply.sytel.adr.common.ws.SharedHTTPSClient - Shared HTTP client created successfully!
+2018-05-18 17:31:43.019 - [][restartedMain] DEBUG it.reply.sytel.adr.common.resource.imp.ResourceFile - getting the inputStream from fileName:[ADR.properties]
+2018-05-18 17:31:43.019 - [][restartedMain] DEBUG it.reply.sytel.adr.configuration.ConfigServicesFile - propertyValue:[ADBM] for propertyName:[DASHBOARD_NAMES]
+2018-05-18 17:31:43.019 - [][restartedMain] DEBUG it.reply.sytel.adr.configuration.ConfigServicesFile - propertyValue:[RemedyUsr] for propertyName:[REMEDY_AUTH_INFO_USER]
+2018-05-18 17:31:43.019 - [][restartedMain] DEBUG it.reply.sytel.adr.configuration.ConfigServicesFile - propertyValue:[RemedyPwd         ] for propertyName:[REMEDY_AUTH_INFO_PWD]
+2018-05-18 17:31:43.019 - [][restartedMain] DEBUG it.reply.sytel.adr.configuration.ConfigServicesFile - propertyValue:[https://dynatrace-sub-CA:8021/rest/management/dashboard/ADBM_TEST_REMEDY_INTEGRATION] for propertyName:[ADBM_URL]
+2018-05-18 17:31:43.019 - [][restartedMain] DEBUG it.reply.sytel.adr.configuration.ConfigServicesFile - propertyValue:[admin] for propertyName:[ADBM_USER]
+2018-05-18 17:31:43.019 - [][restartedMain] DEBUG it.reply.sytel.adr.configuration.ConfigServicesFile - propertyValue:[adradmin01] for propertyName:[ADBM_PWD]
+2018-05-18 17:31:43.019 - [][restartedMain] DEBUG it.reply.sytel.adr.configuration.ConfigServicesFile - propertyValue:[Dynatrace] for propertyName:[ADBM_FIRSTNAME]
+2018-05-18 17:31:43.019 - [][restartedMain] DEBUG it.reply.sytel.adr.configuration.ConfigServicesFile - propertyValue:[2-Significant/Large] for propertyName:[ADBM_IMPACT]
+2018-05-18 17:31:43.019 - [][restartedMain] DEBUG it.reply.sytel.adr.configuration.ConfigServicesFile - propertyValue:[Dynatrace] for propertyName:[ADBM_LASTNAME]
+2018-05-18 17:31:43.019 - [][restartedMain] DEBUG it.reply.sytel.adr.configuration.ConfigServicesFile - propertyValue:[Systems Management] for propertyName:[ADBM_REPORTED_SOURCE]
+2018-05-18 17:31:43.019 - [][restartedMain] DEBUG it.reply.sytel.adr.configuration.ConfigServicesFile - propertyValue:[Infrastructure Event] for propertyName:[ADBM_SERVICE_TYPE]
+2018-05-18 17:31:43.019 - [][restartedMain] DEBUG it.reply.sytel.adr.configuration.ConfigServicesFile - propertyValue:[New] for propertyName:[ADBM_TICKET_STATUS]
+2018-05-18 17:31:43.019 - [][restartedMain] DEBUG it.reply.sytel.adr.configuration.ConfigServicesFile - propertyValue:[2-High] for propertyName:[ADBM_URGENCY]
+2018-05-18 17:31:43.019 - [][restartedMain] DEBUG it.reply.sytel.adr.configuration.ConfigServicesFile - Configuration DONE
+2018-05-18 17:31:43.051 - [][restartedMain] INFO  it.reply.sytel.adr.configuration.ConfigServicesDB - connecting to DB for getting the configuration...
+2018-05-18 17:31:43.082 - [][restartedMain] INFO  it.reply.sytel.adr.configuration.ConfigServicesDB - connecting to DB for getting the configuration...DONE
+2018-05-18 17:31:43.441 - [][restartedMain] INFO  it.reply.sytel.adr.common.ws.SharedHTTPSClient - Shutting down shared HTTP client connection manager
+2018-05-18 17:31:43.441 - [][Thread-18] INFO  it.reply.sytel.adr.common.ws.IdleHTTPConnectionEvictor - IdleHTTPConnectionEvictor task stopped
+2018-05-18 17:31:43.441 - [][restartedMain] INFO  it.reply.sytel.adr.common.ws.SharedHTTPSClient - Shutting down shared HTTP client connection manager
+2018-05-18 17:31:43.441 - [][Thread-17] INFO  it.reply.sytel.adr.common.ws.IdleHTTPConnectionEvictor - IdleHTTPConnectionEvictor task stopped
+2018-05-18 17:32:10.202 - [][restartedMain] INFO  it.reply.sytel.adr.common.ws.GKConnectionKeepAliveStrategy - Using a custom ConnectionKeepAliveStrategy with default duration = 'infinite'
+2018-05-18 17:32:10.217 - [][restartedMain] INFO  it.reply.sytel.adr.common.ws.GKConnectionReuseStrategy - Using a custom ConnectionReuseStrategy based on peer HTTP headers/version
+2018-05-18 17:32:10.233 - [][restartedMain] INFO  it.reply.sytel.adr.common.ws.GKHttpRequestRetryHandler - Using a custom HttpRequestRetryHandler to delegate retry logic to JMS redelivery mechanism
+2018-05-18 17:32:10.233 - [][restartedMain] DEBUG it.reply.sytel.adr.common.ws.SharedHTTPSClient - Creating shared HTTP client
+2018-05-18 17:32:10.233 - [][restartedMain] DEBUG it.reply.sytel.adr.common.ws.SharedHTTPSClient - httpsClientProperties.getTrustURLString():[file:///D:/MyGitRepo/Dynatrace2RemedyLocalRepo/parent/dynatrace2RemedyEngine/src/main/resources/truststore.jks]
+2018-05-18 17:32:10.233 - [][restartedMain] DEBUG it.reply.sytel.adr.common.ws.AuthSSLProtocolSocketFactory - createTrustManagers - Initializing trust manager: dynatracetest
+2018-05-18 17:32:10.233 - [][restartedMain] DEBUG it.reply.sytel.adr.common.ws.AuthSSLProtocolSocketFactory - Initializing trust manager
+2018-05-18 17:32:10.233 - [][restartedMain] DEBUG it.reply.sytel.adr.common.ws.AuthSSLProtocolSocketFactory - --------- protocolHandShake:[TLSv1.2]--------
+2018-05-18 17:32:10.264 - [][Thread-23] INFO  it.reply.sytel.adr.common.ws.IdleHTTPConnectionEvictor - Starting IdleHTTPConnectionEvictor task (evictionPeriod=5000)
+2018-05-18 17:32:10.264 - [][restartedMain] DEBUG it.reply.sytel.adr.common.ws.SharedHTTPSClient - Shared HTTP client created successfully!
+2018-05-18 17:32:10.296 - [][restartedMain] INFO  it.reply.sytel.adr.common.ws.GKConnectionKeepAliveStrategy - Using a custom ConnectionKeepAliveStrategy with default duration = 'infinite'
+2018-05-18 17:32:10.296 - [][restartedMain] INFO  it.reply.sytel.adr.common.ws.GKConnectionReuseStrategy - Using a custom ConnectionReuseStrategy based on peer HTTP headers/version
+2018-05-18 17:32:10.296 - [][restartedMain] INFO  it.reply.sytel.adr.common.ws.GKHttpRequestRetryHandler - Using a custom HttpRequestRetryHandler to delegate retry logic to JMS redelivery mechanism
+2018-05-18 17:32:10.296 - [][restartedMain] DEBUG it.reply.sytel.adr.common.ws.SharedHTTPSClient - Creating shared HTTP client
+2018-05-18 17:32:10.296 - [][restartedMain] DEBUG it.reply.sytel.adr.common.ws.SharedHTTPSClient - httpsClientProperties.getTrustURLString():[file:///D:/MyGitRepo/Dynatrace2RemedyLocalRepo/parent/dynatrace2RemedyEngine/src/main/resources/truststore.jks]
+2018-05-18 17:32:10.311 - [][restartedMain] DEBUG it.reply.sytel.adr.common.ws.AuthSSLProtocolSocketFactory - createTrustManagers - Initializing trust manager: dynatracetest
+2018-05-18 17:32:10.311 - [][restartedMain] DEBUG it.reply.sytel.adr.common.ws.AuthSSLProtocolSocketFactory - Initializing trust manager
+2018-05-18 17:32:10.311 - [][restartedMain] DEBUG it.reply.sytel.adr.common.ws.AuthSSLProtocolSocketFactory - --------- protocolHandShake:[TLSv1.2]--------
+2018-05-18 17:32:10.327 - [][restartedMain] DEBUG it.reply.sytel.adr.common.ws.SharedHTTPSClient - Shared HTTP client created successfully!
+2018-05-18 17:32:10.327 - [][Thread-24] INFO  it.reply.sytel.adr.common.ws.IdleHTTPConnectionEvictor - Starting IdleHTTPConnectionEvictor task (evictionPeriod=5000)
+2018-05-18 17:32:10.358 - [][restartedMain] DEBUG it.reply.sytel.adr.common.resource.imp.ResourceFile - getting the inputStream from fileName:[ADR.properties]
+2018-05-18 17:32:10.358 - [][restartedMain] DEBUG it.reply.sytel.adr.configuration.ConfigServicesFile - propertyValue:[ADBM] for propertyName:[DASHBOARD_NAMES]
+2018-05-18 17:32:10.358 - [][restartedMain] DEBUG it.reply.sytel.adr.configuration.ConfigServicesFile - propertyValue:[RemedyUsr] for propertyName:[REMEDY_AUTH_INFO_USER]
+2018-05-18 17:32:10.358 - [][restartedMain] DEBUG it.reply.sytel.adr.configuration.ConfigServicesFile - propertyValue:[RemedyPwd         ] for propertyName:[REMEDY_AUTH_INFO_PWD]
+2018-05-18 17:32:10.358 - [][restartedMain] DEBUG it.reply.sytel.adr.configuration.ConfigServicesFile - propertyValue:[https://dynatrace-sub-CA:8021/rest/management/dashboard/ADBM_TEST_REMEDY_INTEGRATION] for propertyName:[ADBM_URL]
+2018-05-18 17:32:10.358 - [][restartedMain] DEBUG it.reply.sytel.adr.configuration.ConfigServicesFile - propertyValue:[admin] for propertyName:[ADBM_USER]
+2018-05-18 17:32:10.358 - [][restartedMain] DEBUG it.reply.sytel.adr.configuration.ConfigServicesFile - propertyValue:[adradmin01] for propertyName:[ADBM_PWD]
+2018-05-18 17:32:10.358 - [][restartedMain] DEBUG it.reply.sytel.adr.configuration.ConfigServicesFile - propertyValue:[Dynatrace] for propertyName:[ADBM_FIRSTNAME]
+2018-05-18 17:32:10.358 - [][restartedMain] DEBUG it.reply.sytel.adr.configuration.ConfigServicesFile - propertyValue:[2-Significant/Large] for propertyName:[ADBM_IMPACT]
+2018-05-18 17:32:10.358 - [][restartedMain] DEBUG it.reply.sytel.adr.configuration.ConfigServicesFile - propertyValue:[Dynatrace] for propertyName:[ADBM_LASTNAME]
+2018-05-18 17:32:10.358 - [][restartedMain] DEBUG it.reply.sytel.adr.configuration.ConfigServicesFile - propertyValue:[Systems Management] for propertyName:[ADBM_REPORTED_SOURCE]
+2018-05-18 17:32:10.358 - [][restartedMain] DEBUG it.reply.sytel.adr.configuration.ConfigServicesFile - propertyValue:[Infrastructure Event] for propertyName:[ADBM_SERVICE_TYPE]
+2018-05-18 17:32:10.358 - [][restartedMain] DEBUG it.reply.sytel.adr.configuration.ConfigServicesFile - propertyValue:[New] for propertyName:[ADBM_TICKET_STATUS]
+2018-05-18 17:32:10.358 - [][restartedMain] DEBUG it.reply.sytel.adr.configuration.ConfigServicesFile - propertyValue:[2-High] for propertyName:[ADBM_URGENCY]
+2018-05-18 17:32:10.358 - [][restartedMain] DEBUG it.reply.sytel.adr.configuration.ConfigServicesFile - Configuration DONE
+2018-05-18 17:32:10.374 - [][restartedMain] INFO  it.reply.sytel.adr.configuration.ConfigServicesDB - connecting to DB for getting the configuration...
+2018-05-18 17:32:10.405 - [][restartedMain] INFO  it.reply.sytel.adr.configuration.ConfigServicesDB - connecting to DB for getting the configuration...DONE
+2018-05-18 17:32:12.992 - [][RMI TCP Connection(2)-127.0.0.1] INFO  it.reply.sytel.adr.common.ws.SharedHTTPSClient - Shutting down shared HTTP client connection manager
+2018-05-18 17:32:12.992 - [][Thread-24] INFO  it.reply.sytel.adr.common.ws.IdleHTTPConnectionEvictor - IdleHTTPConnectionEvictor task stopped
+2018-05-18 17:32:12.992 - [][RMI TCP Connection(2)-127.0.0.1] INFO  it.reply.sytel.adr.common.ws.SharedHTTPSClient - Shutting down shared HTTP client connection manager
+2018-05-18 17:32:13.007 - [][Thread-23] INFO  it.reply.sytel.adr.common.ws.IdleHTTPConnectionEvictor - IdleHTTPConnectionEvictor task stopped
