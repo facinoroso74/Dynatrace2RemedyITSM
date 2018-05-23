@@ -12,18 +12,16 @@ $(document).ready(function() {
   	$('#menuId').find('a').each(function() {
         console.log($(this).removeClass("active"));
     });
-    $('#dashboardConfigurationId').addClass("active");
+    $('#remedyConfigurationListId').addClass("active");
 	    
 	$('#example').DataTable( {
-	     "ajax": '/dashboard/readAll',
+	     "ajax": '/remedy/readAll',
          "columns": [
             	{ "data": "checkbox" },
-            	{ "data": "dashboardId" },
-            	{ "data": "name" },
-            	{ "data": "description" },
-            	{ "data": "appUrl" },
-            	{ "data": "appUser" },
-            	{ "data": "appPwd" }
+            	{ "data": "remedyConfigurationId" },
+            	{ "data": "username" },
+            	{ "data": "password" },
+            	{ "data": "url" }
             ],
  	    	 "pageLength": 20,
 				
@@ -45,7 +43,7 @@ $(document).ready(function() {
 		
     $('#addbutton').click(function() {
 		$(location).attr("href",function() {
-			  return "/addDashboard/";
+			  return "/addRemedyConfiguration/";
 		});
     });
     
@@ -67,7 +65,7 @@ $(document).ready(function() {
 		}
 		
 		$(location).attr("href",function() {
-			  return "/editDashboard?idToEdit="+idToEdit;
+			  return "/editRemedyConfiguration?idToEdit="+idToEdit;
 		});
 		
     });
@@ -78,7 +76,6 @@ $(document).ready(function() {
 		
     	$("#example tr.selected td").each(function(index){
     		if(index==1){
-    			alert("Valore:["+$(this).text()+"]");
     			idToDelete= $(this).text();
     		}
     	});
@@ -88,17 +85,16 @@ $(document).ready(function() {
 			return;
 		}
 		request = $.ajax({
-		        url: "/dashboard/delete",
+		        url: "/remedy/delete",
 		        type: "get",
-		        data: { dashboardId: idToDelete}
+		        data: { remedyConfigurationId: idToDelete}
 		})
 				
 		// Callback handler that will be called on success
 		 request.done(function (response, textStatus, jqXHR){
 		        // Log a message to the console
-		        console.log("Hooray, it worked!");
 		        $(location).attr("href",function() {
-					  return "/dashboardList/";
+					  return "/remedyConfiguration/";
 				});
 		 });
 		
@@ -125,32 +121,25 @@ $(document).ready(function() {
    
 } );
 
-
-
 </script>
-
 
 <table id="example" class="display" style="width:100%">
         <thead>
             <tr>
                 <th>checkbox</th>
-                <th>dashboardId</th>
-                <th>name</th>
-                <th>description</th>
-                <th>appUrl</th>
-                <th>appUser</th>
-                <th>appPwd</th>
+                <th>remedyConfigurationId</th>
+                <th>username</th>
+                <th>password</th>
+                <th>url</th>
             </tr>
         </thead>
         <tfoot>
             <tr>
-            	 <th>checkbox</th>
-                <th>dashboardId</th>
-                <th>name</th>
-                <th>description</th>
-                <th>appUrl</th>
-                <th>appUser</th>
-                <th>appPwd</th>
+            	<th>checkbox</th>
+                <th>remedyConfigurationId</th>
+                <th>username</th>
+                <th>password</th>
+                <th>url</th>
             </tr>
         </tfoot>
     </table>

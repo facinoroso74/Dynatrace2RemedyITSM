@@ -33,7 +33,7 @@ li a:hover {
   <li><a id="schedulerManagerLinkId" href="/schedulerManager" class="active">SchedulerManager</a></li>
   <li><a id="incidentConfigurationId" href="/incidentConfiguration">IncidentConfiguration</a></li>
   <li><a id="dashboardConfigurationId" href="/dashboardList">DashboardConfiguration</a></li>
-  <li><a id="remedyConfigurationId" href="/remedyConfiguration">RemedyConfiguration</a></li>
+  <li><a id="remedyConfigurationListId" href="/remedyConfiguration">RemedyConfiguration</a></li>
   <li><a id="dynatraceIncidentConfigurationId" href="/dynatraceIncidents">DynatraceIncidents</a></li>
 </ul>
 </div>
