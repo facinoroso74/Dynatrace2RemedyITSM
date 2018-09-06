@@ -1,22 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<beans xmlns="http://www.springframework.org/schema/beans"
-	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:context="http://www.springframework.org/schema/context"
-	xsi:schemaLocation="http://www.springframework.org/schema/beans
-        http://www.springframework.org/schema/beans/spring-beans.xsd
-        http://www.springframework.org/schema/context
-        http://www.springframework.org/schema/context/spring-context.xsd">
+<!DOCTYPE beans PUBLIC "-//SPRING//DTD BEAN//EN" "http://www.springframework.org/dtd/spring-beans.dtd" >
+<beans>
 
-	<!-- <context:component-scan base-package="com.in28minutes.spring.basics"/> -->
-
-	<bean id="xmlStringBean1" class="java.lang.String">
-		<constructor-arg value="stringBean1" />
-	</bean>
-
-	<bean id="xmlStringBean2" class="java.lang.String">
-		<constructor-arg value="stringBean2" />
-	</bean>
-
-
+	
 	<bean id="sharedHttpClientRemedy" class="it.reply.sytel.adr.common.ws.SharedHTTPSClient" lazy-init="true">
 		<property name="contentType" value="text/xml"/> 
 		<property name="protocolHandShake" value="TLSv1.2"/>
@@ -30,8 +16,8 @@
                                     <entry key="keystorePwd"       value=""/>
                                     <entry key="keystoreURLString" value=""/>
                                     <entry key="trustPwd"          value="password"/>
-                                    <entry key="trustURLString"    value="file:///D:/Dynatrace2RemedyITSM/Dynatrace2RemedyITSM/trunk/resourcesConf/truststore.jks"/>
-								 	<entry key="urlToConnect"      value="http://red12303:8088/mockHPD_IncidentInterface_Create_WSPortTypeSoapBinding"/>
+                                    <entry key="trustURLString"    value="file:///D:/MyGitRepo/Dynatrace2RemedyLocalRepo/parent/dynatrace2RemedyEngine/src/main/resources/truststore.jks"/>
+								 	<entry key="urlToConnect"      value="http://syt12303:8088/mockHPD_IncidentInterface_Create_WSPortTypeSoapBinding"/>
 									<entry key="maxTotalThread"    value="100"/>
                                     <entry key="soTimeout"         value="50000"/>
                                     <entry key="connTimeout"       value="120000"/>
@@ -71,7 +57,7 @@
                                     <entry key="keystorePwd"       value=""/>
                                     <entry key="keystoreURLString" value=""/>
                                     <entry key="trustPwd"          value="password"/>
-                                    <entry key="trustURLString"    value="file:///D:/Dynatrace2RemedyITSM/Dynatrace2RemedyITSM/trunk/resourcesConf/truststore.jks"/>
+                                    <entry key="trustURLString"    value="file:///D:/MyGitRepo/Dynatrace2RemedyLocalRepo/parent/dynatrace2RemedyEngine/src/main/resources/truststore.jks"/>
 									<entry key="urlToConnect"      value=""/>
 									<entry key="maxTotalThread"    value="100"/>
                                     <entry key="soTimeout"         value="50000"/>
@@ -192,13 +178,9 @@
 		</property>
 	</bean>
 		
-	<bean id="configServicesDb" class="it.reply.sytel.adr.configuration.ConfigServicesDB" init-method="init">
-	</bean>
-	
 	<bean id="serviceContext" class="it.reply.sytel.adr.core.services.context.impl.ServiceContextImpl">
 		<property name="daoConfig">
-<!-- 			<ref bean="configServicesFile" /> -->
- 			<ref bean="configServicesDb" />
+			<ref bean="configServicesFile" />
 		</property>
 	</bean>
 	
@@ -251,6 +233,5 @@
 		</property>
 		
 	</bean>
-
-
+	
 </beans>

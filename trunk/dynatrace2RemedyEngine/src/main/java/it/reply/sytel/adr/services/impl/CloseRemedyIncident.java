@@ -22,6 +22,7 @@ public class CloseRemedyIncident extends AbstractService {
 		log = LogManager.getLogger(getClass());
 
 	}
+	
 
 	@Override
 	protected Enviromnent perform(Enviromnent env) {

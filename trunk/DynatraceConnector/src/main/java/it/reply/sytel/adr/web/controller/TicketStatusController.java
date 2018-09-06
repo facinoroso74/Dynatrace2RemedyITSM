@@ -19,6 +19,7 @@ import it.reply.sytel.adr.repositories.TicketStatusRepository;
 @RequestMapping("/ticketstatus")
 public class TicketStatusController {
 	
+	
 	@Autowired
 	TicketStatusRepository ticketstatusRepository;
 	/**

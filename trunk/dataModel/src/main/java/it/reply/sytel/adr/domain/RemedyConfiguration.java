@@ -1,5 +1,7 @@
 package it.reply.sytel.adr.domain;
 
+import java.io.Serializable;
+
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
@@ -9,12 +11,12 @@ import javax.persistence.Table;
 
 @Entity
 @Table(name = "REMEDY_CONFIGURATION")
-public class RemedyConfiguration {
-
+public class RemedyConfiguration implements Serializable{
+	
 	/**
 	 * 
 	 */
-	private static final long serialVersionUID = 1L;
+	private static final long serialVersionUID = 5203748280377837015L;
 	
 	@Id
 	@GeneratedValue(strategy = GenerationType.AUTO)

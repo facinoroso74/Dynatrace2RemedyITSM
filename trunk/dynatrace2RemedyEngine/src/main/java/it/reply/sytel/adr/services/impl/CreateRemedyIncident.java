@@ -34,6 +34,7 @@ public class CreateRemedyIncident extends AbstractService {
 	private IncidentDAO incidentDAO;
 	private RemedyClient remedyClient;
 	
+	
 	@Override
 	protected Enviromnent perform(Enviromnent env) {
 
@@ -56,6 +57,10 @@ public class CreateRemedyIncident extends AbstractService {
 				DynatraceIncident dynatraceIncident = (DynatraceIncident) iterator.next();
 				
 				List<Configuration> incidentConfigurationList = mapIncidentConfiguration.get(dynatraceIncident.getDynatraceIncidentKey().getDashboarName());
+				
+				//controllare nel caso in cui non si trova in configurazione la configurazione cosa si deve fare.				
+				if(incidentConfigurationList==null)
+					throw new CreateRemedyIncidentException("incidentConfigurationList is NULL");
 				//create incident
 				createTicketRemedy(dynatraceIncident, remedyConfiguration, incidentConfigurationList);
 				

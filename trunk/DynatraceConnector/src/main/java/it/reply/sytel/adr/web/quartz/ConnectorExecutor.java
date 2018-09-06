@@ -14,6 +14,7 @@ import it.reply.sytel.adr.services.enviromnent.ADREnvironment;
 @DisallowConcurrentExecution
 public class ConnectorExecutor implements Job {
 
+	
 	@Autowired
 	private RemedyIncidetBuilderEngine remedyIncidetBuilderEngine;
 	

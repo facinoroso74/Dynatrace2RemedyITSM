@@ -30,8 +30,8 @@
                                     <entry key="keystorePwd"       value=""/>
                                     <entry key="keystoreURLString" value=""/>
                                     <entry key="trustPwd"          value="password"/>
-                                    <entry key="trustURLString"    value="file:///D:/MyGitRepo/Dynatrace2RemedyLocalRepo/parent/dynatrace2RemedyEngine/src/main/resources/truststore.jks"/>
-								 	<entry key="urlToConnect"      value="http://red12303:8088/mockHPD_IncidentInterface_Create_WSPortTypeSoapBinding"/>
+                                    <entry key="trustURLString"    value="file:///D:/Dynatrace2RemedyITSM/Dynatrace2RemedyITSM/trunk/resourcesConf/truststore.jks"/>
+								 	<entry key="urlToConnect"      value="http://red19983:8088/mockHPD_IncidentInterface_Create_WSPortTypeSoapBinding"/>
 									<entry key="maxTotalThread"    value="100"/>
                                     <entry key="soTimeout"         value="50000"/>
                                     <entry key="connTimeout"       value="120000"/>
@@ -71,7 +71,7 @@
                                     <entry key="keystorePwd"       value=""/>
                                     <entry key="keystoreURLString" value=""/>
                                     <entry key="trustPwd"          value="password"/>
-                                    <entry key="trustURLString"    value="file:///D:/MyGitRepo/Dynatrace2RemedyLocalRepo/parent/dynatrace2RemedyEngine/src/main/resources/truststore.jks"/>
+                                    <entry key="trustURLString"    value="file:///D:/Dynatrace2RemedyITSM/Dynatrace2RemedyITSM/trunk/resourcesConf/truststore.jks"/>
 									<entry key="urlToConnect"      value=""/>
 									<entry key="maxTotalThread"    value="100"/>
                                     <entry key="soTimeout"         value="50000"/>

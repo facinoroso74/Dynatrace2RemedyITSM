@@ -29,6 +29,7 @@ public class GetDynatraceIncident extends AbstractService {
 		log = LogManager.getLogger(getClass());
 	}
 	
+	
 	@Override
 	protected Enviromnent perform(Enviromnent env) {
 

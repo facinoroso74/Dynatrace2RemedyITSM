@@ -1,8 +1,5 @@
 package it.reply.sytel.adr.restServices;
 
-import it.reply.sytel.adr.domain.Configuration;
-import it.reply.sytel.adr.dto.ConfigurationTableResponse;
-import it.reply.sytel.adr.repositories.ConfigurationRepository;
 import org.apache.log4j.LogManager;
 import org.apache.log4j.Logger;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -10,11 +7,16 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
+import it.reply.sytel.adr.domain.Configuration;
+import it.reply.sytel.adr.dto.ConfigurationTableResponse;
+import it.reply.sytel.adr.repositories.ConfigurationRepository;
+
 @RestController
 @RequestMapping({"/ticketconfiguration"})
 public class ConfigurationController
 {
-  private Logger log = LogManager.getLogger(getClass());
+	private static final Logger log = LogManager.getLogger(ConfigurationController.class);
+  
   @Autowired
   ConfigurationRepository configurationRepository;
   
@@ -30,13 +32,13 @@ public class ConfigurationController
   {
     try
     {
-      this.log.info("configuration to create:[" + configuration + "]");
+      log.info("configuration to create:[" + configuration + "]");
       
       return (Configuration)this.configurationRepository.save(configuration);
     }
     catch (Exception e)
     {
-      this.log.error("Exception on addNewConfiguration", e);
+      log.error("Exception on addNewConfiguration", e);
       throw new RuntimeException("Exception on addNewConfiguration", e);
     }
   }
@@ -44,7 +46,7 @@ public class ConfigurationController
   @RequestMapping({"/read"})
   public Configuration read(@RequestParam String tipoIncident, @RequestParam String sorgenteSistema)
   {
-    this.log.debug("Configuration--> called read method");
+    log.debug("Configuration--> called read method");
     Configuration configuration = this.configurationRepository.findByTipoIncidentAndSorgenteSistema(tipoIncident, sorgenteSistema);
     return configuration;
   }
@@ -52,7 +54,7 @@ public class ConfigurationController
   @RequestMapping({"/readByID"})
   public Configuration read(@RequestParam Long configurationId)
   {
-    this.log.debug("Configuration--> called readByID method");
+    log.debug("Configuration--> called readByID method");
     Configuration configuration = this.configurationRepository.findByconfigurationId(configurationId);
     return configuration;
   }
@@ -60,7 +62,7 @@ public class ConfigurationController
   @RequestMapping({"/readAll"})
   public ConfigurationTableResponse readAll()
   {
-    this.log.debug("Configuration--> called readAll method");
+    log.debug("Configuration--> called readAll method");
     
     Iterable<Configuration> data = this.configurationRepository.findAll();
     return new ConfigurationTableResponse(data);
@@ -69,7 +71,7 @@ public class ConfigurationController
   @RequestMapping({"/delete"})
   public void delete(@RequestParam Long configurationId)
   {
-    this.log.debug("Deleting the ConfigurationId:[" + configurationId + "]");
+    log.debug("Deleting the ConfigurationId:[" + configurationId + "]");
     this.configurationRepository.delete(configurationId);
   }
   
@@ -79,13 +81,13 @@ public class ConfigurationController
   {
     try
     {
-      this.log.info("configuration to edit:[" + configuration + "]");
+      log.info("configuration to edit:[" + configuration + "]");
       
       return (Configuration)this.configurationRepository.save(configuration);
     }
     catch (Exception e)
     {
-      this.log.error("Exception on editConfiguration", e);
+      log.error("Exception on editConfiguration", e);
       throw new RuntimeException("Exception on editConfiguration", e);
     }
   }

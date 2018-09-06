@@ -5,7 +5,6 @@ import java.io.Serializable;
 import it.reply.sytel.adr.domain.Configuration;
 
 public class ConfigurationTableResponse implements Serializable{
-
 	/**
 	 * 
 	 */

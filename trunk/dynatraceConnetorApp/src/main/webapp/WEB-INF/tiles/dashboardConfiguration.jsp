@@ -36,7 +36,7 @@ $(document).ready(function() {
 					"style" : 'os',
 					"selector" : 'td:first-child'
 				},
-		 "order" : [ [ 1, 'desc' ] ],
+		 "order" : [ [ 1, 'asc' ] ],
 	     "lengthMenu" : [ [ 5, 10, 20, 50, -1 ],
 					      [ 5, 10, 20, 50, "All" ] 
 	                    ],

@@ -19,6 +19,7 @@ import it.reply.sytel.adr.repositories.UrgencyRepository;
 @RequestMapping("/urgency")
 public class UrgencyController {
 	
+	
 	@Autowired
 	UrgencyRepository urgencyRepository;
 	/**

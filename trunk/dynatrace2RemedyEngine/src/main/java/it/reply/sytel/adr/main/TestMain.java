@@ -12,6 +12,7 @@ import org.quartz.TriggerKey;
 import it.reply.sytel.adr.common.quartz.QuartzSchedulerBean;
 import it.reply.sytel.adr.constants.ADRConstants;
 
+
 public class TestMain {
 
 	

@@ -19,6 +19,7 @@ import it.reply.sytel.adr.repositories.ServiceTypeRepository;
 @RequestMapping("/servicetype")
 public class ServiceTypeController {
 	
+	
 	@Autowired
 	ServiceTypeRepository serviceTypeRepository;
 	/**

@@ -18,6 +18,7 @@ import it.reply.sytel.adr.repositories.ImpactRepository;
 @RestController
 @RequestMapping("/impact")
 public class ImpactController {
+
 	
 	@Autowired
 	ImpactRepository impactRepository;

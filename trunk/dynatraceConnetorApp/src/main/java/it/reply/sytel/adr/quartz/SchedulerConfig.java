@@ -1,4 +1,4 @@
-package it.reply.sytel.adr.web.quartz;
+package it.reply.sytel.adr.quartz;
 
 import java.io.IOException;
 import java.util.Properties;
@@ -27,15 +27,16 @@ import org.springframework.scheduling.quartz.SchedulerFactoryBean;
 import org.springframework.scheduling.quartz.SimpleTriggerFactoryBean;
 
 import it.reply.sytel.adr.constants.ADRConstants;
-import it.reply.sytel.adr.web.quartz.impl.CheckStatusJobQuartzException;
+import it.reply.sytel.adr.quartz.exc.CheckStatusJobQuartzException;
+
 
 @Configuration
 public class SchedulerConfig {
 
-	
     private static final Logger log = LogManager.getLogger(SchedulerConfig.class);
 
     private SchedulerFactoryBean factory;
+    private String schedulatorTime="0/5 * * * * ?";
     
     
     @Bean
@@ -60,7 +61,7 @@ public class SchedulerConfig {
     public SimpleTriggerFactoryBean simpleJobTrigger(@Qualifier("simpleJobDetail") JobDetail jobDetail,
             @Value("${simplejob.frequency}") long frequency) {
         
-    	log.info("simpleJobTrigger");
+    	log.info("called simpleJobTrigger");
 
         SimpleTriggerFactoryBean factoryBean = new SimpleTriggerFactoryBean();
         factoryBean.setJobDetail(jobDetail);
@@ -105,6 +106,11 @@ org.quartz.jobStore.class=org.quartz.simpl.RAMJobStore
     public boolean startConnector(String schedulatorTime) {
     	
     	try {
+    		if( schedulatorTime==null || schedulatorTime.length()==0 )
+    			schedulatorTime=this.schedulatorTime;
+    		else
+    			this.schedulatorTime=schedulatorTime;
+    		
     		if(isJobStarted())
     			return true;
     		
@@ -166,6 +172,14 @@ org.quartz.jobStore.class=org.quartz.simpl.RAMJobStore
 				log.error("Exception on checkStatus Connector job", e);
 				throw new CheckStatusJobQuartzException("Exception on checkStatus Connector job",e);
 			}
+	}
+
+	public String getSchedulatorTime() {
+		return schedulatorTime;
+	}
+
+	public void setSchedulatorTime(String schedulatorTime) {
+		this.schedulatorTime = schedulatorTime;
 	}
     
 }

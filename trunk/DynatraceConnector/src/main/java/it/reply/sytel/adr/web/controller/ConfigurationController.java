@@ -22,6 +22,7 @@ import it.reply.sytel.adr.web.dto.ConfigurationTableResponse;
 @RequestMapping("/configuration")
 public class ConfigurationController {
 	
+	
 	@Autowired
 	ConfigurationRepository configurationRepository;
 	/**

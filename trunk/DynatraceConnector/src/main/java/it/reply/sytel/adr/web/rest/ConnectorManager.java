@@ -16,6 +16,7 @@ import it.reply.sytel.adr.web.quartz.SchedulerConfig;
 @RestController
 public class ConnectorManager {
     
+	
 	private Logger log = LogManager.getLogger(getClass());
     
 	@Autowired
