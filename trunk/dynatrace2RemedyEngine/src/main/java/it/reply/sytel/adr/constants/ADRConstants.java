@@ -44,5 +44,19 @@ public interface ADRConstants {
 
 
 	public static final String REMEDY_CONFIGURATION = "REMEDY_CONFIGURATION";
+
+
+	public static final String STATUS = "New";
+
+
+	public static final String SERVICE_TYPE= "Infrastructure event";
+
+
+	public static final String REPORTED_SOURCE = "Systems Management";
+
+
+	public static final String FIRST_NAME = "Dynatrace";
+	
+	public static final String LAST_NAME = "Dynatrace";
 	
 }

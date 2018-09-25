@@ -16,18 +16,14 @@ public class ContextException extends CoreNestedException {
 
 	public ContextException(String message, int errorCode, Throwable cause, int errorCodeThrowable) {
 		super(message, errorCode, cause, errorCodeThrowable);
-		// TODO Auto-generated constructor stub
 	}
 
 	public ContextException(String message, Throwable cause) {
 		super(message, cause);
-		// TODO Auto-generated constructor stub
 	}
 
 	public ContextException(String message) {
 		super(message);
-		// TODO Auto-generated constructor stub
 	}
-
     
 }

@@ -77,7 +77,6 @@ public class ProvaXML {
 			}
 			
 		} catch (XmlException e) {
-			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
 	}

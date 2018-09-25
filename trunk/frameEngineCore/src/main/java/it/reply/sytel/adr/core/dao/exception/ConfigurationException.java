@@ -29,30 +29,23 @@ public class ConfigurationException extends CoreNestedException{
 
 	public ConfigurationException(String message, int errorCode, Throwable cause, int errorCodeThrowable) {
 		super(message, errorCode, cause, errorCodeThrowable);
-		// TODO Auto-generated constructor stub
 	}
 
 	public ConfigurationException(String message, Throwable cause) {
 		super(message, cause);
-		// TODO Auto-generated constructor stub
 	}
 
 	public ConfigurationException(String message) {
 		super(message);
-		// TODO Auto-generated constructor stub
 	}
 
 	public ConfigurationException(String message, int errorCode, Throwable cause) {
 		super(message, errorCode, cause);
-		// TODO Auto-generated constructor stub
 	}
 
 	public ConfigurationException(String message, int errorCode) {
 		super(message, errorCode);
-		// TODO Auto-generated constructor stub
 	}
 
-	
-	
 }
 

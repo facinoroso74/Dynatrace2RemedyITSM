@@ -39,7 +39,7 @@ public class ConfigurationController {
 	 */
 	@RequestMapping("/read")
 	public Configuration read(@RequestParam String tipoIncident,@RequestParam String sorgenteSistema) {
-		Configuration configuration= configurationRepository.findByTipoIncidentAndSorgenteSistema(tipoIncident, sorgenteSistema);
+		Configuration configuration= configurationRepository.findByDescrizioneAndSorgenteSistema(tipoIncident, sorgenteSistema);
 	    return configuration;
 	}
 	

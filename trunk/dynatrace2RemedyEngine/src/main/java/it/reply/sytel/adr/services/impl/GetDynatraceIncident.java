@@ -7,14 +7,18 @@ import java.util.Map;
 import java.util.Set;
 
 import org.apache.logging.log4j.LogManager;
+import org.springframework.beans.factory.annotation.Autowired;
 
 import it.reply.sytel.adr.constants.ADRConstants;
 import it.reply.sytel.adr.core.services.enviromnent.Enviromnent;
 import it.reply.sytel.adr.core.services.service.AbstractService;
 import it.reply.sytel.adr.dao.IncidentDAO;
+import it.reply.sytel.adr.domain.Configuration;
 import it.reply.sytel.adr.domain.Dashboard;
 import it.reply.sytel.adr.dynatraceClient.DynatraceClient;
+import it.reply.sytel.adr.repositories.ConfigurationRepository;
 import it.reply.sytel.adr.services.exc.GetDynatraceIncidentException;
+import it.reply.sytel.adr.utility.ADRUtility;
 import it.reply.sytel.adr.vo.DynatraceIncident;
 import it.reply.sytel.adr.vo.DynatraceIncidentKey;
 
@@ -29,7 +33,9 @@ public class GetDynatraceIncident extends AbstractService {
 		log = LogManager.getLogger(getClass());
 	}
 	
-	
+	@Autowired
+    private ConfigurationRepository configurationRepository; 
+    
 	@Override
 	protected Enviromnent perform(Enviromnent env) {
 
@@ -52,21 +58,16 @@ public class GetDynatraceIncident extends AbstractService {
 				
 				Map<DynatraceIncidentKey, DynatraceIncident> map= dynatraceClient.getDynatraceIncidents(dashboard.getName(),dashboard.getAppUrl(),dashboard.getAppUser(),dashboard.getAppPwd());
 				
+				log.info("There are [" + map.keySet().size()+"] incident to work");
+				
 				Set<DynatraceIncidentKey> dynatraceIncidentKeys = map.keySet();
 				
 				for (Iterator<DynatraceIncidentKey> iterator2 = dynatraceIncidentKeys.iterator(); iterator2.hasNext();) {
-					
+
 					DynatraceIncidentKey dynatraceIncidentKey = (DynatraceIncidentKey) iterator2.next();
-					if( !incidentDAO.alreadyExistsDynatraceIncident(dynatraceIncidentKey) ) {
-						DynatraceIncident dynatraceIncident = map.get(dynatraceIncidentKey);
-						dynatraceIncident.setDataIns(now);
-						dynatraceIncident.setDataUpdate(now);
-						incidentDAO.insertDynatraceIncident(dynatraceIncident);
-						log.debug("Incident inserted:["+dynatraceIncidentKey+"");
-					}else {
-						log.debug("Incident alreay Exists:["+dynatraceIncidentKey+"] update the DateUpdate");
-						incidentDAO.updateDynatraceIncidentDateUpdate(dynatraceIncidentKey,now);
-					}
+					
+					insertIntoDB(dynatraceIncidentKey, now, map,dashboard.getName());
+					
 				}
 			}
 			
@@ -76,6 +77,37 @@ public class GetDynatraceIncident extends AbstractService {
 		} catch (Exception e) {
 			throw new GetDynatraceIncidentException("Exception on GetDynatraceIncident", e);
 		}
+	}
+	
+	private void insertIntoDB(DynatraceIncidentKey dynatraceIncidentKey,Timestamp now,Map<DynatraceIncidentKey, DynatraceIncident> map,String dashBoard) {
+
+		if( !incidentDAO.alreadyExistsDynatraceIncident(dynatraceIncidentKey) ) {
+			DynatraceIncident dynatraceIncident = map.get(dynatraceIncidentKey);
+			
+			
+			//I have to store only the incident for who there is a configuration
+			
+			String descrizioneToFind=ADRUtility.getDescrizioneFromIncidentType(dynatraceIncident.getIncidentType());
+			log.debug("descrizioneToFind:["+descrizioneToFind+"] for DashBoard:["+dashBoard+"]");
+			
+			Configuration configuration = configurationRepository.findByDescrizioneAndDashboard(descrizioneToFind, dashBoard);
+			
+			if(configuration==null) {
+				log.info("Dynatrace Event "+descrizioneToFind+" not configurated on DB for the DashBoard:["+dashBoard+"]");
+				return;
+			}else
+				log.info("There is a configuration for Dynatrace Event "+descrizioneToFind+" and the DashBoard:["+dashBoard+"]");
+				
+			dynatraceIncident.setDataIns(now);
+			dynatraceIncident.setDataUpdate(now);
+			incidentDAO.insertDynatraceIncident(dynatraceIncident);
+			log.debug("Incident inserted:["+dynatraceIncidentKey+"");
+			return;
+		}
+		
+		log.debug("Incident already exists:["+dynatraceIncidentKey+"] update the DateUpdate");
+		incidentDAO.updateDynatraceIncidentDateUpdate(dynatraceIncidentKey,now);
+		
 	}
 
 	public IncidentDAO getIncidentDAO() {

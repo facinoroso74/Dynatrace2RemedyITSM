@@ -47,7 +47,7 @@ public class ConfigurationController
   public Configuration read(@RequestParam String tipoIncident, @RequestParam String sorgenteSistema)
   {
     log.debug("Configuration--> called read method");
-    Configuration configuration = this.configurationRepository.findByTipoIncidentAndSorgenteSistema(tipoIncident, sorgenteSistema);
+    Configuration configuration = this.configurationRepository.findByDescrizioneAndSorgenteSistema(tipoIncident, sorgenteSistema);
     return configuration;
   }
   

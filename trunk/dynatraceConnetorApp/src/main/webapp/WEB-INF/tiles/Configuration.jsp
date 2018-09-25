@@ -20,22 +20,12 @@ $(document).ready(function() {
              "columns": [
             	{ "data": "checkbox" },
             	{ "data": "configurationId" },
-            	{ "data": "tipoIncident" },
+            	{ "data": "idEvento" },
             	{ "data": "descrizione" },
             	{ "data": "dashboard" },
-            	{ "data": "firstName" },
-            	{ "data": "lastName" },
-            	{ "data": "serviceType" },
-            	{ "data": "status" },
             	{ "data": "impact" },
             	{ "data": "urgency" },
-            	{ "data": "action" },
-            	{ "data": "createRequest" },
-            	{ "data": "summary" },
             	{ "data": "sorgenteSistema" },
-            	{ "data": "assignedGroup" },
-            	{ "data": "assignedSupportCompany" },
-            	{ "data": "assignedSupportOrganization" }
             ],
  	    	 "pageLength": 20,
 				
@@ -77,47 +67,26 @@ $(document).ready(function() {
 <table id="example" class="display" style="width:100%">
         <thead>
             <tr>
-                
                 <th>checkbox</th>
                 <th>configurationId</th>
-                <th>tipoIncident</th>
+                <th>idEvento</th>
                 <th>descrizione</th>
                 <th>dashboard</th>
-                <th>firstName</th>
-                <th>lastName</th>
-                <th>serviceType</th>
-                <th>status</th>
                 <th>impact</th>
                 <th>urgency</th>
-               <th>action</th>
-               <th>createRequest</th>
-               <th>summary</th>
-               <th>sorgenteSistema</th>
-               <th>assignedGroup</th>
-               <th>assignedSupportCompany</th>
-               <th>assignedSupportOrganization</th>
+                <th>sorgenteSistema</th>
             </tr>
         </thead>
         <tfoot>
             <tr>
             	<th>checkbox</th>
                 <th>configurationId</th>
-                <th>tipoIncident</th>
+                <th>idEvento</th>
                 <th>descrizione</th>
                 <th>dashboard</th>
-                <th>firstName</th>
-                <th>lastName</th>
-                <th>serviceType</th>
-                <th>status</th>
                 <th>impact</th>
                 <th>urgency</th>
-               <th>action</th>
-               <th>createRequest</th>
-               <th>summary</th>
-               <th>sorgenteSistema</th>
-               <th>assignedGroup</th>
-               <th>assignedSupportCompany</th>
-               <th>assignedSupportOrganization</th>
+                <th>sorgenteSistema</th>
             </tr>
         </tfoot>
     </table>

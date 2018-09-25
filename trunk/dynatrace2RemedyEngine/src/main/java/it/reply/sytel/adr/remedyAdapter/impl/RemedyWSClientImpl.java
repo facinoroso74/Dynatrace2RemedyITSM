@@ -22,6 +22,7 @@ import hpdIncidentInterfaceCreateWSVIP.ServiceTypeType;
 import hpdIncidentInterfaceCreateWSVIP.StatusType;
 import hpdIncidentInterfaceCreateWSVIP.UrgencyType;
 import it.reply.sytel.adr.common.ws.HTTPClient;
+import it.reply.sytel.adr.constants.ADRConstants;
 import it.reply.sytel.adr.domain.Configuration;
 import it.reply.sytel.adr.domain.RemedyConfiguration;
 import it.reply.sytel.adr.remedyAdapter.RemedyClient;
@@ -48,21 +49,21 @@ public class RemedyWSClientImpl implements RemedyClient{
 		
 		HelpDeskSubmitServiceDocument helpDeskSubmitServiceDocument = HelpDeskSubmitServiceDocument.Factory.newInstance();
 		CreateInputMap createInputMap = helpDeskSubmitServiceDocument.addNewHelpDeskSubmitService();
-		createInputMap.setFirstName(incidentTypeconfiguration.getFirstName());
-		createInputMap.setLastName(incidentTypeconfiguration.getLastName());
+		createInputMap.setFirstName(ADRConstants.FIRST_NAME);
+		createInputMap.setLastName(ADRConstants.LAST_NAME);
 		
 		
 		createInputMap.setImpact(ImpactType.Enum.forString(incidentTypeconfiguration.getImpact()));
 		checkNullValueImpact(ImpactType.Enum.forString(incidentTypeconfiguration.getImpact()),incidentTypeconfiguration.getImpact());
 		
-		createInputMap.setReportedSource(ReportedSourceType.Enum.forString(incidentTypeconfiguration.getReportedSource()));
-		checkNullValueReportedSource(ReportedSourceType.Enum.forString(incidentTypeconfiguration.getReportedSource()),incidentTypeconfiguration.getReportedSource());
+		createInputMap.setReportedSource(ReportedSourceType.Enum.forString(ADRConstants.REPORTED_SOURCE));
+		//checkNullValueReportedSource(ReportedSourceType.Enum.forString(incidentTypeconfiguration.getReportedSource()),incidentTypeconfiguration.getReportedSource());
 		
-		createInputMap.setServiceType(ServiceTypeType.Enum.forString(incidentTypeconfiguration.getServiceType()));
-		checkNullValueServiceType(ServiceTypeType.Enum.forString(incidentTypeconfiguration.getServiceType()),incidentTypeconfiguration.getServiceType());
+		createInputMap.setServiceType(ServiceTypeType.Enum.forString(ADRConstants.SERVICE_TYPE));
+		//checkNullValueServiceType(ServiceTypeType.Enum.forString(incidentTypeconfiguration.getServiceType()),incidentTypeconfiguration.getServiceType());
 		
-		createInputMap.setStatus(StatusType.Enum.forString(incidentTypeconfiguration.getStatus()));
-		checkNullValueStatus(StatusType.Enum.forString(incidentTypeconfiguration.getStatus()),incidentTypeconfiguration.getStatus());
+		createInputMap.setStatus(StatusType.Enum.forString(ADRConstants.STATUS));
+		//checkNullValueStatus(StatusType.Enum.forString(incidentTypeconfiguration.getStatus()),incidentTypeconfiguration.getStatus());
 		
 		createInputMap.setSummary(".........SUMNMARY..........");
 		createInputMap.setUrgency(UrgencyType.X_1_CRITICAL);
@@ -100,25 +101,25 @@ public class RemedyWSClientImpl implements RemedyClient{
 		return remedyTicketID;
 	}
 	
-	private void checkNullValueStatus(StatusType.Enum forString,String valueSearched) {
-		if(forString==null)
-			throw new RemedyBadValueFieldException("Value ["+valueSearched+"] Not allowed for Remedy Ticket Field:[Status]");
-	}
-	
-	private void checkNullValueReportedSource(ReportedSourceType.Enum forString,String valueSearched) {
-		if(forString==null)
-			throw new RemedyBadValueFieldException("Value ["+valueSearched+"] Not allowed for Remedy Ticket Field:[ReportedSource");
-	}
-
+//	private void checkNullValueStatus(StatusType.Enum forString,String valueSearched) {
+//		if(forString==null)
+//			throw new RemedyBadValueFieldException("Value ["+valueSearched+"] Not allowed for Remedy Ticket Field:[Status]");
+//	}
+//	
+//	private void checkNullValueReportedSource(ReportedSourceType.Enum forString,String valueSearched) {
+//		if(forString==null)
+//			throw new RemedyBadValueFieldException("Value ["+valueSearched+"] Not allowed for Remedy Ticket Field:[ReportedSource");
+//	}
+//
 	private void checkNullValueImpact(ImpactType.Enum forString,String valueSearched) {
 		if(forString==null)
 			throw new RemedyBadValueFieldException("Value ["+valueSearched+"] Not allowed for Remedy Ticket Field:[Impact]");
 	}
-	
-	private void checkNullValueServiceType(ServiceTypeType.Enum forString,String valueSearched) {
-		if(forString==null)
-			throw new RemedyBadValueFieldException("Value ["+valueSearched+"] Not allowed for Remedy Ticket Field:[ServiceType]");
-	}
+//	
+//	private void checkNullValueServiceType(ServiceTypeType.Enum forString,String valueSearched) {
+//		if(forString==null)
+//			throw new RemedyBadValueFieldException("Value ["+valueSearched+"] Not allowed for Remedy Ticket Field:[ServiceType]");
+//	}
 	
 
 	private String callRemedy(CreateInputMap createInputMap,AuthenticationInfo authenticationInfo) {

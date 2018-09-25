@@ -42,6 +42,9 @@ public class CreateRemedyIncident extends AbstractService {
 			
 			Map<String , Object> configMap = (Map<String , Object>)getContext().getConfigMap();
 			HashMap< String, List<Configuration>> mapIncidentConfiguration = (HashMap< String, List<Configuration>>)configMap.get(ADRConstants.INCIDENT_CONFIGURATION_CONFIG_MAP);
+			
+			log.debug("Getting the RemedyConfiguration for [" + ((List<RemedyConfiguration>)configMap.get(ADRConstants.REMEDY_CONFIGURATION)).get(0) + "]");
+			
 			RemedyConfiguration remedyConfiguration = ((List<RemedyConfiguration>)configMap.get(ADRConstants.REMEDY_CONFIGURATION)).get(0);
 			
 			if(remedyConfiguration==null)
@@ -56,13 +59,17 @@ public class CreateRemedyIncident extends AbstractService {
 				
 				DynatraceIncident dynatraceIncident = (DynatraceIncident) iterator.next();
 				
-				List<Configuration> incidentConfigurationList = mapIncidentConfiguration.get(dynatraceIncident.getDynatraceIncidentKey().getDashboarName());
+				log.info("Getting the configuration for the dashboard:["+dynatraceIncident.getDynatraceIncidentKey().getDashboarName()+"]");
 				
-				//controllare nel caso in cui non si trova in configurazione la configurazione cosa si deve fare.				
-				if(incidentConfigurationList==null)
-					throw new CreateRemedyIncidentException("incidentConfigurationList is NULL");
-				//create incident
-				createTicketRemedy(dynatraceIncident, remedyConfiguration, incidentConfigurationList);
+				List<Configuration> incidentConfigurationList = mapIncidentConfiguration.get(dynatraceIncident.getDynatraceIncidentKey().getDashboarName());
+												
+				if(incidentConfigurationList==null) {
+					log.info("There isn't configuration for dashborad:["+dynatraceIncident.getDynatraceIncidentKey().getDashboarName()+"]");
+				}else {
+					log.info("There is a configuration for dashborad:["+dynatraceIncident.getDynatraceIncidentKey().getDashboarName()+"]");
+					//create incident
+					createTicketRemedy(dynatraceIncident, remedyConfiguration, incidentConfigurationList);
+				}
 				
 //				String remedyIncidentId = remedyClient.createIncident(dynatraceIncident,remedyAutenticationInfo,appProperty);
 //				
@@ -87,23 +94,30 @@ public class CreateRemedyIncident extends AbstractService {
 	
 	private boolean checkConfiguration(DynatraceIncident dynatraceIncident,Configuration configuration) {
 		try {
+			//TODO
+			//capire se fare il match della configurazione con incidentType o con il name
+			//capire se fare il match della configurazione con incidentType o con il name
+			//capire se fare il match della configurazione con incidentType o con il name
+			//capire se fare il match della configurazione con incidentType o con il name
+			//capire se fare il match della configurazione con incidentType o con il name
+			//capire se fare il match della configurazione con incidentType o con il name
 			if(log.isDebugEnabled())
 				log.debug("checking for dynatraceIncident["+dynatraceIncident.getDynatraceIncidentKey().getName()+"] into configuration:["+configuration+"]");
-			return (dynatraceIncident.getDynatraceIncidentKey().getName().indexOf(configuration.getTipoIncident()) != -1);
+			return (dynatraceIncident.getDynatraceIncidentKey().getName().indexOf(configuration.getDescrizione()) != -1);
 		}catch (Exception e) {
 			throw new IncidentTypeConfigurationException("There is an error on checking the dynatraceIncident:["+dynatraceIncident+"] configuration:["+configuration+"]",e);
 		}
 	}
 	
 	private Configuration getConfigurationByIncidentType(DynatraceIncident dynatraceIncident,List<Configuration> incidentConfigurationList) {
-		
-		
+				
 		for (Iterator<Configuration> iterator = incidentConfigurationList.iterator(); iterator.hasNext();) {
 			Configuration configuration = (Configuration) iterator.next();
 			if(checkConfiguration(dynatraceIncident,configuration))
 				return configuration;
 		}
-		throw new IncidentTypeConfigurationException("There isn't any configuration for incidentType:["+dynatraceIncident.getIncidentType()+"]");
+		log.info("There isn't any configuration for incidentType:["+dynatraceIncident.getIncidentType()+"]");
+		return null;
 	}
 
 	private void createTicketRemedy(DynatraceIncident dynatraceIncident,RemedyConfiguration remedyConfiguration,List<Configuration> incidentConfigurationList) {
@@ -112,19 +126,31 @@ public class CreateRemedyIncident extends AbstractService {
 			
 			
 			Configuration incidentTypeConfiguration = getConfigurationByIncidentType(dynatraceIncident,incidentConfigurationList);
-			
-			String remedyIncidentId = remedyClient.createIncident( dynatraceIncident,remedyConfiguration,incidentTypeConfiguration);
-	
-			Timestamp now = new Timestamp(System.currentTimeMillis());
-			dynatraceIncident.setRemedyTicketCreateDate(now);
-			dynatraceIncident.setRemedyTicketID(remedyIncidentId);
-			dynatraceIncident.setRemedyTicketIDStatus(incidentTypeConfiguration.getStatus());
-			
-			if(log.isDebugEnabled())
-				log.debug("Response from Remedy ----> remedyIncidentId:["+remedyIncidentId+"]");
-			
-			incidentDAO.updateDynatraceIncidentAfterRemedyCall(dynatraceIncident);
+			if(incidentTypeConfiguration!=null) {
+				String remedyIncidentId = remedyClient.createIncident( dynatraceIncident,remedyConfiguration,incidentTypeConfiguration);
 		
+				Timestamp now = new Timestamp(System.currentTimeMillis());
+				dynatraceIncident.setRemedyTicketCreateDate(now);
+				dynatraceIncident.setRemedyTicketID(remedyIncidentId);
+				dynatraceIncident.setRemedyTicketIDStatus(ADRConstants.STATUS);
+				
+				if(log.isDebugEnabled())
+					log.debug("Response from Remedy ----> remedyIncidentId:["+remedyIncidentId+"]");
+				
+				incidentDAO.updateDynatraceIncidentAfterRemedyCall(dynatraceIncident);
+			}
+			
+			//TODO
+			//si dovrebbe rimuovere dalla tabella l'evento per cui non è stata trovata la configurazione
+			//si dovrebbe rimuovere dalla tabella l'evento per cui non è stata trovata la configurazione
+			//si dovrebbe rimuovere dalla tabella l'evento per cui non è stata trovata la configurazione
+			//si dovrebbe rimuovere dalla tabella l'evento per cui non è stata trovata la configurazione
+			//si dovrebbe rimuovere dalla tabella l'evento per cui non è stata trovata la configurazione
+			//si dovrebbe rimuovere dalla tabella l'evento per cui non è stata trovata la configurazione
+			//si dovrebbe rimuovere dalla tabella l'evento per cui non è stata trovata la configurazione
+			
+			
+			
 		}catch (RemedyBadValueFieldException e) {
 			log.error("exception on create the ticket remedy for DynatraceIncident:["+dynatraceIncident+"]",e);
 		}

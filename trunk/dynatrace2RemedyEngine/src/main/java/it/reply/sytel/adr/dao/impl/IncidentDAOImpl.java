@@ -37,13 +37,13 @@ public class IncidentDAOImpl implements IncidentDAO {
 																	   + "endEvent,source,session,confirmed_by,confirmation,"
 																	   + "sensitivity,conditions,thresholds,actions,measures,"
 																	   + "datains,dataupdate,remedyTicketId,remedyTicketIdStatus,remedyTicketCreateDate,"
-																	   + "dashboardName) "
+																	   + "dashboardName,incident_type) "
 																+ "VALUES"
 																		+ "(?,?,?,?,?,"
 																		+  "?,?,?,?,?,"
 																		+  "?,?,?,?,?,"
 																		+  "?,?,?,?,?,"
-																		+  "?)";
+																		+  "?,?)";
 			
 	private static final String SQL_UPDATE_INCIDENT_DATE_UPDATE="UPDATE INCIDENT set dataupdate=? where name=? and startEvent=?";
 	
@@ -161,6 +161,7 @@ public class IncidentDAOImpl implements IncidentDAO {
 			stmt.setString(19, dynatraceIncident.getRemedyTicketIDStatus());
 			stmt.setTimestamp(20, dynatraceIncident.getRemedyTicketCreateDate());
 			stmt.setString(21, dynatraceIncident.getDynatraceIncidentKey().getDashboarName());
+			stmt.setString(22, dynatraceIncident.getIncidentType());
 			
 			int total=stmt.executeUpdate();
 			

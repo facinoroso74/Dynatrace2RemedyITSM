@@ -126,81 +126,7 @@ public class DynatraceClientImpl implements DynatraceClient{
 		this.restClient = restClient;
 	}
 
-	//effettuo la chiamata REST
-	//faccio il parsing nell'oggetto DashboardreportDocument
-	//scorro l'oggetto per prendere tutti gli oggetti incidentoverviewrecord che hanno come proprietà name/start/source valorizzati
-	//creare un mappa di java object di tipo DynatraceIncident
-
-//	public static void main(String[] args) {
-//		DynatraceClient dynatraceClient = new DynatraceClientImpl();
-//		RestClientImpl restClientImpl = new RestClientImpl();
-//		dynatraceClient.setRestClient(restClientImpl);
-//		Map<DynatraceIncidentKey, DynatraceIncident> map = dynatraceClient.getDynatraceIncidents("https://dynatracereply.adr.it:8021/rest/management/dashboard/IncidentDashboard", "Remedy_Integration", "remedy");
-//		Set<DynatraceIncidentKey> keys = map.keySet();
-//		for (Iterator<DynatraceIncidentKey> iterator = keys.iterator(); iterator.hasNext();) {
-//			DynatraceIncidentKey dynatraceIncidentKey = (DynatraceIncidentKey) iterator.next();
-//			System.out.println("dynatraceIncident-->"+ map.get(dynatraceIncidentKey));
-//		}
-//	}
-	
-//	public static void main(String[] args) {
-//		DynatraceClient dynatraceClient = new DynatraceClientImpl();
-//		RestClientImpl restClientImpl = new RestClientImpl();
-//		dynatraceClient.setRestClient(restClientImpl);
-//		Map<DynatraceIncidentKey, DynatraceIncident> map = dynatraceClient.getDynatraceIncidents("https://dynatrace-sub-CA:8021/rest/management/dashboard/ADBM_TEST_REMEDY_INTEGRATION", "admin", "adradmin01");
-//		Set<DynatraceIncidentKey> keys = map.keySet();
-//		for (Iterator<DynatraceIncidentKey> iterator = keys.iterator(); iterator.hasNext();) {
-//			DynatraceIncidentKey dynatraceIncidentKey = (DynatraceIncidentKey) iterator.next();
-//			System.out.println("dynatraceIncident-->"+ map.get(dynatraceIncidentKey));
-//		}
-//	}
-	
 	public static void main(String[] args) {
-//		String dashboardreportBuffer="<?xml version=\"1.0\" encoding=\"utf-8\"?>\r\n" + 
-//				"<dashboardreport name=\"ADBM_TEST_REMEDY_INTEGRATION\" version=\"7.0.10.1010\" reportdate=\"2018-03-21T18:14:58.485+01:00\" description=\"\">\r\n" + 
-//				"  <source name=\"ADBM_TEST\">\r\n" + 
-//				"    <filters summary=\"last 24 hours\">\r\n" + 
-//				"      <filter>tf:Last24h</filter>\r\n" + 
-//				"    </filters>\r\n" + 
-//				"  </source>\r\n" + 
-//				"  <data>\r\n" + 
-//				"    <incidentsoverviewdashlet name=\"Incidents\" description=\"\" displaysource=\"Base\">\r\n" + 
-//				"      <source>\r\n" + 
-//				"        <filters summary=\"Incident Rules, last 24 hours\">\r\n" + 
-//				"          <filter>tf:Last24h</filter>\r\n" + 
-//				"          <filter>if:RULE?Agent Instrumentation Disabledif:RULE?Application Process Out-of-Memoryif:RULE?Application Process Unavailable (unexpected)if:RULE?Application Process Unhealthyif:RULE?Average response time degradedif:RULE?CURRENT_Q_DEPTHif:RULE?Database connection issueif:RULE?Failure rate too highif:RULE?Host Availabilityif:RULE?Host CPU Unhealthyif:RULE?Host Disk Unhealthyif:RULE?Host Memory Unhealthyif:RULE?Host Network Unhealthyif:RULE?JDBC Connection Pool Percent Usedif:RULE?JDBC Connection Pool Waiting Thread Countif:RULE?Potentially stuck Java VM detectedif:RULE?Response time degraded for slow requestsif:RULE?Status of the QMif:RULE?Thread Declared Hungif:RULE?Total GC Collection Time</filter>\r\n" + 
-//				"        </filters>\r\n" + 
-//				"      </source>\r\n" + 
-//				"      <incidentoverviewrecords structuretype=\"tree\">\r\n" + 
-//				"        <incidentoverviewrecord name=\"ADBM_TEST (6)\">\r\n" + 
-//				"          <incidentoverviewrecord name=\"Agent Instrumentation Disabled\"></incidentoverviewrecord>\r\n" + 
-//				"          <incidentoverviewrecord name=\"Application Process Out-of-Memory\"></incidentoverviewrecord>\r\n" + 
-//				"          <incidentoverviewrecord name=\"Application Process Unavailable (unexpected)\"></incidentoverviewrecord>\r\n" + 
-//				"          <incidentoverviewrecord name=\"Application Process Unhealthy\"></incidentoverviewrecord>\r\n" + 
-//				"          <incidentoverviewrecord name=\"CURRENT_Q_DEPTH (6)\">\r\n" + 
-//				"            <incidentoverviewrecord name=\"Queue Group/CURRENT_Q_DEPTH: CURRENT_Q_DEPTH [Queue Name-&gt;ADBM_QU_ANAGRAFICA] (ARAPPX02_QM_THRESHOULD_10@192.168.175.144) ARAPPX02_QM_THRESHOULD_10 upper bound exceeded\" start=\"2018-03-08T16:40:10.000+01:00\" source=\"ARAPPX02_QM_THRESHOLD_10@192.168.175.144\"></incidentoverviewrecord>\r\n" + 
-//				"            <incidentoverviewrecord name=\"Queue Group/CURRENT_Q_DEPTH: CURRENT_Q_DEPTH [Queue Name-&gt;ADBM_QU_NAS] (ARAPPX02_QM - Test1@192.168.175.144) ARAPPX02_QM - Test1 upper bound exceeded\" start=\"2018-03-19T22:56:10.000+01:00\" source=\"ARAPPX02_QM - Test1@192.168.175.144\"></incidentoverviewrecord>\r\n" + 
-//				"            <incidentoverviewrecord name=\"Queue Group/CURRENT_Q_DEPTH: CURRENT_Q_DEPTH [Queue Name-&gt;ADBM_QU_UFIS_ADR] (ARAPPX02_QM - Test1@192.168.175.144) ARAPPX02_QM - Test1 upper bound exceeded\" start=\"2018-03-19T19:29:10.000+01:00\" source=\"ARAPPX02_QM - Test1@192.168.175.144\"></incidentoverviewrecord>\r\n" + 
-//				"            <incidentoverviewrecord name=\"Queue Group/CURRENT_Q_DEPTH: CURRENT_Q_DEPTH [Queue Name-&gt;ADBM_QU_UFIS_TEST] (ARAPPX02_QM - Test1@192.168.175.144) ARAPPX02_QM - Test1 upper bound exceeded\" start=\"2018-03-19T22:10:10.000+01:00\" source=\"ARAPPX02_QM - Test1@192.168.175.144\"></incidentoverviewrecord>\r\n" + 
-//				"            <incidentoverviewrecord name=\"Queue Group/CURRENT_Q_DEPTH: CURRENT_Q_DEPTH [Queue Name-&gt;LM_QU_ADBM] (ARAPPX02_QM - Test1@192.168.175.144) ARAPPX02_QM - Test1 upper bound exceeded\" start=\"2018-03-12T00:47:10.000+01:00\" source=\"ARAPPX02_QM - Test1@192.168.175.144\"></incidentoverviewrecord>\r\n" + 
-//				"            <incidentoverviewrecord name=\"Queue Group/CURRENT_Q_DEPTH: CURRENT_Q_DEPTH [Queue Name-&gt;TELEX_QU_ADBM] (ARAPPX02_QM - Test1@192.168.175.144) ARAPPX02_QM - Test1 upper bound exceeded\" start=\"2018-03-19T16:45:10.000+01:00\" source=\"ARAPPX02_QM - Test1@192.168.175.144\"></incidentoverviewrecord>\r\n" + 
-//				"          </incidentoverviewrecord>\r\n" + 
-//				"          <incidentoverviewrecord name=\"Database Agent Connection Issue\"></incidentoverviewrecord>\r\n" + 
-//				"          <incidentoverviewrecord name=\"Failure rate too high\"></incidentoverviewrecord>\r\n" + 
-//				"          <incidentoverviewrecord name=\"JDBC Connection Pool Percent Used\"></incidentoverviewrecord>\r\n" + 
-//				"          <incidentoverviewrecord name=\"JDBC Connection Pool Waiting Thread Count\"></incidentoverviewrecord>\r\n" + 
-//				"          <incidentoverviewrecord name=\"Potentially stuck Java VM detected\"></incidentoverviewrecord>\r\n" + 
-//				"          <incidentoverviewrecord name=\"Response time degraded\"></incidentoverviewrecord>\r\n" + 
-//				"          <incidentoverviewrecord name=\"Response time degraded for slow requests\"></incidentoverviewrecord>\r\n" + 
-//				"          <incidentoverviewrecord name=\"Status of the QM\"></incidentoverviewrecord>\r\n" + 
-//				"          <incidentoverviewrecord name=\"Thread Declared Hung\"></incidentoverviewrecord>\r\n" + 
-//				"          <incidentoverviewrecord name=\"Total GC Collection Time\"></incidentoverviewrecord>\r\n" + 
-//				"        </incidentoverviewrecord>\r\n" + 
-//				"      </incidentoverviewrecords>\r\n" + 
-//				"    </incidentsoverviewdashlet>\r\n" + 
-//				"  </data>\r\n" + 
-//				"</dashboardreport>";
-		
 		
 		String dashboardreportBuffer="<?xml version=\"1.0\" encoding=\"utf-8\"?>\r\n" + 
 		"<dashboardreport name=\"ADBM_TEST_REMEDY_INTEGRATION\" version=\"7.0.10.1010\" reportdate=\"2018-03-21T18:14:58.485+01:00\" description=\"\">\r\n" + 
@@ -256,7 +182,6 @@ public class DynatraceClientImpl implements DynatraceClient{
 			dynatraceClient.buildMapDynatraceIncidentFromDashboardreport("ADBM", dashboardreportBuffer);
 			System.out.println("DONE");
 		} catch (XmlException e) {
-			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
 		

@@ -59,7 +59,7 @@ public class RemedyIncidetBuilderEngine {
 	    	getDynatraceIncident.execute(env);
 	    	
 
-	    	createRemedyIncident.execute(env);
+	    	//createRemedyIncident.execute(env);
 	    	
 	    	
 	    	//closeRemedyIncident.execute(env);

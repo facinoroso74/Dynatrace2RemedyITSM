@@ -15,8 +15,10 @@ package it.reply.sytel.adr.configuration;
 
 import java.util.ArrayList;
 import java.util.HashMap;
+import java.util.Iterator;
 import java.util.List;
 import java.util.Map;
+import java.util.Set;
 
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
@@ -71,6 +73,14 @@ public class ConfigServicesDB implements ConfigurationService {
 			}
 			
 		}
+		
+		log.info("---------Configuration begin----------");
+		Set<String> keys = mapIncidentConfiguration.keySet();
+		for (Iterator<String> iterator = keys.iterator(); iterator.hasNext();) {
+			String key = (String) iterator.next();
+			log.info(mapIncidentConfiguration.get(key));
+		}
+		log.info("---------Configuration end------------");
 		
 		map.put(ADRConstants.INCIDENT_CONFIGURATION_CONFIG_MAP, mapIncidentConfiguration);
 		
