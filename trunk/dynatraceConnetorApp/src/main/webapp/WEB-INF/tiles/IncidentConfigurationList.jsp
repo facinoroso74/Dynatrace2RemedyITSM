@@ -26,6 +26,9 @@ $(document).ready(function() {
 	         	{ "data": "impact" },
 	         	{ "data": "urgency" },
 	         	{ "data": "sorgenteSistema" },
+	         	{ "data": "categorizationTier1" },
+            	{ "data": "categorizationTier2" },
+            	{ "data": "categorizationTier3" },
             ],
  	    	 "pageLength": 20,
  	    	
@@ -52,13 +55,13 @@ $(document).ready(function() {
     });
     
     $('#editbuttonSpan').click(function() {
-    	alert('hello world edit');
+    	//alert('hello world edit');
       
 		var idToEdit=0;
 		
     	$("#example tr.selected td").each(function(index){
     		if(index==1){
-    			alert("Valore:["+$(this).text()+"]");
+    		//	alert("Valore:["+$(this).text()+"]");
     			idToEdit= $(this).text();
     		}
     	});
@@ -145,6 +148,9 @@ $(document).ready(function() {
                 <th>impact</th>
                 <th>urgency</th>
                 <th>sorgenteSistema</th>
+                 <th>categorizationTier1</th>
+                <th>categorizationTier2</th>
+                <th>categorizationTier3</th>
             </tr>
         </thead>
         <tfoot>
@@ -157,6 +163,9 @@ $(document).ready(function() {
                 <th>impact</th>
                 <th>urgency</th>
                 <th>sorgenteSistema</th>
+                <th>categorizationTier1</th>
+                <th>categorizationTier2</th>
+                <th>categorizationTier3</th>
             </tr>
         </tfoot>
     </table>

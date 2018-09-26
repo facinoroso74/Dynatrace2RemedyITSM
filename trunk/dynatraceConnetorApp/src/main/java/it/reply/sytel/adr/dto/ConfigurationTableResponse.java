@@ -30,6 +30,10 @@ public class ConfigurationTableResponse
       configurationForTable.setUrgency(configuration.getUrgency());
       configurationForTable.setSorgenteSistema(configuration.getSorgenteSistema());
       
+      configurationForTable.setCategorizationTier1(configuration.getCategorizationTier1());
+      configurationForTable.setCategorizationTier2(configuration.getCategorizationTier2());
+      configurationForTable.setCategorizationTier3(configuration.getCategorizationTier3());
+      
       ((ArrayList<ConfigurationForTable>)this.data).add(configurationForTable);
       
 //    configurationForTable.setTipoIncident(configuration.getTipoIncident());

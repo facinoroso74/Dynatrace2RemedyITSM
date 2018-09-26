@@ -14,10 +14,12 @@ import org.xmlsoap.schemas.soap.envelope.Header;
 import hpdIncidentInterfaceCreateWSVIP.AuthenticationInfo;
 import hpdIncidentInterfaceCreateWSVIP.AuthenticationInfoDocument;
 import hpdIncidentInterfaceCreateWSVIP.CreateInputMap;
+import hpdIncidentInterfaceCreateWSVIP.CreateRequestType;
 import hpdIncidentInterfaceCreateWSVIP.HelpDeskSubmitServiceDocument;
 import hpdIncidentInterfaceCreateWSVIP.HelpDeskSubmitServiceResponseDocument;
 import hpdIncidentInterfaceCreateWSVIP.ImpactType;
 import hpdIncidentInterfaceCreateWSVIP.ReportedSourceType;
+import hpdIncidentInterfaceCreateWSVIP.SedeIntType;
 import hpdIncidentInterfaceCreateWSVIP.ServiceTypeType;
 import hpdIncidentInterfaceCreateWSVIP.StatusType;
 import hpdIncidentInterfaceCreateWSVIP.UrgencyType;
@@ -42,31 +44,45 @@ public class RemedyWSClientImpl implements RemedyClient{
 	@Override
 	public String createIncident(DynatraceIncident dynatraceIncident,RemedyConfiguration remedyAutenticationInfo,Configuration incidentTypeconfiguration){
 		
+		checkNullValueImpact(ImpactType.Enum.forString(incidentTypeconfiguration.getImpact()),incidentTypeconfiguration.getImpact());
+		checkNullValueUrgency(UrgencyType.Enum.forString(incidentTypeconfiguration.getUrgency()),incidentTypeconfiguration.getUrgency());
+				
 		AuthenticationInfoDocument authenticationInfoDocument = AuthenticationInfoDocument.Factory.newInstance();
 		AuthenticationInfo authenticationInfo = authenticationInfoDocument.addNewAuthenticationInfo();
 		authenticationInfo.setUserName(remedyAutenticationInfo.getUsername());
 		authenticationInfo.setPassword(remedyAutenticationInfo.getPassword());
 		
 		HelpDeskSubmitServiceDocument helpDeskSubmitServiceDocument = HelpDeskSubmitServiceDocument.Factory.newInstance();
+		
 		CreateInputMap createInputMap = helpDeskSubmitServiceDocument.addNewHelpDeskSubmitService();
 		createInputMap.setFirstName(ADRConstants.FIRST_NAME);
 		createInputMap.setLastName(ADRConstants.LAST_NAME);
-		
-		
 		createInputMap.setImpact(ImpactType.Enum.forString(incidentTypeconfiguration.getImpact()));
-		checkNullValueImpact(ImpactType.Enum.forString(incidentTypeconfiguration.getImpact()),incidentTypeconfiguration.getImpact());
+		createInputMap.setUrgency(UrgencyType.Enum.forString(incidentTypeconfiguration.getUrgency()));
 		
 		createInputMap.setReportedSource(ReportedSourceType.Enum.forString(ADRConstants.REPORTED_SOURCE));
-		//checkNullValueReportedSource(ReportedSourceType.Enum.forString(incidentTypeconfiguration.getReportedSource()),incidentTypeconfiguration.getReportedSource());
 		
 		createInputMap.setServiceType(ServiceTypeType.Enum.forString(ADRConstants.SERVICE_TYPE));
-		//checkNullValueServiceType(ServiceTypeType.Enum.forString(incidentTypeconfiguration.getServiceType()),incidentTypeconfiguration.getServiceType());
 		
 		createInputMap.setStatus(StatusType.Enum.forString(ADRConstants.STATUS));
-		//checkNullValueStatus(StatusType.Enum.forString(incidentTypeconfiguration.getStatus()),incidentTypeconfiguration.getStatus());
 		
-		createInputMap.setSummary(".........SUMNMARY..........");
-		createInputMap.setUrgency(UrgencyType.X_1_CRITICAL);
+		createInputMap.setAction(ADRConstants.ACTION);
+		
+		createInputMap.setCreateRequest(CreateRequestType.Enum.forString(ADRConstants.CREATE_REQUEST));
+		
+		createInputMap.setNotes(dynatraceIncident.getDynatraceIncidentKey().getName());
+		createInputMap.setSummary(incidentTypeconfiguration.getIdEvento());
+		createInputMap.setSistemaSorgente(incidentTypeconfiguration.getSorgenteSistema());
+		
+		createInputMap.setSedeInt(SedeIntType.Enum.forString(ADRConstants.SEDE_INT));
+		
+		createInputMap.setCategorizationTier1(incidentTypeconfiguration.getCategorizationTier1());
+		createInputMap.setCategorizationTier2(incidentTypeconfiguration.getCategorizationTier2());
+		createInputMap.setCategorizationTier3(incidentTypeconfiguration.getCategorizationTier3());
+		
+		
+		//Sede_int
+		
 		
 		//add optional attributes
 //		createInputMap.setAssignedGroup(arg0);
@@ -114,6 +130,10 @@ public class RemedyWSClientImpl implements RemedyClient{
 	private void checkNullValueImpact(ImpactType.Enum forString,String valueSearched) {
 		if(forString==null)
 			throw new RemedyBadValueFieldException("Value ["+valueSearched+"] Not allowed for Remedy Ticket Field:[Impact]");
+	}
+	private void checkNullValueUrgency(UrgencyType.Enum forString,String valueSearched) {
+		if(forString==null)
+			throw new RemedyBadValueFieldException("Value ["+valueSearched+"] Not allowed for Remedy Ticket Field:[Ugency]");
 	}
 //	
 //	private void checkNullValueServiceType(ServiceTypeType.Enum forString,String valueSearched) {

@@ -45,8 +45,8 @@ public class ConfigServicesDB implements ConfigurationService {
     @Autowired
     private DashboardRepository dashboardRepository;
     
-    @Autowired
-    private ConfigurationRepository configurationRepository; 
+//    @Autowired
+//    private ConfigurationRepository configurationRepository; 
     
     @Autowired
     private RemedyConfigurationRepository remedyConfigurationRepository; 
@@ -54,37 +54,37 @@ public class ConfigServicesDB implements ConfigurationService {
 	private Map<String,Object> map;
 
 
-	private void buildMapIncidentConfigurationBySorgenteSistema() {
-		
-		Iterable<Configuration> incidentConfigurationList = configurationRepository.findAll();
-		HashMap< String, List<Configuration>> mapIncidentConfiguration = new HashMap<String,List<Configuration>>();
-		
-		for (Configuration incidentConfiguration : incidentConfigurationList) {
-
-			if (mapIncidentConfiguration.get(incidentConfiguration.getSorgenteSistema()) == null ) {
-				
-				List<Configuration> incidentConfigurationBySorgenteSistemaList = new ArrayList<Configuration>();
-				incidentConfigurationBySorgenteSistemaList.add(incidentConfiguration);
-				mapIncidentConfiguration.put(incidentConfiguration.getSorgenteSistema(), incidentConfigurationBySorgenteSistemaList);
-				
-			}else {
-				List<Configuration> incidentConfigurationBySorgenteSistemaList  = mapIncidentConfiguration.get(incidentConfiguration.getSorgenteSistema());
-				incidentConfigurationBySorgenteSistemaList.add(incidentConfiguration);
-			}
-			
-		}
-		
-		log.info("---------Configuration begin----------");
-		Set<String> keys = mapIncidentConfiguration.keySet();
-		for (Iterator<String> iterator = keys.iterator(); iterator.hasNext();) {
-			String key = (String) iterator.next();
-			log.info(mapIncidentConfiguration.get(key));
-		}
-		log.info("---------Configuration end------------");
-		
-		map.put(ADRConstants.INCIDENT_CONFIGURATION_CONFIG_MAP, mapIncidentConfiguration);
-		
-	}
+//	private void buildMapIncidentConfigurationBySorgenteSistema() {
+//		
+//		//Iterable<Configuration> incidentConfigurationList = configurationRepository.findAll();
+//		HashMap< String, List<Configuration>> mapIncidentConfiguration = new HashMap<String,List<Configuration>>();
+//		
+//		for (Configuration incidentConfiguration : incidentConfigurationList) {
+//
+//			if (mapIncidentConfiguration.get(incidentConfiguration.getSorgenteSistema()) == null ) {
+//				
+//				List<Configuration> incidentConfigurationBySorgenteSistemaList = new ArrayList<Configuration>();
+//				incidentConfigurationBySorgenteSistemaList.add(incidentConfiguration);
+//				mapIncidentConfiguration.put(incidentConfiguration.getSorgenteSistema(), incidentConfigurationBySorgenteSistemaList);
+//				
+//			}else {
+//				List<Configuration> incidentConfigurationBySorgenteSistemaList  = mapIncidentConfiguration.get(incidentConfiguration.getSorgenteSistema());
+//				incidentConfigurationBySorgenteSistemaList.add(incidentConfiguration);
+//			}
+//			
+//		}
+//		
+//		log.info("---------Configuration begin----------");
+//		Set<String> keys = mapIncidentConfiguration.keySet();
+//		for (Iterator<String> iterator = keys.iterator(); iterator.hasNext();) {
+//			String key = (String) iterator.next();
+//			log.info(mapIncidentConfiguration.get(key));
+//		}
+//		log.info("---------Configuration end------------");
+//		
+//		map.put(ADRConstants.INCIDENT_CONFIGURATION_CONFIG_MAP, mapIncidentConfiguration);
+//		
+//	}
 	
     public void init() {
     	
@@ -94,7 +94,7 @@ public class ConfigServicesDB implements ConfigurationService {
 		
     	map.put(ADRConstants.DASH_BOARD_CONFIG_LIST, dashboardRepository.findAll());
     	map.put(ADRConstants.REMEDY_CONFIGURATION, remedyConfigurationRepository.findAll());
-    	buildMapIncidentConfigurationBySorgenteSistema();
+    	//buildMapIncidentConfigurationBySorgenteSistema();
 		log.info("connecting to DB for getting the configuration...DONE");
     }
   

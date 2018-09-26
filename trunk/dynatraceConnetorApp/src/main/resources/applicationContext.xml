@@ -31,7 +31,8 @@
                                     <entry key="keystoreURLString" value=""/>
                                     <entry key="trustPwd"          value="password"/>
                                     <entry key="trustURLString"    value="file:///D:/Dynatrace2RemedyITSM/Dynatrace2RemedyITSM/trunk/resourcesConf/truststore.jks"/>
-								 	<entry key="urlToConnect"      value="http://red19983:8088/mockHPD_IncidentInterface_Create_WSPortTypeSoapBinding"/>
+                                    <entry key="urlToConnect"      value="http://localhost:8088/mockHPD_IncidentInterface_Create_WSPortTypeSoapBinding"/>
+<!-- 								 	<entry key="urlToConnect"      value="http://red19983:8088/mockHPD_IncidentInterface_Create_WSPortTypeSoapBinding"/> -->
 									<entry key="maxTotalThread"    value="100"/>
                                     <entry key="soTimeout"         value="50000"/>
                                     <entry key="connTimeout"       value="120000"/>

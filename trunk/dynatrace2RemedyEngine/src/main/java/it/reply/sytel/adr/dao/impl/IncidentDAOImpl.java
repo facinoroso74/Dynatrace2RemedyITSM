@@ -304,6 +304,8 @@ public class IncidentDAOImpl implements IncidentDAO {
 				dynatraceIncident.setState(rslt.getString("state"));
 				dynatraceIncident.setThresholds(rslt.getString("thresholds"));
 				
+				dynatraceIncident.setIncidentType(rslt.getString("incident_type"));
+				
 				dynatraceIncidentList.add(dynatraceIncident);
 				
 			}

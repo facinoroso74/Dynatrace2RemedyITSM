@@ -76,12 +76,30 @@ $(document).ready(function() {
 	<table border="1">
 		<tr BGCOLOR="#CCCCFF"><th>COLUMN_NAME</th><th>VALUE</th></tr>
 		
-		<tr><td>ID_EVENTO</td><td><input type="TEXT" id="idEvento" name="idEvento"></td></tr>
-		<tr><td>DESCRIZIONE</td><td><input type="TEXT" id="descrizione" name="descrizione"></td></tr>
-		<tr><td>DASHBOARD</td><td><input type="TEXT" id="dashboard" name="dashboard"></td></tr>
-		<tr><td>IMPACT</td><td><input type="TEXT" id="impact" name="impact"></td></tr>
-		<tr><td>URGENCY</td><td><input type="TEXT" id="urgency" name="urgency"></td></tr>
-		<tr><td>SORGENTE_SISTEMA</td><td><input type="TEXT" id="sorgenteSistema" name="sorgenteSistema"></td></tr>
+		<tr><td>ID_EVENTO</td><td><input type="TEXT" id="idEvento" name="idEvento" size="25"></td></tr>
+		<tr><td>DESCRIZIONE</td><td><input type="TEXT" id="descrizione" name="descrizione" size="25"></td></tr>
+		<tr><td>DASHBOARD</td><td><input type="TEXT" id="dashboard" name="dashboard" size="25"></td></tr>
+		<tr><td>IMPACT</td><td>
+				<select name="impact">
+				  <option value="1-Extensive/Widespread"/>1-Extensive/Widespread</option>
+          		  <option value="2-Significant/Large"/>2-Significant/Large</option>
+          		  <option value="3-Moderate/Limited"/>3-Moderate/Limited</option>
+          		  <option value="4-Minor/Localized"/>4-Minor/Localized</option>
+          		</select>
+		</td></tr>
+		<tr><td>URGENCY</td><td>
+				<select name="urgency"> 
+					<option value="1-Critical"/>1-Critical</option>
+	          		<option value="2-High"/>2-High</option>
+	          		<option value="3-Medium"/>3-Medium</option>
+	          		<option value="4-Low"/>4-Low</option>
+          		</select>
+		</td></tr>
+		<tr><td>SORGENTE_SISTEMA</td><td><input type="TEXT" id="sorgenteSistema" name="sorgenteSistema" size="25"></td></tr>
+		<tr><td>CATEGORIZATION_TIER1</td><td><input type="TEXT" id="categorizationTier1" name="categorizationTier1" size="25"></td></tr>
+		<tr><td>CATEGORIZATION_TIER2</td><td><input type="TEXT" id="categorizationTier2" name="categorizationTier2" size="25"></td></tr>
+		<tr><td>CATEGORIZATION_TIER3</td><td><input type="TEXT" id="categorizationTier3" name="categorizationTier3" size="25"></td></tr>
+		        
 	</table>
 </form>
 <div id="buttons">

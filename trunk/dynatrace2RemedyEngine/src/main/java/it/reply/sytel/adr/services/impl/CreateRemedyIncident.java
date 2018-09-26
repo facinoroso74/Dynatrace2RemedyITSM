@@ -7,6 +7,7 @@ import java.util.List;
 import java.util.Map;
 
 import org.apache.logging.log4j.LogManager;
+import org.springframework.beans.factory.annotation.Autowired;
 
 import it.reply.sytel.adr.constants.ADRConstants;
 import it.reply.sytel.adr.core.services.enviromnent.Enviromnent;
@@ -17,23 +18,27 @@ import it.reply.sytel.adr.domain.Dashboard;
 import it.reply.sytel.adr.domain.RemedyConfiguration;
 import it.reply.sytel.adr.remedyAdapter.RemedyClient;
 import it.reply.sytel.adr.remedyAdapter.exc.RemedyBadValueFieldException;
+import it.reply.sytel.adr.repositories.ConfigurationRepository;
 import it.reply.sytel.adr.services.exc.CreateRemedyIncidentException;
 import it.reply.sytel.adr.services.exc.IncidentTypeConfigurationException;
+import it.reply.sytel.adr.utility.ADRUtility;
 import it.reply.sytel.adr.vo.AppProperty;
 import it.reply.sytel.adr.vo.DynatraceIncident;
 import it.reply.sytel.adr.vo.RemedyAutenticationInfo;
 
 public class CreateRemedyIncident extends AbstractService {
 
+	@Autowired
+    private ConfigurationRepository configurationRepository; 
+	
+	private IncidentDAO incidentDAO;
+	private RemedyClient remedyClient;
+	
 	public CreateRemedyIncident() {
 		super(CreateRemedyIncident.class.getName());
 		log = LogManager.getLogger(getClass());
 
 	}
-
-	private IncidentDAO incidentDAO;
-	private RemedyClient remedyClient;
-	
 	
 	@Override
 	protected Enviromnent perform(Enviromnent env) {
@@ -59,17 +64,20 @@ public class CreateRemedyIncident extends AbstractService {
 				
 				DynatraceIncident dynatraceIncident = (DynatraceIncident) iterator.next();
 				
-				log.info("Getting the configuration for the dashboard:["+dynatraceIncident.getDynatraceIncidentKey().getDashboarName()+"]");
+//				log.info("Getting the configuration for the dashboard:["+dynatraceIncident.getDynatraceIncidentKey().getDashboarName()+"]");
+//				
+//				List<Configuration> incidentConfigurationList = mapIncidentConfiguration.get(dynatraceIncident.getDynatraceIncidentKey().getDashboarName());
+//												
+//				if(incidentConfigurationList==null) {
+//					log.info("There isn't configuration for dashborad:["+dynatraceIncident.getDynatraceIncidentKey().getDashboarName()+"]");
+//				}else {
+//					log.info("There is a configuration for dashborad:["+dynatraceIncident.getDynatraceIncidentKey().getDashboarName()+"]");
+//					//create incident
+//					createTicketRemedy(dynatraceIncident, remedyConfiguration, incidentConfigurationList);
+//				}
+//				
+				createTicketRemedy(dynatraceIncident, remedyConfiguration,null);
 				
-				List<Configuration> incidentConfigurationList = mapIncidentConfiguration.get(dynatraceIncident.getDynatraceIncidentKey().getDashboarName());
-												
-				if(incidentConfigurationList==null) {
-					log.info("There isn't configuration for dashborad:["+dynatraceIncident.getDynatraceIncidentKey().getDashboarName()+"]");
-				}else {
-					log.info("There is a configuration for dashborad:["+dynatraceIncident.getDynatraceIncidentKey().getDashboarName()+"]");
-					//create incident
-					createTicketRemedy(dynatraceIncident, remedyConfiguration, incidentConfigurationList);
-				}
 				
 //				String remedyIncidentId = remedyClient.createIncident(dynatraceIncident,remedyAutenticationInfo,appProperty);
 //				
@@ -120,12 +128,25 @@ public class CreateRemedyIncident extends AbstractService {
 		return null;
 	}
 
+	private Configuration getConfigurationByIncidentType(DynatraceIncident dynatraceIncident) {
+		log.debug("DynatraceIncident:["+dynatraceIncident+"]");
+		String descrizioneToFind=ADRUtility.getDescrizioneFromIncidentType(dynatraceIncident.getIncidentType());
+		log.debug("DescrizioneToFind:["+descrizioneToFind+"] for DashBoard:["+dynatraceIncident.getDynatraceIncidentKey().getDashboarName()+"]");
+		
+		Configuration configuration = configurationRepository.findByDescrizioneAndDashboard(descrizioneToFind, dynatraceIncident.getDynatraceIncidentKey().getDashboarName());
+		if(configuration==null)
+			log.info("There isn't any configuration for incidentType:["+descrizioneToFind+"]");
+		return configuration;
+	}
+	
 	private void createTicketRemedy(DynatraceIncident dynatraceIncident,RemedyConfiguration remedyConfiguration,List<Configuration> incidentConfigurationList) {
 		//create incident
 		try {
 			
 			
-			Configuration incidentTypeConfiguration = getConfigurationByIncidentType(dynatraceIncident,incidentConfigurationList);
+			//Configuration incidentTypeConfiguration = getConfigurationByIncidentType(dynatraceIncident,incidentConfigurationList);
+			Configuration incidentTypeConfiguration = getConfigurationByIncidentType(dynatraceIncident);
+			
 			if(incidentTypeConfiguration!=null) {
 				String remedyIncidentId = remedyClient.createIncident( dynatraceIncident,remedyConfiguration,incidentTypeConfiguration);
 		
@@ -143,13 +164,6 @@ public class CreateRemedyIncident extends AbstractService {
 			//TODO
 			//si dovrebbe rimuovere dalla tabella l'evento per cui non è stata trovata la configurazione
 			//si dovrebbe rimuovere dalla tabella l'evento per cui non è stata trovata la configurazione
-			//si dovrebbe rimuovere dalla tabella l'evento per cui non è stata trovata la configurazione
-			//si dovrebbe rimuovere dalla tabella l'evento per cui non è stata trovata la configurazione
-			//si dovrebbe rimuovere dalla tabella l'evento per cui non è stata trovata la configurazione
-			//si dovrebbe rimuovere dalla tabella l'evento per cui non è stata trovata la configurazione
-			//si dovrebbe rimuovere dalla tabella l'evento per cui non è stata trovata la configurazione
-			
-			
 			
 		}catch (RemedyBadValueFieldException e) {
 			log.error("exception on create the ticket remedy for DynatraceIncident:["+dynatraceIncident+"]",e);

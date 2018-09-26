@@ -37,6 +37,15 @@ public class Configuration implements Serializable {
 	@Column
 	String sorgenteSistema;
 
+	
+	@Column
+	String categorizationTier1;
+	@Column
+	String categorizationTier2;
+	@Column
+	String categorizationTier3;
+	
+	
 	public Long getConfigurationId() {
 		return configurationId;
 	}
@@ -93,10 +102,37 @@ public class Configuration implements Serializable {
 		this.sorgenteSistema = sorgenteSistema;
 	}
 
+	public String getCategorizationTier1() {
+		return categorizationTier1;
+	}
+
+	public void setCategorizationTier1(String categorizationTier1) {
+		this.categorizationTier1 = categorizationTier1;
+	}
+
+	public String getCategorizationTier2() {
+		return categorizationTier2;
+	}
+
+	public void setCategorizationTier2(String categorizationTier2) {
+		this.categorizationTier2 = categorizationTier2;
+	}
+
+	public String getCategorizationTier3() {
+		return categorizationTier3;
+	}
+
+	public void setCategorizationTier3(String categorizationTier3) {
+		this.categorizationTier3 = categorizationTier3;
+	}
+
 	@Override
 	public int hashCode() {
 		final int prime = 31;
 		int result = 1;
+		result = prime * result + ((categorizationTier1 == null) ? 0 : categorizationTier1.hashCode());
+		result = prime * result + ((categorizationTier2 == null) ? 0 : categorizationTier2.hashCode());
+		result = prime * result + ((categorizationTier3 == null) ? 0 : categorizationTier3.hashCode());
 		result = prime * result + ((configurationId == null) ? 0 : configurationId.hashCode());
 		result = prime * result + ((dashboard == null) ? 0 : dashboard.hashCode());
 		result = prime * result + ((descrizione == null) ? 0 : descrizione.hashCode());
@@ -116,6 +152,21 @@ public class Configuration implements Serializable {
 		if (getClass() != obj.getClass())
 			return false;
 		Configuration other = (Configuration) obj;
+		if (categorizationTier1 == null) {
+			if (other.categorizationTier1 != null)
+				return false;
+		} else if (!categorizationTier1.equals(other.categorizationTier1))
+			return false;
+		if (categorizationTier2 == null) {
+			if (other.categorizationTier2 != null)
+				return false;
+		} else if (!categorizationTier2.equals(other.categorizationTier2))
+			return false;
+		if (categorizationTier3 == null) {
+			if (other.categorizationTier3 != null)
+				return false;
+		} else if (!categorizationTier3.equals(other.categorizationTier3))
+			return false;
 		if (configurationId == null) {
 			if (other.configurationId != null)
 				return false;
@@ -158,11 +209,9 @@ public class Configuration implements Serializable {
 	public String toString() {
 		return "Configuration [configurationId=" + configurationId + ", idEvento=" + idEvento + ", descrizione="
 				+ descrizione + ", dashboard=" + dashboard + ", impact=" + impact + ", urgency=" + urgency
-				+ ", sorgenteSistema=" + sorgenteSistema + "]";
+				+ ", sorgenteSistema=" + sorgenteSistema + ", categorizationTier1=" + categorizationTier1
+				+ ", categorizationTier2=" + categorizationTier2 + ", categorizationTier3=" + categorizationTier3 + "]";
 	}
-	
-	
-	
-	
-	
+
+		
 }
