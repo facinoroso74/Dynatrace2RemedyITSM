@@ -20,8 +20,15 @@ $(document).ready(function() {
             	{ "data": "checkbox" },
             	{ "data": "remedyConfigurationId" },
             	{ "data": "username" },
-            	{ "data": "password" },
-            	{ "data": "url" }
+//             	{ "data": "password" },            	
+            	{ "data": "status" },
+            	{ "data": "service_type" },
+            	{ "data": "reported_source" },
+            	{ "data": "first_name" },
+            	{ "data": "last_name" },
+            	{ "data": "action" },
+            	{ "data": "create_request" },
+            	{ "data": "sede_int" },
             ],
  	    	 "pageLength": 20,
 				
@@ -48,13 +55,12 @@ $(document).ready(function() {
     });
     
     $('#editbuttonSpan').click(function() {
-    	alert('hello world edit');
-      
+    	     
 		var idToEdit=0;
 		
     	$("#example tr.selected td").each(function(index){
     		if(index==1){
-    			alert("Valore:["+$(this).text()+"]");
+    			//alert("Valore:["+$(this).text()+"]");
     			idToEdit= $(this).text();
     		}
     	});
@@ -129,8 +135,15 @@ $(document).ready(function() {
                 <th>checkbox</th>
                 <th>remedyConfigurationId</th>
                 <th>username</th>
-                <th>password</th>
-                <th>url</th>
+<!--                 <th>password</th> -->
+                <th>status</th>
+				<th>service_type</th>
+				<th>reported_source</th>
+				<th>first_name</th>
+				<th>last_name</th>
+				<th>action</th>
+				<th>create_request</th>
+				<th>sede_int</th>
             </tr>
         </thead>
         <tfoot>
@@ -138,8 +151,15 @@ $(document).ready(function() {
             	<th>checkbox</th>
                 <th>remedyConfigurationId</th>
                 <th>username</th>
-                <th>password</th>
-                <th>url</th>
+<!--                 <th>password</th> -->
+                <th>status</th>
+				<th>service_type</th>
+				<th>reported_source</th>
+				<th>first_name</th>
+				<th>last_name</th>
+				<th>action</th>
+				<th>create_request</th>
+				<th>sede_int</th>
             </tr>
         </tfoot>
     </table>

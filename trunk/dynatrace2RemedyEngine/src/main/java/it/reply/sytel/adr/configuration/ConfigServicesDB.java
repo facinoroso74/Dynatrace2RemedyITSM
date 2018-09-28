@@ -13,24 +13,14 @@
  */
 package it.reply.sytel.adr.configuration;
 
-import java.util.ArrayList;
 import java.util.HashMap;
-import java.util.Iterator;
-import java.util.List;
 import java.util.Map;
-import java.util.Set;
 
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
-import org.springframework.beans.factory.annotation.Autowired;
 
-import it.reply.sytel.adr.constants.ADRConstants;
 import it.reply.sytel.adr.core.dao.configuration.ConfigurationService;
 import it.reply.sytel.adr.core.dao.exception.ConfigurationException;
-import it.reply.sytel.adr.domain.Configuration;
-import it.reply.sytel.adr.repositories.ConfigurationRepository;
-import it.reply.sytel.adr.repositories.DashboardRepository;
-import it.reply.sytel.adr.repositories.RemedyConfigurationRepository;
 
 /**
  * @author MPantaleone
@@ -42,15 +32,6 @@ public class ConfigServicesDB implements ConfigurationService {
 	
 	private Logger log = LogManager.getLogger(getClass());
 	
-    @Autowired
-    private DashboardRepository dashboardRepository;
-    
-//    @Autowired
-//    private ConfigurationRepository configurationRepository; 
-    
-    @Autowired
-    private RemedyConfigurationRepository remedyConfigurationRepository; 
-    
 	private Map<String,Object> map;
 
 
@@ -88,14 +69,14 @@ public class ConfigServicesDB implements ConfigurationService {
 	
     public void init() {
     	
-    	log.info("connecting to DB for getting the configuration...");
+//    	log.info("connecting to DB for getting the configuration...");
     	
     	map = new HashMap<String,Object>();
 		
-    	map.put(ADRConstants.DASH_BOARD_CONFIG_LIST, dashboardRepository.findAll());
-    	map.put(ADRConstants.REMEDY_CONFIGURATION, remedyConfigurationRepository.findAll());
+//    	map.put(ADRConstants.DASH_BOARD_CONFIG_LIST, dashboardRepository.findAll());
+    	//map.put(ADRConstants.REMEDY_CONFIGURATION, remedyConfigurationRepository.findAll());
     	//buildMapIncidentConfigurationBySorgenteSistema();
-		log.info("connecting to DB for getting the configuration...DONE");
+//		log.info("connecting to DB for getting the configuration...DONE");
     }
   
 	/* (non-Javadoc)

@@ -17,6 +17,7 @@ import it.reply.sytel.adr.domain.Configuration;
 import it.reply.sytel.adr.domain.Dashboard;
 import it.reply.sytel.adr.dynatraceClient.DynatraceClient;
 import it.reply.sytel.adr.repositories.ConfigurationRepository;
+import it.reply.sytel.adr.repositories.DashboardRepository;
 import it.reply.sytel.adr.services.exc.GetDynatraceIncidentException;
 import it.reply.sytel.adr.utility.ADRUtility;
 import it.reply.sytel.adr.vo.DynatraceIncident;
@@ -27,6 +28,8 @@ public class GetDynatraceIncident extends AbstractService {
 	private IncidentDAO incidentDAO;
 	private DynatraceClient dynatraceClient;
 	
+	@Autowired
+	private DashboardRepository dashboardRepository;
 	
 	public GetDynatraceIncident() {
 		super(GetDynatraceIncident.class.getName());
@@ -43,7 +46,8 @@ public class GetDynatraceIncident extends AbstractService {
 			Timestamp now = new Timestamp(System.currentTimeMillis());
 			
 			Map<String , Object> configMap = (Map<String , Object>)getContext().getConfigMap();
-			Iterable<Dashboard> dashboardconfigList = (Iterable<Dashboard>)configMap.get(ADRConstants.DASH_BOARD_CONFIG_LIST);
+			//Iterable<Dashboard> dashboardconfigList = (Iterable<Dashboard>)configMap.get(ADRConstants.DASH_BOARD_CONFIG_LIST);
+			Iterable<Dashboard> dashboardconfigList = dashboardRepository.findAll();
 			
 			log.info("Number of DashBoard to call:["+((List<Dashboard>)dashboardconfigList).size()+"]");
 			

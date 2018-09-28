@@ -1,101 +1,101 @@
-2018-09-26 18:24:36.998 - [][restartedMain] INFO  it.reply.sytel.adr.configuration.ConfigServicesDB - connecting to DB for getting the configuration...
-2018-09-26 18:24:37.308 - [][restartedMain] INFO  it.reply.sytel.adr.configuration.ConfigServicesDB - connecting to DB for getting the configuration...DONE
-2018-09-26 18:24:37.380 - [][restartedMain] INFO  it.reply.sytel.adr.common.ws.GKConnectionKeepAliveStrategy - Using a custom ConnectionKeepAliveStrategy with default duration = 'infinite'
-2018-09-26 18:24:37.391 - [][restartedMain] INFO  it.reply.sytel.adr.common.ws.GKConnectionReuseStrategy - Using a custom ConnectionReuseStrategy based on peer HTTP headers/version
-2018-09-26 18:24:37.398 - [][restartedMain] INFO  it.reply.sytel.adr.common.ws.GKHttpRequestRetryHandler - Using a custom HttpRequestRetryHandler to delegate retry logic to JMS redelivery mechanism
-2018-09-26 18:24:37.400 - [][restartedMain] DEBUG it.reply.sytel.adr.common.ws.SharedHTTPSClient - Creating shared HTTP client
-2018-09-26 18:24:37.400 - [][restartedMain] DEBUG it.reply.sytel.adr.common.ws.SharedHTTPSClient - httpsClientProperties.getTrustURLString():[file:///D:/Dynatrace2RemedyITSM/Dynatrace2RemedyITSM/trunk/resourcesConf/truststore.jks]
-2018-09-26 18:24:37.415 - [][restartedMain] DEBUG it.reply.sytel.adr.common.ws.AuthSSLProtocolSocketFactory - createTrustManagers - Initializing trust manager: dynatracetest
-2018-09-26 18:24:37.415 - [][restartedMain] DEBUG it.reply.sytel.adr.common.ws.AuthSSLProtocolSocketFactory - Initializing trust manager
-2018-09-26 18:24:37.420 - [][restartedMain] DEBUG it.reply.sytel.adr.common.ws.AuthSSLProtocolSocketFactory - --------- protocolHandShake:[TLSv1.2]--------
-2018-09-26 18:24:38.151 - [][restartedMain] DEBUG it.reply.sytel.adr.common.ws.SharedHTTPSClient - Shared HTTP client created successfully!
-2018-09-26 18:24:38.151 - [][Thread-6] INFO  it.reply.sytel.adr.common.ws.IdleHTTPConnectionEvictor - Starting IdleHTTPConnectionEvictor task (evictionPeriod=5000)
-2018-09-26 18:24:38.176 - [][restartedMain] INFO  it.reply.sytel.adr.common.ws.GKConnectionKeepAliveStrategy - Using a custom ConnectionKeepAliveStrategy with default duration = 'infinite'
-2018-09-26 18:24:38.177 - [][restartedMain] INFO  it.reply.sytel.adr.common.ws.GKConnectionReuseStrategy - Using a custom ConnectionReuseStrategy based on peer HTTP headers/version
-2018-09-26 18:24:38.178 - [][restartedMain] INFO  it.reply.sytel.adr.common.ws.GKHttpRequestRetryHandler - Using a custom HttpRequestRetryHandler to delegate retry logic to JMS redelivery mechanism
-2018-09-26 18:24:38.179 - [][restartedMain] DEBUG it.reply.sytel.adr.common.ws.SharedHTTPSClient - Creating shared HTTP client
-2018-09-26 18:24:38.179 - [][restartedMain] DEBUG it.reply.sytel.adr.common.ws.SharedHTTPSClient - httpsClientProperties.getTrustURLString():[file:///D:/Dynatrace2RemedyITSM/Dynatrace2RemedyITSM/trunk/resourcesConf/truststore.jks]
-2018-09-26 18:24:38.180 - [][restartedMain] DEBUG it.reply.sytel.adr.common.ws.AuthSSLProtocolSocketFactory - createTrustManagers - Initializing trust manager: dynatracetest
-2018-09-26 18:24:38.181 - [][restartedMain] DEBUG it.reply.sytel.adr.common.ws.AuthSSLProtocolSocketFactory - Initializing trust manager
-2018-09-26 18:24:38.181 - [][restartedMain] DEBUG it.reply.sytel.adr.common.ws.AuthSSLProtocolSocketFactory - --------- protocolHandShake:[TLSv1.2]--------
-2018-09-26 18:24:38.185 - [][restartedMain] DEBUG it.reply.sytel.adr.common.ws.SharedHTTPSClient - Shared HTTP client created successfully!
-2018-09-26 18:24:38.185 - [][Thread-7] INFO  it.reply.sytel.adr.common.ws.IdleHTTPConnectionEvictor - Starting IdleHTTPConnectionEvictor task (evictionPeriod=5000)
-2018-09-26 18:24:38.406 - [][restartedMain] INFO  it.reply.sytel.adr.quartz.SchedulerConfig - called simpleJobTrigger
-2018-09-26 18:24:38.549 - [][restartedMain] DEBUG it.reply.sytel.adr.common.resource.imp.ResourceFile - getting the inputStream from fileName:[ADR.properties]
-2018-09-26 18:24:38.551 - [][restartedMain] DEBUG it.reply.sytel.adr.configuration.ConfigServicesFile - propertyValue:[ADBM] for propertyName:[DASHBOARD_NAMES]
-2018-09-26 18:24:38.552 - [][restartedMain] DEBUG it.reply.sytel.adr.configuration.ConfigServicesFile - propertyValue:[RemedyUsr] for propertyName:[REMEDY_AUTH_INFO_USER]
-2018-09-26 18:24:38.553 - [][restartedMain] DEBUG it.reply.sytel.adr.configuration.ConfigServicesFile - propertyValue:[RemedyPwd         ] for propertyName:[REMEDY_AUTH_INFO_PWD]
-2018-09-26 18:24:38.555 - [][restartedMain] DEBUG it.reply.sytel.adr.configuration.ConfigServicesFile - propertyValue:[https://dynatrace-sub-CA:8021/rest/management/dashboard/ADBM_TEST_REMEDY_INTEGRATION] for propertyName:[ADBM_URL]
-2018-09-26 18:24:38.555 - [][restartedMain] DEBUG it.reply.sytel.adr.configuration.ConfigServicesFile - propertyValue:[admin] for propertyName:[ADBM_USER]
-2018-09-26 18:24:38.555 - [][restartedMain] DEBUG it.reply.sytel.adr.configuration.ConfigServicesFile - propertyValue:[adradmin01] for propertyName:[ADBM_PWD]
-2018-09-26 18:24:38.555 - [][restartedMain] DEBUG it.reply.sytel.adr.configuration.ConfigServicesFile - propertyValue:[Dynatrace] for propertyName:[ADBM_FIRSTNAME]
-2018-09-26 18:24:38.555 - [][restartedMain] DEBUG it.reply.sytel.adr.configuration.ConfigServicesFile - propertyValue:[2-Significant/Large] for propertyName:[ADBM_IMPACT]
-2018-09-26 18:24:38.556 - [][restartedMain] DEBUG it.reply.sytel.adr.configuration.ConfigServicesFile - propertyValue:[Dynatrace] for propertyName:[ADBM_LASTNAME]
-2018-09-26 18:24:38.556 - [][restartedMain] DEBUG it.reply.sytel.adr.configuration.ConfigServicesFile - propertyValue:[Systems Management] for propertyName:[ADBM_REPORTED_SOURCE]
-2018-09-26 18:24:38.557 - [][restartedMain] DEBUG it.reply.sytel.adr.configuration.ConfigServicesFile - propertyValue:[Infrastructure Event] for propertyName:[ADBM_SERVICE_TYPE]
-2018-09-26 18:24:38.557 - [][restartedMain] DEBUG it.reply.sytel.adr.configuration.ConfigServicesFile - propertyValue:[New] for propertyName:[ADBM_TICKET_STATUS]
-2018-09-26 18:24:38.557 - [][restartedMain] DEBUG it.reply.sytel.adr.configuration.ConfigServicesFile - propertyValue:[2-High] for propertyName:[ADBM_URGENCY]
-2018-09-26 18:24:38.557 - [][restartedMain] DEBUG it.reply.sytel.adr.configuration.ConfigServicesFile - Configuration DONE
-2018-09-26 18:24:44.385 - [][http-nio-8181-exec-4] INFO  it.reply.sytel.adr.restServices.ConnectorManager - Calling connector ONE SHOT...
-2018-09-26 18:24:44.390 - [AC1F07675BABB2CC00011C07][http-nio-8181-exec-4] INFO  it.reply.sytel.adr.engine.RemedyIncidetBuilderEngine - Flow RemedyIncidentdBuilder Engine Called...
-2018-09-26 18:24:44.391 - [AC1F07675BABB2CC00011C07][http-nio-8181-exec-4] INFO  it.reply.sytel.adr.services.impl.GetDynatraceIncident - service:[it.reply.sytel.adr.services.impl.GetDynatraceIncident] called ... 
-2018-09-26 18:24:44.391 - [AC1F07675BABB2CC00011C07][http-nio-8181-exec-4] INFO  it.reply.sytel.adr.services.impl.GetDynatraceIncident - Number of DashBoard to call:[2]
-2018-09-26 18:24:44.392 - [AC1F07675BABB2CC00011C07][http-nio-8181-exec-4] DEBUG it.reply.sytel.adr.services.impl.GetDynatraceIncident - the Name for app:[ADM]
-2018-09-26 18:24:44.392 - [AC1F07675BABB2CC00011C07][http-nio-8181-exec-4] DEBUG it.reply.sytel.adr.services.impl.GetDynatraceIncident - the URL for app:[https://dynatrace-sub-CA:8021/rest/management/dashboard/ADBM_TEST_REMEDY_INTEGRATION]
-2018-09-26 18:24:44.392 - [AC1F07675BABB2CC00011C07][http-nio-8181-exec-4] DEBUG it.reply.sytel.adr.services.impl.GetDynatraceIncident - the USR for app:[admin]
-2018-09-26 18:24:44.392 - [AC1F07675BABB2CC00011C07][http-nio-8181-exec-4] DEBUG it.reply.sytel.adr.services.impl.GetDynatraceIncident - the PWD for app:[adradmin01]
-2018-09-26 18:24:44.392 - [AC1F07675BABB2CC00011C07][http-nio-8181-exec-4] DEBUG it.reply.sytel.adr.dynatraceClient.imp.RestClientImpl - calling the console:[https://dynatrace-sub-CA:8021/rest/management/dashboard/ADBM_TEST_REMEDY_INTEGRATION] with user[admin] pwd=adradmin01...
-2018-09-26 18:24:44.396 - [AC1F07675BABB2CC00011C07][http-nio-8181-exec-4] DEBUG it.reply.sytel.adr.common.ws.SharedHTTPSClient - Executing POST with basic authentication
-2018-09-26 18:24:44.404 - [AC1F07675BABB2CC00011C07][http-nio-8181-exec-4] DEBUG it.reply.sytel.adr.common.ws.SharedHTTPSClient - SOAP HTTP request headers:
-2018-09-26 18:24:44.405 - [AC1F07675BABB2CC00011C07][http-nio-8181-exec-4] INFO  it.reply.sytel.adr.common.ws.SharedHTTPSClient - 	name=Authorization, value=Basic YWRtaW46YWRyYWRtaW4wMQ==
-2018-09-26 18:24:44.601 - [AC1F07675BABB2CC00011C07][http-nio-8181-exec-4] INFO  it.reply.sytel.adr.common.ws.AuthSSLX509TrustManager -  Server certificate 1:
-2018-09-26 18:24:44.603 - [AC1F07675BABB2CC00011C07][http-nio-8181-exec-4] INFO  it.reply.sytel.adr.common.ws.AuthSSLX509TrustManager -   Subject DN: CN=*.adr.it, O=Aeroporti di Roma S.p.A., L=fiumicino, ST=Italia, C=IT
-2018-09-26 18:24:44.603 - [AC1F07675BABB2CC00011C07][http-nio-8181-exec-4] INFO  it.reply.sytel.adr.common.ws.AuthSSLX509TrustManager -   Signature Algorithm: SHA256withRSA
-2018-09-26 18:24:44.603 - [AC1F07675BABB2CC00011C07][http-nio-8181-exec-4] INFO  it.reply.sytel.adr.common.ws.AuthSSLX509TrustManager -   Valid from: Tue Oct 06 02:00:00 CEST 2015
-2018-09-26 18:24:44.604 - [AC1F07675BABB2CC00011C07][http-nio-8181-exec-4] INFO  it.reply.sytel.adr.common.ws.AuthSSLX509TrustManager -   Valid until: Thu Jan 03 13:00:00 CET 2019
-2018-09-26 18:24:44.604 - [AC1F07675BABB2CC00011C07][http-nio-8181-exec-4] INFO  it.reply.sytel.adr.common.ws.AuthSSLX509TrustManager -   Issuer: CN=DigiCert SHA2 Secure Server CA, O=DigiCert Inc, C=US
-2018-09-26 18:24:44.605 - [AC1F07675BABB2CC00011C07][http-nio-8181-exec-4] INFO  it.reply.sytel.adr.common.ws.AuthSSLX509TrustManager -  Server certificate 2:
-2018-09-26 18:24:44.605 - [AC1F07675BABB2CC00011C07][http-nio-8181-exec-4] INFO  it.reply.sytel.adr.common.ws.AuthSSLX509TrustManager -   Subject DN: CN=DigiCert SHA2 Secure Server CA, O=DigiCert Inc, C=US
-2018-09-26 18:24:44.605 - [AC1F07675BABB2CC00011C07][http-nio-8181-exec-4] INFO  it.reply.sytel.adr.common.ws.AuthSSLX509TrustManager -   Signature Algorithm: SHA256withRSA
-2018-09-26 18:24:44.605 - [AC1F07675BABB2CC00011C07][http-nio-8181-exec-4] INFO  it.reply.sytel.adr.common.ws.AuthSSLX509TrustManager -   Valid from: Fri Mar 08 13:00:00 CET 2013
-2018-09-26 18:24:44.605 - [AC1F07675BABB2CC00011C07][http-nio-8181-exec-4] INFO  it.reply.sytel.adr.common.ws.AuthSSLX509TrustManager -   Valid until: Wed Mar 08 13:00:00 CET 2023
-2018-09-26 18:24:44.606 - [AC1F07675BABB2CC00011C07][http-nio-8181-exec-4] INFO  it.reply.sytel.adr.common.ws.AuthSSLX509TrustManager -   Issuer: CN=DigiCert Global Root CA, OU=www.digicert.com, O=DigiCert Inc, C=US
-2018-09-26 18:24:44.606 - [AC1F07675BABB2CC00011C07][http-nio-8181-exec-4] INFO  it.reply.sytel.adr.common.ws.AuthSSLX509TrustManager -  Server certificate 3:
-2018-09-26 18:24:44.607 - [AC1F07675BABB2CC00011C07][http-nio-8181-exec-4] INFO  it.reply.sytel.adr.common.ws.AuthSSLX509TrustManager -   Subject DN: CN=DigiCert Global Root CA, OU=www.digicert.com, O=DigiCert Inc, C=US
-2018-09-26 18:24:44.607 - [AC1F07675BABB2CC00011C07][http-nio-8181-exec-4] INFO  it.reply.sytel.adr.common.ws.AuthSSLX509TrustManager -   Signature Algorithm: SHA1withRSA
-2018-09-26 18:24:44.607 - [AC1F07675BABB2CC00011C07][http-nio-8181-exec-4] INFO  it.reply.sytel.adr.common.ws.AuthSSLX509TrustManager -   Valid from: Fri Nov 10 01:00:00 CET 2006
-2018-09-26 18:24:44.607 - [AC1F07675BABB2CC00011C07][http-nio-8181-exec-4] INFO  it.reply.sytel.adr.common.ws.AuthSSLX509TrustManager -   Valid until: Mon Nov 10 01:00:00 CET 2031
-2018-09-26 18:24:44.608 - [AC1F07675BABB2CC00011C07][http-nio-8181-exec-4] INFO  it.reply.sytel.adr.common.ws.AuthSSLX509TrustManager -   Issuer: CN=DigiCert Global Root CA, OU=www.digicert.com, O=DigiCert Inc, C=US
-2018-09-26 18:24:44.954 - [AC1F07675BABB2CC00011C07][http-nio-8181-exec-4] INFO  it.reply.sytel.adr.common.ws.GKConnectionReuseStrategy - Remote peer HTTP version > 1.0 --> keep-alive=true
-2018-09-26 18:24:44.955 - [AC1F07675BABB2CC00011C07][http-nio-8181-exec-4] INFO  it.reply.sytel.adr.common.ws.GKConnectionKeepAliveStrategy - Current connection will be kept alive 'indefinitely'
-2018-09-26 18:24:44.960 - [AC1F07675BABB2CC00011C07][http-nio-8181-exec-4] INFO  it.reply.sytel.adr.common.ws.SharedHTTPSClient - SOAP HTTP response headers:
-2018-09-26 18:24:44.960 - [AC1F07675BABB2CC00011C07][http-nio-8181-exec-4] INFO  it.reply.sytel.adr.common.ws.SharedHTTPSClient - 	name=Date, value=Wed, 26 Sep 2018 16:24:44 GMT
-2018-09-26 18:24:44.960 - [AC1F07675BABB2CC00011C07][http-nio-8181-exec-4] INFO  it.reply.sytel.adr.common.ws.SharedHTTPSClient - 	name=Set-Cookie, value=JSESSIONID=f5pl3glp77bk1nedb8grn8tgk;Path=/;Secure;HttpOnly
-2018-09-26 18:24:44.960 - [AC1F07675BABB2CC00011C07][http-nio-8181-exec-4] INFO  it.reply.sytel.adr.common.ws.SharedHTTPSClient - 	name=Expires, value=Thu, 01 Jan 1970 00:00:00 GMT
-2018-09-26 18:24:44.960 - [AC1F07675BABB2CC00011C07][http-nio-8181-exec-4] INFO  it.reply.sytel.adr.common.ws.SharedHTTPSClient - 	name=Content-Disposition, value=inline; filename="ADBM_TEST_REMEDY_INTEGRATION.xml"
-2018-09-26 18:24:44.960 - [AC1F07675BABB2CC00011C07][http-nio-8181-exec-4] INFO  it.reply.sytel.adr.common.ws.SharedHTTPSClient - 	name=Content-Type, value=text/xml
-2018-09-26 18:24:44.961 - [AC1F07675BABB2CC00011C07][http-nio-8181-exec-4] INFO  it.reply.sytel.adr.common.ws.SharedHTTPSClient - 	name=Cache-Control, value=no-cache
-2018-09-26 18:24:44.961 - [AC1F07675BABB2CC00011C07][http-nio-8181-exec-4] INFO  it.reply.sytel.adr.common.ws.SharedHTTPSClient - 	name=Cache-Control, value=must-revalidate
-2018-09-26 18:24:44.961 - [AC1F07675BABB2CC00011C07][http-nio-8181-exec-4] INFO  it.reply.sytel.adr.common.ws.SharedHTTPSClient - 	name=Cache-Control, value=max-age=0
-2018-09-26 18:24:44.961 - [AC1F07675BABB2CC00011C07][http-nio-8181-exec-4] INFO  it.reply.sytel.adr.common.ws.SharedHTTPSClient - 	name=Pragma, value=no-cache
-2018-09-26 18:24:44.961 - [AC1F07675BABB2CC00011C07][http-nio-8181-exec-4] INFO  it.reply.sytel.adr.common.ws.SharedHTTPSClient - 	name=Vary, value=Accept-Encoding, User-Agent
-2018-09-26 18:24:44.961 - [AC1F07675BABB2CC00011C07][http-nio-8181-exec-4] INFO  it.reply.sytel.adr.common.ws.SharedHTTPSClient - 	name=Content-Length, value=4181
-2018-09-26 18:24:44.961 - [AC1F07675BABB2CC00011C07][http-nio-8181-exec-4] INFO  it.reply.sytel.adr.common.ws.SharedHTTPSClient - HTTP response code received: 200
-2018-09-26 18:24:44.962 - [AC1F07675BABB2CC00011C07][http-nio-8181-exec-4] DEBUG it.reply.sytel.adr.dynatraceClient.imp.RestClientImpl - calling the console:[https://dynatrace-sub-CA:8021/rest/management/dashboard/ADBM_TEST_REMEDY_INTEGRATION] with user[admin] pwd=adradmin01... DONE elapsed:[570]
-2018-09-26 18:24:44.962 - [AC1F07675BABB2CC00011C07][http-nio-8181-exec-4] DEBUG it.reply.sytel.adr.dynatraceClient.imp.RestClientImpl - content:[<?xml version="1.0" encoding="utf-8"?>
-<dashboardreport name="ADBM_TEST_REMEDY_INTEGRATION" version="7.0.28.1010" reportdate="2018-09-26T18:24:44.944+02:00" description="">
+2018-09-28 16:51:12.916 - [][restartedMain] INFO  it.reply.sytel.adr.configuration.ConfigServicesDB - connecting to DB for getting the configuration...
+2018-09-28 16:51:12.935 - [][restartedMain] INFO  it.reply.sytel.adr.configuration.ConfigServicesDB - connecting to DB for getting the configuration...DONE
+2018-09-28 16:51:12.988 - [][restartedMain] INFO  it.reply.sytel.adr.common.ws.GKConnectionKeepAliveStrategy - Using a custom ConnectionKeepAliveStrategy with default duration = 'infinite'
+2018-09-28 16:51:13.003 - [][restartedMain] INFO  it.reply.sytel.adr.common.ws.GKConnectionReuseStrategy - Using a custom ConnectionReuseStrategy based on peer HTTP headers/version
+2018-09-28 16:51:13.003 - [][restartedMain] INFO  it.reply.sytel.adr.common.ws.GKHttpRequestRetryHandler - Using a custom HttpRequestRetryHandler to delegate retry logic to JMS redelivery mechanism
+2018-09-28 16:51:13.019 - [][restartedMain] DEBUG it.reply.sytel.adr.common.ws.SharedHTTPSClient - Creating shared HTTP client
+2018-09-28 16:51:13.019 - [][restartedMain] DEBUG it.reply.sytel.adr.common.ws.SharedHTTPSClient - httpsClientProperties.getTrustURLString():[file:///D:/Dynatrace2RemedyITSM/Dynatrace2RemedyITSM/trunk/resourcesConf/truststore.jks]
+2018-09-28 16:51:13.019 - [][restartedMain] DEBUG it.reply.sytel.adr.common.ws.AuthSSLProtocolSocketFactory - createTrustManagers - Initializing trust manager: dynatracetest
+2018-09-28 16:51:13.019 - [][restartedMain] DEBUG it.reply.sytel.adr.common.ws.AuthSSLProtocolSocketFactory - Initializing trust manager
+2018-09-28 16:51:13.035 - [][restartedMain] DEBUG it.reply.sytel.adr.common.ws.AuthSSLProtocolSocketFactory - --------- protocolHandShake:[TLSv1.2]--------
+2018-09-28 16:51:13.738 - [][restartedMain] DEBUG it.reply.sytel.adr.common.ws.SharedHTTPSClient - Shared HTTP client created successfully!
+2018-09-28 16:51:13.753 - [][Thread-6] INFO  it.reply.sytel.adr.common.ws.IdleHTTPConnectionEvictor - Starting IdleHTTPConnectionEvictor task (evictionPeriod=5000)
+2018-09-28 16:51:13.769 - [][restartedMain] INFO  it.reply.sytel.adr.common.ws.GKConnectionKeepAliveStrategy - Using a custom ConnectionKeepAliveStrategy with default duration = 'infinite'
+2018-09-28 16:51:13.769 - [][restartedMain] INFO  it.reply.sytel.adr.common.ws.GKConnectionReuseStrategy - Using a custom ConnectionReuseStrategy based on peer HTTP headers/version
+2018-09-28 16:51:13.769 - [][restartedMain] INFO  it.reply.sytel.adr.common.ws.GKHttpRequestRetryHandler - Using a custom HttpRequestRetryHandler to delegate retry logic to JMS redelivery mechanism
+2018-09-28 16:51:13.769 - [][restartedMain] DEBUG it.reply.sytel.adr.common.ws.SharedHTTPSClient - Creating shared HTTP client
+2018-09-28 16:51:13.769 - [][restartedMain] DEBUG it.reply.sytel.adr.common.ws.SharedHTTPSClient - httpsClientProperties.getTrustURLString():[file:///D:/Dynatrace2RemedyITSM/Dynatrace2RemedyITSM/trunk/resourcesConf/truststore.jks]
+2018-09-28 16:51:13.769 - [][restartedMain] DEBUG it.reply.sytel.adr.common.ws.AuthSSLProtocolSocketFactory - createTrustManagers - Initializing trust manager: dynatracetest
+2018-09-28 16:51:13.769 - [][restartedMain] DEBUG it.reply.sytel.adr.common.ws.AuthSSLProtocolSocketFactory - Initializing trust manager
+2018-09-28 16:51:13.769 - [][restartedMain] DEBUG it.reply.sytel.adr.common.ws.AuthSSLProtocolSocketFactory - --------- protocolHandShake:[TLSv1.2]--------
+2018-09-28 16:51:13.769 - [][restartedMain] DEBUG it.reply.sytel.adr.common.ws.SharedHTTPSClient - Shared HTTP client created successfully!
+2018-09-28 16:51:13.769 - [][Thread-7] INFO  it.reply.sytel.adr.common.ws.IdleHTTPConnectionEvictor - Starting IdleHTTPConnectionEvictor task (evictionPeriod=5000)
+2018-09-28 16:51:13.979 - [][restartedMain] INFO  it.reply.sytel.adr.quartz.SchedulerConfig - called simpleJobTrigger
+2018-09-28 16:51:14.099 - [][restartedMain] DEBUG it.reply.sytel.adr.common.resource.imp.ResourceFile - getting the inputStream from fileName:[ADR.properties]
+2018-09-28 16:51:14.099 - [][restartedMain] DEBUG it.reply.sytel.adr.configuration.ConfigServicesFile - propertyValue:[ADBM] for propertyName:[DASHBOARD_NAMES]
+2018-09-28 16:51:14.099 - [][restartedMain] DEBUG it.reply.sytel.adr.configuration.ConfigServicesFile - propertyValue:[RemedyUsr] for propertyName:[REMEDY_AUTH_INFO_USER]
+2018-09-28 16:51:14.099 - [][restartedMain] DEBUG it.reply.sytel.adr.configuration.ConfigServicesFile - propertyValue:[RemedyPwd         ] for propertyName:[REMEDY_AUTH_INFO_PWD]
+2018-09-28 16:51:14.099 - [][restartedMain] DEBUG it.reply.sytel.adr.configuration.ConfigServicesFile - propertyValue:[https://dynatrace-sub-CA:8021/rest/management/dashboard/ADBM_TEST_REMEDY_INTEGRATION] for propertyName:[ADBM_URL]
+2018-09-28 16:51:14.099 - [][restartedMain] DEBUG it.reply.sytel.adr.configuration.ConfigServicesFile - propertyValue:[admin] for propertyName:[ADBM_USER]
+2018-09-28 16:51:14.099 - [][restartedMain] DEBUG it.reply.sytel.adr.configuration.ConfigServicesFile - propertyValue:[adradmin01] for propertyName:[ADBM_PWD]
+2018-09-28 16:51:14.099 - [][restartedMain] DEBUG it.reply.sytel.adr.configuration.ConfigServicesFile - propertyValue:[Dynatrace] for propertyName:[ADBM_FIRSTNAME]
+2018-09-28 16:51:14.099 - [][restartedMain] DEBUG it.reply.sytel.adr.configuration.ConfigServicesFile - propertyValue:[2-Significant/Large] for propertyName:[ADBM_IMPACT]
+2018-09-28 16:51:14.099 - [][restartedMain] DEBUG it.reply.sytel.adr.configuration.ConfigServicesFile - propertyValue:[Dynatrace] for propertyName:[ADBM_LASTNAME]
+2018-09-28 16:51:14.099 - [][restartedMain] DEBUG it.reply.sytel.adr.configuration.ConfigServicesFile - propertyValue:[Systems Management] for propertyName:[ADBM_REPORTED_SOURCE]
+2018-09-28 16:51:14.099 - [][restartedMain] DEBUG it.reply.sytel.adr.configuration.ConfigServicesFile - propertyValue:[Infrastructure Event] for propertyName:[ADBM_SERVICE_TYPE]
+2018-09-28 16:51:14.099 - [][restartedMain] DEBUG it.reply.sytel.adr.configuration.ConfigServicesFile - propertyValue:[New] for propertyName:[ADBM_TICKET_STATUS]
+2018-09-28 16:51:14.099 - [][restartedMain] DEBUG it.reply.sytel.adr.configuration.ConfigServicesFile - propertyValue:[2-High] for propertyName:[ADBM_URGENCY]
+2018-09-28 16:51:14.099 - [][restartedMain] DEBUG it.reply.sytel.adr.configuration.ConfigServicesFile - Configuration DONE
+2018-09-28 16:56:28.478 - [][http-nio-8181-exec-2] INFO  it.reply.sytel.adr.restServices.ConnectorManager - Calling connector ONE SHOT...
+2018-09-28 16:56:28.483 - [AC1F07675BAE411C000192DA][http-nio-8181-exec-2] INFO  it.reply.sytel.adr.engine.RemedyIncidetBuilderEngine - Flow RemedyIncidentdBuilder Engine Called...
+2018-09-28 16:56:28.483 - [AC1F07675BAE411C000192DA][http-nio-8181-exec-2] INFO  it.reply.sytel.adr.services.impl.GetDynatraceIncident - service:[it.reply.sytel.adr.services.impl.GetDynatraceIncident] called ... 
+2018-09-28 16:56:28.488 - [AC1F07675BAE411C000192DA][http-nio-8181-exec-2] INFO  it.reply.sytel.adr.services.impl.GetDynatraceIncident - Number of DashBoard to call:[2]
+2018-09-28 16:56:28.488 - [AC1F07675BAE411C000192DA][http-nio-8181-exec-2] DEBUG it.reply.sytel.adr.services.impl.GetDynatraceIncident - the Name for app:[ADM]
+2018-09-28 16:56:28.489 - [AC1F07675BAE411C000192DA][http-nio-8181-exec-2] DEBUG it.reply.sytel.adr.services.impl.GetDynatraceIncident - the URL for app:[https://dynatrace-sub-CA:8021/rest/management/dashboard/ADBM_TEST_REMEDY_INTEGRATION]
+2018-09-28 16:56:28.489 - [AC1F07675BAE411C000192DA][http-nio-8181-exec-2] DEBUG it.reply.sytel.adr.services.impl.GetDynatraceIncident - the USR for app:[admin]
+2018-09-28 16:56:28.489 - [AC1F07675BAE411C000192DA][http-nio-8181-exec-2] DEBUG it.reply.sytel.adr.services.impl.GetDynatraceIncident - the PWD for app:[adradmin01]
+2018-09-28 16:56:28.489 - [AC1F07675BAE411C000192DA][http-nio-8181-exec-2] DEBUG it.reply.sytel.adr.dynatraceClient.imp.RestClientImpl - calling the console:[https://dynatrace-sub-CA:8021/rest/management/dashboard/ADBM_TEST_REMEDY_INTEGRATION] with user[admin] pwd=adradmin01...
+2018-09-28 16:56:28.492 - [AC1F07675BAE411C000192DA][http-nio-8181-exec-2] DEBUG it.reply.sytel.adr.common.ws.SharedHTTPSClient - Executing POST with basic authentication
+2018-09-28 16:56:28.499 - [AC1F07675BAE411C000192DA][http-nio-8181-exec-2] DEBUG it.reply.sytel.adr.common.ws.SharedHTTPSClient - SOAP HTTP request headers:
+2018-09-28 16:56:28.500 - [AC1F07675BAE411C000192DA][http-nio-8181-exec-2] INFO  it.reply.sytel.adr.common.ws.SharedHTTPSClient - 	name=Authorization, value=Basic YWRtaW46YWRyYWRtaW4wMQ==
+2018-09-28 16:56:28.692 - [AC1F07675BAE411C000192DA][http-nio-8181-exec-2] INFO  it.reply.sytel.adr.common.ws.AuthSSLX509TrustManager -  Server certificate 1:
+2018-09-28 16:56:28.693 - [AC1F07675BAE411C000192DA][http-nio-8181-exec-2] INFO  it.reply.sytel.adr.common.ws.AuthSSLX509TrustManager -   Subject DN: CN=*.adr.it, O=Aeroporti di Roma S.p.A., L=fiumicino, ST=Italia, C=IT
+2018-09-28 16:56:28.693 - [AC1F07675BAE411C000192DA][http-nio-8181-exec-2] INFO  it.reply.sytel.adr.common.ws.AuthSSLX509TrustManager -   Signature Algorithm: SHA256withRSA
+2018-09-28 16:56:28.693 - [AC1F07675BAE411C000192DA][http-nio-8181-exec-2] INFO  it.reply.sytel.adr.common.ws.AuthSSLX509TrustManager -   Valid from: Tue Oct 06 02:00:00 CEST 2015
+2018-09-28 16:56:28.694 - [AC1F07675BAE411C000192DA][http-nio-8181-exec-2] INFO  it.reply.sytel.adr.common.ws.AuthSSLX509TrustManager -   Valid until: Thu Jan 03 13:00:00 CET 2019
+2018-09-28 16:56:28.694 - [AC1F07675BAE411C000192DA][http-nio-8181-exec-2] INFO  it.reply.sytel.adr.common.ws.AuthSSLX509TrustManager -   Issuer: CN=DigiCert SHA2 Secure Server CA, O=DigiCert Inc, C=US
+2018-09-28 16:56:28.694 - [AC1F07675BAE411C000192DA][http-nio-8181-exec-2] INFO  it.reply.sytel.adr.common.ws.AuthSSLX509TrustManager -  Server certificate 2:
+2018-09-28 16:56:28.694 - [AC1F07675BAE411C000192DA][http-nio-8181-exec-2] INFO  it.reply.sytel.adr.common.ws.AuthSSLX509TrustManager -   Subject DN: CN=DigiCert SHA2 Secure Server CA, O=DigiCert Inc, C=US
+2018-09-28 16:56:28.694 - [AC1F07675BAE411C000192DA][http-nio-8181-exec-2] INFO  it.reply.sytel.adr.common.ws.AuthSSLX509TrustManager -   Signature Algorithm: SHA256withRSA
+2018-09-28 16:56:28.694 - [AC1F07675BAE411C000192DA][http-nio-8181-exec-2] INFO  it.reply.sytel.adr.common.ws.AuthSSLX509TrustManager -   Valid from: Fri Mar 08 13:00:00 CET 2013
+2018-09-28 16:56:28.695 - [AC1F07675BAE411C000192DA][http-nio-8181-exec-2] INFO  it.reply.sytel.adr.common.ws.AuthSSLX509TrustManager -   Valid until: Wed Mar 08 13:00:00 CET 2023
+2018-09-28 16:56:28.695 - [AC1F07675BAE411C000192DA][http-nio-8181-exec-2] INFO  it.reply.sytel.adr.common.ws.AuthSSLX509TrustManager -   Issuer: CN=DigiCert Global Root CA, OU=www.digicert.com, O=DigiCert Inc, C=US
+2018-09-28 16:56:28.695 - [AC1F07675BAE411C000192DA][http-nio-8181-exec-2] INFO  it.reply.sytel.adr.common.ws.AuthSSLX509TrustManager -  Server certificate 3:
+2018-09-28 16:56:28.695 - [AC1F07675BAE411C000192DA][http-nio-8181-exec-2] INFO  it.reply.sytel.adr.common.ws.AuthSSLX509TrustManager -   Subject DN: CN=DigiCert Global Root CA, OU=www.digicert.com, O=DigiCert Inc, C=US
+2018-09-28 16:56:28.696 - [AC1F07675BAE411C000192DA][http-nio-8181-exec-2] INFO  it.reply.sytel.adr.common.ws.AuthSSLX509TrustManager -   Signature Algorithm: SHA1withRSA
+2018-09-28 16:56:28.696 - [AC1F07675BAE411C000192DA][http-nio-8181-exec-2] INFO  it.reply.sytel.adr.common.ws.AuthSSLX509TrustManager -   Valid from: Fri Nov 10 01:00:00 CET 2006
+2018-09-28 16:56:28.696 - [AC1F07675BAE411C000192DA][http-nio-8181-exec-2] INFO  it.reply.sytel.adr.common.ws.AuthSSLX509TrustManager -   Valid until: Mon Nov 10 01:00:00 CET 2031
+2018-09-28 16:56:28.696 - [AC1F07675BAE411C000192DA][http-nio-8181-exec-2] INFO  it.reply.sytel.adr.common.ws.AuthSSLX509TrustManager -   Issuer: CN=DigiCert Global Root CA, OU=www.digicert.com, O=DigiCert Inc, C=US
+2018-09-28 16:56:29.066 - [AC1F07675BAE411C000192DA][http-nio-8181-exec-2] INFO  it.reply.sytel.adr.common.ws.GKConnectionReuseStrategy - Remote peer HTTP version > 1.0 --> keep-alive=true
+2018-09-28 16:56:29.067 - [AC1F07675BAE411C000192DA][http-nio-8181-exec-2] INFO  it.reply.sytel.adr.common.ws.GKConnectionKeepAliveStrategy - Current connection will be kept alive 'indefinitely'
+2018-09-28 16:56:29.071 - [AC1F07675BAE411C000192DA][http-nio-8181-exec-2] INFO  it.reply.sytel.adr.common.ws.SharedHTTPSClient - SOAP HTTP response headers:
+2018-09-28 16:56:29.071 - [AC1F07675BAE411C000192DA][http-nio-8181-exec-2] INFO  it.reply.sytel.adr.common.ws.SharedHTTPSClient - 	name=Date, value=Fri, 28 Sep 2018 14:56:28 GMT
+2018-09-28 16:56:29.071 - [AC1F07675BAE411C000192DA][http-nio-8181-exec-2] INFO  it.reply.sytel.adr.common.ws.SharedHTTPSClient - 	name=Set-Cookie, value=JSESSIONID=kz2if727oda019g4kncfufxfx;Path=/;Secure;HttpOnly
+2018-09-28 16:56:29.071 - [AC1F07675BAE411C000192DA][http-nio-8181-exec-2] INFO  it.reply.sytel.adr.common.ws.SharedHTTPSClient - 	name=Expires, value=Thu, 01 Jan 1970 00:00:00 GMT
+2018-09-28 16:56:29.071 - [AC1F07675BAE411C000192DA][http-nio-8181-exec-2] INFO  it.reply.sytel.adr.common.ws.SharedHTTPSClient - 	name=Content-Disposition, value=inline; filename="ADBM_TEST_REMEDY_INTEGRATION.xml"
+2018-09-28 16:56:29.071 - [AC1F07675BAE411C000192DA][http-nio-8181-exec-2] INFO  it.reply.sytel.adr.common.ws.SharedHTTPSClient - 	name=Content-Type, value=text/xml
+2018-09-28 16:56:29.071 - [AC1F07675BAE411C000192DA][http-nio-8181-exec-2] INFO  it.reply.sytel.adr.common.ws.SharedHTTPSClient - 	name=Cache-Control, value=no-cache
+2018-09-28 16:56:29.071 - [AC1F07675BAE411C000192DA][http-nio-8181-exec-2] INFO  it.reply.sytel.adr.common.ws.SharedHTTPSClient - 	name=Cache-Control, value=must-revalidate
+2018-09-28 16:56:29.071 - [AC1F07675BAE411C000192DA][http-nio-8181-exec-2] INFO  it.reply.sytel.adr.common.ws.SharedHTTPSClient - 	name=Cache-Control, value=max-age=0
+2018-09-28 16:56:29.071 - [AC1F07675BAE411C000192DA][http-nio-8181-exec-2] INFO  it.reply.sytel.adr.common.ws.SharedHTTPSClient - 	name=Pragma, value=no-cache
+2018-09-28 16:56:29.071 - [AC1F07675BAE411C000192DA][http-nio-8181-exec-2] INFO  it.reply.sytel.adr.common.ws.SharedHTTPSClient - 	name=Vary, value=Accept-Encoding, User-Agent
+2018-09-28 16:56:29.072 - [AC1F07675BAE411C000192DA][http-nio-8181-exec-2] INFO  it.reply.sytel.adr.common.ws.SharedHTTPSClient - 	name=Content-Length, value=4181
+2018-09-28 16:56:29.072 - [AC1F07675BAE411C000192DA][http-nio-8181-exec-2] INFO  it.reply.sytel.adr.common.ws.SharedHTTPSClient - HTTP response code received: 200
+2018-09-28 16:56:29.072 - [AC1F07675BAE411C000192DA][http-nio-8181-exec-2] DEBUG it.reply.sytel.adr.dynatraceClient.imp.RestClientImpl - calling the console:[https://dynatrace-sub-CA:8021/rest/management/dashboard/ADBM_TEST_REMEDY_INTEGRATION] with user[admin] pwd=adradmin01... DONE elapsed:[583]
+2018-09-28 16:56:29.072 - [AC1F07675BAE411C000192DA][http-nio-8181-exec-2] DEBUG it.reply.sytel.adr.dynatraceClient.imp.RestClientImpl - content:[<?xml version="1.0" encoding="utf-8"?>
+<dashboardreport name="ADBM_TEST_REMEDY_INTEGRATION" version="7.0.28.1010" reportdate="2018-09-28T16:56:29.062+02:00" description="">
   <source name="ADBM_TEST">
-    <filters summary="Incident Rules, last 5 minutes">
-      <filter>if:RULE?Agent Instrumentation Disabledif:RULE?Application Process Out-of-Memoryif:RULE?Application Process Unavailable (unexpected)if:RULE?Application Process Unhealthyif:RULE?CURRENT_Q_DEPTHif:RULE?Failure rate too highif:RULE?JDBC Connection Pool Percent Usedif:RULE?JDBC Connection Pool Waiting Thread Countif:RULE?Potentially stuck Java VM detectedif:RULE?Response time degraded for slow requestsif:RULE?Status of the QMif:RULE?Thread Declared Hungif:RULE?Total GC Collection Time</filter>
+    <filters summary="last 5 minutes, Incident Rules">
       <filter>tf:Last5Min</filter>
+      <filter>if:RULE?Agent Instrumentation Disabledif:RULE?Application Process Out-of-Memoryif:RULE?Application Process Unavailable (unexpected)if:RULE?Application Process Unhealthyif:RULE?CURRENT_Q_DEPTHif:RULE?Failure rate too highif:RULE?JDBC Connection Pool Percent Usedif:RULE?JDBC Connection Pool Waiting Thread Countif:RULE?Potentially stuck Java VM detectedif:RULE?Response time degraded for slow requestsif:RULE?Status of the QMif:RULE?Thread Declared Hungif:RULE?Total GC Collection Time</filter>
     </filters>
   </source>
   <data>
     <incidentsoverviewdashlet name="Incidents" description="" displaysource="Base">
       <source>
-        <filters summary="Incident Rules, last 5 minutes">
-          <filter>if:RULE?Agent Instrumentation Disabledif:RULE?Application Process Out-of-Memoryif:RULE?Application Process Unavailable (unexpected)if:RULE?Application Process Unhealthyif:RULE?Average response time degradedif:RULE?CURRENT_Q_DEPTHif:RULE?Failure rate too highif:RULE?Host Availabilityif:RULE?Host CPU Unhealthyif:RULE?Host Disk Unhealthyif:RULE?Host Memory Unhealthyif:RULE?Host Network Unhealthyif:RULE?JDBC Connection Pool Percent Usedif:RULE?JDBC Connection Pool Waiting Thread Countif:RULE?Potentially stuck Java VM detectedif:RULE?Response time degraded for slow requestsif:RULE?Status of the QMif:RULE?Thread Declared Hungif:RULE?Total GC Collection Time</filter>
+        <filters summary="last 5 minutes, Incident Rules">
           <filter>tf:Last5Min</filter>
+          <filter>if:RULE?Agent Instrumentation Disabledif:RULE?Application Process Out-of-Memoryif:RULE?Application Process Unavailable (unexpected)if:RULE?Application Process Unhealthyif:RULE?Average response time degradedif:RULE?CURRENT_Q_DEPTHif:RULE?Failure rate too highif:RULE?Host Availabilityif:RULE?Host CPU Unhealthyif:RULE?Host Disk Unhealthyif:RULE?Host Memory Unhealthyif:RULE?Host Network Unhealthyif:RULE?JDBC Connection Pool Percent Usedif:RULE?JDBC Connection Pool Waiting Thread Countif:RULE?Potentially stuck Java VM detectedif:RULE?Response time degraded for slow requestsif:RULE?Status of the QMif:RULE?Thread Declared Hungif:RULE?Total GC Collection Time</filter>
         </filters>
       </source>
       <incidentoverviewrecords structuretype="tree">
@@ -107,7 +107,7 @@
           <incidentoverviewrecord name="CURRENT_Q_DEPTH"></incidentoverviewrecord>
           <incidentoverviewrecord name="Failure rate too high"></incidentoverviewrecord>
           <incidentoverviewrecord name="Host Memory Unhealthy (1)">
-            <incidentoverviewrecord name="The memory health of host 'mercurio' is not ok. During the last 15 minutes this host reported 10% (or less) and 1 GB (or less) memory available" start="2018-09-25T15:09:02.056+02:00" source="mercurio"></incidentoverviewrecord>
+            <incidentoverviewrecord name="The memory health of host 'mercurio' is not ok. During the last 15 minutes this host reported 10% (or less) and 1 GB (or less) memory available" start="2018-09-27T10:28:08.859+02:00" source="mercurio"></incidentoverviewrecord>
           </incidentoverviewrecord>
           <incidentoverviewrecord name="JDBC Connection Pool Percent Used"></incidentoverviewrecord>
           <incidentoverviewrecord name="JDBC Connection Pool Waiting Thread Count"></incidentoverviewrecord>
@@ -125,55 +125,55 @@
   </data>
 </dashboardreport>
 ]
-2018-09-26 18:24:45.223 - [AC1F07675BABB2CC00011C07][http-nio-8181-exec-4] DEBUG it.reply.sytel.adr.dynatraceClient.imp.DynatraceClientImpl - ---------FirstIncidentType:[Incidents]----------------
-2018-09-26 18:24:45.229 - [AC1F07675BABB2CC00011C07][http-nio-8181-exec-4] DEBUG it.reply.sytel.adr.dynatraceClient.imp.DynatraceClientImpl - incidentTypeChild:[Agent Instrumentation Disabled]
-2018-09-26 18:24:45.229 - [AC1F07675BABB2CC00011C07][http-nio-8181-exec-4] DEBUG it.reply.sytel.adr.dynatraceClient.imp.DynatraceClientImpl - incidentTypeChild:[Application Process Out-of-Memory]
-2018-09-26 18:24:45.230 - [AC1F07675BABB2CC00011C07][http-nio-8181-exec-4] DEBUG it.reply.sytel.adr.dynatraceClient.imp.DynatraceClientImpl - incidentTypeChild:[Application Process Unavailable (unexpected)]
-2018-09-26 18:24:45.230 - [AC1F07675BABB2CC00011C07][http-nio-8181-exec-4] DEBUG it.reply.sytel.adr.dynatraceClient.imp.DynatraceClientImpl - incidentTypeChild:[Application Process Unhealthy]
-2018-09-26 18:24:45.230 - [AC1F07675BABB2CC00011C07][http-nio-8181-exec-4] DEBUG it.reply.sytel.adr.dynatraceClient.imp.DynatraceClientImpl - incidentTypeChild:[CURRENT_Q_DEPTH]
-2018-09-26 18:24:45.230 - [AC1F07675BABB2CC00011C07][http-nio-8181-exec-4] DEBUG it.reply.sytel.adr.dynatraceClient.imp.DynatraceClientImpl - incidentTypeChild:[Failure rate too high]
-2018-09-26 18:24:45.230 - [AC1F07675BABB2CC00011C07][http-nio-8181-exec-4] DEBUG it.reply.sytel.adr.dynatraceClient.imp.DynatraceClientImpl - incidentTypeChild:[Host Memory Unhealthy (1)]
-2018-09-26 18:24:45.269 - [AC1F07675BABB2CC00011C07][http-nio-8181-exec-4] DEBUG it.reply.sytel.adr.dynatraceClient.imp.DynatraceClientImpl - ------ALLARME-----:[<xml-fragment name="The memory health of host 'mercurio' is not ok. During the last 15 minutes this host reported 10% (or less) and 1 GB (or less) memory available" start="2018-09-25T15:09:02.056+02:00" source="mercurio"/>] incidentType:[Host Memory Unhealthy (1)]
-2018-09-26 18:24:45.270 - [AC1F07675BABB2CC00011C07][http-nio-8181-exec-4] DEBUG it.reply.sytel.adr.dynatraceClient.imp.DynatraceClientImpl - incidentTypeChild:[The memory health of host 'mercurio' is not ok. During the last 15 minutes this host reported 10% (or less) and 1 GB (or less) memory available]
-2018-09-26 18:24:45.270 - [AC1F07675BABB2CC00011C07][http-nio-8181-exec-4] DEBUG it.reply.sytel.adr.dynatraceClient.imp.DynatraceClientImpl - incidentTypeChild:[JDBC Connection Pool Percent Used]
-2018-09-26 18:24:45.271 - [AC1F07675BABB2CC00011C07][http-nio-8181-exec-4] DEBUG it.reply.sytel.adr.dynatraceClient.imp.DynatraceClientImpl - incidentTypeChild:[JDBC Connection Pool Waiting Thread Count]
-2018-09-26 18:24:45.271 - [AC1F07675BABB2CC00011C07][http-nio-8181-exec-4] DEBUG it.reply.sytel.adr.dynatraceClient.imp.DynatraceClientImpl - incidentTypeChild:[Potentially stuck Java VM detected]
-2018-09-26 18:24:45.271 - [AC1F07675BABB2CC00011C07][http-nio-8181-exec-4] DEBUG it.reply.sytel.adr.dynatraceClient.imp.DynatraceClientImpl - incidentTypeChild:[Response time degraded]
-2018-09-26 18:24:45.271 - [AC1F07675BABB2CC00011C07][http-nio-8181-exec-4] DEBUG it.reply.sytel.adr.dynatraceClient.imp.DynatraceClientImpl - incidentTypeChild:[Response time degraded for slow requests]
-2018-09-26 18:24:45.271 - [AC1F07675BABB2CC00011C07][http-nio-8181-exec-4] DEBUG it.reply.sytel.adr.dynatraceClient.imp.DynatraceClientImpl - incidentTypeChild:[Status of the QM (1)]
-2018-09-26 18:24:45.271 - [AC1F07675BABB2CC00011C07][http-nio-8181-exec-4] DEBUG it.reply.sytel.adr.dynatraceClient.imp.DynatraceClientImpl - ------ALLARME-----:[<xml-fragment name="Queue Manager Group/Status: Status (ADBM_QU_BRS2ADR _NUM_MSG@192.168.175.144) ADBM_QU_BRS2ADR _NUM_MSG lower bound exceeded; Queue Manager Group/Status: Status (ADBM_QU_UFIS_ADR _NUM_MSG@192.168.175.144) ADBM_QU_UFIS_ADR _NUM_MSG upper bound exceeded" start="2018-09-26T16:59:10.000+02:00" source="ADBM_QU_UFIS_ADR _NUM_MSG@192.168.175.144, ADBM_QU_BRS2ADR _NUM_MSG@192.168.175.144"/>] incidentType:[Status of the QM (1)]
-2018-09-26 18:24:45.271 - [AC1F07675BABB2CC00011C07][http-nio-8181-exec-4] DEBUG it.reply.sytel.adr.dynatraceClient.imp.DynatraceClientImpl - incidentTypeChild:[Queue Manager Group/Status: Status (ADBM_QU_BRS2ADR _NUM_MSG@192.168.175.144) ADBM_QU_BRS2ADR _NUM_MSG lower bound exceeded; Queue Manager Group/Status: Status (ADBM_QU_UFIS_ADR _NUM_MSG@192.168.175.144) ADBM_QU_UFIS_ADR _NUM_MSG upper bound exceeded]
-2018-09-26 18:24:45.272 - [AC1F07675BABB2CC00011C07][http-nio-8181-exec-4] DEBUG it.reply.sytel.adr.dynatraceClient.imp.DynatraceClientImpl - incidentTypeChild:[Thread Declared Hung]
-2018-09-26 18:24:45.272 - [AC1F07675BABB2CC00011C07][http-nio-8181-exec-4] DEBUG it.reply.sytel.adr.dynatraceClient.imp.DynatraceClientImpl - incidentTypeChild:[Total GC Collection Time]
-2018-09-26 18:24:45.272 - [AC1F07675BABB2CC00011C07][http-nio-8181-exec-4] INFO  it.reply.sytel.adr.services.impl.GetDynatraceIncident - There are [2] incident to work
-2018-09-26 18:24:45.279 - [AC1F07675BABB2CC00011C07][http-nio-8181-exec-4] DEBUG it.reply.sytel.adr.services.impl.GetDynatraceIncident - descrizioneToFind:[Status of the QM] for DashBoard:[ADM]
-2018-09-26 18:24:45.286 - [AC1F07675BABB2CC00011C07][http-nio-8181-exec-4] INFO  it.reply.sytel.adr.services.impl.GetDynatraceIncident - Dynatrace Event Status of the QM not configurated on DB for the DashBoard:[ADM]
-2018-09-26 18:24:45.290 - [AC1F07675BABB2CC00011C07][http-nio-8181-exec-4] DEBUG it.reply.sytel.adr.services.impl.GetDynatraceIncident - descrizioneToFind:[Host Memory Unhealthy] for DashBoard:[ADM]
-2018-09-26 18:24:45.292 - [AC1F07675BABB2CC00011C07][http-nio-8181-exec-4] INFO  it.reply.sytel.adr.services.impl.GetDynatraceIncident - Dynatrace Event Host Memory Unhealthy not configurated on DB for the DashBoard:[ADM]
-2018-09-26 18:24:45.293 - [AC1F07675BABB2CC00011C07][http-nio-8181-exec-4] DEBUG it.reply.sytel.adr.services.impl.GetDynatraceIncident - the Name for app:[BOL_TEST_REMEDY_INTEGRATION]
-2018-09-26 18:24:45.293 - [AC1F07675BABB2CC00011C07][http-nio-8181-exec-4] DEBUG it.reply.sytel.adr.services.impl.GetDynatraceIncident - the URL for app:[https://dynatrace-sub-ca:8021/rest/management/dashboard/BOL_TEST_REMEDY_INTEGRATION]
-2018-09-26 18:24:45.293 - [AC1F07675BABB2CC00011C07][http-nio-8181-exec-4] DEBUG it.reply.sytel.adr.services.impl.GetDynatraceIncident - the USR for app:[admin]
-2018-09-26 18:24:45.293 - [AC1F07675BABB2CC00011C07][http-nio-8181-exec-4] DEBUG it.reply.sytel.adr.services.impl.GetDynatraceIncident - the PWD for app:[adradmin01]
-2018-09-26 18:24:45.293 - [AC1F07675BABB2CC00011C07][http-nio-8181-exec-4] DEBUG it.reply.sytel.adr.dynatraceClient.imp.RestClientImpl - calling the console:[https://dynatrace-sub-ca:8021/rest/management/dashboard/BOL_TEST_REMEDY_INTEGRATION] with user[admin] pwd=adradmin01...
-2018-09-26 18:24:45.293 - [AC1F07675BABB2CC00011C07][http-nio-8181-exec-4] DEBUG it.reply.sytel.adr.common.ws.SharedHTTPSClient - Executing POST with basic authentication
-2018-09-26 18:24:45.293 - [AC1F07675BABB2CC00011C07][http-nio-8181-exec-4] DEBUG it.reply.sytel.adr.common.ws.SharedHTTPSClient - SOAP HTTP request headers:
-2018-09-26 18:24:45.293 - [AC1F07675BABB2CC00011C07][http-nio-8181-exec-4] INFO  it.reply.sytel.adr.common.ws.SharedHTTPSClient - 	name=Authorization, value=Basic YWRtaW46YWRyYWRtaW4wMQ==
-2018-09-26 18:24:45.474 - [AC1F07675BABB2CC00011C07][http-nio-8181-exec-4] INFO  it.reply.sytel.adr.common.ws.GKConnectionReuseStrategy - Remote peer HTTP version > 1.0 --> keep-alive=true
-2018-09-26 18:24:45.474 - [AC1F07675BABB2CC00011C07][http-nio-8181-exec-4] INFO  it.reply.sytel.adr.common.ws.GKConnectionKeepAliveStrategy - Current connection will be kept alive 'indefinitely'
-2018-09-26 18:24:45.474 - [AC1F07675BABB2CC00011C07][http-nio-8181-exec-4] INFO  it.reply.sytel.adr.common.ws.SharedHTTPSClient - SOAP HTTP response headers:
-2018-09-26 18:24:45.474 - [AC1F07675BABB2CC00011C07][http-nio-8181-exec-4] INFO  it.reply.sytel.adr.common.ws.SharedHTTPSClient - 	name=Date, value=Wed, 26 Sep 2018 16:24:45 GMT
-2018-09-26 18:24:45.474 - [AC1F07675BABB2CC00011C07][http-nio-8181-exec-4] INFO  it.reply.sytel.adr.common.ws.SharedHTTPSClient - 	name=Content-Disposition, value=inline; filename="BOL_TEST_REMEDY_INTEGRATION.xml"
-2018-09-26 18:24:45.474 - [AC1F07675BABB2CC00011C07][http-nio-8181-exec-4] INFO  it.reply.sytel.adr.common.ws.SharedHTTPSClient - 	name=Content-Type, value=text/xml
-2018-09-26 18:24:45.474 - [AC1F07675BABB2CC00011C07][http-nio-8181-exec-4] INFO  it.reply.sytel.adr.common.ws.SharedHTTPSClient - 	name=Cache-Control, value=no-cache
-2018-09-26 18:24:45.474 - [AC1F07675BABB2CC00011C07][http-nio-8181-exec-4] INFO  it.reply.sytel.adr.common.ws.SharedHTTPSClient - 	name=Cache-Control, value=must-revalidate
-2018-09-26 18:24:45.474 - [AC1F07675BABB2CC00011C07][http-nio-8181-exec-4] INFO  it.reply.sytel.adr.common.ws.SharedHTTPSClient - 	name=Cache-Control, value=max-age=0
-2018-09-26 18:24:45.475 - [AC1F07675BABB2CC00011C07][http-nio-8181-exec-4] INFO  it.reply.sytel.adr.common.ws.SharedHTTPSClient - 	name=Pragma, value=no-cache
-2018-09-26 18:24:45.475 - [AC1F07675BABB2CC00011C07][http-nio-8181-exec-4] INFO  it.reply.sytel.adr.common.ws.SharedHTTPSClient - 	name=Vary, value=Accept-Encoding, User-Agent
-2018-09-26 18:24:45.475 - [AC1F07675BABB2CC00011C07][http-nio-8181-exec-4] INFO  it.reply.sytel.adr.common.ws.SharedHTTPSClient - 	name=Content-Length, value=3678
-2018-09-26 18:24:45.475 - [AC1F07675BABB2CC00011C07][http-nio-8181-exec-4] INFO  it.reply.sytel.adr.common.ws.SharedHTTPSClient - HTTP response code received: 200
-2018-09-26 18:24:45.475 - [AC1F07675BABB2CC00011C07][http-nio-8181-exec-4] DEBUG it.reply.sytel.adr.dynatraceClient.imp.RestClientImpl - calling the console:[https://dynatrace-sub-ca:8021/rest/management/dashboard/BOL_TEST_REMEDY_INTEGRATION] with user[admin] pwd=adradmin01... DONE elapsed:[182]
-2018-09-26 18:24:45.476 - [AC1F07675BABB2CC00011C07][http-nio-8181-exec-4] DEBUG it.reply.sytel.adr.dynatraceClient.imp.RestClientImpl - content:[<?xml version="1.0" encoding="utf-8"?>
-<dashboardreport name="BOL_TEST_REMEDY_INTEGRATION" version="7.0.28.1010" reportdate="2018-09-26T18:24:45.478+02:00" description="">
+2018-09-28 16:56:29.322 - [AC1F07675BAE411C000192DA][http-nio-8181-exec-2] DEBUG it.reply.sytel.adr.dynatraceClient.imp.DynatraceClientImpl - ---------FirstIncidentType:[Incidents]----------------
+2018-09-28 16:56:29.330 - [AC1F07675BAE411C000192DA][http-nio-8181-exec-2] DEBUG it.reply.sytel.adr.dynatraceClient.imp.DynatraceClientImpl - incidentTypeChild:[Agent Instrumentation Disabled]
+2018-09-28 16:56:29.330 - [AC1F07675BAE411C000192DA][http-nio-8181-exec-2] DEBUG it.reply.sytel.adr.dynatraceClient.imp.DynatraceClientImpl - incidentTypeChild:[Application Process Out-of-Memory]
+2018-09-28 16:56:29.330 - [AC1F07675BAE411C000192DA][http-nio-8181-exec-2] DEBUG it.reply.sytel.adr.dynatraceClient.imp.DynatraceClientImpl - incidentTypeChild:[Application Process Unavailable (unexpected)]
+2018-09-28 16:56:29.330 - [AC1F07675BAE411C000192DA][http-nio-8181-exec-2] DEBUG it.reply.sytel.adr.dynatraceClient.imp.DynatraceClientImpl - incidentTypeChild:[Application Process Unhealthy]
+2018-09-28 16:56:29.330 - [AC1F07675BAE411C000192DA][http-nio-8181-exec-2] DEBUG it.reply.sytel.adr.dynatraceClient.imp.DynatraceClientImpl - incidentTypeChild:[CURRENT_Q_DEPTH]
+2018-09-28 16:56:29.330 - [AC1F07675BAE411C000192DA][http-nio-8181-exec-2] DEBUG it.reply.sytel.adr.dynatraceClient.imp.DynatraceClientImpl - incidentTypeChild:[Failure rate too high]
+2018-09-28 16:56:29.330 - [AC1F07675BAE411C000192DA][http-nio-8181-exec-2] DEBUG it.reply.sytel.adr.dynatraceClient.imp.DynatraceClientImpl - incidentTypeChild:[Host Memory Unhealthy (1)]
+2018-09-28 16:56:29.359 - [AC1F07675BAE411C000192DA][http-nio-8181-exec-2] DEBUG it.reply.sytel.adr.dynatraceClient.imp.DynatraceClientImpl - ------ALLARME-----:[<xml-fragment name="The memory health of host 'mercurio' is not ok. During the last 15 minutes this host reported 10% (or less) and 1 GB (or less) memory available" start="2018-09-27T10:28:08.859+02:00" source="mercurio"/>] incidentType:[Host Memory Unhealthy (1)]
+2018-09-28 16:56:29.360 - [AC1F07675BAE411C000192DA][http-nio-8181-exec-2] DEBUG it.reply.sytel.adr.dynatraceClient.imp.DynatraceClientImpl - incidentTypeChild:[The memory health of host 'mercurio' is not ok. During the last 15 minutes this host reported 10% (or less) and 1 GB (or less) memory available]
+2018-09-28 16:56:29.360 - [AC1F07675BAE411C000192DA][http-nio-8181-exec-2] DEBUG it.reply.sytel.adr.dynatraceClient.imp.DynatraceClientImpl - incidentTypeChild:[JDBC Connection Pool Percent Used]
+2018-09-28 16:56:29.360 - [AC1F07675BAE411C000192DA][http-nio-8181-exec-2] DEBUG it.reply.sytel.adr.dynatraceClient.imp.DynatraceClientImpl - incidentTypeChild:[JDBC Connection Pool Waiting Thread Count]
+2018-09-28 16:56:29.360 - [AC1F07675BAE411C000192DA][http-nio-8181-exec-2] DEBUG it.reply.sytel.adr.dynatraceClient.imp.DynatraceClientImpl - incidentTypeChild:[Potentially stuck Java VM detected]
+2018-09-28 16:56:29.360 - [AC1F07675BAE411C000192DA][http-nio-8181-exec-2] DEBUG it.reply.sytel.adr.dynatraceClient.imp.DynatraceClientImpl - incidentTypeChild:[Response time degraded]
+2018-09-28 16:56:29.360 - [AC1F07675BAE411C000192DA][http-nio-8181-exec-2] DEBUG it.reply.sytel.adr.dynatraceClient.imp.DynatraceClientImpl - incidentTypeChild:[Response time degraded for slow requests]
+2018-09-28 16:56:29.360 - [AC1F07675BAE411C000192DA][http-nio-8181-exec-2] DEBUG it.reply.sytel.adr.dynatraceClient.imp.DynatraceClientImpl - incidentTypeChild:[Status of the QM (1)]
+2018-09-28 16:56:29.361 - [AC1F07675BAE411C000192DA][http-nio-8181-exec-2] DEBUG it.reply.sytel.adr.dynatraceClient.imp.DynatraceClientImpl - ------ALLARME-----:[<xml-fragment name="Queue Manager Group/Status: Status (ADBM_QU_BRS2ADR _NUM_MSG@192.168.175.144) ADBM_QU_BRS2ADR _NUM_MSG lower bound exceeded; Queue Manager Group/Status: Status (ADBM_QU_UFIS_ADR _NUM_MSG@192.168.175.144) ADBM_QU_UFIS_ADR _NUM_MSG upper bound exceeded" start="2018-09-26T16:59:10.000+02:00" source="ADBM_QU_UFIS_ADR _NUM_MSG@192.168.175.144, ADBM_QU_BRS2ADR _NUM_MSG@192.168.175.144"/>] incidentType:[Status of the QM (1)]
+2018-09-28 16:56:29.361 - [AC1F07675BAE411C000192DA][http-nio-8181-exec-2] DEBUG it.reply.sytel.adr.dynatraceClient.imp.DynatraceClientImpl - incidentTypeChild:[Queue Manager Group/Status: Status (ADBM_QU_BRS2ADR _NUM_MSG@192.168.175.144) ADBM_QU_BRS2ADR _NUM_MSG lower bound exceeded; Queue Manager Group/Status: Status (ADBM_QU_UFIS_ADR _NUM_MSG@192.168.175.144) ADBM_QU_UFIS_ADR _NUM_MSG upper bound exceeded]
+2018-09-28 16:56:29.361 - [AC1F07675BAE411C000192DA][http-nio-8181-exec-2] DEBUG it.reply.sytel.adr.dynatraceClient.imp.DynatraceClientImpl - incidentTypeChild:[Thread Declared Hung]
+2018-09-28 16:56:29.361 - [AC1F07675BAE411C000192DA][http-nio-8181-exec-2] DEBUG it.reply.sytel.adr.dynatraceClient.imp.DynatraceClientImpl - incidentTypeChild:[Total GC Collection Time]
+2018-09-28 16:56:29.361 - [AC1F07675BAE411C000192DA][http-nio-8181-exec-2] INFO  it.reply.sytel.adr.services.impl.GetDynatraceIncident - There are [2] incident to work
+2018-09-28 16:56:29.382 - [AC1F07675BAE411C000192DA][http-nio-8181-exec-2] DEBUG it.reply.sytel.adr.services.impl.GetDynatraceIncident - descrizioneToFind:[Status of the QM] for DashBoard:[ADM]
+2018-09-28 16:56:29.395 - [AC1F07675BAE411C000192DA][http-nio-8181-exec-2] INFO  it.reply.sytel.adr.services.impl.GetDynatraceIncident - Dynatrace Event Status of the QM not configurated on DB for the DashBoard:[ADM]
+2018-09-28 16:56:29.401 - [AC1F07675BAE411C000192DA][http-nio-8181-exec-2] DEBUG it.reply.sytel.adr.services.impl.GetDynatraceIncident - descrizioneToFind:[Host Memory Unhealthy] for DashBoard:[ADM]
+2018-09-28 16:56:29.406 - [AC1F07675BAE411C000192DA][http-nio-8181-exec-2] INFO  it.reply.sytel.adr.services.impl.GetDynatraceIncident - Dynatrace Event Host Memory Unhealthy not configurated on DB for the DashBoard:[ADM]
+2018-09-28 16:56:29.407 - [AC1F07675BAE411C000192DA][http-nio-8181-exec-2] DEBUG it.reply.sytel.adr.services.impl.GetDynatraceIncident - the Name for app:[BOL_TEST_REMEDY_INTEGRATION]
+2018-09-28 16:56:29.407 - [AC1F07675BAE411C000192DA][http-nio-8181-exec-2] DEBUG it.reply.sytel.adr.services.impl.GetDynatraceIncident - the URL for app:[https://dynatrace-sub-ca:8021/rest/management/dashboard/BOL_TEST_REMEDY_INTEGRATION]
+2018-09-28 16:56:29.407 - [AC1F07675BAE411C000192DA][http-nio-8181-exec-2] DEBUG it.reply.sytel.adr.services.impl.GetDynatraceIncident - the USR for app:[admin]
+2018-09-28 16:56:29.407 - [AC1F07675BAE411C000192DA][http-nio-8181-exec-2] DEBUG it.reply.sytel.adr.services.impl.GetDynatraceIncident - the PWD for app:[adradmin01]
+2018-09-28 16:56:29.407 - [AC1F07675BAE411C000192DA][http-nio-8181-exec-2] DEBUG it.reply.sytel.adr.dynatraceClient.imp.RestClientImpl - calling the console:[https://dynatrace-sub-ca:8021/rest/management/dashboard/BOL_TEST_REMEDY_INTEGRATION] with user[admin] pwd=adradmin01...
+2018-09-28 16:56:29.407 - [AC1F07675BAE411C000192DA][http-nio-8181-exec-2] DEBUG it.reply.sytel.adr.common.ws.SharedHTTPSClient - Executing POST with basic authentication
+2018-09-28 16:56:29.407 - [AC1F07675BAE411C000192DA][http-nio-8181-exec-2] DEBUG it.reply.sytel.adr.common.ws.SharedHTTPSClient - SOAP HTTP request headers:
+2018-09-28 16:56:29.407 - [AC1F07675BAE411C000192DA][http-nio-8181-exec-2] INFO  it.reply.sytel.adr.common.ws.SharedHTTPSClient - 	name=Authorization, value=Basic YWRtaW46YWRyYWRtaW4wMQ==
+2018-09-28 16:56:29.589 - [AC1F07675BAE411C000192DA][http-nio-8181-exec-2] INFO  it.reply.sytel.adr.common.ws.GKConnectionReuseStrategy - Remote peer HTTP version > 1.0 --> keep-alive=true
+2018-09-28 16:56:29.590 - [AC1F07675BAE411C000192DA][http-nio-8181-exec-2] INFO  it.reply.sytel.adr.common.ws.GKConnectionKeepAliveStrategy - Current connection will be kept alive 'indefinitely'
+2018-09-28 16:56:29.590 - [AC1F07675BAE411C000192DA][http-nio-8181-exec-2] INFO  it.reply.sytel.adr.common.ws.SharedHTTPSClient - SOAP HTTP response headers:
+2018-09-28 16:56:29.590 - [AC1F07675BAE411C000192DA][http-nio-8181-exec-2] INFO  it.reply.sytel.adr.common.ws.SharedHTTPSClient - 	name=Date, value=Fri, 28 Sep 2018 14:56:29 GMT
+2018-09-28 16:56:29.590 - [AC1F07675BAE411C000192DA][http-nio-8181-exec-2] INFO  it.reply.sytel.adr.common.ws.SharedHTTPSClient - 	name=Content-Disposition, value=inline; filename="BOL_TEST_REMEDY_INTEGRATION.xml"
+2018-09-28 16:56:29.590 - [AC1F07675BAE411C000192DA][http-nio-8181-exec-2] INFO  it.reply.sytel.adr.common.ws.SharedHTTPSClient - 	name=Content-Type, value=text/xml
+2018-09-28 16:56:29.590 - [AC1F07675BAE411C000192DA][http-nio-8181-exec-2] INFO  it.reply.sytel.adr.common.ws.SharedHTTPSClient - 	name=Cache-Control, value=no-cache
+2018-09-28 16:56:29.590 - [AC1F07675BAE411C000192DA][http-nio-8181-exec-2] INFO  it.reply.sytel.adr.common.ws.SharedHTTPSClient - 	name=Cache-Control, value=must-revalidate
+2018-09-28 16:56:29.590 - [AC1F07675BAE411C000192DA][http-nio-8181-exec-2] INFO  it.reply.sytel.adr.common.ws.SharedHTTPSClient - 	name=Cache-Control, value=max-age=0
+2018-09-28 16:56:29.590 - [AC1F07675BAE411C000192DA][http-nio-8181-exec-2] INFO  it.reply.sytel.adr.common.ws.SharedHTTPSClient - 	name=Pragma, value=no-cache
+2018-09-28 16:56:29.590 - [AC1F07675BAE411C000192DA][http-nio-8181-exec-2] INFO  it.reply.sytel.adr.common.ws.SharedHTTPSClient - 	name=Vary, value=Accept-Encoding, User-Agent
+2018-09-28 16:56:29.590 - [AC1F07675BAE411C000192DA][http-nio-8181-exec-2] INFO  it.reply.sytel.adr.common.ws.SharedHTTPSClient - 	name=Content-Length, value=3974
+2018-09-28 16:56:29.590 - [AC1F07675BAE411C000192DA][http-nio-8181-exec-2] INFO  it.reply.sytel.adr.common.ws.SharedHTTPSClient - HTTP response code received: 200
+2018-09-28 16:56:29.590 - [AC1F07675BAE411C000192DA][http-nio-8181-exec-2] DEBUG it.reply.sytel.adr.dynatraceClient.imp.RestClientImpl - calling the console:[https://dynatrace-sub-ca:8021/rest/management/dashboard/BOL_TEST_REMEDY_INTEGRATION] with user[admin] pwd=adradmin01... DONE elapsed:[183]
+2018-09-28 16:56:29.591 - [AC1F07675BAE411C000192DA][http-nio-8181-exec-2] DEBUG it.reply.sytel.adr.dynatraceClient.imp.RestClientImpl - content:[<?xml version="1.0" encoding="utf-8"?>
+<dashboardreport name="BOL_TEST_REMEDY_INTEGRATION" version="7.0.28.1010" reportdate="2018-09-28T16:56:29.594+02:00" description="">
   <source name="ADRIT-BOL-PMS_TEST">
     <filters summary="last 24 hours">
       <filter>tf:Last24h</filter>
@@ -183,26 +183,27 @@
     <incidentsoverviewdashlet name="Incidents" description="" displaysource="Base">
       <source>
         <filters summary="Incident Rules, last 24 hours">
-          <filter>tf:Last24h</filter>
           <filter>if:RULE?Agent Instrumentation Disabledif:RULE?Application Process Out-of-Memoryif:RULE?Application Process Unavailable (unexpected)if:RULE?Application Process Unhealthyif:RULE?Average response time degradedif:RULE?Failure rate too highif:RULE?Host Availabilityif:RULE?Host CPU Unhealthyif:RULE?Host Disk Unhealthyif:RULE?Host Memory Unhealthyif:RULE?Host Network Unhealthyif:RULE?Response time degraded for slow requests</filter>
+          <filter>tf:Last24h</filter>
         </filters>
       </source>
       <incidentoverviewrecords structuretype="tree">
-        <incidentoverviewrecord name="ADRIT-BOL-PMS_TEST (7)">
+        <incidentoverviewrecord name="ADRIT-BOL-PMS_TEST (8)">
           <incidentoverviewrecord name="Agent Instrumentation Disabled"></incidentoverviewrecord>
           <incidentoverviewrecord name="Application Process Out-of-Memory"></incidentoverviewrecord>
           <incidentoverviewrecord name="Application Process Unavailable (unexpected) (5)">
-            <incidentoverviewrecord name="Agent 'TOMCAT-AUTH_ADRIT_TEST@n73411023' connection lost" start="2018-09-26T15:14:07.734+02:00" duration="3131" end="2018-09-26T15:14:10.865+02:00" source="-"></incidentoverviewrecord>
-            <incidentoverviewrecord name="Agent 'TOMCAT_ADRIT_TEST@n73411021' connection lost" start="2018-09-26T15:14:04.257+02:00" duration="48" end="2018-09-26T15:14:04.305+02:00" source="-"></incidentoverviewrecord>
-            <incidentoverviewrecord name="Agent 'TOMCAT_ADRIT_TEST@n73411021' connection lost" start="2018-09-26T02:30:37.922+02:00" duration="35005" end="2018-09-26T02:31:12.927+02:00" source="-"></incidentoverviewrecord>
-            <incidentoverviewrecord name="Agent 'TOMCAT_ADRIT_TEST@n73411022' connection lost" start="2018-09-26T15:14:04.287+02:00" duration="3446" end="2018-09-26T15:14:07.733+02:00" source="-"></incidentoverviewrecord>
-            <incidentoverviewrecord name="Agent 'TOMCAT_ADRIT_TEST@n73411022' connection lost" start="2018-09-26T02:40:39.884+02:00" duration="32087" end="2018-09-26T02:41:11.971+02:00" source="-"></incidentoverviewrecord>
+            <incidentoverviewrecord name="Agent 'TOMCAT-AUTH_ADRIT_TEST@n73411023' connection lost" start="2018-09-28T15:25:21.251+02:00" duration="28" end="2018-09-28T15:25:21.279+02:00" source="-"></incidentoverviewrecord>
+            <incidentoverviewrecord name="Agent 'TOMCAT_ADRIT_TEST@n73411021' connection lost" start="2018-09-28T15:25:14.909+02:00" duration="49" end="2018-09-28T15:25:14.958+02:00" source="-"></incidentoverviewrecord>
+            <incidentoverviewrecord name="Agent 'TOMCAT_ADRIT_TEST@n73411021' connection lost" start="2018-09-28T02:30:38.914+02:00" duration="33613" end="2018-09-28T02:31:12.527+02:00" source="-"></incidentoverviewrecord>
+            <incidentoverviewrecord name="Agent 'TOMCAT_ADRIT_TEST@n73411022' connection lost" start="2018-09-28T02:40:40.222+02:00" duration="32323" end="2018-09-28T02:41:12.545+02:00" source="-"></incidentoverviewrecord>
+            <incidentoverviewrecord name="Agent 'TOMCAT_ADRIT_TEST@n73411022' connection lost" start="2018-09-28T15:25:14.937+02:00" duration="22" end="2018-09-28T15:25:14.959+02:00" source="-"></incidentoverviewrecord>
           </incidentoverviewrecord>
           <incidentoverviewrecord name="Application Process Unhealthy"></incidentoverviewrecord>
           <incidentoverviewrecord name="Failure rate too high"></incidentoverviewrecord>
-          <incidentoverviewrecord name="Response time degraded (2)">
-            <incidentoverviewrecord name="Average response time of &quot;Web Page Requests [&lt;...&gt;] ADR.IT (APACHE_ADRIT_TEST[Apache 2.2]@n73411020)&quot; degraded" start="2018-09-26T08:05:00.000+02:00" duration="5049033" end="2018-09-26T09:29:09.033+02:00" source="-"></incidentoverviewrecord>
-            <incidentoverviewrecord name="Average response time of &quot;Web Page Requests [&lt;...&gt;] ADR.IT (APACHE_ADRIT_TEST[Apache 2.2]@n73411020)&quot; degraded" start="2018-09-25T18:41:00.000+02:00" duration="6426707" end="2018-09-25T20:28:06.707+02:00" source="-"></incidentoverviewrecord>
+          <incidentoverviewrecord name="Response time degraded (3)">
+            <incidentoverviewrecord name="Average response time of &quot;Web Page Requests [&lt;...&gt;] ADR.IT (APACHE_ADRIT_TEST[Apache 2.2]@n73411020)&quot; degraded" start="2018-09-28T14:24:00.000+02:00" duration="5161861" end="2018-09-28T15:50:01.861+02:00" source="-"></incidentoverviewrecord>
+            <incidentoverviewrecord name="Average response time of &quot;Web Page Requests [&lt;...&gt;] ADR.IT (APACHE_ADRIT_TEST[Apache 2.2]@n73411020)&quot; degraded" start="2018-09-28T12:46:00.000+02:00" duration="5161729" end="2018-09-28T14:12:01.729+02:00" source="-"></incidentoverviewrecord>
+            <incidentoverviewrecord name="Average response time of &quot;Web Page Requests [&lt;...&gt;] ADR.IT (APACHE_ADRIT_TEST[Apache 2.2]@n73411020)&quot; degraded" start="2018-09-27T16:16:00.000+02:00" duration="5769486" end="2018-09-27T17:52:09.486+02:00" source="-"></incidentoverviewrecord>
           </incidentoverviewrecord>
           <incidentoverviewrecord name="Response time degraded for slow requests"></incidentoverviewrecord>
         </incidentoverviewrecord>
@@ -211,54 +212,407 @@
   </data>
 </dashboardreport>
 ]
-2018-09-26 18:24:45.478 - [AC1F07675BABB2CC00011C07][http-nio-8181-exec-4] DEBUG it.reply.sytel.adr.dynatraceClient.imp.DynatraceClientImpl - ---------FirstIncidentType:[Incidents]----------------
-2018-09-26 18:24:45.478 - [AC1F07675BABB2CC00011C07][http-nio-8181-exec-4] DEBUG it.reply.sytel.adr.dynatraceClient.imp.DynatraceClientImpl - incidentTypeChild:[Agent Instrumentation Disabled]
-2018-09-26 18:24:45.478 - [AC1F07675BABB2CC00011C07][http-nio-8181-exec-4] DEBUG it.reply.sytel.adr.dynatraceClient.imp.DynatraceClientImpl - incidentTypeChild:[Application Process Out-of-Memory]
-2018-09-26 18:24:45.478 - [AC1F07675BABB2CC00011C07][http-nio-8181-exec-4] DEBUG it.reply.sytel.adr.dynatraceClient.imp.DynatraceClientImpl - incidentTypeChild:[Application Process Unavailable (unexpected) (5)]
-2018-09-26 18:24:45.479 - [AC1F07675BABB2CC00011C07][http-nio-8181-exec-4] DEBUG it.reply.sytel.adr.dynatraceClient.imp.DynatraceClientImpl - ------ALLARME-----:[<xml-fragment name="Agent 'TOMCAT-AUTH_ADRIT_TEST@n73411023' connection lost" start="2018-09-26T15:14:07.734+02:00" duration="3131" end="2018-09-26T15:14:10.865+02:00" source="-"/>] incidentType:[Application Process Unavailable (unexpected) (5)]
-2018-09-26 18:24:45.479 - [AC1F07675BABB2CC00011C07][http-nio-8181-exec-4] DEBUG it.reply.sytel.adr.dynatraceClient.imp.DynatraceClientImpl - incidentTypeChild:[Agent 'TOMCAT-AUTH_ADRIT_TEST@n73411023' connection lost]
-2018-09-26 18:24:45.479 - [AC1F07675BABB2CC00011C07][http-nio-8181-exec-4] DEBUG it.reply.sytel.adr.dynatraceClient.imp.DynatraceClientImpl - ------ALLARME-----:[<xml-fragment name="Agent 'TOMCAT_ADRIT_TEST@n73411021' connection lost" start="2018-09-26T15:14:04.257+02:00" duration="48" end="2018-09-26T15:14:04.305+02:00" source="-"/>] incidentType:[Application Process Unavailable (unexpected) (5)]
-2018-09-26 18:24:45.480 - [AC1F07675BABB2CC00011C07][http-nio-8181-exec-4] DEBUG it.reply.sytel.adr.dynatraceClient.imp.DynatraceClientImpl - incidentTypeChild:[Agent 'TOMCAT_ADRIT_TEST@n73411021' connection lost]
-2018-09-26 18:24:45.480 - [AC1F07675BABB2CC00011C07][http-nio-8181-exec-4] DEBUG it.reply.sytel.adr.dynatraceClient.imp.DynatraceClientImpl - ------ALLARME-----:[<xml-fragment name="Agent 'TOMCAT_ADRIT_TEST@n73411021' connection lost" start="2018-09-26T02:30:37.922+02:00" duration="35005" end="2018-09-26T02:31:12.927+02:00" source="-"/>] incidentType:[Application Process Unavailable (unexpected) (5)]
-2018-09-26 18:24:45.480 - [AC1F07675BABB2CC00011C07][http-nio-8181-exec-4] DEBUG it.reply.sytel.adr.dynatraceClient.imp.DynatraceClientImpl - incidentTypeChild:[Agent 'TOMCAT_ADRIT_TEST@n73411021' connection lost]
-2018-09-26 18:24:45.480 - [AC1F07675BABB2CC00011C07][http-nio-8181-exec-4] DEBUG it.reply.sytel.adr.dynatraceClient.imp.DynatraceClientImpl - ------ALLARME-----:[<xml-fragment name="Agent 'TOMCAT_ADRIT_TEST@n73411022' connection lost" start="2018-09-26T15:14:04.287+02:00" duration="3446" end="2018-09-26T15:14:07.733+02:00" source="-"/>] incidentType:[Application Process Unavailable (unexpected) (5)]
-2018-09-26 18:24:45.480 - [AC1F07675BABB2CC00011C07][http-nio-8181-exec-4] DEBUG it.reply.sytel.adr.dynatraceClient.imp.DynatraceClientImpl - incidentTypeChild:[Agent 'TOMCAT_ADRIT_TEST@n73411022' connection lost]
-2018-09-26 18:24:45.481 - [AC1F07675BABB2CC00011C07][http-nio-8181-exec-4] DEBUG it.reply.sytel.adr.dynatraceClient.imp.DynatraceClientImpl - ------ALLARME-----:[<xml-fragment name="Agent 'TOMCAT_ADRIT_TEST@n73411022' connection lost" start="2018-09-26T02:40:39.884+02:00" duration="32087" end="2018-09-26T02:41:11.971+02:00" source="-"/>] incidentType:[Application Process Unavailable (unexpected) (5)]
-2018-09-26 18:24:45.481 - [AC1F07675BABB2CC00011C07][http-nio-8181-exec-4] DEBUG it.reply.sytel.adr.dynatraceClient.imp.DynatraceClientImpl - incidentTypeChild:[Agent 'TOMCAT_ADRIT_TEST@n73411022' connection lost]
-2018-09-26 18:24:45.481 - [AC1F07675BABB2CC00011C07][http-nio-8181-exec-4] DEBUG it.reply.sytel.adr.dynatraceClient.imp.DynatraceClientImpl - incidentTypeChild:[Application Process Unhealthy]
-2018-09-26 18:24:45.482 - [AC1F07675BABB2CC00011C07][http-nio-8181-exec-4] DEBUG it.reply.sytel.adr.dynatraceClient.imp.DynatraceClientImpl - incidentTypeChild:[Failure rate too high]
-2018-09-26 18:24:45.482 - [AC1F07675BABB2CC00011C07][http-nio-8181-exec-4] DEBUG it.reply.sytel.adr.dynatraceClient.imp.DynatraceClientImpl - incidentTypeChild:[Response time degraded (2)]
-2018-09-26 18:24:45.482 - [AC1F07675BABB2CC00011C07][http-nio-8181-exec-4] DEBUG it.reply.sytel.adr.dynatraceClient.imp.DynatraceClientImpl - ------ALLARME-----:[<xml-fragment name="Average response time of &quot;Web Page Requests [&lt;...>] ADR.IT (APACHE_ADRIT_TEST[Apache 2.2]@n73411020)&quot; degraded" start="2018-09-26T08:05:00.000+02:00" duration="5049033" end="2018-09-26T09:29:09.033+02:00" source="-"/>] incidentType:[Response time degraded (2)]
-2018-09-26 18:24:45.483 - [AC1F07675BABB2CC00011C07][http-nio-8181-exec-4] DEBUG it.reply.sytel.adr.dynatraceClient.imp.DynatraceClientImpl - incidentTypeChild:[Average response time of "Web Page Requests [<...>] ADR.IT (APACHE_ADRIT_TEST[Apache 2.2]@n73411020)" degraded]
-2018-09-26 18:24:45.483 - [AC1F07675BABB2CC00011C07][http-nio-8181-exec-4] DEBUG it.reply.sytel.adr.dynatraceClient.imp.DynatraceClientImpl - ------ALLARME-----:[<xml-fragment name="Average response time of &quot;Web Page Requests [&lt;...>] ADR.IT (APACHE_ADRIT_TEST[Apache 2.2]@n73411020)&quot; degraded" start="2018-09-25T18:41:00.000+02:00" duration="6426707" end="2018-09-25T20:28:06.707+02:00" source="-"/>] incidentType:[Response time degraded (2)]
-2018-09-26 18:24:45.484 - [AC1F07675BABB2CC00011C07][http-nio-8181-exec-4] DEBUG it.reply.sytel.adr.dynatraceClient.imp.DynatraceClientImpl - incidentTypeChild:[Average response time of "Web Page Requests [<...>] ADR.IT (APACHE_ADRIT_TEST[Apache 2.2]@n73411020)" degraded]
-2018-09-26 18:24:45.484 - [AC1F07675BABB2CC00011C07][http-nio-8181-exec-4] DEBUG it.reply.sytel.adr.dynatraceClient.imp.DynatraceClientImpl - incidentTypeChild:[Response time degraded for slow requests]
-2018-09-26 18:24:45.484 - [AC1F07675BABB2CC00011C07][http-nio-8181-exec-4] INFO  it.reply.sytel.adr.services.impl.GetDynatraceIncident - There are [7] incident to work
-2018-09-26 18:24:45.488 - [AC1F07675BABB2CC00011C07][http-nio-8181-exec-4] DEBUG it.reply.sytel.adr.dao.impl.IncidentDAOImpl - name:[Agent 'TOMCAT_ADRIT_TEST@n73411021' connection lost startEvent:[2018-09-26 15:14:04.257]
-2018-09-26 18:24:45.489 - [AC1F07675BABB2CC00011C07][http-nio-8181-exec-4] DEBUG it.reply.sytel.adr.services.impl.GetDynatraceIncident - Incident already exists:[DynatraceIncidentKey [name=Agent 'TOMCAT_ADRIT_TEST@n73411021' connection lost, startEvent=2018-09-26 15:14:04.257, dashboarName=BOL_TEST_REMEDY_INTEGRATION]] update the DateUpdate
-2018-09-26 18:24:45.493 - [AC1F07675BABB2CC00011C07][http-nio-8181-exec-4] DEBUG it.reply.sytel.adr.dao.impl.IncidentDAOImpl - Updated 1 rows
-2018-09-26 18:24:45.496 - [AC1F07675BABB2CC00011C07][http-nio-8181-exec-4] DEBUG it.reply.sytel.adr.dao.impl.IncidentDAOImpl - name:[Agent 'TOMCAT_ADRIT_TEST@n73411022' connection lost startEvent:[2018-09-26 15:14:04.287]
-2018-09-26 18:24:45.497 - [AC1F07675BABB2CC00011C07][http-nio-8181-exec-4] DEBUG it.reply.sytel.adr.services.impl.GetDynatraceIncident - Incident already exists:[DynatraceIncidentKey [name=Agent 'TOMCAT_ADRIT_TEST@n73411022' connection lost, startEvent=2018-09-26 15:14:04.287, dashboarName=BOL_TEST_REMEDY_INTEGRATION]] update the DateUpdate
-2018-09-26 18:24:45.502 - [AC1F07675BABB2CC00011C07][http-nio-8181-exec-4] DEBUG it.reply.sytel.adr.dao.impl.IncidentDAOImpl - Updated 1 rows
-2018-09-26 18:24:45.505 - [AC1F07675BABB2CC00011C07][http-nio-8181-exec-4] DEBUG it.reply.sytel.adr.dao.impl.IncidentDAOImpl - name:[Agent 'TOMCAT_ADRIT_TEST@n73411022' connection lost startEvent:[2018-09-26 02:40:39.884]
-2018-09-26 18:24:45.505 - [AC1F07675BABB2CC00011C07][http-nio-8181-exec-4] DEBUG it.reply.sytel.adr.services.impl.GetDynatraceIncident - Incident already exists:[DynatraceIncidentKey [name=Agent 'TOMCAT_ADRIT_TEST@n73411022' connection lost, startEvent=2018-09-26 02:40:39.884, dashboarName=BOL_TEST_REMEDY_INTEGRATION]] update the DateUpdate
-2018-09-26 18:24:45.508 - [AC1F07675BABB2CC00011C07][http-nio-8181-exec-4] DEBUG it.reply.sytel.adr.dao.impl.IncidentDAOImpl - Updated 1 rows
-2018-09-26 18:24:45.511 - [AC1F07675BABB2CC00011C07][http-nio-8181-exec-4] DEBUG it.reply.sytel.adr.dao.impl.IncidentDAOImpl - name:[Agent 'TOMCAT-AUTH_ADRIT_TEST@n73411023' connection lost startEvent:[2018-09-26 15:14:07.734]
-2018-09-26 18:24:45.512 - [AC1F07675BABB2CC00011C07][http-nio-8181-exec-4] DEBUG it.reply.sytel.adr.services.impl.GetDynatraceIncident - Incident already exists:[DynatraceIncidentKey [name=Agent 'TOMCAT-AUTH_ADRIT_TEST@n73411023' connection lost, startEvent=2018-09-26 15:14:07.734, dashboarName=BOL_TEST_REMEDY_INTEGRATION]] update the DateUpdate
-2018-09-26 18:24:45.515 - [AC1F07675BABB2CC00011C07][http-nio-8181-exec-4] DEBUG it.reply.sytel.adr.dao.impl.IncidentDAOImpl - Updated 1 rows
-2018-09-26 18:24:45.520 - [AC1F07675BABB2CC00011C07][http-nio-8181-exec-4] DEBUG it.reply.sytel.adr.dao.impl.IncidentDAOImpl - name:[Agent 'TOMCAT_ADRIT_TEST@n73411021' connection lost startEvent:[2018-09-26 02:30:37.922]
-2018-09-26 18:24:45.520 - [AC1F07675BABB2CC00011C07][http-nio-8181-exec-4] DEBUG it.reply.sytel.adr.services.impl.GetDynatraceIncident - Incident already exists:[DynatraceIncidentKey [name=Agent 'TOMCAT_ADRIT_TEST@n73411021' connection lost, startEvent=2018-09-26 02:30:37.922, dashboarName=BOL_TEST_REMEDY_INTEGRATION]] update the DateUpdate
-2018-09-26 18:24:45.524 - [AC1F07675BABB2CC00011C07][http-nio-8181-exec-4] DEBUG it.reply.sytel.adr.dao.impl.IncidentDAOImpl - Updated 1 rows
-2018-09-26 18:24:45.528 - [AC1F07675BABB2CC00011C07][http-nio-8181-exec-4] DEBUG it.reply.sytel.adr.services.impl.GetDynatraceIncident - descrizioneToFind:[Response time degraded] for DashBoard:[BOL_TEST_REMEDY_INTEGRATION]
-2018-09-26 18:24:45.530 - [AC1F07675BABB2CC00011C07][http-nio-8181-exec-4] INFO  it.reply.sytel.adr.services.impl.GetDynatraceIncident - Dynatrace Event Response time degraded not configurated on DB for the DashBoard:[BOL_TEST_REMEDY_INTEGRATION]
-2018-09-26 18:24:45.534 - [AC1F07675BABB2CC00011C07][http-nio-8181-exec-4] DEBUG it.reply.sytel.adr.services.impl.GetDynatraceIncident - descrizioneToFind:[Response time degraded] for DashBoard:[BOL_TEST_REMEDY_INTEGRATION]
-2018-09-26 18:24:45.536 - [AC1F07675BABB2CC00011C07][http-nio-8181-exec-4] INFO  it.reply.sytel.adr.services.impl.GetDynatraceIncident - Dynatrace Event Response time degraded not configurated on DB for the DashBoard:[BOL_TEST_REMEDY_INTEGRATION]
-2018-09-26 18:24:45.537 - [AC1F07675BABB2CC00011C07][http-nio-8181-exec-4] INFO  it.reply.sytel.adr.services.impl.GetDynatraceIncident - Service:[it.reply.sytel.adr.services.impl.GetDynatraceIncident] called ... DONE with ServiceExecutionTime:[1146]
-2018-09-26 18:24:45.537 - [AC1F07675BABB2CC00011C07][http-nio-8181-exec-4] INFO  it.reply.sytel.adr.services.impl.CreateRemedyIncident - service:[it.reply.sytel.adr.services.impl.CreateRemedyIncident] called ... 
-2018-09-26 18:24:45.537 - [AC1F07675BABB2CC00011C07][http-nio-8181-exec-4] DEBUG it.reply.sytel.adr.services.impl.CreateRemedyIncident - Getting the RemedyConfiguration for [RemedyConfiguration [remedyConfigurationId=1, username=Admin, password=Admin, url=]]
-2018-09-26 18:24:45.540 - [AC1F07675BABB2CC00011C07][http-nio-8181-exec-4] INFO  it.reply.sytel.adr.services.impl.CreateRemedyIncident - Number of incident to create on Remedy:[0]
-2018-09-26 18:24:45.541 - [AC1F07675BABB2CC00011C07][http-nio-8181-exec-4] INFO  it.reply.sytel.adr.services.impl.CreateRemedyIncident - Service:[it.reply.sytel.adr.services.impl.CreateRemedyIncident] called ... DONE with ServiceExecutionTime:[4]
-2018-09-26 18:24:45.541 - [AC1F07675BABB2CC00011C07][http-nio-8181-exec-4] INFO  it.reply.sytel.adr.services.impl.CloseRemedyIncident - service:[it.reply.sytel.adr.services.impl.CloseRemedyIncident] called ... 
-2018-09-26 18:24:45.544 - [AC1F07675BABB2CC00011C07][http-nio-8181-exec-4] INFO  it.reply.sytel.adr.services.impl.CloseRemedyIncident - Service:[it.reply.sytel.adr.services.impl.CloseRemedyIncident] called ... DONE with ServiceExecutionTime:[3]
-2018-09-26 18:24:45.545 - [AC1F07675BABB2CC00011C07][http-nio-8181-exec-4] INFO  it.reply.sytel.adr.engine.RemedyIncidetBuilderEngine - Flow RemedyIncidentdBuilder Engine executed with ExecutionTime (1156)
-2018-09-26 18:24:45.545 - [][http-nio-8181-exec-4] INFO  it.reply.sytel.adr.restServices.ConnectorManager - Calling connector ONE SHOT... DONE
+2018-09-28 16:56:29.592 - [AC1F07675BAE411C000192DA][http-nio-8181-exec-2] DEBUG it.reply.sytel.adr.dynatraceClient.imp.DynatraceClientImpl - ---------FirstIncidentType:[Incidents]----------------
+2018-09-28 16:56:29.593 - [AC1F07675BAE411C000192DA][http-nio-8181-exec-2] DEBUG it.reply.sytel.adr.dynatraceClient.imp.DynatraceClientImpl - incidentTypeChild:[Agent Instrumentation Disabled]
+2018-09-28 16:56:29.593 - [AC1F07675BAE411C000192DA][http-nio-8181-exec-2] DEBUG it.reply.sytel.adr.dynatraceClient.imp.DynatraceClientImpl - incidentTypeChild:[Application Process Out-of-Memory]
+2018-09-28 16:56:29.593 - [AC1F07675BAE411C000192DA][http-nio-8181-exec-2] DEBUG it.reply.sytel.adr.dynatraceClient.imp.DynatraceClientImpl - incidentTypeChild:[Application Process Unavailable (unexpected) (5)]
+2018-09-28 16:56:29.593 - [AC1F07675BAE411C000192DA][http-nio-8181-exec-2] DEBUG it.reply.sytel.adr.dynatraceClient.imp.DynatraceClientImpl - ------ALLARME-----:[<xml-fragment name="Agent 'TOMCAT-AUTH_ADRIT_TEST@n73411023' connection lost" start="2018-09-28T15:25:21.251+02:00" duration="28" end="2018-09-28T15:25:21.279+02:00" source="-"/>] incidentType:[Application Process Unavailable (unexpected) (5)]
+2018-09-28 16:56:29.593 - [AC1F07675BAE411C000192DA][http-nio-8181-exec-2] DEBUG it.reply.sytel.adr.dynatraceClient.imp.DynatraceClientImpl - incidentTypeChild:[Agent 'TOMCAT-AUTH_ADRIT_TEST@n73411023' connection lost]
+2018-09-28 16:56:29.594 - [AC1F07675BAE411C000192DA][http-nio-8181-exec-2] DEBUG it.reply.sytel.adr.dynatraceClient.imp.DynatraceClientImpl - ------ALLARME-----:[<xml-fragment name="Agent 'TOMCAT_ADRIT_TEST@n73411021' connection lost" start="2018-09-28T15:25:14.909+02:00" duration="49" end="2018-09-28T15:25:14.958+02:00" source="-"/>] incidentType:[Application Process Unavailable (unexpected) (5)]
+2018-09-28 16:56:29.594 - [AC1F07675BAE411C000192DA][http-nio-8181-exec-2] DEBUG it.reply.sytel.adr.dynatraceClient.imp.DynatraceClientImpl - incidentTypeChild:[Agent 'TOMCAT_ADRIT_TEST@n73411021' connection lost]
+2018-09-28 16:56:29.594 - [AC1F07675BAE411C000192DA][http-nio-8181-exec-2] DEBUG it.reply.sytel.adr.dynatraceClient.imp.DynatraceClientImpl - ------ALLARME-----:[<xml-fragment name="Agent 'TOMCAT_ADRIT_TEST@n73411021' connection lost" start="2018-09-28T02:30:38.914+02:00" duration="33613" end="2018-09-28T02:31:12.527+02:00" source="-"/>] incidentType:[Application Process Unavailable (unexpected) (5)]
+2018-09-28 16:56:29.595 - [AC1F07675BAE411C000192DA][http-nio-8181-exec-2] DEBUG it.reply.sytel.adr.dynatraceClient.imp.DynatraceClientImpl - incidentTypeChild:[Agent 'TOMCAT_ADRIT_TEST@n73411021' connection lost]
+2018-09-28 16:56:29.595 - [AC1F07675BAE411C000192DA][http-nio-8181-exec-2] DEBUG it.reply.sytel.adr.dynatraceClient.imp.DynatraceClientImpl - ------ALLARME-----:[<xml-fragment name="Agent 'TOMCAT_ADRIT_TEST@n73411022' connection lost" start="2018-09-28T02:40:40.222+02:00" duration="32323" end="2018-09-28T02:41:12.545+02:00" source="-"/>] incidentType:[Application Process Unavailable (unexpected) (5)]
+2018-09-28 16:56:29.595 - [AC1F07675BAE411C000192DA][http-nio-8181-exec-2] DEBUG it.reply.sytel.adr.dynatraceClient.imp.DynatraceClientImpl - incidentTypeChild:[Agent 'TOMCAT_ADRIT_TEST@n73411022' connection lost]
+2018-09-28 16:56:29.595 - [AC1F07675BAE411C000192DA][http-nio-8181-exec-2] DEBUG it.reply.sytel.adr.dynatraceClient.imp.DynatraceClientImpl - ------ALLARME-----:[<xml-fragment name="Agent 'TOMCAT_ADRIT_TEST@n73411022' connection lost" start="2018-09-28T15:25:14.937+02:00" duration="22" end="2018-09-28T15:25:14.959+02:00" source="-"/>] incidentType:[Application Process Unavailable (unexpected) (5)]
+2018-09-28 16:56:29.596 - [AC1F07675BAE411C000192DA][http-nio-8181-exec-2] DEBUG it.reply.sytel.adr.dynatraceClient.imp.DynatraceClientImpl - incidentTypeChild:[Agent 'TOMCAT_ADRIT_TEST@n73411022' connection lost]
+2018-09-28 16:56:29.596 - [AC1F07675BAE411C000192DA][http-nio-8181-exec-2] DEBUG it.reply.sytel.adr.dynatraceClient.imp.DynatraceClientImpl - incidentTypeChild:[Application Process Unhealthy]
+2018-09-28 16:56:29.596 - [AC1F07675BAE411C000192DA][http-nio-8181-exec-2] DEBUG it.reply.sytel.adr.dynatraceClient.imp.DynatraceClientImpl - incidentTypeChild:[Failure rate too high]
+2018-09-28 16:56:29.596 - [AC1F07675BAE411C000192DA][http-nio-8181-exec-2] DEBUG it.reply.sytel.adr.dynatraceClient.imp.DynatraceClientImpl - incidentTypeChild:[Response time degraded (3)]
+2018-09-28 16:56:29.596 - [AC1F07675BAE411C000192DA][http-nio-8181-exec-2] DEBUG it.reply.sytel.adr.dynatraceClient.imp.DynatraceClientImpl - ------ALLARME-----:[<xml-fragment name="Average response time of &quot;Web Page Requests [&lt;...>] ADR.IT (APACHE_ADRIT_TEST[Apache 2.2]@n73411020)&quot; degraded" start="2018-09-28T14:24:00.000+02:00" duration="5161861" end="2018-09-28T15:50:01.861+02:00" source="-"/>] incidentType:[Response time degraded (3)]
+2018-09-28 16:56:29.596 - [AC1F07675BAE411C000192DA][http-nio-8181-exec-2] DEBUG it.reply.sytel.adr.dynatraceClient.imp.DynatraceClientImpl - incidentTypeChild:[Average response time of "Web Page Requests [<...>] ADR.IT (APACHE_ADRIT_TEST[Apache 2.2]@n73411020)" degraded]
+2018-09-28 16:56:29.597 - [AC1F07675BAE411C000192DA][http-nio-8181-exec-2] DEBUG it.reply.sytel.adr.dynatraceClient.imp.DynatraceClientImpl - ------ALLARME-----:[<xml-fragment name="Average response time of &quot;Web Page Requests [&lt;...>] ADR.IT (APACHE_ADRIT_TEST[Apache 2.2]@n73411020)&quot; degraded" start="2018-09-28T12:46:00.000+02:00" duration="5161729" end="2018-09-28T14:12:01.729+02:00" source="-"/>] incidentType:[Response time degraded (3)]
+2018-09-28 16:56:29.597 - [AC1F07675BAE411C000192DA][http-nio-8181-exec-2] DEBUG it.reply.sytel.adr.dynatraceClient.imp.DynatraceClientImpl - incidentTypeChild:[Average response time of "Web Page Requests [<...>] ADR.IT (APACHE_ADRIT_TEST[Apache 2.2]@n73411020)" degraded]
+2018-09-28 16:56:29.597 - [AC1F07675BAE411C000192DA][http-nio-8181-exec-2] DEBUG it.reply.sytel.adr.dynatraceClient.imp.DynatraceClientImpl - ------ALLARME-----:[<xml-fragment name="Average response time of &quot;Web Page Requests [&lt;...>] ADR.IT (APACHE_ADRIT_TEST[Apache 2.2]@n73411020)&quot; degraded" start="2018-09-27T16:16:00.000+02:00" duration="5769486" end="2018-09-27T17:52:09.486+02:00" source="-"/>] incidentType:[Response time degraded (3)]
+2018-09-28 16:56:29.597 - [AC1F07675BAE411C000192DA][http-nio-8181-exec-2] DEBUG it.reply.sytel.adr.dynatraceClient.imp.DynatraceClientImpl - incidentTypeChild:[Average response time of "Web Page Requests [<...>] ADR.IT (APACHE_ADRIT_TEST[Apache 2.2]@n73411020)" degraded]
+2018-09-28 16:56:29.597 - [AC1F07675BAE411C000192DA][http-nio-8181-exec-2] DEBUG it.reply.sytel.adr.dynatraceClient.imp.DynatraceClientImpl - incidentTypeChild:[Response time degraded for slow requests]
+2018-09-28 16:56:29.598 - [AC1F07675BAE411C000192DA][http-nio-8181-exec-2] INFO  it.reply.sytel.adr.services.impl.GetDynatraceIncident - There are [8] incident to work
+2018-09-28 16:56:29.601 - [AC1F07675BAE411C000192DA][http-nio-8181-exec-2] DEBUG it.reply.sytel.adr.services.impl.GetDynatraceIncident - descrizioneToFind:[Response time degraded] for DashBoard:[BOL_TEST_REMEDY_INTEGRATION]
+2018-09-28 16:56:29.604 - [AC1F07675BAE411C000192DA][http-nio-8181-exec-2] INFO  it.reply.sytel.adr.services.impl.GetDynatraceIncident - Dynatrace Event Response time degraded not configurated on DB for the DashBoard:[BOL_TEST_REMEDY_INTEGRATION]
+2018-09-28 16:56:29.608 - [AC1F07675BAE411C000192DA][http-nio-8181-exec-2] DEBUG it.reply.sytel.adr.services.impl.GetDynatraceIncident - descrizioneToFind:[Application Process Unavailable (unexpected)] for DashBoard:[BOL_TEST_REMEDY_INTEGRATION]
+2018-09-28 16:56:29.612 - [AC1F07675BAE411C000192DA][http-nio-8181-exec-2] INFO  it.reply.sytel.adr.services.impl.GetDynatraceIncident - There is a configuration for Dynatrace Event Application Process Unavailable (unexpected) and the DashBoard:[BOL_TEST_REMEDY_INTEGRATION]
+2018-09-28 16:56:29.626 - [AC1F07675BAE411C000192DA][http-nio-8181-exec-2] DEBUG it.reply.sytel.adr.dao.impl.IncidentDAOImpl - Updated 1 rows
+2018-09-28 16:56:29.627 - [AC1F07675BAE411C000192DA][http-nio-8181-exec-2] DEBUG it.reply.sytel.adr.services.impl.GetDynatraceIncident - Incident inserted:[DynatraceIncidentKey [name=Agent 'TOMCAT_ADRIT_TEST@n73411021' connection lost, startEvent=2018-09-28 15:25:14.909, dashboarName=BOL_TEST_REMEDY_INTEGRATION]
+2018-09-28 16:56:29.631 - [AC1F07675BAE411C000192DA][http-nio-8181-exec-2] DEBUG it.reply.sytel.adr.services.impl.GetDynatraceIncident - descrizioneToFind:[Application Process Unavailable (unexpected)] for DashBoard:[BOL_TEST_REMEDY_INTEGRATION]
+2018-09-28 16:56:29.634 - [AC1F07675BAE411C000192DA][http-nio-8181-exec-2] INFO  it.reply.sytel.adr.services.impl.GetDynatraceIncident - There is a configuration for Dynatrace Event Application Process Unavailable (unexpected) and the DashBoard:[BOL_TEST_REMEDY_INTEGRATION]
+2018-09-28 16:56:29.639 - [AC1F07675BAE411C000192DA][http-nio-8181-exec-2] DEBUG it.reply.sytel.adr.dao.impl.IncidentDAOImpl - Updated 1 rows
+2018-09-28 16:56:29.640 - [AC1F07675BAE411C000192DA][http-nio-8181-exec-2] DEBUG it.reply.sytel.adr.services.impl.GetDynatraceIncident - Incident inserted:[DynatraceIncidentKey [name=Agent 'TOMCAT_ADRIT_TEST@n73411022' connection lost, startEvent=2018-09-28 02:40:40.222, dashboarName=BOL_TEST_REMEDY_INTEGRATION]
+2018-09-28 16:56:29.645 - [AC1F07675BAE411C000192DA][http-nio-8181-exec-2] DEBUG it.reply.sytel.adr.services.impl.GetDynatraceIncident - descrizioneToFind:[Application Process Unavailable (unexpected)] for DashBoard:[BOL_TEST_REMEDY_INTEGRATION]
+2018-09-28 16:56:29.649 - [AC1F07675BAE411C000192DA][http-nio-8181-exec-2] INFO  it.reply.sytel.adr.services.impl.GetDynatraceIncident - There is a configuration for Dynatrace Event Application Process Unavailable (unexpected) and the DashBoard:[BOL_TEST_REMEDY_INTEGRATION]
+2018-09-28 16:56:29.655 - [AC1F07675BAE411C000192DA][http-nio-8181-exec-2] DEBUG it.reply.sytel.adr.dao.impl.IncidentDAOImpl - Updated 1 rows
+2018-09-28 16:56:29.655 - [AC1F07675BAE411C000192DA][http-nio-8181-exec-2] DEBUG it.reply.sytel.adr.services.impl.GetDynatraceIncident - Incident inserted:[DynatraceIncidentKey [name=Agent 'TOMCAT_ADRIT_TEST@n73411021' connection lost, startEvent=2018-09-28 02:30:38.914, dashboarName=BOL_TEST_REMEDY_INTEGRATION]
+2018-09-28 16:56:29.659 - [AC1F07675BAE411C000192DA][http-nio-8181-exec-2] DEBUG it.reply.sytel.adr.services.impl.GetDynatraceIncident - descrizioneToFind:[Response time degraded] for DashBoard:[BOL_TEST_REMEDY_INTEGRATION]
+2018-09-28 16:56:29.663 - [AC1F07675BAE411C000192DA][http-nio-8181-exec-2] INFO  it.reply.sytel.adr.services.impl.GetDynatraceIncident - Dynatrace Event Response time degraded not configurated on DB for the DashBoard:[BOL_TEST_REMEDY_INTEGRATION]
+2018-09-28 16:56:29.667 - [AC1F07675BAE411C000192DA][http-nio-8181-exec-2] DEBUG it.reply.sytel.adr.services.impl.GetDynatraceIncident - descrizioneToFind:[Response time degraded] for DashBoard:[BOL_TEST_REMEDY_INTEGRATION]
+2018-09-28 16:56:29.671 - [AC1F07675BAE411C000192DA][http-nio-8181-exec-2] INFO  it.reply.sytel.adr.services.impl.GetDynatraceIncident - Dynatrace Event Response time degraded not configurated on DB for the DashBoard:[BOL_TEST_REMEDY_INTEGRATION]
+2018-09-28 16:56:29.675 - [AC1F07675BAE411C000192DA][http-nio-8181-exec-2] DEBUG it.reply.sytel.adr.services.impl.GetDynatraceIncident - descrizioneToFind:[Application Process Unavailable (unexpected)] for DashBoard:[BOL_TEST_REMEDY_INTEGRATION]
+2018-09-28 16:56:29.678 - [AC1F07675BAE411C000192DA][http-nio-8181-exec-2] INFO  it.reply.sytel.adr.services.impl.GetDynatraceIncident - There is a configuration for Dynatrace Event Application Process Unavailable (unexpected) and the DashBoard:[BOL_TEST_REMEDY_INTEGRATION]
+2018-09-28 16:56:29.682 - [AC1F07675BAE411C000192DA][http-nio-8181-exec-2] DEBUG it.reply.sytel.adr.dao.impl.IncidentDAOImpl - Updated 1 rows
+2018-09-28 16:56:29.683 - [AC1F07675BAE411C000192DA][http-nio-8181-exec-2] DEBUG it.reply.sytel.adr.services.impl.GetDynatraceIncident - Incident inserted:[DynatraceIncidentKey [name=Agent 'TOMCAT_ADRIT_TEST@n73411022' connection lost, startEvent=2018-09-28 15:25:14.937, dashboarName=BOL_TEST_REMEDY_INTEGRATION]
+2018-09-28 16:56:29.687 - [AC1F07675BAE411C000192DA][http-nio-8181-exec-2] DEBUG it.reply.sytel.adr.services.impl.GetDynatraceIncident - descrizioneToFind:[Application Process Unavailable (unexpected)] for DashBoard:[BOL_TEST_REMEDY_INTEGRATION]
+2018-09-28 16:56:29.690 - [AC1F07675BAE411C000192DA][http-nio-8181-exec-2] INFO  it.reply.sytel.adr.services.impl.GetDynatraceIncident - There is a configuration for Dynatrace Event Application Process Unavailable (unexpected) and the DashBoard:[BOL_TEST_REMEDY_INTEGRATION]
+2018-09-28 16:56:29.696 - [AC1F07675BAE411C000192DA][http-nio-8181-exec-2] DEBUG it.reply.sytel.adr.dao.impl.IncidentDAOImpl - Updated 1 rows
+2018-09-28 16:56:29.696 - [AC1F07675BAE411C000192DA][http-nio-8181-exec-2] DEBUG it.reply.sytel.adr.services.impl.GetDynatraceIncident - Incident inserted:[DynatraceIncidentKey [name=Agent 'TOMCAT-AUTH_ADRIT_TEST@n73411023' connection lost, startEvent=2018-09-28 15:25:21.251, dashboarName=BOL_TEST_REMEDY_INTEGRATION]
+2018-09-28 16:56:29.697 - [AC1F07675BAE411C000192DA][http-nio-8181-exec-2] INFO  it.reply.sytel.adr.services.impl.GetDynatraceIncident - Service:[it.reply.sytel.adr.services.impl.GetDynatraceIncident] called ... DONE with ServiceExecutionTime:[1214]
+2018-09-28 16:56:29.698 - [AC1F07675BAE411C000192DA][http-nio-8181-exec-2] INFO  it.reply.sytel.adr.services.impl.CreateRemedyIncident - service:[it.reply.sytel.adr.services.impl.CreateRemedyIncident] called ... 
+2018-09-28 16:56:29.716 - [AC1F07675BAE411C000192DA][http-nio-8181-exec-2] INFO  it.reply.sytel.adr.services.impl.CreateRemedyIncident - Number of incident to create on Remedy:[5]
+2018-09-28 16:56:29.716 - [AC1F07675BAE411C000192DA][http-nio-8181-exec-2] DEBUG it.reply.sytel.adr.services.impl.CreateRemedyIncident - DynatraceIncident:[DynatraceIncident [id=301, dynatraceIncidentKey=DynatraceIncidentKey [name=Agent 'TOMCAT_ADRIT_TEST@n73411021' connection lost, startEvent=2018-09-28 15:25:14.909, dashboarName=BOL_TEST_REMEDY_INTEGRATION], heatfield=null, incidentType=Application Process Unavailable (unexpected) (5), state=null, duration=49, endEvent=2018-09-28 15:25:14.958, source=-, session=null, confimed_by=null, confirmation=null, sensitivity=null, conditions=null, thresholds=null, actions=null, measures=null, dataIns=2018-09-28 16:56:28.484, dataUpdate=2018-09-28 16:56:28.484, remedyTicketID=null, remedyTicketIDStatus=null, remedyTicketCreateDate=null]]
+2018-09-28 16:56:29.717 - [AC1F07675BAE411C000192DA][http-nio-8181-exec-2] DEBUG it.reply.sytel.adr.services.impl.CreateRemedyIncident - DescrizioneToFind:[Application Process Unavailable (unexpected)] for DashBoard:[BOL_TEST_REMEDY_INTEGRATION]
+2018-09-28 16:56:29.902 - [AC1F07675BAE411C000192DA][http-nio-8181-exec-2] DEBUG it.reply.sytel.adr.remedyAdapter.impl.RemedyWSClientImpl - Exception on helpDeskSubmitServiceDocument:[<urn:HelpDesk_Submit_Service xmlns:urn="urn:HPD_IncidentInterface_Create_WS_VIP"><urn:Categorization_Tier_1>TIER1</urn:Categorization_Tier_1><urn:Categorization_Tier_2>TIER2</urn:Categorization_Tier_2><urn:Categorization_Tier_3>TIER3</urn:Categorization_Tier_3><urn:First_Name>Dynatrace</urn:First_Name><urn:Impact>1-Extensive/Widespread</urn:Impact><urn:Last_Name>Dynatrace</urn:Last_Name><urn:Reported_Source>Systems Management</urn:Reported_Source><urn:Service_Type>Infrastructure Event</urn:Service_Type><urn:Status>New</urn:Status><urn:Action>Create</urn:Action><urn:Create_Request>Yes</urn:Create_Request><urn:Summary>IDEvento1_BOL</urn:Summary><urn:Notes>Agent 'TOMCAT_ADRIT_TEST@n73411021' connection lost</urn:Notes><urn:Urgency>1-Critical</urn:Urgency><urn:Sede_Int>FCO</urn:Sede_Int><urn:Sistema_sorgente>BOL</urn:Sistema_sorgente></urn:HelpDesk_Submit_Service>]
+2018-09-28 16:56:29.947 - [AC1F07675BAE411C000192DA][http-nio-8181-exec-2] INFO  it.reply.sytel.adr.remedyAdapter.impl.RemedyWSClientImpl - EnvelopeToSend sent to Remedy:[<Envelope xmlns="http://schemas.xmlsoap.org/soap/envelope/" xmlns:urn="urn:HPD_IncidentInterface_Create_WS_VIP">
+  <Header>
+    <urn:AuthenticationInfo>
+      <urn:userName>Admin</urn:userName>
+      <urn:password>Admin1</urn:password>
+    </urn:AuthenticationInfo>
+  </Header>
+  <Body>
+    <urn:HelpDesk_Submit_Service>
+      <urn:Categorization_Tier_1>TIER1</urn:Categorization_Tier_1>
+      <urn:Categorization_Tier_2>TIER2</urn:Categorization_Tier_2>
+      <urn:Categorization_Tier_3>TIER3</urn:Categorization_Tier_3>
+      <urn:First_Name>Dynatrace</urn:First_Name>
+      <urn:Impact>1-Extensive/Widespread</urn:Impact>
+      <urn:Last_Name>Dynatrace</urn:Last_Name>
+      <urn:Reported_Source>Systems Management</urn:Reported_Source>
+      <urn:Service_Type>Infrastructure Event</urn:Service_Type>
+      <urn:Status>New</urn:Status>
+      <urn:Action>Create</urn:Action>
+      <urn:Create_Request>Yes</urn:Create_Request>
+      <urn:Summary>IDEvento1_BOL</urn:Summary>
+      <urn:Notes>Agent 'TOMCAT_ADRIT_TEST@n73411021' connection lost</urn:Notes>
+      <urn:Urgency>1-Critical</urn:Urgency>
+      <urn:Sede_Int>FCO</urn:Sede_Int>
+      <urn:Sistema_sorgente>BOL</urn:Sistema_sorgente>
+    </urn:HelpDesk_Submit_Service>
+  </Body>
+</Envelope>]
+2018-09-28 16:56:29.950 - [AC1F07675BAE411C000192DA][http-nio-8181-exec-2] INFO  it.reply.sytel.adr.common.ws.SharedHTTPSClient - Executing POST request to URL: POST http://localhost:8088/mockHPD_IncidentInterface_Create_WSPortTypeSoapBinding HTTP/1.1
+2018-09-28 16:56:30.050 - [AC1F07675BAE411C000192DA][http-nio-8181-exec-2] INFO  it.reply.sytel.adr.common.ws.GKConnectionReuseStrategy - Remote peer HTTP version > 1.0 --> keep-alive=true
+2018-09-28 16:56:30.051 - [AC1F07675BAE411C000192DA][http-nio-8181-exec-2] INFO  it.reply.sytel.adr.common.ws.GKConnectionKeepAliveStrategy - Current connection will be kept alive 'indefinitely'
+2018-09-28 16:56:30.051 - [AC1F07675BAE411C000192DA][http-nio-8181-exec-2] INFO  it.reply.sytel.adr.common.ws.SharedHTTPSClient - SOAP HTTP response headers:
+2018-09-28 16:56:30.051 - [AC1F07675BAE411C000192DA][http-nio-8181-exec-2] INFO  it.reply.sytel.adr.common.ws.SharedHTTPSClient - 	name=Content-Type, value=text/xml; charset=utf-8
+2018-09-28 16:56:30.051 - [AC1F07675BAE411C000192DA][http-nio-8181-exec-2] INFO  it.reply.sytel.adr.common.ws.SharedHTTPSClient - 	name=Content-Length, value=349
+2018-09-28 16:56:30.051 - [AC1F07675BAE411C000192DA][http-nio-8181-exec-2] INFO  it.reply.sytel.adr.common.ws.SharedHTTPSClient - 	name=Server, value=Jetty(6.1.26)
+2018-09-28 16:56:30.051 - [AC1F07675BAE411C000192DA][http-nio-8181-exec-2] INFO  it.reply.sytel.adr.common.ws.SharedHTTPSClient - HTTP response code received: 200
+2018-09-28 16:56:30.059 - [AC1F07675BAE411C000192DA][http-nio-8181-exec-2] INFO  it.reply.sytel.adr.remedyAdapter.impl.RemedyWSClientImpl - Return from Remedy :[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:urn="urn:HPD_IncidentInterface_Create_WS_VIP">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <urn:HelpDesk_Submit_ServiceResponse>
+         <urn:Incident_Number>1</urn:Incident_Number>
+      </urn:HelpDesk_Submit_ServiceResponse>
+   </soapenv:Body>
+</soapenv:Envelope>]
+2018-09-28 16:56:30.059 - [AC1F07675BAE411C000192DA][http-nio-8181-exec-2] INFO  it.reply.sytel.adr.remedyAdapter.impl.RemedyWSClientImpl - Starting gettting Remedy Response
+2018-09-28 16:56:30.083 - [AC1F07675BAE411C000192DA][http-nio-8181-exec-2] INFO  it.reply.sytel.adr.remedyAdapter.impl.RemedyWSClientImpl - incidentNumber: [1]
+2018-09-28 16:56:30.083 - [AC1F07675BAE411C000192DA][http-nio-8181-exec-2] DEBUG it.reply.sytel.adr.services.impl.CreateRemedyIncident - Response from Remedy ----> remedyIncidentId:[1]
+2018-09-28 16:56:30.094 - [AC1F07675BAE411C000192DA][http-nio-8181-exec-2] DEBUG it.reply.sytel.adr.dao.impl.IncidentDAOImpl - Updated 1 rows
+2018-09-28 16:56:30.094 - [AC1F07675BAE411C000192DA][http-nio-8181-exec-2] DEBUG it.reply.sytel.adr.services.impl.CreateRemedyIncident - DynatraceIncident:[DynatraceIncident [id=302, dynatraceIncidentKey=DynatraceIncidentKey [name=Agent 'TOMCAT_ADRIT_TEST@n73411022' connection lost, startEvent=2018-09-28 02:40:40.222, dashboarName=BOL_TEST_REMEDY_INTEGRATION], heatfield=null, incidentType=Application Process Unavailable (unexpected) (5), state=null, duration=32323, endEvent=2018-09-28 02:41:12.545, source=-, session=null, confimed_by=null, confirmation=null, sensitivity=null, conditions=null, thresholds=null, actions=null, measures=null, dataIns=2018-09-28 16:56:28.484, dataUpdate=2018-09-28 16:56:28.484, remedyTicketID=null, remedyTicketIDStatus=null, remedyTicketCreateDate=null]]
+2018-09-28 16:56:30.094 - [AC1F07675BAE411C000192DA][http-nio-8181-exec-2] DEBUG it.reply.sytel.adr.services.impl.CreateRemedyIncident - DescrizioneToFind:[Application Process Unavailable (unexpected)] for DashBoard:[BOL_TEST_REMEDY_INTEGRATION]
+2018-09-28 16:56:30.098 - [AC1F07675BAE411C000192DA][http-nio-8181-exec-2] DEBUG it.reply.sytel.adr.remedyAdapter.impl.RemedyWSClientImpl - Exception on helpDeskSubmitServiceDocument:[<urn:HelpDesk_Submit_Service xmlns:urn="urn:HPD_IncidentInterface_Create_WS_VIP"><urn:Categorization_Tier_1>TIER1</urn:Categorization_Tier_1><urn:Categorization_Tier_2>TIER2</urn:Categorization_Tier_2><urn:Categorization_Tier_3>TIER3</urn:Categorization_Tier_3><urn:First_Name>Dynatrace</urn:First_Name><urn:Impact>1-Extensive/Widespread</urn:Impact><urn:Last_Name>Dynatrace</urn:Last_Name><urn:Reported_Source>Systems Management</urn:Reported_Source><urn:Service_Type>Infrastructure Event</urn:Service_Type><urn:Status>New</urn:Status><urn:Action>Create</urn:Action><urn:Create_Request>Yes</urn:Create_Request><urn:Summary>IDEvento1_BOL</urn:Summary><urn:Notes>Agent 'TOMCAT_ADRIT_TEST@n73411022' connection lost</urn:Notes><urn:Urgency>1-Critical</urn:Urgency><urn:Sede_Int>FCO</urn:Sede_Int><urn:Sistema_sorgente>BOL</urn:Sistema_sorgente></urn:HelpDesk_Submit_Service>]
+2018-09-28 16:56:30.100 - [AC1F07675BAE411C000192DA][http-nio-8181-exec-2] INFO  it.reply.sytel.adr.remedyAdapter.impl.RemedyWSClientImpl - EnvelopeToSend sent to Remedy:[<Envelope xmlns="http://schemas.xmlsoap.org/soap/envelope/" xmlns:urn="urn:HPD_IncidentInterface_Create_WS_VIP">
+  <Header>
+    <urn:AuthenticationInfo>
+      <urn:userName>Admin</urn:userName>
+      <urn:password>Admin1</urn:password>
+    </urn:AuthenticationInfo>
+  </Header>
+  <Body>
+    <urn:HelpDesk_Submit_Service>
+      <urn:Categorization_Tier_1>TIER1</urn:Categorization_Tier_1>
+      <urn:Categorization_Tier_2>TIER2</urn:Categorization_Tier_2>
+      <urn:Categorization_Tier_3>TIER3</urn:Categorization_Tier_3>
+      <urn:First_Name>Dynatrace</urn:First_Name>
+      <urn:Impact>1-Extensive/Widespread</urn:Impact>
+      <urn:Last_Name>Dynatrace</urn:Last_Name>
+      <urn:Reported_Source>Systems Management</urn:Reported_Source>
+      <urn:Service_Type>Infrastructure Event</urn:Service_Type>
+      <urn:Status>New</urn:Status>
+      <urn:Action>Create</urn:Action>
+      <urn:Create_Request>Yes</urn:Create_Request>
+      <urn:Summary>IDEvento1_BOL</urn:Summary>
+      <urn:Notes>Agent 'TOMCAT_ADRIT_TEST@n73411022' connection lost</urn:Notes>
+      <urn:Urgency>1-Critical</urn:Urgency>
+      <urn:Sede_Int>FCO</urn:Sede_Int>
+      <urn:Sistema_sorgente>BOL</urn:Sistema_sorgente>
+    </urn:HelpDesk_Submit_Service>
+  </Body>
+</Envelope>]
+2018-09-28 16:56:30.102 - [AC1F07675BAE411C000192DA][http-nio-8181-exec-2] INFO  it.reply.sytel.adr.common.ws.SharedHTTPSClient - Executing POST request to URL: POST http://localhost:8088/mockHPD_IncidentInterface_Create_WSPortTypeSoapBinding HTTP/1.1
+2018-09-28 16:56:30.111 - [AC1F07675BAE411C000192DA][http-nio-8181-exec-2] INFO  it.reply.sytel.adr.common.ws.GKConnectionReuseStrategy - Remote peer HTTP version > 1.0 --> keep-alive=true
+2018-09-28 16:56:30.111 - [AC1F07675BAE411C000192DA][http-nio-8181-exec-2] INFO  it.reply.sytel.adr.common.ws.GKConnectionKeepAliveStrategy - Current connection will be kept alive 'indefinitely'
+2018-09-28 16:56:30.111 - [AC1F07675BAE411C000192DA][http-nio-8181-exec-2] INFO  it.reply.sytel.adr.common.ws.SharedHTTPSClient - SOAP HTTP response headers:
+2018-09-28 16:56:30.111 - [AC1F07675BAE411C000192DA][http-nio-8181-exec-2] INFO  it.reply.sytel.adr.common.ws.SharedHTTPSClient - 	name=Content-Type, value=text/xml; charset=utf-8
+2018-09-28 16:56:30.112 - [AC1F07675BAE411C000192DA][http-nio-8181-exec-2] INFO  it.reply.sytel.adr.common.ws.SharedHTTPSClient - 	name=Content-Length, value=349
+2018-09-28 16:56:30.112 - [AC1F07675BAE411C000192DA][http-nio-8181-exec-2] INFO  it.reply.sytel.adr.common.ws.SharedHTTPSClient - 	name=Server, value=Jetty(6.1.26)
+2018-09-28 16:56:30.112 - [AC1F07675BAE411C000192DA][http-nio-8181-exec-2] INFO  it.reply.sytel.adr.common.ws.SharedHTTPSClient - HTTP response code received: 200
+2018-09-28 16:56:30.112 - [AC1F07675BAE411C000192DA][http-nio-8181-exec-2] INFO  it.reply.sytel.adr.remedyAdapter.impl.RemedyWSClientImpl - Return from Remedy :[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:urn="urn:HPD_IncidentInterface_Create_WS_VIP">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <urn:HelpDesk_Submit_ServiceResponse>
+         <urn:Incident_Number>1</urn:Incident_Number>
+      </urn:HelpDesk_Submit_ServiceResponse>
+   </soapenv:Body>
+</soapenv:Envelope>]
+2018-09-28 16:56:30.112 - [AC1F07675BAE411C000192DA][http-nio-8181-exec-2] INFO  it.reply.sytel.adr.remedyAdapter.impl.RemedyWSClientImpl - Starting gettting Remedy Response
+2018-09-28 16:56:30.113 - [AC1F07675BAE411C000192DA][http-nio-8181-exec-2] INFO  it.reply.sytel.adr.remedyAdapter.impl.RemedyWSClientImpl - incidentNumber: [1]
+2018-09-28 16:56:30.113 - [AC1F07675BAE411C000192DA][http-nio-8181-exec-2] DEBUG it.reply.sytel.adr.services.impl.CreateRemedyIncident - Response from Remedy ----> remedyIncidentId:[1]
+2018-09-28 16:56:30.119 - [AC1F07675BAE411C000192DA][http-nio-8181-exec-2] DEBUG it.reply.sytel.adr.dao.impl.IncidentDAOImpl - Updated 1 rows
+2018-09-28 16:56:30.119 - [AC1F07675BAE411C000192DA][http-nio-8181-exec-2] DEBUG it.reply.sytel.adr.services.impl.CreateRemedyIncident - DynatraceIncident:[DynatraceIncident [id=303, dynatraceIncidentKey=DynatraceIncidentKey [name=Agent 'TOMCAT_ADRIT_TEST@n73411021' connection lost, startEvent=2018-09-28 02:30:38.914, dashboarName=BOL_TEST_REMEDY_INTEGRATION], heatfield=null, incidentType=Application Process Unavailable (unexpected) (5), state=null, duration=33613, endEvent=2018-09-28 02:31:12.527, source=-, session=null, confimed_by=null, confirmation=null, sensitivity=null, conditions=null, thresholds=null, actions=null, measures=null, dataIns=2018-09-28 16:56:28.484, dataUpdate=2018-09-28 16:56:28.484, remedyTicketID=null, remedyTicketIDStatus=null, remedyTicketCreateDate=null]]
+2018-09-28 16:56:30.119 - [AC1F07675BAE411C000192DA][http-nio-8181-exec-2] DEBUG it.reply.sytel.adr.services.impl.CreateRemedyIncident - DescrizioneToFind:[Application Process Unavailable (unexpected)] for DashBoard:[BOL_TEST_REMEDY_INTEGRATION]
+2018-09-28 16:56:30.123 - [AC1F07675BAE411C000192DA][http-nio-8181-exec-2] DEBUG it.reply.sytel.adr.remedyAdapter.impl.RemedyWSClientImpl - Exception on helpDeskSubmitServiceDocument:[<urn:HelpDesk_Submit_Service xmlns:urn="urn:HPD_IncidentInterface_Create_WS_VIP"><urn:Categorization_Tier_1>TIER1</urn:Categorization_Tier_1><urn:Categorization_Tier_2>TIER2</urn:Categorization_Tier_2><urn:Categorization_Tier_3>TIER3</urn:Categorization_Tier_3><urn:First_Name>Dynatrace</urn:First_Name><urn:Impact>1-Extensive/Widespread</urn:Impact><urn:Last_Name>Dynatrace</urn:Last_Name><urn:Reported_Source>Systems Management</urn:Reported_Source><urn:Service_Type>Infrastructure Event</urn:Service_Type><urn:Status>New</urn:Status><urn:Action>Create</urn:Action><urn:Create_Request>Yes</urn:Create_Request><urn:Summary>IDEvento1_BOL</urn:Summary><urn:Notes>Agent 'TOMCAT_ADRIT_TEST@n73411021' connection lost</urn:Notes><urn:Urgency>1-Critical</urn:Urgency><urn:Sede_Int>FCO</urn:Sede_Int><urn:Sistema_sorgente>BOL</urn:Sistema_sorgente></urn:HelpDesk_Submit_Service>]
+2018-09-28 16:56:30.125 - [AC1F07675BAE411C000192DA][http-nio-8181-exec-2] INFO  it.reply.sytel.adr.remedyAdapter.impl.RemedyWSClientImpl - EnvelopeToSend sent to Remedy:[<Envelope xmlns="http://schemas.xmlsoap.org/soap/envelope/" xmlns:urn="urn:HPD_IncidentInterface_Create_WS_VIP">
+  <Header>
+    <urn:AuthenticationInfo>
+      <urn:userName>Admin</urn:userName>
+      <urn:password>Admin1</urn:password>
+    </urn:AuthenticationInfo>
+  </Header>
+  <Body>
+    <urn:HelpDesk_Submit_Service>
+      <urn:Categorization_Tier_1>TIER1</urn:Categorization_Tier_1>
+      <urn:Categorization_Tier_2>TIER2</urn:Categorization_Tier_2>
+      <urn:Categorization_Tier_3>TIER3</urn:Categorization_Tier_3>
+      <urn:First_Name>Dynatrace</urn:First_Name>
+      <urn:Impact>1-Extensive/Widespread</urn:Impact>
+      <urn:Last_Name>Dynatrace</urn:Last_Name>
+      <urn:Reported_Source>Systems Management</urn:Reported_Source>
+      <urn:Service_Type>Infrastructure Event</urn:Service_Type>
+      <urn:Status>New</urn:Status>
+      <urn:Action>Create</urn:Action>
+      <urn:Create_Request>Yes</urn:Create_Request>
+      <urn:Summary>IDEvento1_BOL</urn:Summary>
+      <urn:Notes>Agent 'TOMCAT_ADRIT_TEST@n73411021' connection lost</urn:Notes>
+      <urn:Urgency>1-Critical</urn:Urgency>
+      <urn:Sede_Int>FCO</urn:Sede_Int>
+      <urn:Sistema_sorgente>BOL</urn:Sistema_sorgente>
+    </urn:HelpDesk_Submit_Service>
+  </Body>
+</Envelope>]
+2018-09-28 16:56:30.126 - [AC1F07675BAE411C000192DA][http-nio-8181-exec-2] INFO  it.reply.sytel.adr.common.ws.SharedHTTPSClient - Executing POST request to URL: POST http://localhost:8088/mockHPD_IncidentInterface_Create_WSPortTypeSoapBinding HTTP/1.1
+2018-09-28 16:56:30.131 - [AC1F07675BAE411C000192DA][http-nio-8181-exec-2] INFO  it.reply.sytel.adr.common.ws.GKConnectionReuseStrategy - Remote peer HTTP version > 1.0 --> keep-alive=true
+2018-09-28 16:56:30.131 - [AC1F07675BAE411C000192DA][http-nio-8181-exec-2] INFO  it.reply.sytel.adr.common.ws.GKConnectionKeepAliveStrategy - Current connection will be kept alive 'indefinitely'
+2018-09-28 16:56:30.131 - [AC1F07675BAE411C000192DA][http-nio-8181-exec-2] INFO  it.reply.sytel.adr.common.ws.SharedHTTPSClient - SOAP HTTP response headers:
+2018-09-28 16:56:30.131 - [AC1F07675BAE411C000192DA][http-nio-8181-exec-2] INFO  it.reply.sytel.adr.common.ws.SharedHTTPSClient - 	name=Content-Type, value=text/xml; charset=utf-8
+2018-09-28 16:56:30.131 - [AC1F07675BAE411C000192DA][http-nio-8181-exec-2] INFO  it.reply.sytel.adr.common.ws.SharedHTTPSClient - 	name=Content-Length, value=349
+2018-09-28 16:56:30.131 - [AC1F07675BAE411C000192DA][http-nio-8181-exec-2] INFO  it.reply.sytel.adr.common.ws.SharedHTTPSClient - 	name=Server, value=Jetty(6.1.26)
+2018-09-28 16:56:30.132 - [AC1F07675BAE411C000192DA][http-nio-8181-exec-2] INFO  it.reply.sytel.adr.common.ws.SharedHTTPSClient - HTTP response code received: 200
+2018-09-28 16:56:30.132 - [AC1F07675BAE411C000192DA][http-nio-8181-exec-2] INFO  it.reply.sytel.adr.remedyAdapter.impl.RemedyWSClientImpl - Return from Remedy :[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:urn="urn:HPD_IncidentInterface_Create_WS_VIP">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <urn:HelpDesk_Submit_ServiceResponse>
+         <urn:Incident_Number>1</urn:Incident_Number>
+      </urn:HelpDesk_Submit_ServiceResponse>
+   </soapenv:Body>
+</soapenv:Envelope>]
+2018-09-28 16:56:30.132 - [AC1F07675BAE411C000192DA][http-nio-8181-exec-2] INFO  it.reply.sytel.adr.remedyAdapter.impl.RemedyWSClientImpl - Starting gettting Remedy Response
+2018-09-28 16:56:30.133 - [AC1F07675BAE411C000192DA][http-nio-8181-exec-2] INFO  it.reply.sytel.adr.remedyAdapter.impl.RemedyWSClientImpl - incidentNumber: [1]
+2018-09-28 16:56:30.133 - [AC1F07675BAE411C000192DA][http-nio-8181-exec-2] DEBUG it.reply.sytel.adr.services.impl.CreateRemedyIncident - Response from Remedy ----> remedyIncidentId:[1]
+2018-09-28 16:56:30.138 - [AC1F07675BAE411C000192DA][http-nio-8181-exec-2] DEBUG it.reply.sytel.adr.dao.impl.IncidentDAOImpl - Updated 1 rows
+2018-09-28 16:56:30.138 - [AC1F07675BAE411C000192DA][http-nio-8181-exec-2] DEBUG it.reply.sytel.adr.services.impl.CreateRemedyIncident - DynatraceIncident:[DynatraceIncident [id=304, dynatraceIncidentKey=DynatraceIncidentKey [name=Agent 'TOMCAT_ADRIT_TEST@n73411022' connection lost, startEvent=2018-09-28 15:25:14.937, dashboarName=BOL_TEST_REMEDY_INTEGRATION], heatfield=null, incidentType=Application Process Unavailable (unexpected) (5), state=null, duration=22, endEvent=2018-09-28 15:25:14.959, source=-, session=null, confimed_by=null, confirmation=null, sensitivity=null, conditions=null, thresholds=null, actions=null, measures=null, dataIns=2018-09-28 16:56:28.484, dataUpdate=2018-09-28 16:56:28.484, remedyTicketID=null, remedyTicketIDStatus=null, remedyTicketCreateDate=null]]
+2018-09-28 16:56:30.138 - [AC1F07675BAE411C000192DA][http-nio-8181-exec-2] DEBUG it.reply.sytel.adr.services.impl.CreateRemedyIncident - DescrizioneToFind:[Application Process Unavailable (unexpected)] for DashBoard:[BOL_TEST_REMEDY_INTEGRATION]
+2018-09-28 16:56:30.142 - [AC1F07675BAE411C000192DA][http-nio-8181-exec-2] DEBUG it.reply.sytel.adr.remedyAdapter.impl.RemedyWSClientImpl - Exception on helpDeskSubmitServiceDocument:[<urn:HelpDesk_Submit_Service xmlns:urn="urn:HPD_IncidentInterface_Create_WS_VIP"><urn:Categorization_Tier_1>TIER1</urn:Categorization_Tier_1><urn:Categorization_Tier_2>TIER2</urn:Categorization_Tier_2><urn:Categorization_Tier_3>TIER3</urn:Categorization_Tier_3><urn:First_Name>Dynatrace</urn:First_Name><urn:Impact>1-Extensive/Widespread</urn:Impact><urn:Last_Name>Dynatrace</urn:Last_Name><urn:Reported_Source>Systems Management</urn:Reported_Source><urn:Service_Type>Infrastructure Event</urn:Service_Type><urn:Status>New</urn:Status><urn:Action>Create</urn:Action><urn:Create_Request>Yes</urn:Create_Request><urn:Summary>IDEvento1_BOL</urn:Summary><urn:Notes>Agent 'TOMCAT_ADRIT_TEST@n73411022' connection lost</urn:Notes><urn:Urgency>1-Critical</urn:Urgency><urn:Sede_Int>FCO</urn:Sede_Int><urn:Sistema_sorgente>BOL</urn:Sistema_sorgente></urn:HelpDesk_Submit_Service>]
+2018-09-28 16:56:30.144 - [AC1F07675BAE411C000192DA][http-nio-8181-exec-2] INFO  it.reply.sytel.adr.remedyAdapter.impl.RemedyWSClientImpl - EnvelopeToSend sent to Remedy:[<Envelope xmlns="http://schemas.xmlsoap.org/soap/envelope/" xmlns:urn="urn:HPD_IncidentInterface_Create_WS_VIP">
+  <Header>
+    <urn:AuthenticationInfo>
+      <urn:userName>Admin</urn:userName>
+      <urn:password>Admin1</urn:password>
+    </urn:AuthenticationInfo>
+  </Header>
+  <Body>
+    <urn:HelpDesk_Submit_Service>
+      <urn:Categorization_Tier_1>TIER1</urn:Categorization_Tier_1>
+      <urn:Categorization_Tier_2>TIER2</urn:Categorization_Tier_2>
+      <urn:Categorization_Tier_3>TIER3</urn:Categorization_Tier_3>
+      <urn:First_Name>Dynatrace</urn:First_Name>
+      <urn:Impact>1-Extensive/Widespread</urn:Impact>
+      <urn:Last_Name>Dynatrace</urn:Last_Name>
+      <urn:Reported_Source>Systems Management</urn:Reported_Source>
+      <urn:Service_Type>Infrastructure Event</urn:Service_Type>
+      <urn:Status>New</urn:Status>
+      <urn:Action>Create</urn:Action>
+      <urn:Create_Request>Yes</urn:Create_Request>
+      <urn:Summary>IDEvento1_BOL</urn:Summary>
+      <urn:Notes>Agent 'TOMCAT_ADRIT_TEST@n73411022' connection lost</urn:Notes>
+      <urn:Urgency>1-Critical</urn:Urgency>
+      <urn:Sede_Int>FCO</urn:Sede_Int>
+      <urn:Sistema_sorgente>BOL</urn:Sistema_sorgente>
+    </urn:HelpDesk_Submit_Service>
+  </Body>
+</Envelope>]
+2018-09-28 16:56:30.144 - [AC1F07675BAE411C000192DA][http-nio-8181-exec-2] INFO  it.reply.sytel.adr.common.ws.SharedHTTPSClient - Executing POST request to URL: POST http://localhost:8088/mockHPD_IncidentInterface_Create_WSPortTypeSoapBinding HTTP/1.1
+2018-09-28 16:56:30.159 - [AC1F07675BAE411C000192DA][http-nio-8181-exec-2] INFO  it.reply.sytel.adr.common.ws.GKConnectionReuseStrategy - Remote peer HTTP version > 1.0 --> keep-alive=true
+2018-09-28 16:56:30.159 - [AC1F07675BAE411C000192DA][http-nio-8181-exec-2] INFO  it.reply.sytel.adr.common.ws.GKConnectionKeepAliveStrategy - Current connection will be kept alive 'indefinitely'
+2018-09-28 16:56:30.159 - [AC1F07675BAE411C000192DA][http-nio-8181-exec-2] INFO  it.reply.sytel.adr.common.ws.SharedHTTPSClient - SOAP HTTP response headers:
+2018-09-28 16:56:30.160 - [AC1F07675BAE411C000192DA][http-nio-8181-exec-2] INFO  it.reply.sytel.adr.common.ws.SharedHTTPSClient - 	name=Content-Type, value=text/xml; charset=utf-8
+2018-09-28 16:56:30.160 - [AC1F07675BAE411C000192DA][http-nio-8181-exec-2] INFO  it.reply.sytel.adr.common.ws.SharedHTTPSClient - 	name=Content-Length, value=349
+2018-09-28 16:56:30.160 - [AC1F07675BAE411C000192DA][http-nio-8181-exec-2] INFO  it.reply.sytel.adr.common.ws.SharedHTTPSClient - 	name=Server, value=Jetty(6.1.26)
+2018-09-28 16:56:30.160 - [AC1F07675BAE411C000192DA][http-nio-8181-exec-2] INFO  it.reply.sytel.adr.common.ws.SharedHTTPSClient - HTTP response code received: 200
+2018-09-28 16:56:30.160 - [AC1F07675BAE411C000192DA][http-nio-8181-exec-2] INFO  it.reply.sytel.adr.remedyAdapter.impl.RemedyWSClientImpl - Return from Remedy :[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:urn="urn:HPD_IncidentInterface_Create_WS_VIP">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <urn:HelpDesk_Submit_ServiceResponse>
+         <urn:Incident_Number>1</urn:Incident_Number>
+      </urn:HelpDesk_Submit_ServiceResponse>
+   </soapenv:Body>
+</soapenv:Envelope>]
+2018-09-28 16:56:30.160 - [AC1F07675BAE411C000192DA][http-nio-8181-exec-2] INFO  it.reply.sytel.adr.remedyAdapter.impl.RemedyWSClientImpl - Starting gettting Remedy Response
+2018-09-28 16:56:30.161 - [AC1F07675BAE411C000192DA][http-nio-8181-exec-2] INFO  it.reply.sytel.adr.remedyAdapter.impl.RemedyWSClientImpl - incidentNumber: [1]
+2018-09-28 16:56:30.161 - [AC1F07675BAE411C000192DA][http-nio-8181-exec-2] DEBUG it.reply.sytel.adr.services.impl.CreateRemedyIncident - Response from Remedy ----> remedyIncidentId:[1]
+2018-09-28 16:56:30.167 - [AC1F07675BAE411C000192DA][http-nio-8181-exec-2] DEBUG it.reply.sytel.adr.dao.impl.IncidentDAOImpl - Updated 1 rows
+2018-09-28 16:56:30.167 - [AC1F07675BAE411C000192DA][http-nio-8181-exec-2] DEBUG it.reply.sytel.adr.services.impl.CreateRemedyIncident - DynatraceIncident:[DynatraceIncident [id=305, dynatraceIncidentKey=DynatraceIncidentKey [name=Agent 'TOMCAT-AUTH_ADRIT_TEST@n73411023' connection lost, startEvent=2018-09-28 15:25:21.251, dashboarName=BOL_TEST_REMEDY_INTEGRATION], heatfield=null, incidentType=Application Process Unavailable (unexpected) (5), state=null, duration=28, endEvent=2018-09-28 15:25:21.279, source=-, session=null, confimed_by=null, confirmation=null, sensitivity=null, conditions=null, thresholds=null, actions=null, measures=null, dataIns=2018-09-28 16:56:28.484, dataUpdate=2018-09-28 16:56:28.484, remedyTicketID=null, remedyTicketIDStatus=null, remedyTicketCreateDate=null]]
+2018-09-28 16:56:30.168 - [AC1F07675BAE411C000192DA][http-nio-8181-exec-2] DEBUG it.reply.sytel.adr.services.impl.CreateRemedyIncident - DescrizioneToFind:[Application Process Unavailable (unexpected)] for DashBoard:[BOL_TEST_REMEDY_INTEGRATION]
+2018-09-28 16:56:30.172 - [AC1F07675BAE411C000192DA][http-nio-8181-exec-2] DEBUG it.reply.sytel.adr.remedyAdapter.impl.RemedyWSClientImpl - Exception on helpDeskSubmitServiceDocument:[<urn:HelpDesk_Submit_Service xmlns:urn="urn:HPD_IncidentInterface_Create_WS_VIP"><urn:Categorization_Tier_1>TIER1</urn:Categorization_Tier_1><urn:Categorization_Tier_2>TIER2</urn:Categorization_Tier_2><urn:Categorization_Tier_3>TIER3</urn:Categorization_Tier_3><urn:First_Name>Dynatrace</urn:First_Name><urn:Impact>1-Extensive/Widespread</urn:Impact><urn:Last_Name>Dynatrace</urn:Last_Name><urn:Reported_Source>Systems Management</urn:Reported_Source><urn:Service_Type>Infrastructure Event</urn:Service_Type><urn:Status>New</urn:Status><urn:Action>Create</urn:Action><urn:Create_Request>Yes</urn:Create_Request><urn:Summary>IDEvento1_BOL</urn:Summary><urn:Notes>Agent 'TOMCAT-AUTH_ADRIT_TEST@n73411023' connection lost</urn:Notes><urn:Urgency>1-Critical</urn:Urgency><urn:Sede_Int>FCO</urn:Sede_Int><urn:Sistema_sorgente>BOL</urn:Sistema_sorgente></urn:HelpDesk_Submit_Service>]
+2018-09-28 16:56:30.175 - [AC1F07675BAE411C000192DA][http-nio-8181-exec-2] INFO  it.reply.sytel.adr.remedyAdapter.impl.RemedyWSClientImpl - EnvelopeToSend sent to Remedy:[<Envelope xmlns="http://schemas.xmlsoap.org/soap/envelope/" xmlns:urn="urn:HPD_IncidentInterface_Create_WS_VIP">
+  <Header>
+    <urn:AuthenticationInfo>
+      <urn:userName>Admin</urn:userName>
+      <urn:password>Admin1</urn:password>
+    </urn:AuthenticationInfo>
+  </Header>
+  <Body>
+    <urn:HelpDesk_Submit_Service>
+      <urn:Categorization_Tier_1>TIER1</urn:Categorization_Tier_1>
+      <urn:Categorization_Tier_2>TIER2</urn:Categorization_Tier_2>
+      <urn:Categorization_Tier_3>TIER3</urn:Categorization_Tier_3>
+      <urn:First_Name>Dynatrace</urn:First_Name>
+      <urn:Impact>1-Extensive/Widespread</urn:Impact>
+      <urn:Last_Name>Dynatrace</urn:Last_Name>
+      <urn:Reported_Source>Systems Management</urn:Reported_Source>
+      <urn:Service_Type>Infrastructure Event</urn:Service_Type>
+      <urn:Status>New</urn:Status>
+      <urn:Action>Create</urn:Action>
+      <urn:Create_Request>Yes</urn:Create_Request>
+      <urn:Summary>IDEvento1_BOL</urn:Summary>
+      <urn:Notes>Agent 'TOMCAT-AUTH_ADRIT_TEST@n73411023' connection lost</urn:Notes>
+      <urn:Urgency>1-Critical</urn:Urgency>
+      <urn:Sede_Int>FCO</urn:Sede_Int>
+      <urn:Sistema_sorgente>BOL</urn:Sistema_sorgente>
+    </urn:HelpDesk_Submit_Service>
+  </Body>
+</Envelope>]
+2018-09-28 16:56:30.176 - [AC1F07675BAE411C000192DA][http-nio-8181-exec-2] INFO  it.reply.sytel.adr.common.ws.SharedHTTPSClient - Executing POST request to URL: POST http://localhost:8088/mockHPD_IncidentInterface_Create_WSPortTypeSoapBinding HTTP/1.1
+2018-09-28 16:56:30.182 - [AC1F07675BAE411C000192DA][http-nio-8181-exec-2] INFO  it.reply.sytel.adr.common.ws.GKConnectionReuseStrategy - Remote peer HTTP version > 1.0 --> keep-alive=true
+2018-09-28 16:56:30.182 - [AC1F07675BAE411C000192DA][http-nio-8181-exec-2] INFO  it.reply.sytel.adr.common.ws.GKConnectionKeepAliveStrategy - Current connection will be kept alive 'indefinitely'
+2018-09-28 16:56:30.183 - [AC1F07675BAE411C000192DA][http-nio-8181-exec-2] INFO  it.reply.sytel.adr.common.ws.SharedHTTPSClient - SOAP HTTP response headers:
+2018-09-28 16:56:30.183 - [AC1F07675BAE411C000192DA][http-nio-8181-exec-2] INFO  it.reply.sytel.adr.common.ws.SharedHTTPSClient - 	name=Content-Type, value=text/xml; charset=utf-8
+2018-09-28 16:56:30.183 - [AC1F07675BAE411C000192DA][http-nio-8181-exec-2] INFO  it.reply.sytel.adr.common.ws.SharedHTTPSClient - 	name=Content-Length, value=349
+2018-09-28 16:56:30.183 - [AC1F07675BAE411C000192DA][http-nio-8181-exec-2] INFO  it.reply.sytel.adr.common.ws.SharedHTTPSClient - 	name=Server, value=Jetty(6.1.26)
+2018-09-28 16:56:30.183 - [AC1F07675BAE411C000192DA][http-nio-8181-exec-2] INFO  it.reply.sytel.adr.common.ws.SharedHTTPSClient - HTTP response code received: 200
+2018-09-28 16:56:30.183 - [AC1F07675BAE411C000192DA][http-nio-8181-exec-2] INFO  it.reply.sytel.adr.remedyAdapter.impl.RemedyWSClientImpl - Return from Remedy :[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:urn="urn:HPD_IncidentInterface_Create_WS_VIP">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <urn:HelpDesk_Submit_ServiceResponse>
+         <urn:Incident_Number>1</urn:Incident_Number>
+      </urn:HelpDesk_Submit_ServiceResponse>
+   </soapenv:Body>
+</soapenv:Envelope>]
+2018-09-28 16:56:30.183 - [AC1F07675BAE411C000192DA][http-nio-8181-exec-2] INFO  it.reply.sytel.adr.remedyAdapter.impl.RemedyWSClientImpl - Starting gettting Remedy Response
+2018-09-28 16:56:30.184 - [AC1F07675BAE411C000192DA][http-nio-8181-exec-2] INFO  it.reply.sytel.adr.remedyAdapter.impl.RemedyWSClientImpl - incidentNumber: [1]
+2018-09-28 16:56:30.185 - [AC1F07675BAE411C000192DA][http-nio-8181-exec-2] DEBUG it.reply.sytel.adr.services.impl.CreateRemedyIncident - Response from Remedy ----> remedyIncidentId:[1]
+2018-09-28 16:56:30.190 - [AC1F07675BAE411C000192DA][http-nio-8181-exec-2] DEBUG it.reply.sytel.adr.dao.impl.IncidentDAOImpl - Updated 1 rows
+2018-09-28 16:56:30.191 - [AC1F07675BAE411C000192DA][http-nio-8181-exec-2] INFO  it.reply.sytel.adr.services.impl.CreateRemedyIncident - Service:[it.reply.sytel.adr.services.impl.CreateRemedyIncident] called ... DONE with ServiceExecutionTime:[492]
+2018-09-28 16:56:30.191 - [AC1F07675BAE411C000192DA][http-nio-8181-exec-2] INFO  it.reply.sytel.adr.services.impl.CloseRemedyIncident - service:[it.reply.sytel.adr.services.impl.CloseRemedyIncident] called ... 
+2018-09-28 16:56:30.199 - [AC1F07675BAE411C000192DA][http-nio-8181-exec-2] INFO  it.reply.sytel.adr.services.impl.CloseRemedyIncident - dynatraceIncident not more exist:[DynatraceIncidentKey [name=Agent 'TOMCAT_ADRIT_TEST@n73411021' connection lost, startEvent=2018-09-26 15:14:04.257, dashboarName=BOL_TEST_REMEDY_INTEGRATION]]
+2018-09-28 16:56:30.215 - [AC1F07675BAE411C000192DA][http-nio-8181-exec-2] DEBUG it.reply.sytel.adr.dao.impl.IncidentDAOImpl - delete 1 rows
+2018-09-28 16:56:30.215 - [AC1F07675BAE411C000192DA][http-nio-8181-exec-2] INFO  it.reply.sytel.adr.services.impl.CloseRemedyIncident - dynatraceIncident not more exist:[DynatraceIncidentKey [name=Agent 'TOMCAT_ADRIT_TEST@n73411022' connection lost, startEvent=2018-09-26 15:14:04.287, dashboarName=BOL_TEST_REMEDY_INTEGRATION]]
+2018-09-28 16:56:30.222 - [AC1F07675BAE411C000192DA][http-nio-8181-exec-2] DEBUG it.reply.sytel.adr.dao.impl.IncidentDAOImpl - delete 1 rows
+2018-09-28 16:56:30.222 - [AC1F07675BAE411C000192DA][http-nio-8181-exec-2] INFO  it.reply.sytel.adr.services.impl.CloseRemedyIncident - dynatraceIncident not more exist:[DynatraceIncidentKey [name=Agent 'TOMCAT_ADRIT_TEST@n73411022' connection lost, startEvent=2018-09-26 02:40:39.884, dashboarName=BOL_TEST_REMEDY_INTEGRATION]]
+2018-09-28 16:56:30.227 - [AC1F07675BAE411C000192DA][http-nio-8181-exec-2] DEBUG it.reply.sytel.adr.dao.impl.IncidentDAOImpl - delete 1 rows
+2018-09-28 16:56:30.227 - [AC1F07675BAE411C000192DA][http-nio-8181-exec-2] INFO  it.reply.sytel.adr.services.impl.CloseRemedyIncident - dynatraceIncident not more exist:[DynatraceIncidentKey [name=Agent 'TOMCAT-AUTH_ADRIT_TEST@n73411023' connection lost, startEvent=2018-09-26 15:14:07.734, dashboarName=BOL_TEST_REMEDY_INTEGRATION]]
+2018-09-28 16:56:30.231 - [AC1F07675BAE411C000192DA][http-nio-8181-exec-2] DEBUG it.reply.sytel.adr.dao.impl.IncidentDAOImpl - delete 1 rows
+2018-09-28 16:56:30.232 - [AC1F07675BAE411C000192DA][http-nio-8181-exec-2] INFO  it.reply.sytel.adr.services.impl.CloseRemedyIncident - dynatraceIncident not more exist:[DynatraceIncidentKey [name=Agent 'TOMCAT_ADRIT_TEST@n73411021' connection lost, startEvent=2018-09-26 02:30:37.922, dashboarName=BOL_TEST_REMEDY_INTEGRATION]]
+2018-09-28 16:56:30.237 - [AC1F07675BAE411C000192DA][http-nio-8181-exec-2] DEBUG it.reply.sytel.adr.dao.impl.IncidentDAOImpl - delete 1 rows
+2018-09-28 16:56:30.237 - [AC1F07675BAE411C000192DA][http-nio-8181-exec-2] INFO  it.reply.sytel.adr.services.impl.CloseRemedyIncident - Service:[it.reply.sytel.adr.services.impl.CloseRemedyIncident] called ... DONE with ServiceExecutionTime:[46]
+2018-09-28 16:56:30.237 - [AC1F07675BAE411C000192DA][http-nio-8181-exec-2] INFO  it.reply.sytel.adr.engine.RemedyIncidetBuilderEngine - Flow RemedyIncidentdBuilder Engine executed with ExecutionTime (1755)
+2018-09-28 16:56:30.237 - [][http-nio-8181-exec-2] INFO  it.reply.sytel.adr.restServices.ConnectorManager - Calling connector ONE SHOT... DONE
+2018-09-28 16:57:07.077 - [][Thread-10] INFO  it.reply.sytel.adr.common.ws.SharedHTTPSClient - Shutting down shared HTTP client connection manager
+2018-09-28 16:57:07.077 - [][Thread-7] INFO  it.reply.sytel.adr.common.ws.IdleHTTPConnectionEvictor - IdleHTTPConnectionEvictor task stopped
+2018-09-28 16:57:07.079 - [][Thread-10] INFO  it.reply.sytel.adr.common.ws.SharedHTTPSClient - Shutting down shared HTTP client connection manager
+2018-09-28 16:57:07.079 - [][Thread-6] INFO  it.reply.sytel.adr.common.ws.IdleHTTPConnectionEvictor - IdleHTTPConnectionEvictor task stopped
+2018-09-28 16:57:10.668 - [][restartedMain] INFO  it.reply.sytel.adr.common.ws.GKConnectionKeepAliveStrategy - Using a custom ConnectionKeepAliveStrategy with default duration = 'infinite'
+2018-09-28 16:57:10.673 - [][restartedMain] INFO  it.reply.sytel.adr.common.ws.GKConnectionReuseStrategy - Using a custom ConnectionReuseStrategy based on peer HTTP headers/version
+2018-09-28 16:57:10.678 - [][restartedMain] INFO  it.reply.sytel.adr.common.ws.GKHttpRequestRetryHandler - Using a custom HttpRequestRetryHandler to delegate retry logic to JMS redelivery mechanism
+2018-09-28 16:57:10.679 - [][restartedMain] DEBUG it.reply.sytel.adr.common.ws.SharedHTTPSClient - Creating shared HTTP client
+2018-09-28 16:57:10.679 - [][restartedMain] DEBUG it.reply.sytel.adr.common.ws.SharedHTTPSClient - httpsClientProperties.getTrustURLString():[file:///D:/Dynatrace2RemedyITSM/Dynatrace2RemedyITSM/trunk/resourcesConf/truststore.jks]
+2018-09-28 16:57:10.686 - [][restartedMain] DEBUG it.reply.sytel.adr.common.ws.AuthSSLProtocolSocketFactory - createTrustManagers - Initializing trust manager: dynatracetest
+2018-09-28 16:57:10.686 - [][restartedMain] DEBUG it.reply.sytel.adr.common.ws.AuthSSLProtocolSocketFactory - Initializing trust manager
+2018-09-28 16:57:10.688 - [][restartedMain] DEBUG it.reply.sytel.adr.common.ws.AuthSSLProtocolSocketFactory - --------- protocolHandShake:[TLSv1.2]--------
+2018-09-28 16:57:10.697 - [][restartedMain] DEBUG it.reply.sytel.adr.common.ws.SharedHTTPSClient - Shared HTTP client created successfully!
+2018-09-28 16:57:10.698 - [][Thread-18] INFO  it.reply.sytel.adr.common.ws.IdleHTTPConnectionEvictor - Starting IdleHTTPConnectionEvictor task (evictionPeriod=5000)
+2018-09-28 16:57:10.730 - [][restartedMain] INFO  it.reply.sytel.adr.common.ws.GKConnectionKeepAliveStrategy - Using a custom ConnectionKeepAliveStrategy with default duration = 'infinite'
+2018-09-28 16:57:10.730 - [][restartedMain] INFO  it.reply.sytel.adr.common.ws.GKConnectionReuseStrategy - Using a custom ConnectionReuseStrategy based on peer HTTP headers/version
+2018-09-28 16:57:10.730 - [][restartedMain] INFO  it.reply.sytel.adr.common.ws.GKHttpRequestRetryHandler - Using a custom HttpRequestRetryHandler to delegate retry logic to JMS redelivery mechanism
+2018-09-28 16:57:10.731 - [][restartedMain] DEBUG it.reply.sytel.adr.common.ws.SharedHTTPSClient - Creating shared HTTP client
+2018-09-28 16:57:10.731 - [][restartedMain] DEBUG it.reply.sytel.adr.common.ws.SharedHTTPSClient - httpsClientProperties.getTrustURLString():[file:///D:/Dynatrace2RemedyITSM/Dynatrace2RemedyITSM/trunk/resourcesConf/truststore.jks]
+2018-09-28 16:57:10.732 - [][restartedMain] DEBUG it.reply.sytel.adr.common.ws.AuthSSLProtocolSocketFactory - createTrustManagers - Initializing trust manager: dynatracetest
+2018-09-28 16:57:10.732 - [][restartedMain] DEBUG it.reply.sytel.adr.common.ws.AuthSSLProtocolSocketFactory - Initializing trust manager
+2018-09-28 16:57:10.732 - [][restartedMain] DEBUG it.reply.sytel.adr.common.ws.AuthSSLProtocolSocketFactory - --------- protocolHandShake:[TLSv1.2]--------
+2018-09-28 16:57:10.736 - [][restartedMain] DEBUG it.reply.sytel.adr.common.ws.SharedHTTPSClient - Shared HTTP client created successfully!
+2018-09-28 16:57:10.736 - [][Thread-19] INFO  it.reply.sytel.adr.common.ws.IdleHTTPConnectionEvictor - Starting IdleHTTPConnectionEvictor task (evictionPeriod=5000)
+2018-09-28 16:57:10.815 - [][restartedMain] INFO  it.reply.sytel.adr.quartz.SchedulerConfig - called simpleJobTrigger
+2018-09-28 16:57:10.837 - [][restartedMain] DEBUG it.reply.sytel.adr.common.resource.imp.ResourceFile - getting the inputStream from fileName:[ADR.properties]
+2018-09-28 16:57:10.838 - [][restartedMain] DEBUG it.reply.sytel.adr.configuration.ConfigServicesFile - propertyValue:[ADBM] for propertyName:[DASHBOARD_NAMES]
+2018-09-28 16:57:10.839 - [][restartedMain] DEBUG it.reply.sytel.adr.configuration.ConfigServicesFile - propertyValue:[RemedyUsr] for propertyName:[REMEDY_AUTH_INFO_USER]
+2018-09-28 16:57:10.839 - [][restartedMain] DEBUG it.reply.sytel.adr.configuration.ConfigServicesFile - propertyValue:[RemedyPwd         ] for propertyName:[REMEDY_AUTH_INFO_PWD]
+2018-09-28 16:57:10.841 - [][restartedMain] DEBUG it.reply.sytel.adr.configuration.ConfigServicesFile - propertyValue:[https://dynatrace-sub-CA:8021/rest/management/dashboard/ADBM_TEST_REMEDY_INTEGRATION] for propertyName:[ADBM_URL]
+2018-09-28 16:57:10.841 - [][restartedMain] DEBUG it.reply.sytel.adr.configuration.ConfigServicesFile - propertyValue:[admin] for propertyName:[ADBM_USER]
+2018-09-28 16:57:10.841 - [][restartedMain] DEBUG it.reply.sytel.adr.configuration.ConfigServicesFile - propertyValue:[adradmin01] for propertyName:[ADBM_PWD]
+2018-09-28 16:57:10.841 - [][restartedMain] DEBUG it.reply.sytel.adr.configuration.ConfigServicesFile - propertyValue:[Dynatrace] for propertyName:[ADBM_FIRSTNAME]
+2018-09-28 16:57:10.841 - [][restartedMain] DEBUG it.reply.sytel.adr.configuration.ConfigServicesFile - propertyValue:[2-Significant/Large] for propertyName:[ADBM_IMPACT]
+2018-09-28 16:57:10.841 - [][restartedMain] DEBUG it.reply.sytel.adr.configuration.ConfigServicesFile - propertyValue:[Dynatrace] for propertyName:[ADBM_LASTNAME]
+2018-09-28 16:57:10.841 - [][restartedMain] DEBUG it.reply.sytel.adr.configuration.ConfigServicesFile - propertyValue:[Systems Management] for propertyName:[ADBM_REPORTED_SOURCE]
+2018-09-28 16:57:10.841 - [][restartedMain] DEBUG it.reply.sytel.adr.configuration.ConfigServicesFile - propertyValue:[Infrastructure Event] for propertyName:[ADBM_SERVICE_TYPE]
+2018-09-28 16:57:10.841 - [][restartedMain] DEBUG it.reply.sytel.adr.configuration.ConfigServicesFile - propertyValue:[New] for propertyName:[ADBM_TICKET_STATUS]
+2018-09-28 16:57:10.842 - [][restartedMain] DEBUG it.reply.sytel.adr.configuration.ConfigServicesFile - propertyValue:[2-High] for propertyName:[ADBM_URGENCY]
+2018-09-28 16:57:10.842 - [][restartedMain] DEBUG it.reply.sytel.adr.configuration.ConfigServicesFile - Configuration DONE
+2018-09-28 16:59:07.825 - [][Thread-14] INFO  it.reply.sytel.adr.common.ws.SharedHTTPSClient - Shutting down shared HTTP client connection manager
+2018-09-28 16:59:07.825 - [][Thread-19] INFO  it.reply.sytel.adr.common.ws.IdleHTTPConnectionEvictor - IdleHTTPConnectionEvictor task stopped
+2018-09-28 16:59:07.825 - [][Thread-14] INFO  it.reply.sytel.adr.common.ws.SharedHTTPSClient - Shutting down shared HTTP client connection manager
+2018-09-28 16:59:07.825 - [][Thread-18] INFO  it.reply.sytel.adr.common.ws.IdleHTTPConnectionEvictor - IdleHTTPConnectionEvictor task stopped
+2018-09-28 16:59:10.593 - [][restartedMain] INFO  it.reply.sytel.adr.common.ws.GKConnectionKeepAliveStrategy - Using a custom ConnectionKeepAliveStrategy with default duration = 'infinite'
+2018-09-28 16:59:10.609 - [][restartedMain] INFO  it.reply.sytel.adr.common.ws.GKConnectionReuseStrategy - Using a custom ConnectionReuseStrategy based on peer HTTP headers/version
+2018-09-28 16:59:10.609 - [][restartedMain] INFO  it.reply.sytel.adr.common.ws.GKHttpRequestRetryHandler - Using a custom HttpRequestRetryHandler to delegate retry logic to JMS redelivery mechanism
+2018-09-28 16:59:10.609 - [][restartedMain] DEBUG it.reply.sytel.adr.common.ws.SharedHTTPSClient - Creating shared HTTP client
+2018-09-28 16:59:10.609 - [][restartedMain] DEBUG it.reply.sytel.adr.common.ws.SharedHTTPSClient - httpsClientProperties.getTrustURLString():[file:///D:/Dynatrace2RemedyITSM/Dynatrace2RemedyITSM/trunk/resourcesConf/truststore.jks]
+2018-09-28 16:59:10.609 - [][restartedMain] DEBUG it.reply.sytel.adr.common.ws.AuthSSLProtocolSocketFactory - createTrustManagers - Initializing trust manager: dynatracetest
+2018-09-28 16:59:10.609 - [][restartedMain] DEBUG it.reply.sytel.adr.common.ws.AuthSSLProtocolSocketFactory - Initializing trust manager
+2018-09-28 16:59:10.609 - [][restartedMain] DEBUG it.reply.sytel.adr.common.ws.AuthSSLProtocolSocketFactory - --------- protocolHandShake:[TLSv1.2]--------
+2018-09-28 16:59:10.624 - [][restartedMain] DEBUG it.reply.sytel.adr.common.ws.SharedHTTPSClient - Shared HTTP client created successfully!
+2018-09-28 16:59:10.624 - [][Thread-28] INFO  it.reply.sytel.adr.common.ws.IdleHTTPConnectionEvictor - Starting IdleHTTPConnectionEvictor task (evictionPeriod=5000)
+2018-09-28 16:59:10.656 - [][restartedMain] INFO  it.reply.sytel.adr.common.ws.GKConnectionKeepAliveStrategy - Using a custom ConnectionKeepAliveStrategy with default duration = 'infinite'
+2018-09-28 16:59:10.656 - [][restartedMain] INFO  it.reply.sytel.adr.common.ws.GKConnectionReuseStrategy - Using a custom ConnectionReuseStrategy based on peer HTTP headers/version
+2018-09-28 16:59:10.656 - [][restartedMain] INFO  it.reply.sytel.adr.common.ws.GKHttpRequestRetryHandler - Using a custom HttpRequestRetryHandler to delegate retry logic to JMS redelivery mechanism
+2018-09-28 16:59:10.656 - [][restartedMain] DEBUG it.reply.sytel.adr.common.ws.SharedHTTPSClient - Creating shared HTTP client
+2018-09-28 16:59:10.656 - [][restartedMain] DEBUG it.reply.sytel.adr.common.ws.SharedHTTPSClient - httpsClientProperties.getTrustURLString():[file:///D:/Dynatrace2RemedyITSM/Dynatrace2RemedyITSM/trunk/resourcesConf/truststore.jks]
+2018-09-28 16:59:10.656 - [][restartedMain] DEBUG it.reply.sytel.adr.common.ws.AuthSSLProtocolSocketFactory - createTrustManagers - Initializing trust manager: dynatracetest
+2018-09-28 16:59:10.656 - [][restartedMain] DEBUG it.reply.sytel.adr.common.ws.AuthSSLProtocolSocketFactory - Initializing trust manager
+2018-09-28 16:59:10.656 - [][restartedMain] DEBUG it.reply.sytel.adr.common.ws.AuthSSLProtocolSocketFactory - --------- protocolHandShake:[TLSv1.2]--------
+2018-09-28 16:59:10.656 - [][restartedMain] DEBUG it.reply.sytel.adr.common.ws.SharedHTTPSClient - Shared HTTP client created successfully!
+2018-09-28 16:59:10.656 - [][Thread-29] INFO  it.reply.sytel.adr.common.ws.IdleHTTPConnectionEvictor - Starting IdleHTTPConnectionEvictor task (evictionPeriod=5000)
+2018-09-28 16:59:10.734 - [][restartedMain] INFO  it.reply.sytel.adr.quartz.SchedulerConfig - called simpleJobTrigger
+2018-09-28 16:59:10.765 - [][restartedMain] DEBUG it.reply.sytel.adr.common.resource.imp.ResourceFile - getting the inputStream from fileName:[ADR.properties]
+2018-09-28 16:59:10.765 - [][restartedMain] DEBUG it.reply.sytel.adr.configuration.ConfigServicesFile - propertyValue:[ADBM] for propertyName:[DASHBOARD_NAMES]
+2018-09-28 16:59:10.765 - [][restartedMain] DEBUG it.reply.sytel.adr.configuration.ConfigServicesFile - propertyValue:[RemedyUsr] for propertyName:[REMEDY_AUTH_INFO_USER]
+2018-09-28 16:59:10.765 - [][restartedMain] DEBUG it.reply.sytel.adr.configuration.ConfigServicesFile - propertyValue:[RemedyPwd         ] for propertyName:[REMEDY_AUTH_INFO_PWD]
+2018-09-28 16:59:10.765 - [][restartedMain] DEBUG it.reply.sytel.adr.configuration.ConfigServicesFile - propertyValue:[https://dynatrace-sub-CA:8021/rest/management/dashboard/ADBM_TEST_REMEDY_INTEGRATION] for propertyName:[ADBM_URL]
+2018-09-28 16:59:10.765 - [][restartedMain] DEBUG it.reply.sytel.adr.configuration.ConfigServicesFile - propertyValue:[admin] for propertyName:[ADBM_USER]
+2018-09-28 16:59:10.765 - [][restartedMain] DEBUG it.reply.sytel.adr.configuration.ConfigServicesFile - propertyValue:[adradmin01] for propertyName:[ADBM_PWD]
+2018-09-28 16:59:10.765 - [][restartedMain] DEBUG it.reply.sytel.adr.configuration.ConfigServicesFile - propertyValue:[Dynatrace] for propertyName:[ADBM_FIRSTNAME]
+2018-09-28 16:59:10.765 - [][restartedMain] DEBUG it.reply.sytel.adr.configuration.ConfigServicesFile - propertyValue:[2-Significant/Large] for propertyName:[ADBM_IMPACT]
+2018-09-28 16:59:10.765 - [][restartedMain] DEBUG it.reply.sytel.adr.configuration.ConfigServicesFile - propertyValue:[Dynatrace] for propertyName:[ADBM_LASTNAME]
+2018-09-28 16:59:10.765 - [][restartedMain] DEBUG it.reply.sytel.adr.configuration.ConfigServicesFile - propertyValue:[Systems Management] for propertyName:[ADBM_REPORTED_SOURCE]
+2018-09-28 16:59:10.765 - [][restartedMain] DEBUG it.reply.sytel.adr.configuration.ConfigServicesFile - propertyValue:[Infrastructure Event] for propertyName:[ADBM_SERVICE_TYPE]
+2018-09-28 16:59:10.765 - [][restartedMain] DEBUG it.reply.sytel.adr.configuration.ConfigServicesFile - propertyValue:[New] for propertyName:[ADBM_TICKET_STATUS]
+2018-09-28 16:59:10.765 - [][restartedMain] DEBUG it.reply.sytel.adr.configuration.ConfigServicesFile - propertyValue:[2-High] for propertyName:[ADBM_URGENCY]
+2018-09-28 16:59:10.765 - [][restartedMain] DEBUG it.reply.sytel.adr.configuration.ConfigServicesFile - Configuration DONE

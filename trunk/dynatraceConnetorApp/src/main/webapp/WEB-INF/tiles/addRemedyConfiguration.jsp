@@ -76,8 +76,15 @@ $(document).ready(function() {
 	<table border="1">
 		<tr BGCOLOR="#CCCCFF"><th>COLUMN_NAME</th><th>VALUE</th></tr>
 		<tr><td>USERNAME</td><td><input type="TEXT" id="username" name="username"></td></tr>
-		<tr><td>PASSWORD</td><td><input type="TEXT" id="password" name="password"></td></tr>
-		<tr><td>URL</td><td><input type="TEXT" id="url" name="url"></td></tr>
+		<tr><td>PASSWORD</td><td><input type="PASSWORD" id="password" name="password"></td></tr>
+		<tr><td>STATUS</td><td><input type="TEXT" id="status" name="status"></td></tr>
+		<tr><td>SERVICE_TYPE</td><td><input type="TEXT" id="service_type" name="service_type"></td></tr>
+		<tr><td>REPORTED_SOURCE</td><td><input type="TEXT" id="reported_source" name="reported_source"></td></tr>
+		<tr><td>FIRST_NAME</td><td><input type="TEXT" id="first_name" name="first_name"></td></tr>
+		<tr><td>LAST_NAME</td><td><input type="TEXT" id="last_name" name="last_name"></td></tr>
+		<tr><td>ACTION</td><td><input type="TEXT" id="action" name="action"></td></tr>
+		<tr><td>CREATE_REQUEST</td><td><input type="TEXT" id="create_request" name="create_request"></td></tr>
+		<tr><td>SEDE_INT</td><td><input type="TEXT" id="sede_int" name="sede_int"></td></tr>
 	</table>
 	
 </form>

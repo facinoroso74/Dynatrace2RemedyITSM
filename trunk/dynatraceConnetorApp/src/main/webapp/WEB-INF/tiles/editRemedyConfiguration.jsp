@@ -20,7 +20,15 @@ $(document).ready(function() {
     	$("#remedyConfigurationId").val(data.remedyConfigurationId);
     	$("#username").val(data.username);
     	$("#password").val(data.password);
-    	$("#url").val(data.url);
+    	$("#status").val(data.status);
+    	$("#service_type").val(data.service_type);
+    	$("#reported_source").val(data.reported_source);
+    	$("#first_name").val(data.first_name);
+    	$("#last_name").val(data.last_name);
+    	$("#action").val(data.action);
+    	$("#create_request").val(data.create_request);
+    	$("#sede_int").val(data.sede_int);
+    	
     	    	    	
     	//alert("data.id22-->"+data.configurationId);
        //$('.greeting-id').append(data.id);
@@ -92,10 +100,17 @@ $(document).ready(function() {
 <form id="newConfigurationId" action="" method="POST">
 	<table border="1">
 	 	<tr BGCOLOR="#CCCCFF"><th>COLUMN_NAME</th><th>VALUE</th></tr>
-	 	<tr><td>REMEDY_CONFIGURATION_ID</td><td><input type="TEXT" id="remedyConfigurationId" name="remedyConfigurationId" disabled size="150"></td></tr>
-		<tr><td>USERNAME</td><td><input type="TEXT" id="username" name="username" size="150"></td></tr>
-		<tr><td>PASSWORD</td><td><input type="TEXT" id="password" name="password" size="150"></td></tr>
-		<tr><td>URL</td><td><input type="TEXT" id="url" name="url" size="150"></td></tr>
+	 	<tr><td>REMEDY_CONFIGURATION_ID</td><td><input type="TEXT" id="remedyConfigurationId" name="remedyConfigurationId" disabled size="20"></td></tr>
+		<tr><td>USERNAME</td><td><input type="TEXT" id="username" name="username" size="20"></td></tr>
+		<tr><td>PASSWORD</td><td><input type="PASSWORD" id="password" name="password" size="20"></td></tr>
+		<tr><td>STATUS</td><td><input type="TEXT" id="status" name="status"></td></tr>
+		<tr><td>SERVICE_TYPE</td><td><input type="TEXT" id="service_type" name="service_type"></td></tr>
+		<tr><td>REPORTED_SOURCE</td><td><input type="TEXT" id="reported_source" name="reported_source"></td></tr>
+		<tr><td>FIRST_NAME</td><td><input type="TEXT" id="first_name" name="first_name"></td></tr>
+		<tr><td>LAST_NAME</td><td><input type="TEXT" id="last_name" name="last_name"></td></tr>
+		<tr><td>ACTION</td><td><input type="TEXT" id="action" name="action"></td></tr>
+		<tr><td>CREATE_REQUEST</td><td><input type="TEXT" id="create_request" name="create_request"></td></tr>
+		<tr><td>SEDE_INT</td><td><input type="TEXT" id="sede_int" name="sede_int"></td></tr>
 	</table>
 	
 </form>

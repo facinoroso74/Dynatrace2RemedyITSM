@@ -3,7 +3,6 @@ package it.reply.sytel.adr.dto;
 import java.io.Serializable;
 import java.util.ArrayList;
 
-import it.reply.sytel.adr.domain.Dashboard;
 import it.reply.sytel.adr.domain.RemedyConfiguration;
 
 public class RemedyConfigurationTableResponse
@@ -26,9 +25,16 @@ public class RemedyConfigurationTableResponse
     	remedyConfigurationForTable.setCheckbox("");
     	remedyConfigurationForTable.setRemedyConfigurationId(remedyConfiguration.getRemedyConfigurationId());
     	remedyConfigurationForTable.setPassword(remedyConfiguration.getPassword());
-    	remedyConfigurationForTable.setUrl(remedyConfiguration.getUrl());
     	remedyConfigurationForTable.setUsername(remedyConfiguration.getUsername());
-    	    	   
+    	remedyConfigurationForTable.setStatus(remedyConfiguration.getStatus());
+    	remedyConfigurationForTable.setService_type(remedyConfiguration.getService_type());
+    	remedyConfigurationForTable.setReported_source(remedyConfiguration.getReported_source());
+    	remedyConfigurationForTable.setFirst_name(remedyConfiguration.getFirst_name());
+    	remedyConfigurationForTable.setLast_name(remedyConfiguration.getLast_name());
+    	remedyConfigurationForTable.setAction(remedyConfiguration.getAction());
+    	remedyConfigurationForTable.setCreate_request(remedyConfiguration.getCreate_request());
+    	remedyConfigurationForTable.setSede_int(remedyConfiguration.getSede_int());
+    	
         ((ArrayList<RemedyConfigurationForTable>)this.data).add(remedyConfigurationForTable);
     }
   }

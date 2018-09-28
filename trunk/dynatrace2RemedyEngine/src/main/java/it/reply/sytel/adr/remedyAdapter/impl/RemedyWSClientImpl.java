@@ -24,7 +24,6 @@ import hpdIncidentInterfaceCreateWSVIP.ServiceTypeType;
 import hpdIncidentInterfaceCreateWSVIP.StatusType;
 import hpdIncidentInterfaceCreateWSVIP.UrgencyType;
 import it.reply.sytel.adr.common.ws.HTTPClient;
-import it.reply.sytel.adr.constants.ADRConstants;
 import it.reply.sytel.adr.domain.Configuration;
 import it.reply.sytel.adr.domain.RemedyConfiguration;
 import it.reply.sytel.adr.remedyAdapter.RemedyClient;
@@ -42,39 +41,39 @@ public class RemedyWSClientImpl implements RemedyClient{
 	private org.apache.logging.log4j.Logger log = LogManager.getLogger(getClass());
 
 	@Override
-	public String createIncident(DynatraceIncident dynatraceIncident,RemedyConfiguration remedyAutenticationInfo,Configuration incidentTypeconfiguration){
+	public String createIncident(DynatraceIncident dynatraceIncident,RemedyConfiguration remedyConfiguration,Configuration incidentTypeconfiguration){
 		
 		checkNullValueImpact(ImpactType.Enum.forString(incidentTypeconfiguration.getImpact()),incidentTypeconfiguration.getImpact());
 		checkNullValueUrgency(UrgencyType.Enum.forString(incidentTypeconfiguration.getUrgency()),incidentTypeconfiguration.getUrgency());
 				
 		AuthenticationInfoDocument authenticationInfoDocument = AuthenticationInfoDocument.Factory.newInstance();
 		AuthenticationInfo authenticationInfo = authenticationInfoDocument.addNewAuthenticationInfo();
-		authenticationInfo.setUserName(remedyAutenticationInfo.getUsername());
-		authenticationInfo.setPassword(remedyAutenticationInfo.getPassword());
+		authenticationInfo.setUserName(remedyConfiguration.getUsername());
+		authenticationInfo.setPassword(remedyConfiguration.getPassword());
 		
 		HelpDeskSubmitServiceDocument helpDeskSubmitServiceDocument = HelpDeskSubmitServiceDocument.Factory.newInstance();
 		
 		CreateInputMap createInputMap = helpDeskSubmitServiceDocument.addNewHelpDeskSubmitService();
-		createInputMap.setFirstName(ADRConstants.FIRST_NAME);
-		createInputMap.setLastName(ADRConstants.LAST_NAME);
+		createInputMap.setFirstName(remedyConfiguration.getFirst_name());
+		createInputMap.setLastName(remedyConfiguration.getLast_name());
 		createInputMap.setImpact(ImpactType.Enum.forString(incidentTypeconfiguration.getImpact()));
 		createInputMap.setUrgency(UrgencyType.Enum.forString(incidentTypeconfiguration.getUrgency()));
 		
-		createInputMap.setReportedSource(ReportedSourceType.Enum.forString(ADRConstants.REPORTED_SOURCE));
+		createInputMap.setReportedSource(ReportedSourceType.Enum.forString(remedyConfiguration.getReported_source()));
 		
-		createInputMap.setServiceType(ServiceTypeType.Enum.forString(ADRConstants.SERVICE_TYPE));
+		createInputMap.setServiceType(ServiceTypeType.Enum.forString(remedyConfiguration.getService_type()));
 		
-		createInputMap.setStatus(StatusType.Enum.forString(ADRConstants.STATUS));
+		createInputMap.setStatus(StatusType.Enum.forString(remedyConfiguration.getStatus()));
 		
-		createInputMap.setAction(ADRConstants.ACTION);
+		createInputMap.setAction(remedyConfiguration.getAction());
 		
-		createInputMap.setCreateRequest(CreateRequestType.Enum.forString(ADRConstants.CREATE_REQUEST));
+		createInputMap.setCreateRequest(CreateRequestType.Enum.forString(remedyConfiguration.getCreate_request()));
 		
 		createInputMap.setNotes(dynatraceIncident.getDynatraceIncidentKey().getName());
 		createInputMap.setSummary(incidentTypeconfiguration.getIdEvento());
 		createInputMap.setSistemaSorgente(incidentTypeconfiguration.getSorgenteSistema());
 		
-		createInputMap.setSedeInt(SedeIntType.Enum.forString(ADRConstants.SEDE_INT));
+		createInputMap.setSedeInt(SedeIntType.Enum.forString(remedyConfiguration.getSede_int()));
 		
 		createInputMap.setCategorizationTier1(incidentTypeconfiguration.getCategorizationTier1());
 		createInputMap.setCategorizationTier2(incidentTypeconfiguration.getCategorizationTier2());
@@ -229,8 +228,6 @@ public class RemedyWSClientImpl implements RemedyClient{
 	public void setSharedHTTPClient(HTTPClient sharedHTTPClient) {
 		this.sharedHTTPClient = sharedHTTPClient;
 	}
-
-
 	public String getEncoding() {
 		return encoding;
 	}

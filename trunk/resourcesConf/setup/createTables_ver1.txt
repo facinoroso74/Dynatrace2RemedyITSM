@@ -1,0 +1,91 @@
+DROP TABLE DASHBOARD;
+CREATE TABLE DASHBOARD (
+	dashboard_Id           INTEGER NOT NULL GENERATED ALWAYS AS IDENTITY (START WITH 1, INCREMENT BY 1),
+	name               VARCHAR(250),
+	app_url                VARCHAR(250),
+	app_user               VARCHAR(250),
+	app_pwd                VARCHAR(250),
+	description            VARCHAR(250),
+	CONSTRAINT primary_key_dashborad PRIMARY KEY (dashboard_Id,name)
+);
+ALTER TABLE DASHBOARD 
+ADD CONSTRAINT P_UC_DASHBOARD UNIQUE (name);
+
+
+DROP TABLE CONFIGURATION;
+CREATE TABLE CONFIGURATION (
+	Configuration_ID	           INTEGER NOT NULL GENERATED ALWAYS AS IDENTITY (START WITH 1, INCREMENT BY 1),
+	Id_Evento    	               VARCHAR(250),
+	Descrizione 	               VARCHAR(250),
+	Dashboard	                   VARCHAR(250),
+	Impact	                       VARCHAR(250),
+	Urgency	                       VARCHAR(250),
+	Sorgente_Sistema               VARCHAR(250),
+	Categorization_Tier1           VARCHAR(250),
+	Categorization_Tier2           VARCHAR(250),
+	Categorization_Tier3           VARCHAR(250),
+	CONSTRAINT primary_key_configuration PRIMARY KEY (Id_Evento,Configuration_ID,Sorgente_Sistema)
+);
+
+drop table incident;
+CREATE TABLE INCIDENT (
+	ID                     INTEGER NOT NULL GENERATED ALWAYS AS IDENTITY (START WITH 1, INCREMENT BY 1),
+	name                   VARCHAR(250),
+	incident_type          VARCHAR(250),
+	heatfield              VARCHAR(250),
+	state                  VARCHAR(250),
+	startEvent             TIMESTAMP,
+	duration               VARCHAR(250),
+	endEvent               TIMESTAMP,
+	source                 VARCHAR(250),
+	session                VARCHAR(250),
+	confirmed_by           VARCHAR(250),
+	confirmation           VARCHAR(250),
+	sensitivity            VARCHAR(250),
+	conditions             VARCHAR(250),
+	thresholds             VARCHAR(250),
+	actions                VARCHAR(250),
+	measures               VARCHAR(250),
+	dataIns                TIMESTAMP,
+	dataUpdate             TIMESTAMP,
+	remedyTicketID         VARCHAR(250),
+	remedyTicketIDStatus   VARCHAR(250),
+	remedyTicketCreateDate TIMESTAMP,
+	dashboardName          VARCHAR(250),
+	CONSTRAINT primary_key_incident PRIMARY KEY (name,startEvent)
+);
+
+drop table REMEDY_CONFIGURATION;
+create table REMEDY_CONFIGURATION(
+	remedy_configuration_id       INTEGER NOT NULL GENERATED ALWAYS AS IDENTITY (START WITH 1, INCREMENT BY 1),
+	username                      VARCHAR(250),
+	password                      VARCHAR(250),
+	status                        VARCHAR(250),
+	service_type                  VARCHAR(250),
+	reported_source               VARCHAR(250),
+	first_name                    VARCHAR(250),
+	last_name                     VARCHAR(250),
+	action                        VARCHAR(250),
+	create_request                VARCHAR(250),
+	sede_int                      VARCHAR(250),
+	CONSTRAINT primary_key_remedy_configuration PRIMARY KEY (remedy_configuration_id)
+);
+
+drop table SCHEDULATOR_CONFIGURATION;
+create table SCHEDULATOR_CONFIGURATION(
+	schedulator_configuration_id       INTEGER NOT NULL GENERATED ALWAYS AS IDENTITY (START WITH 1, INCREMENT BY 1),
+	name                      VARCHAR(250),
+	crontime                  VARCHAR(250),
+	status                    VARCHAR(250),
+	CONSTRAINT primary_key_schedulator_configuration PRIMARY KEY (schedulator_configuration_id)
+);
+
+insert into 
+	 SCHEDULATOR_CONFIGURATION(name,crontime,status)
+values('Schedulator','0/5 * * * * ?','false');
+
+DROP TABLE IMPACT;
+DROP TABLE SERVICE_TYPE;
+DROP TABLE URGENCY;
+DROP TABLE TICKET_STATUS;
+DROP TABLE BOOKING;

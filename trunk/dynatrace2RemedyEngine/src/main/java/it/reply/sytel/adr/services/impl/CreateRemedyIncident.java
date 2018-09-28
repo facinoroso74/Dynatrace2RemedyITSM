@@ -19,6 +19,7 @@ import it.reply.sytel.adr.domain.RemedyConfiguration;
 import it.reply.sytel.adr.remedyAdapter.RemedyClient;
 import it.reply.sytel.adr.remedyAdapter.exc.RemedyBadValueFieldException;
 import it.reply.sytel.adr.repositories.ConfigurationRepository;
+import it.reply.sytel.adr.repositories.RemedyConfigurationRepository;
 import it.reply.sytel.adr.services.exc.CreateRemedyIncidentException;
 import it.reply.sytel.adr.services.exc.IncidentTypeConfigurationException;
 import it.reply.sytel.adr.utility.ADRUtility;
@@ -31,6 +32,9 @@ public class CreateRemedyIncident extends AbstractService {
 	@Autowired
     private ConfigurationRepository configurationRepository; 
 	
+	@Autowired
+    private RemedyConfigurationRepository remedyConfigurationRepository;
+	
 	private IncidentDAO incidentDAO;
 	private RemedyClient remedyClient;
 	
@@ -40,17 +44,22 @@ public class CreateRemedyIncident extends AbstractService {
 
 	}
 	
+	
+	
 	@Override
 	protected Enviromnent perform(Enviromnent env) {
 
 		try {
 			
+			Iterable<RemedyConfiguration> remedyCondifugrationIterable = remedyConfigurationRepository.findAll();
+			
+			
 			Map<String , Object> configMap = (Map<String , Object>)getContext().getConfigMap();
 			HashMap< String, List<Configuration>> mapIncidentConfiguration = (HashMap< String, List<Configuration>>)configMap.get(ADRConstants.INCIDENT_CONFIGURATION_CONFIG_MAP);
 			
-			log.debug("Getting the RemedyConfiguration for [" + ((List<RemedyConfiguration>)configMap.get(ADRConstants.REMEDY_CONFIGURATION)).get(0) + "]");
+			//log.debug("Getting the RemedyConfiguration for [" + ((List<RemedyConfiguration>)configMap.get(ADRConstants.REMEDY_CONFIGURATION)).get(0) + "]");
 			
-			RemedyConfiguration remedyConfiguration = ((List<RemedyConfiguration>)configMap.get(ADRConstants.REMEDY_CONFIGURATION)).get(0);
+			RemedyConfiguration remedyConfiguration = ((List<RemedyConfiguration>)remedyCondifugrationIterable).get(0);
 			
 			if(remedyConfiguration==null)
 				throw new RemedyBadValueFieldException("The RemedyConfiguration is NULL. Please set the configuration for ITSM Remedy");
@@ -153,7 +162,7 @@ public class CreateRemedyIncident extends AbstractService {
 				Timestamp now = new Timestamp(System.currentTimeMillis());
 				dynatraceIncident.setRemedyTicketCreateDate(now);
 				dynatraceIncident.setRemedyTicketID(remedyIncidentId);
-				dynatraceIncident.setRemedyTicketIDStatus(ADRConstants.STATUS);
+				dynatraceIncident.setRemedyTicketIDStatus(remedyConfiguration.getStatus());
 				
 				if(log.isDebugEnabled())
 					log.debug("Response from Remedy ----> remedyIncidentId:["+remedyIncidentId+"]");
