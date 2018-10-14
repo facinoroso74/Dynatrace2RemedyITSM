@@ -22,6 +22,7 @@
                                     <entry key="keystoreURLString" value=""/>
                                     <entry key="trustPwd"          value="password"/>
                                     <entry key="trustURLString"    value="file:///D:/Dynatrace2RemedyITSM/Dynatrace2RemedyITSM/trunk/resourcesConf/truststore.jks"/>
+<!--                                     <entry key="trustURLString"    value="file:///opt/dynatrace/remedyConnector/config/truststore.jks"/> -->
                                     <entry key="urlToConnect"      value="http://localhost:8088/mockHPD_IncidentInterface_Create_WSPortTypeSoapBinding"/>
 <!-- 								 	<entry key="urlToConnect"      value="http://red19983:8088/mockHPD_IncidentInterface_Create_WSPortTypeSoapBinding"/> -->
 									<entry key="maxTotalThread"    value="100"/>
@@ -63,6 +64,7 @@
                                     <entry key="keystorePwd"       value=""/>
                                     <entry key="keystoreURLString" value=""/>
                                     <entry key="trustPwd"          value="password"/>
+<!--                                     <entry key="trustURLString"    value="file:///opt/dynatrace/remedyConnector/config/truststore.jks"/> -->
                                     <entry key="trustURLString"    value="file:///D:/Dynatrace2RemedyITSM/Dynatrace2RemedyITSM/trunk/resourcesConf/truststore.jks"/>
 									<entry key="urlToConnect"      value=""/>
 									<entry key="maxTotalThread"    value="100"/>
@@ -90,38 +92,6 @@
 		</property> 
 	</bean>
 
-<!-- 	<bean id="DB2DataSource" class="org.apache.commons.dbcp.BasicDataSource" destroy-method="close" > -->
-<!--         <property name="driverClassName"> -->
-<!--         	<value>com.ibm.db2.jcc.DB2Driver</value> -->
-<!--         </property> -->
-<!--         <property name="url"> -->
-<!--             <value>jdbc:db2://10.133.1.110:33009/SG01D1AC</value> -->
-<!--         </property> -->
-<!--         <property name="username"> -->
-<!--         	<value>E101157</value> -->
-<!--         </property> -->
-<!--         <property name="password"> -->
-<!--         	<value>PA66TEST</value> -->
-<!--         </property> -->
-<!--     </bean> -->
-    
-<!--     <bean id="jdbcTemplate" class="org.springframework.jdbc.core.JdbcTemplate"> -->
-<!-- 		<property name="dataSource"> -->
-<!-- 			<ref bean="DB2DataSource"/> -->
-<!-- 		</property> -->
-<!-- 	</bean> -->
-	
-	<!-- DAO -->
-	
-<!-- 	<bean id="testCaseDAO" class="it.reply.sytel.rma.dao.impl.TestCaseDaoImpl"> -->
-<!--     	<property name="jdbcTemplate"> -->
-<!--     		<ref bean="jdbcTemplate"/> -->
-<!--     	</property> -->
-<!--     	<property name="schemaName"> -->
-<!--     		<value>TXT1</value> -->
-<!--     	</property> -->
-<!-- 	</bean> -->
-	
 	<bean id="restClient" class="it.reply.sytel.adr.dynatraceClient.imp.RestClientImpl"> 
     	<property name="httpClient">
     		<ref bean="sharedHttpClientDynatrace"/>
@@ -160,13 +130,19 @@
 	
 	</bean>
 	
-	<bean id="incidentDAO" class="it.reply.sytel.adr.dao.impl.IncidentDAOImpl"> 
-<!--     	<property name="jdbcTemplate"> -->
-<!--     		<ref bean="jdbcTemplate"/> -->
-<!--     	</property> -->
-<!--     	<property name="schemaName"> -->
-<!--     		<value>TXT1</value> -->
-<!--     	</property> -->
+	<bean id="incidentDAO" class="it.reply.sytel.adr.dao.impl.IncidentDAOImpl" init-method="init">
+		<property name="protocol">
+			<value>localhost</value>
+		</property>
+		<property name="port">
+			<value>1527</value>
+		</property>
+		<property name="dbName">
+			<value>d:/DerbyDB1/IncidentDB</value>
+		</property>
+<!-- 		<property name="dbName"> -->
+<!-- 			<value>/opt/dynatrace/remedyConnector/DerbyDB/IncidentDB</value> -->
+<!-- 		</property> -->
 	</bean>
 
 	<!-- Services Context -->
@@ -183,14 +159,15 @@
 			<ref bean="configResourceFile"/>
 		</property>
 	</bean>
+	
+	<bean id="daoConfig" class="it.reply.sytel.adr.configuration.ConfigServicesFile">
 		
-	<bean id="configServicesDb" class="it.reply.sytel.adr.configuration.ConfigServicesDB" init-method="init">
 	</bean>
+	
 	
 	<bean id="serviceContext" class="it.reply.sytel.adr.core.services.context.impl.ServiceContextImpl">
 		<property name="daoConfig">
-<!-- 			<ref bean="configServicesFile" /> -->
- 			<ref bean="configServicesDb" />
+			<ref bean="daoConfig" />
 		</property>
 	</bean>
 	

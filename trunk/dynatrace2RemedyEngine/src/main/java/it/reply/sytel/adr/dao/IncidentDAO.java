@@ -9,11 +9,7 @@ import it.reply.sytel.adr.vo.DynatraceIncidentKey;
 public interface IncidentDAO {
 
 	public void insertDynatraceIncident(DynatraceIncident dynatraceIncident);
-	
-	public DynatraceIncident getDynatraceIncident(DynatraceIncidentKey dynatraceIncidentKey);
-	
-	public List<DynatraceIncident> getDynatraceIncidentToClose(Timestamp startToCompare);
-	
+
 	public List<DynatraceIncident> getDynatraceIncidentWithoutRemedyTicketID();
 	
 	public boolean alreadyExistsDynatraceIncident(DynatraceIncidentKey dynatraceIncidentKey);

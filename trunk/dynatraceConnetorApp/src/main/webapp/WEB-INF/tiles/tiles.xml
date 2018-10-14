@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="ISO-8859-1" ?>
+<!DOCTYPE tiles-definitions PUBLIC
+       "-//Apache Software Foundation//DTD Tiles Configuration 3.0//EN"
+       "http://tiles.apache.org/dtds/tiles-config_3_0.dtd">
+
+
+<tiles-definitions>
+
+	<definition name="app.homepage" template="/WEB-INF/jsp/layouts/default.jsp">
+		<put-attribute name="title" value="Demo Page" />
+		<put-attribute name="header" value="/WEB-INF/jsp/layouts/header.jsp" />
+		<put-attribute name="content" value="/WEB-INF/jsp/view/home.jsp" />
+		<put-attribute name="footer" value="/WEB-INF/jsp/layouts/footer.jsp" />
+	</definition>
+
+
+	<!-- Incident Configuration -->
+	<definition name="app.incidentConfiguration" template="/WEB-INF/jsp/layouts/default.jsp">
+		<put-attribute name="title" value="Demo Page" />
+		<put-attribute name="header" value="/WEB-INF/jsp/layouts/header.jsp" />
+		<put-attribute name="content" value="/WEB-INF/jsp/view/IncidentConfigurationList.jsp" />
+		<put-attribute name="footer" value="/WEB-INF/jsp/layouts/footer.jsp" />
+	</definition>
+	
+	<definition name="app.addIncidentConfiguration" template="/WEB-INF/jsp/layouts/default.jsp">
+		<put-attribute name="title" value="Demo Page" />
+		<put-attribute name="header" value="/WEB-INF/jsp/layouts/header.jsp" />
+		<put-attribute name="content" value="/WEB-INF/jsp/view/addIncidentConfiguration.jsp" />
+		<put-attribute name="footer" value="/WEB-INF/jsp/layouts/footer.jsp" />
+	</definition>
+	
+	<definition name="app.editIncidentConfiguration" template="/WEB-INF/jsp/layouts/default.jsp">
+		<put-attribute name="title" value="Demo Page" />
+		<put-attribute name="header" value="/WEB-INF/jsp/layouts/header.jsp" />
+		<put-attribute name="content" value="/WEB-INF/jsp/view/editIncidentConfiguration.jsp" />
+		<put-attribute name="footer" value="/WEB-INF/jsp/layouts/footer.jsp" />
+	</definition>
+	
+	<!-- DashBoard Configuration -->
+	<definition name="app.dashboardConfiguration" template="/WEB-INF/jsp/layouts/default.jsp">
+		<put-attribute name="title" value="Demo Page" />
+		<put-attribute name="header" value="/WEB-INF/jsp/layouts/header.jsp" />
+		<put-attribute name="content" value="/WEB-INF/jsp/view/dashboardConfiguration.jsp" />
+		<put-attribute name="footer" value="/WEB-INF/jsp/layouts/footer.jsp" />
+	</definition>
+	
+	<definition name="app.addDashboardConfiguration" template="/WEB-INF/jsp/layouts/default.jsp">
+		<put-attribute name="title" value="Demo Page" />
+		<put-attribute name="header" value="/WEB-INF/jsp/layouts/header.jsp" />
+		<put-attribute name="content" value="/WEB-INF/jsp/view/addDashboardConfiguration.jsp" />
+		<put-attribute name="footer" value="/WEB-INF/jsp/layouts/footer.jsp" />
+	</definition>
+	
+	<definition name="app.editDashboardConfiguration" template="/WEB-INF/jsp/layouts/default.jsp">
+		<put-attribute name="title" value="Demo Page" />
+		<put-attribute name="header" value="/WEB-INF/jsp/layouts/header.jsp" />
+		<put-attribute name="content" value="/WEB-INF/jsp/view/editDashboardConfiguration.jsp" />
+		<put-attribute name="footer" value="/WEB-INF/jsp/layouts/footer.jsp" />
+	</definition>
+	
+	<!-- Remedy Configuration -->
+	<definition name="app.remedyConfiguration" template="/WEB-INF/jsp/layouts/default.jsp">
+		<put-attribute name="title" value="Demo Page" />
+		<put-attribute name="header" value="/WEB-INF/jsp/layouts/header.jsp" />
+		<put-attribute name="content" value="/WEB-INF/jsp/view/remedyConfiguration.jsp" />
+		<put-attribute name="footer" value="/WEB-INF/jsp/layouts/footer.jsp" />
+	</definition>
+	
+	<definition name="app.addRemedyConfiguration" template="/WEB-INF/jsp/layouts/default.jsp">
+		<put-attribute name="title" value="Demo Page" />
+		<put-attribute name="header" value="/WEB-INF/jsp/layouts/header.jsp" />
+		<put-attribute name="content" value="/WEB-INF/jsp/view/addRemedyConfiguration.jsp" />
+		<put-attribute name="footer" value="/WEB-INF/jsp/layouts/footer.jsp" />
+	</definition>
+	
+	<definition name="app.editRemedyConfiguration" template="/WEB-INF/jsp/layouts/default.jsp">
+		<put-attribute name="title" value="Demo Page" />
+		<put-attribute name="header" value="/WEB-INF/jsp/layouts/header.jsp" />
+		<put-attribute name="content" value="/WEB-INF/jsp/view/editRemedyConfiguration.jsp" />
+		<put-attribute name="footer" value="/WEB-INF/jsp/layouts/footer.jsp" />
+	</definition>
+	
+	<!-- Dynatrace Incidents  -->
+	<definition name="app.dynatraceIncidents" template="/WEB-INF/jsp/layouts/default.jsp">
+		<put-attribute name="title" value="Demo Page" />
+		<put-attribute name="header" value="/WEB-INF/jsp/layouts/header.jsp" />
+		<put-attribute name="content" value="/WEB-INF/jsp/view/dynatraceIncidents.jsp" />
+		<put-attribute name="footer" value="/WEB-INF/jsp/layouts/footer.jsp" />
+	</definition>
+	
+	<!-- Scheduler Manager -->
+	<definition name="app.schedulerManager" template="/WEB-INF/jsp/layouts/default.jsp">
+		<put-attribute name="title" value="Demo Page" />
+		<put-attribute name="header" value="/WEB-INF/jsp/layouts/header.jsp" />
+		<put-attribute name="content" value="/WEB-INF/jsp/view/schedulerManager.jsp" />
+		<put-attribute name="footer" value="/WEB-INF/jsp/layouts/footer.jsp" />
+	</definition>
+	
+	
+</tiles-definitions>

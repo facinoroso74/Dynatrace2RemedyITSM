@@ -40,7 +40,7 @@ public class ConfigServicesFile implements ConfigurationService {
 	private Logger log = LogManager.getLogger(getClass());
 	
     private Resource resource;
-	private Map<String,Object> map;
+	private Map<String,Object> map=new HashMap<String,Object>();
     
 	private Map<String,AppProperty> loadAppProperty(Properties prop,String appNames) {
 		String[] appNameArray = appNames.split(ADRConstants.DELIMITER);

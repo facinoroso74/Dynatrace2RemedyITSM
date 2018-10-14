@@ -1,7 +1,7 @@
 package it.reply.sytel.adr.restServices;
 
-import org.apache.log4j.LogManager;
-import org.apache.log4j.Logger;
+//import org.apache.log4j.LogManager;
+//import org.apache.log4j.Logger;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
@@ -16,7 +16,7 @@ import it.reply.sytel.adr.repositories.DynatraceIncidentRepository;
 @RequestMapping({"/dynatraceIncident"})
 public class DynatraceIncident
 {
-  private Logger log = LogManager.getLogger(getClass());
+  //private Logger log = LogManager.getLogger(getClass());
   
   @Autowired
   DynatraceIncidentRepository dynatraceIncidentRepository;
@@ -25,7 +25,7 @@ public class DynatraceIncident
   @RequestMapping({"/readAll"})
   public DynatraceIncidentTableResponse readAll()
   {
-    this.log.debug("Dashboard--> called readAll method");
+    //this.log.debug("Dashboard--> called readAll method");
     
     Iterable<DynatraceIncidentBean> data = this.dynatraceIncidentRepository.findAll();
     return new DynatraceIncidentTableResponse(data);
@@ -34,14 +34,14 @@ public class DynatraceIncident
   @RequestMapping({"/delete"})
   public void delete(@RequestParam Long dynatraceIncidentId)
   {
-    this.log.debug("Deleting the dashboardId:[" + dynatraceIncidentId + "]");
-    this.dynatraceIncidentRepository.delete(dynatraceIncidentId);
+    //this.log.debug("Deleting the dashboardId:[" + dynatraceIncidentId + "]");
+    this.dynatraceIncidentRepository.deleteById(dynatraceIncidentId);
   }
   
   @RequestMapping({"/read"})
   public DynatraceIncidentBean read(@RequestParam Long dynatraceIncidentId)
   {
-    this.log.debug("Deleting the dynatraceIncidentId:[" + dynatraceIncidentId + "]");
+    //this.log.debug("Deleting the dynatraceIncidentId:[" + dynatraceIncidentId + "]");
     return this.dynatraceIncidentRepository.findById(dynatraceIncidentId);
   }
 }

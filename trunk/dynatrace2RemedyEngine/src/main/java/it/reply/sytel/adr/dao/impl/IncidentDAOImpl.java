@@ -18,18 +18,15 @@ import it.reply.sytel.adr.vo.DynatraceIncident;
 import it.reply.sytel.adr.vo.DynatraceIncidentKey;
 
 public class IncidentDAOImpl implements IncidentDAO {
-
-	//embedded
-	//String driver = "org.apache.derby.jdbc.EmbeddedDriver";
-	//String protocol = "";
-	//String dbName="D:/DerbyDB/IncidentDB";
 	
 	//network
-	String driver = "org.apache.derby.jdbc.ClientDriver";
-	String protocol = "//localhost:1527/";
-	String dbName="d:/DerbyDB/IncidentDB";
-	String connectionURL = "jdbc:derby:"+protocol + dbName; 
-	
+	public static final String DRIVER_DB = "org.apache.derby.jdbc.ClientDriver";
+
+	private String protocol;
+	private String port;
+	private String dbName;
+//	private  String connectionURL = "jdbc:derby:"+protocol + dbName; 
+//	
 	javax.sql.DataSource ds=null;
 	
 	
@@ -89,14 +86,18 @@ public class IncidentDAOImpl implements IncidentDAO {
 																+ 	" and startEvent=?";
 	
 	public IncidentDAOImpl() {
-		
-		ds = new org.apache.derby.jdbc.ClientDataSource();
-		((org.apache.derby.jdbc.ClientDataSource) ds).setServerName("localhost");
-		((org.apache.derby.jdbc.ClientDataSource) ds).setPortNumber(1527);
-		((org.apache.derby.jdbc.ClientDataSource) ds).setDatabaseName("d:/DerbyDB/IncidentDB;create=false");
-		//((org.apache.derby.jdbc.ClientDataSource) ds).setTraceDirectory("d:/DerbyDB/myTraceDir");
 	}
 	
+	public void init() {
+			
+		ds = new org.apache.derby.jdbc.ClientDataSource();
+		((org.apache.derby.jdbc.ClientDataSource) ds).setServerName(this.protocol);
+		((org.apache.derby.jdbc.ClientDataSource) ds).setPortNumber((Integer.parseInt(this.port)));
+		//((org.apache.derby.jdbc.ClientDataSource) ds).setDatabaseName("d:/DerbyDB/IncidentDB;create=false");
+		((org.apache.derby.jdbc.ClientDataSource) ds).setDatabaseName(this.dbName);
+		//((org.apache.derby.jdbc.ClientDataSource) ds).setTraceDirectory("d:/DerbyDB/myTraceDir");
+	}
+
 	private Logger log = LogManager.getLogger(getClass());
 	
 	
@@ -200,8 +201,6 @@ public class IncidentDAOImpl implements IncidentDAO {
 				log.debug("name:["+ rslt.getString("name")+ " startEvent:[" + rslt.getTimestamp("startEvent")+"]");
 			}
 						
-			//DriverManager.getConnection("jdbc:derby:D:/DerbyDB/IncidentDB;shutdown=true");
-			
 			if(total>0)
 				return true;
 			
@@ -215,19 +214,7 @@ public class IncidentDAOImpl implements IncidentDAO {
 	}
 
 
-	@Override
-	public List<DynatraceIncident> getDynatraceIncidentToClose(Timestamp startToCompare) {
-		// TODO Auto-generated method stub
-		return null;
-	}
-
-
-	@Override
-	public DynatraceIncident getDynatraceIncident(DynatraceIncidentKey dynatraceIncidentKey) {
-		// TODO Auto-generated method stub
-		return null;
-	}
-
+	
 
 
 
@@ -421,6 +408,30 @@ public class IncidentDAOImpl implements IncidentDAO {
 				} finally {
 					closeResource(null, stmt, rslt);
 				}
+	}
+
+	public String getProtocol() {
+		return protocol;
+	}
+
+	public void setProtocol(String protocol) {
+		this.protocol = protocol;
+	}
+
+	public String getPort() {
+		return port;
+	}
+
+	public void setPort(String port) {
+		this.port = port;
+	}
+
+	public String getDbName() {
+		return dbName;
+	}
+
+	public void setDbName(String dbName) {
+		this.dbName = dbName;
 	}
 
 }

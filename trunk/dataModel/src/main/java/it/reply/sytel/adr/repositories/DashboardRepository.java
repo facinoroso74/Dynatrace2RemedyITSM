@@ -9,5 +9,6 @@ import it.reply.sytel.adr.domain.Dashboard;
 public interface DashboardRepository extends CrudRepository<Dashboard, Long> {
 	
 	 public Dashboard findByName(String name);
+	 public Dashboard findByDashboardId(Long id);
 	 
 }

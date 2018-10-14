@@ -21,7 +21,7 @@ public class ConnectorManager {
     private static final String SCHEDULATOR_NAME="Schedulator";
     
 	@Autowired
-	private RemedyIncidetBuilderEngine remedyIncidetBuilderEngine;
+	private RemedyIncidetBuilderEngine remedyIncidetBuilderEngine; 
     
 	@Autowired
 	SchedulerConfig schedulerConfig;

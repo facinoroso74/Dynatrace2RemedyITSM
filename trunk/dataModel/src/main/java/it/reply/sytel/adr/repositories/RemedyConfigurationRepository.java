@@ -7,5 +7,7 @@ import it.reply.sytel.adr.domain.RemedyConfiguration;
 
 @Transactional
 public interface RemedyConfigurationRepository extends CrudRepository<RemedyConfiguration, Long> {
+
+	RemedyConfiguration findByRemedyConfigurationId(Long remedyConfigurationId);
 		
 }
