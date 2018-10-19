@@ -21,6 +21,7 @@
         <module>dataModel</module>
 		<module>dynatrace2RemedyEngine</module>
         <module>dynatraceConnetorApp</module>
+		<module>remedy-wsClose-xmlbeans</module>
     </modules>
 
 <!-- 
