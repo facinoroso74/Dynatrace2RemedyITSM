@@ -46,7 +46,11 @@ public class CloseRemedyIncident extends AbstractService {
 			
 			//N.B.
 			//eventualemente chiudere il ticket su remedy utilizzando l'id dell'incident
-			
+			//e chiudere quelli che hanno l0 startDate ed EndDate valorizzato
+			//1-Fare query su Remedy con l'ID 
+			//2-se lo stato è diverso da risolto o chiuso chiamare la modify con lo stato a Risolto
+			//3-aggiornare lo stato sulla tabella degli incident
+						
 			return env;
 
 		
