@@ -42,7 +42,7 @@ $(document).ready(function() {
             	{ "data": "remedyTicketID" },
             	{ "data": "remedyTicketIDStatus" },
             	{ "data": "remedyTicketCreateDate" },
-            	
+            	{ "data": "remedyresponse" },
             ],
  	    	 "pageLength": 20,
 				
@@ -149,6 +149,7 @@ $(document).ready(function() {
                 <th>remedyTicketID</th>
                 <th>remedyTicketIDStatus</th>
                 <th>remedyTicketCreateDate</th>
+                <th>remedyResponse</th>
             </tr>
         </thead>
         <tfoot>
@@ -176,6 +177,7 @@ $(document).ready(function() {
                 <th>remedyTicketID</th>
                 <th>remedyTicketIDStatus</th>
                 <th>remedyTicketCreateDate</th>
+                <th>remedyResponse</th>
             </tr>
         </tfoot>
     </table>

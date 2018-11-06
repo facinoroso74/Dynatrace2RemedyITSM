@@ -28,8 +28,11 @@ $(document).ready(function() {
     	$("#action").val(data.action);
     	$("#create_request").val(data.create_request);
     	$("#sede_int").val(data.sede_int);
+    	$("#statusResolved").val(data.statusResolved);
+    	$("#statusReasonResolved").val(data.statusReasonResolved);
+    	$("#actionResolved").val(data.actionResolved);
+    	$("#resolutionResolved").val(data.resolutionResolved);
     	
-    	    	    	
     	//alert("data.id22-->"+data.configurationId);
        //$('.greeting-id').append(data.id);
        //$('.greeting-content').append(data.content);
@@ -111,6 +114,10 @@ $(document).ready(function() {
 		<tr><td>ACTION</td><td><input type="TEXT" id="action" name="action"></td></tr>
 		<tr><td>CREATE_REQUEST</td><td><input type="TEXT" id="create_request" name="create_request"></td></tr>
 		<tr><td>SEDE_INT</td><td><input type="TEXT" id="sede_int" name="sede_int"></td></tr>
+		<tr><td>STATUS_RESOLVED</td><td><input type="TEXT" id="statusResolved" name="statusResolved"></td></tr>
+		<tr><td>STATUS_REASON_RESOLVED</td><td><input type="TEXT" id="statusReasonResolved" name="statusReasonResolved"></td></tr>
+		<tr><td>ACTION_RESOLVED</td><td><input type="TEXT" id="actionResolved" name="actionResolved"></td></tr>
+		<tr><td>RESOLUTION_RESOLVED</td><td><input type="TEXT" id="resolutionResolved" name="resolutionResolved"></td></tr>
 	</table>
 	
 </form>

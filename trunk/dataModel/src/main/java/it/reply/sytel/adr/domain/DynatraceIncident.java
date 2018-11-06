@@ -54,6 +54,7 @@ public class DynatraceIncident implements Serializable{
 	private String remedyTicketID;
 	private String remedyTicketIDStatus;
 	private Timestamp remedyTicketCreateDate;
+	private String remedyResponse;
 	
 	public int getId() {
 		return id;
@@ -195,6 +196,12 @@ public class DynatraceIncident implements Serializable{
 	public void setDashboarName(String dashboarName) {
 		this.dashboarName = dashboarName;
 	}
+	public String getRemedyResponse() {
+		return remedyResponse;
+	}
+	public void setRemedyResponse(String remedyResponse) {
+		this.remedyResponse = remedyResponse;
+	}
 	@Override
 	public int hashCode() {
 		final int prime = 31;
@@ -213,6 +220,7 @@ public class DynatraceIncident implements Serializable{
 		result = prime * result + ((incidentType == null) ? 0 : incidentType.hashCode());
 		result = prime * result + ((measures == null) ? 0 : measures.hashCode());
 		result = prime * result + ((name == null) ? 0 : name.hashCode());
+		result = prime * result + ((remedyResponse == null) ? 0 : remedyResponse.hashCode());
 		result = prime * result + ((remedyTicketCreateDate == null) ? 0 : remedyTicketCreateDate.hashCode());
 		result = prime * result + ((remedyTicketID == null) ? 0 : remedyTicketID.hashCode());
 		result = prime * result + ((remedyTicketIDStatus == null) ? 0 : remedyTicketIDStatus.hashCode());
@@ -300,6 +308,11 @@ public class DynatraceIncident implements Serializable{
 				return false;
 		} else if (!name.equals(other.name))
 			return false;
+		if (remedyResponse == null) {
+			if (other.remedyResponse != null)
+				return false;
+		} else if (!remedyResponse.equals(other.remedyResponse))
+			return false;
 		if (remedyTicketCreateDate == null) {
 			if (other.remedyTicketCreateDate != null)
 				return false;
@@ -347,7 +360,6 @@ public class DynatraceIncident implements Serializable{
 			return false;
 		return true;
 	}
-	
 	@Override
 	public String toString() {
 		return "DynatraceIncident [id=" + id + ", name=" + name + ", startEvent=" + startEvent + ", dashboarName="
@@ -357,8 +369,9 @@ public class DynatraceIncident implements Serializable{
 				+ ", conditions=" + conditions + ", thresholds=" + thresholds + ", actions=" + actions + ", measures="
 				+ measures + ", dataIns=" + dataIns + ", dataUpdate=" + dataUpdate + ", remedyTicketID="
 				+ remedyTicketID + ", remedyTicketIDStatus=" + remedyTicketIDStatus + ", remedyTicketCreateDate="
-				+ remedyTicketCreateDate + "]";
+				+ remedyTicketCreateDate + ", remedyResponse=" + remedyResponse + "]";
 	}
+	
 	
 	
 }

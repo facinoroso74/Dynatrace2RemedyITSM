@@ -53,6 +53,7 @@ public class DynatraceIncidentForTable implements Serializable{
 	
 	private String dashboardName;
 
+	private String remedyresponse;
 	
 	public String getCheckbox() {
 		return checkbox;
@@ -254,6 +255,14 @@ public class DynatraceIncidentForTable implements Serializable{
 		this.dashboardName = dashboardName;
 	}
 
+	public String getRemedyresponse() {
+		return remedyresponse;
+	}
+
+	public void setRemedyresponse(String remedyResponse) {
+		this.remedyresponse = remedyResponse;
+	}
+
 	@Override
 	public int hashCode() {
 		final int prime = 31;
@@ -273,6 +282,7 @@ public class DynatraceIncidentForTable implements Serializable{
 		result = prime * result + ((incidentType == null) ? 0 : incidentType.hashCode());
 		result = prime * result + ((measures == null) ? 0 : measures.hashCode());
 		result = prime * result + ((name == null) ? 0 : name.hashCode());
+		result = prime * result + ((remedyresponse == null) ? 0 : remedyresponse.hashCode());
 		result = prime * result + ((remedyTicketCreateDate == null) ? 0 : remedyTicketCreateDate.hashCode());
 		result = prime * result + ((remedyTicketID == null) ? 0 : remedyTicketID.hashCode());
 		result = prime * result + ((remedyTicketIDStatus == null) ? 0 : remedyTicketIDStatus.hashCode());
@@ -319,7 +329,6 @@ public class DynatraceIncidentForTable implements Serializable{
 				return false;
 		} else if (!confirmation.equals(other.confirmation))
 			return false;
-		
 		if (dashboardName == null) {
 			if (other.dashboardName != null)
 				return false;
@@ -369,6 +378,11 @@ public class DynatraceIncidentForTable implements Serializable{
 			if (other.name != null)
 				return false;
 		} else if (!name.equals(other.name))
+			return false;
+		if (remedyresponse == null) {
+			if (other.remedyresponse != null)
+				return false;
+		} else if (!remedyresponse.equals(other.remedyresponse))
 			return false;
 		if (remedyTicketCreateDate == null) {
 			if (other.remedyTicketCreateDate != null)
@@ -421,13 +435,14 @@ public class DynatraceIncidentForTable implements Serializable{
 	@Override
 	public String toString() {
 		return "DynatraceIncidentForTable [checkbox=" + checkbox + ", id=" + id + ", name=" + name + ", incidentType="
-				+ incidentType + ", heatfield=" + heatfield + ", state=" + state
-				+ ", startEvent=" + startEvent + ", duration=" + duration + ", endEvent=" + endEvent + ", source="
-				+ source + ", session=" + session + ", confimedBy=" + confimedBy + ", confirmation=" + confirmation
-				+ ", sensitivity=" + sensitivity + ", conditions=" + conditions + ", thresholds=" + thresholds
-				+ ", actions=" + actions + ", measures=" + measures + ", dataIns=" + dataIns + ", dataUpdate="
-				+ dataUpdate + ", remedyTicketID=" + remedyTicketID + ", remedyTicketIDStatus=" + remedyTicketIDStatus
-				+ ", remedyTicketCreateDate=" + remedyTicketCreateDate + ", dashboardName=" + dashboardName + "]";
+				+ incidentType + ", heatfield=" + heatfield + ", state=" + state + ", startEvent=" + startEvent
+				+ ", duration=" + duration + ", endEvent=" + endEvent + ", source=" + source + ", session=" + session
+				+ ", confimedBy=" + confimedBy + ", confirmation=" + confirmation + ", sensitivity=" + sensitivity
+				+ ", conditions=" + conditions + ", thresholds=" + thresholds + ", actions=" + actions + ", measures="
+				+ measures + ", dataIns=" + dataIns + ", dataUpdate=" + dataUpdate + ", remedyTicketID="
+				+ remedyTicketID + ", remedyTicketIDStatus=" + remedyTicketIDStatus + ", remedyTicketCreateDate="
+				+ remedyTicketCreateDate + ", dashboardName=" + dashboardName + ", remedyResponse=" + remedyresponse
+				+ "]";
 	}
-	
+
 }

@@ -39,6 +39,20 @@ public class RemedyConfigurationForTable implements Serializable{
 	@Column
 	String sede_int;
 	
+	@Column
+	String statusResolved;
+	
+	@Column
+	String statusReasonResolved;
+	
+	@Column
+	String actionResolved;
+	
+	@Column
+	String resolutionResolved;
+	
+	
+	
 	public String getCheckbox() {
 		return checkbox;
 	}
@@ -111,19 +125,37 @@ public class RemedyConfigurationForTable implements Serializable{
 	public void setSede_int(String sede_int) {
 		this.sede_int = sede_int;
 	}
-	@Override
-	public String toString() {
-		return "RemedyConfigurationForTable [checkbox=" + checkbox + ", remedyConfigurationId=" + remedyConfigurationId
-				+ ", username=" + username + ", password=" + password + ", status=" + status + ", service_type="
-				+ service_type + ", reported_source=" + reported_source + ", first_name=" + first_name + ", last_name="
-				+ last_name + ", action=" + action + ", create_request=" + create_request + ", sede_int=" + sede_int
-				+ "]";
+	public String getStatusResolved() {
+		return statusResolved;
 	}
+	public void setStatusResolved(String statusResolved) {
+		this.statusResolved = statusResolved;
+	}
+	public String getStatusReasonResolved() {
+		return statusReasonResolved;
+	}
+	public void setStatusReasonResolved(String statusReasonResolved) {
+		this.statusReasonResolved = statusReasonResolved;
+	}
+	public String getActionResolved() {
+		return actionResolved;
+	}
+	public void setActionResolved(String actionResolved) {
+		this.actionResolved = actionResolved;
+	}
+	public String getResolutionResolved() {
+		return resolutionResolved;
+	}
+	public void setResolutionResolved(String resolutionResolved) {
+		this.resolutionResolved = resolutionResolved;
+	}
+	
 	@Override
 	public int hashCode() {
 		final int prime = 31;
 		int result = 1;
 		result = prime * result + ((action == null) ? 0 : action.hashCode());
+		result = prime * result + ((actionResolved == null) ? 0 : actionResolved.hashCode());
 		result = prime * result + ((checkbox == null) ? 0 : checkbox.hashCode());
 		result = prime * result + ((create_request == null) ? 0 : create_request.hashCode());
 		result = prime * result + ((first_name == null) ? 0 : first_name.hashCode());
@@ -131,12 +163,16 @@ public class RemedyConfigurationForTable implements Serializable{
 		result = prime * result + ((password == null) ? 0 : password.hashCode());
 		result = prime * result + ((remedyConfigurationId == null) ? 0 : remedyConfigurationId.hashCode());
 		result = prime * result + ((reported_source == null) ? 0 : reported_source.hashCode());
+		result = prime * result + ((resolutionResolved == null) ? 0 : resolutionResolved.hashCode());
 		result = prime * result + ((sede_int == null) ? 0 : sede_int.hashCode());
 		result = prime * result + ((service_type == null) ? 0 : service_type.hashCode());
 		result = prime * result + ((status == null) ? 0 : status.hashCode());
+		result = prime * result + ((statusReasonResolved == null) ? 0 : statusReasonResolved.hashCode());
+		result = prime * result + ((statusResolved == null) ? 0 : statusResolved.hashCode());
 		result = prime * result + ((username == null) ? 0 : username.hashCode());
 		return result;
 	}
+	
 	@Override
 	public boolean equals(Object obj) {
 		if (this == obj)
@@ -150,6 +186,11 @@ public class RemedyConfigurationForTable implements Serializable{
 			if (other.action != null)
 				return false;
 		} else if (!action.equals(other.action))
+			return false;
+		if (actionResolved == null) {
+			if (other.actionResolved != null)
+				return false;
+		} else if (!actionResolved.equals(other.actionResolved))
 			return false;
 		if (checkbox == null) {
 			if (other.checkbox != null)
@@ -186,6 +227,11 @@ public class RemedyConfigurationForTable implements Serializable{
 				return false;
 		} else if (!reported_source.equals(other.reported_source))
 			return false;
+		if (resolutionResolved == null) {
+			if (other.resolutionResolved != null)
+				return false;
+		} else if (!resolutionResolved.equals(other.resolutionResolved))
+			return false;
 		if (sede_int == null) {
 			if (other.sede_int != null)
 				return false;
@@ -201,12 +247,32 @@ public class RemedyConfigurationForTable implements Serializable{
 				return false;
 		} else if (!status.equals(other.status))
 			return false;
+		if (statusReasonResolved == null) {
+			if (other.statusReasonResolved != null)
+				return false;
+		} else if (!statusReasonResolved.equals(other.statusReasonResolved))
+			return false;
+		if (statusResolved == null) {
+			if (other.statusResolved != null)
+				return false;
+		} else if (!statusResolved.equals(other.statusResolved))
+			return false;
 		if (username == null) {
 			if (other.username != null)
 				return false;
 		} else if (!username.equals(other.username))
 			return false;
 		return true;
+	}
+	
+	@Override
+	public String toString() {
+		return "RemedyConfigurationForTable [checkbox=" + checkbox + ", remedyConfigurationId=" + remedyConfigurationId
+				+ ", username=" + username + ", password=" + password + ", status=" + status + ", service_type="
+				+ service_type + ", reported_source=" + reported_source + ", first_name=" + first_name + ", last_name="
+				+ last_name + ", action=" + action + ", create_request=" + create_request + ", sede_int=" + sede_int
+				+ ", statusResolved=" + statusResolved + ", statusReasonResolved=" + statusReasonResolved
+				+ ", actionResolved=" + actionResolved + ", resolutionResolved=" + resolutionResolved + "]";
 	}
 	
 	

@@ -27,6 +27,8 @@ public class SchedulatorConfiguration implements Serializable{
 	String crontime;
 	@Column
 	String status;
+	@Column 
+	int retentionDays;
 	
 	public Long getSchedulatorConfigurationId() {
 		return schedulatorConfigurationId;
@@ -52,12 +54,19 @@ public class SchedulatorConfiguration implements Serializable{
 	public void setStatus(String status) {
 		this.status = status;
 	}
+	public int getRetentionDays() {
+		return retentionDays;
+	}
+	public void setRetentionDays(int retentionDays) {
+		this.retentionDays = retentionDays;
+	}
 	@Override
 	public int hashCode() {
 		final int prime = 31;
 		int result = 1;
 		result = prime * result + ((crontime == null) ? 0 : crontime.hashCode());
 		result = prime * result + ((name == null) ? 0 : name.hashCode());
+		result = prime * result + retentionDays;
 		result = prime * result + ((schedulatorConfigurationId == null) ? 0 : schedulatorConfigurationId.hashCode());
 		result = prime * result + ((status == null) ? 0 : status.hashCode());
 		return result;
@@ -81,6 +90,8 @@ public class SchedulatorConfiguration implements Serializable{
 				return false;
 		} else if (!name.equals(other.name))
 			return false;
+		if (retentionDays != other.retentionDays)
+			return false;
 		if (schedulatorConfigurationId == null) {
 			if (other.schedulatorConfigurationId != null)
 				return false;
@@ -93,11 +104,11 @@ public class SchedulatorConfiguration implements Serializable{
 			return false;
 		return true;
 	}
+	
 	@Override
 	public String toString() {
 		return "SchedulatorConfiguration [schedulatorConfigurationId=" + schedulatorConfigurationId + ", name=" + name
-				+ ", crontime=" + crontime + ", status=" + status + "]";
+				+ ", crontime=" + crontime + ", status=" + status + ", retentionDays=" + retentionDays + "]";
 	}
-	
 	
 }

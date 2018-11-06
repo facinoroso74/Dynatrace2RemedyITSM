@@ -6,6 +6,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
+import it.reply.sytel.adr.constants.ADRConstants;
 import it.reply.sytel.adr.core.services.enviromnent.Enviromnent;
 import it.reply.sytel.adr.domain.SchedulatorConfiguration;
 import it.reply.sytel.adr.engine.RemedyIncidetBuilderEngine;
@@ -69,7 +70,7 @@ public class ConnectorManager {
     @RequestMapping("/get")
     public SchedulatorConfiguration getSchedulatorConfiguration(){
 	   	try {
-	   		return schedulatorConfigurationRepository.findByName(SCHEDULATOR_NAME); 		
+	   		return schedulatorConfigurationRepository.findByName(ADRConstants.SCHEDULATOR_NAME); 		
     	}catch (Exception e) {
 			log.error("Exception on getting the SchedulatorConfiguration",e);
 			throw new RuntimeException("Exception on getting the SchedulatorConfiguration", e);

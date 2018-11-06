@@ -34,6 +34,10 @@ public class RemedyConfigurationTableResponse
     	remedyConfigurationForTable.setAction(remedyConfiguration.getAction());
     	remedyConfigurationForTable.setCreate_request(remedyConfiguration.getCreate_request());
     	remedyConfigurationForTable.setSede_int(remedyConfiguration.getSede_int());
+    	remedyConfigurationForTable.setStatusResolved(remedyConfiguration.getStatusResolved());
+    	remedyConfigurationForTable.setStatusReasonResolved(remedyConfiguration.getStatusReasonResolved());
+    	remedyConfigurationForTable.setActionResolved(remedyConfiguration.getActionResolved());
+    	remedyConfigurationForTable.setResolutionResolved(remedyConfiguration.getResolutionResolved());
     	
         ((ArrayList<RemedyConfigurationForTable>)this.data).add(remedyConfigurationForTable);
     }

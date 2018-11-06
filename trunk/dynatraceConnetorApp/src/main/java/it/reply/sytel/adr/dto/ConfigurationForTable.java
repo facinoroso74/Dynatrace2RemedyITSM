@@ -14,6 +14,7 @@ public class ConfigurationForTable
   String dashboard;
   String impact;
   String urgency;
+  String summary;
   String sorgenteSistema;
   String categorizationTier1;
   String categorizationTier2;
@@ -83,7 +84,15 @@ public class ConfigurationForTable
   }
   
   
-  public String getSorgenteSistema()
+  public String getSummary() {
+	return summary;
+}
+
+public void setSummary(String summary) {
+	this.summary = summary;
+}
+
+public String getSorgenteSistema()
   {
     return this.sorgenteSistema;
   }
@@ -139,6 +148,7 @@ public int hashCode() {
 	result = prime * result + ((idEvento == null) ? 0 : idEvento.hashCode());
 	result = prime * result + ((impact == null) ? 0 : impact.hashCode());
 	result = prime * result + ((sorgenteSistema == null) ? 0 : sorgenteSistema.hashCode());
+	result = prime * result + ((summary == null) ? 0 : summary.hashCode());
 	result = prime * result + ((urgency == null) ? 0 : urgency.hashCode());
 	return result;
 }
@@ -202,6 +212,11 @@ public boolean equals(Object obj) {
 			return false;
 	} else if (!sorgenteSistema.equals(other.sorgenteSistema))
 		return false;
+	if (summary == null) {
+		if (other.summary != null)
+			return false;
+	} else if (!summary.equals(other.summary))
+		return false;
 	if (urgency == null) {
 		if (other.urgency != null)
 			return false;
@@ -214,9 +229,11 @@ public boolean equals(Object obj) {
 public String toString() {
 	return "ConfigurationForTable [checkbox=" + checkbox + ", configurationId=" + configurationId + ", idEvento="
 			+ idEvento + ", descrizione=" + descrizione + ", dashboard=" + dashboard + ", impact=" + impact
-			+ ", urgency=" + urgency + ", sorgenteSistema=" + sorgenteSistema + ", categorizationTier1="
-			+ categorizationTier1 + ", categorizationTier2=" + categorizationTier2 + ", categorizationTier3="
-			+ categorizationTier3 + "]";
+			+ ", urgency=" + urgency + ", summary=" + summary + ", sorgenteSistema=" + sorgenteSistema
+			+ ", categorizationTier1=" + categorizationTier1 + ", categorizationTier2=" + categorizationTier2
+			+ ", categorizationTier3=" + categorizationTier3 + "]";
 }
+
+
 
 }

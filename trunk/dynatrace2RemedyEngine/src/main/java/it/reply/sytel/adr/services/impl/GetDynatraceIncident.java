@@ -62,17 +62,31 @@ public class GetDynatraceIncident extends AbstractService {
 				
 				Map<DynatraceIncidentKey, DynatraceIncident> map= dynatraceClient.getDynatraceIncidents(dashboard.getName(),dashboard.getAppUrl(),dashboard.getAppUser(),dashboard.getAppPwd());
 				
-				log.info("There are [" + map.keySet().size()+"] incident to work");
+				log.info("--------------There are [" + map.keySet().size()+"] incident to work------------");
 				
+				if(log.isDebugEnabled()) {
+					log.debug("--------------------------------INCIDENTS--------------------------------------------");
+					Set<DynatraceIncidentKey> keys = map.keySet();
+					for (Iterator<DynatraceIncidentKey> iterator = keys.iterator(); iterator.hasNext();) {
+						DynatraceIncidentKey dynatraceIncidentKey = (DynatraceIncidentKey) iterator.next();
+						log.debug("Incident:["+map.get(dynatraceIncidentKey)+"]");
+					}
+					log.debug("-------------------------------------------------------------------------------------");
+				}
+					
 				Set<DynatraceIncidentKey> dynatraceIncidentKeys = map.keySet();
+				
+				int i=0;
 				
 				for (Iterator<DynatraceIncidentKey> iterator2 = dynatraceIncidentKeys.iterator(); iterator2.hasNext();) {
 
 					DynatraceIncidentKey dynatraceIncidentKey = (DynatraceIncidentKey) iterator2.next();
 					
-					insertIntoDB(dynatraceIncidentKey, now, map,dashboard.getName());
-					
+					if(insertIntoDB(dynatraceIncidentKey, now, map,dashboard.getName()))
+						i++;
 				}
+				
+				log.info("Incident inserted nunmber:["+i+"]");
 			}
 			
 			env.put(ADRConstants.SYSDATE, now);
@@ -83,34 +97,51 @@ public class GetDynatraceIncident extends AbstractService {
 		}
 	}
 	
-	private void insertIntoDB(DynatraceIncidentKey dynatraceIncidentKey,Timestamp now,Map<DynatraceIncidentKey, DynatraceIncident> map,String dashBoard) {
+	private boolean insertIntoDB(DynatraceIncidentKey dynatraceIncidentKey,Timestamp now,Map<DynatraceIncidentKey, DynatraceIncident> map,String dashBoard) {
 
-		if( !incidentDAO.alreadyExistsDynatraceIncident(dynatraceIncidentKey) ) {
-			DynatraceIncident dynatraceIncident = map.get(dynatraceIncidentKey);
-			
-			
-			//I have to store only the incident for who there is a configuration
-			
-			String descrizioneToFind=ADRUtility.getDescrizioneFromIncidentType(dynatraceIncident.getIncidentType());
-			log.debug("descrizioneToFind:["+descrizioneToFind+"] for DashBoard:["+dashBoard+"]");
-			
-			Configuration configuration = configurationRepository.findByDescrizioneAndDashboard(descrizioneToFind, dashBoard);
-			
-			if(configuration==null) {
-				log.info("Dynatrace Event "+descrizioneToFind+" not configurated on DB for the DashBoard:["+dashBoard+"]");
-				return;
-			}else
-				log.info("There is a configuration for Dynatrace Event "+descrizioneToFind+" and the DashBoard:["+dashBoard+"]");
-				
-			dynatraceIncident.setDataIns(now);
-			dynatraceIncident.setDataUpdate(now);
-			incidentDAO.insertDynatraceIncident(dynatraceIncident);
-			log.debug("Incident inserted:["+dynatraceIncidentKey+"");
-			return;
-		}
+		DynatraceIncident dynatraceIncident = map.get(dynatraceIncidentKey);
 		
-		log.debug("Incident already exists:["+dynatraceIncidentKey+"] update the DateUpdate");
-		incidentDAO.updateDynatraceIncidentDateUpdate(dynatraceIncidentKey,now);
+		//check if the ticket not exists and the dynatarceIncident endDate is null
+		if( !incidentDAO.alreadyExistsDynatraceIncident(dynatraceIncidentKey)){ 
+
+			if(dynatraceIncident.getEndEvent()==null) {
+						
+				//I have to store only the incident for who there is a configuration
+				
+				String descrizioneToFind=ADRUtility.getDescrizioneFromIncidentType(dynatraceIncident.getIncidentType());
+				log.debug("descrizioneToFind:["+descrizioneToFind+"] for DashBoard:["+dashBoard+"]");
+				
+				Configuration configuration = configurationRepository.findByDescrizioneAndDashboard(descrizioneToFind, dashBoard);
+				
+				if(configuration==null) {
+					log.info("Dynatrace Event "+descrizioneToFind+" not configurated on DB for the DashBoard:["+dashBoard+"]");
+					return false;
+				}
+				
+				log.info("There is a configuration for Dynatrace Event "+descrizioneToFind+" and the DashBoard:["+dashBoard+"]");
+				dynatraceIncident.setDataIns(now);
+				dynatraceIncident.setDataUpdate(now);
+				incidentDAO.insertDynatraceIncident(dynatraceIncident);
+				log.info("Incident inserted:["+dynatraceIncidentKey+"");
+				return true;
+			}
+			return false;
+		}else {
+			
+			//If the incident exists and the endDate is not null, then I have to perform the update it
+			//if into the table is null
+			if(dynatraceIncident.getEndEvent()!=null) {
+				if(incidentDAO.isDynatraceIncidentWithTicketIDAndStatusNewWithoutEndDate(dynatraceIncidentKey)) {
+					incidentDAO.updateDynatraceIncidentEndDateUpdate(dynatraceIncident);
+					log.debug("Incident :["+dynatraceIncidentKey+" updated with endDate:["+dynatraceIncident.getEndEvent()+"]");
+				}else
+					log.debug("The Dynatrace Incident:["+dynatraceIncidentKey+"] is not updated because the remedyTicketId is null or the Status is not New or the EndDate is not null");
+			}
+			
+			log.info("Incident already exists:["+dynatraceIncidentKey+"] update the DateUpdate");
+			incidentDAO.updateDynatraceIncidentDateUpdate(dynatraceIncidentKey,now);
+			return false;
+		}
 		
 	}
 

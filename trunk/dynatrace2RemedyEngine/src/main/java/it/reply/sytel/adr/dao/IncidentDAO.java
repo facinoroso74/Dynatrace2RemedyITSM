@@ -21,4 +21,17 @@ public interface IncidentDAO {
 	public List<DynatraceIncidentKey> getAllDynatraceIncidentNotMoreExist(Timestamp now);
 
 	public void deleteDynaraceIncident(DynatraceIncidentKey dynatraceIncidentKey);
+
+	public void updateDynatraceIncidentEndDateUpdate(DynatraceIncident dynatraceIncident);
+
+	public boolean isDynatraceIncidentWithTicketIDAndStatusNewWithoutEndDate(DynatraceIncidentKey dynatraceIncidentKey);
+	
+	public List<DynatraceIncident> getDynatraceIncidentWithTicketIDAndStatusNewAndEndDate();
+
+	public void updateDynatraceIncidentCallWithStatusWithError(DynatraceIncident dynatraceIncident);
+
+	public void setDynatraceIncidentStatus(DynatraceIncident dynatraceIncident, String status);
+
+	public int deleteOldDynatraceIncidents(int retentionDays);
+
 }

@@ -37,6 +37,8 @@ public class Configuration implements Serializable {
 	@Column
 	String sorgenteSistema;
 
+	@Column
+	String summary;
 	
 	@Column
 	String categorizationTier1;
@@ -126,6 +128,15 @@ public class Configuration implements Serializable {
 		this.categorizationTier3 = categorizationTier3;
 	}
 
+		
+	public String getSummary() {
+		return summary;
+	}
+
+	public void setSummary(String summary) {
+		this.summary = summary;
+	}
+
 	@Override
 	public int hashCode() {
 		final int prime = 31;
@@ -139,6 +150,7 @@ public class Configuration implements Serializable {
 		result = prime * result + ((idEvento == null) ? 0 : idEvento.hashCode());
 		result = prime * result + ((impact == null) ? 0 : impact.hashCode());
 		result = prime * result + ((sorgenteSistema == null) ? 0 : sorgenteSistema.hashCode());
+		result = prime * result + ((summary == null) ? 0 : summary.hashCode());
 		result = prime * result + ((urgency == null) ? 0 : urgency.hashCode());
 		return result;
 	}
@@ -197,6 +209,11 @@ public class Configuration implements Serializable {
 				return false;
 		} else if (!sorgenteSistema.equals(other.sorgenteSistema))
 			return false;
+		if (summary == null) {
+			if (other.summary != null)
+				return false;
+		} else if (!summary.equals(other.summary))
+			return false;
 		if (urgency == null) {
 			if (other.urgency != null)
 				return false;
@@ -209,9 +226,10 @@ public class Configuration implements Serializable {
 	public String toString() {
 		return "Configuration [configurationId=" + configurationId + ", idEvento=" + idEvento + ", descrizione="
 				+ descrizione + ", dashboard=" + dashboard + ", impact=" + impact + ", urgency=" + urgency
-				+ ", sorgenteSistema=" + sorgenteSistema + ", categorizationTier1=" + categorizationTier1
-				+ ", categorizationTier2=" + categorizationTier2 + ", categorizationTier3=" + categorizationTier3 + "]";
+				+ ", sorgenteSistema=" + sorgenteSistema + ", summary=" + summary + ", categorizationTier1="
+				+ categorizationTier1 + ", categorizationTier2=" + categorizationTier2 + ", categorizationTier3="
+				+ categorizationTier3 + "]";
 	}
 
-		
+	
 }

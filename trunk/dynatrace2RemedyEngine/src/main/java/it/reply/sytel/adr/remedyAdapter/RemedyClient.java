@@ -8,4 +8,5 @@ public interface RemedyClient {
 
 	public String createIncident(DynatraceIncident dynatraceIncident,RemedyConfiguration remedyConfiguration,Configuration incidentTypeConfiguration);
 	
+	
 }

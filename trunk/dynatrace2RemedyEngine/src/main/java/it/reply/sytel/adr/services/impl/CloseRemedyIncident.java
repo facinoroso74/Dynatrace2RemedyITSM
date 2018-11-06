@@ -5,17 +5,28 @@ import java.util.Iterator;
 import java.util.List;
 
 import org.apache.logging.log4j.LogManager;
+import org.springframework.beans.factory.annotation.Autowired;
 
+import hpdIncidentInterfaceWS.HelpDeskQueryServiceResponseDocument;
 import it.reply.sytel.adr.constants.ADRConstants;
 import it.reply.sytel.adr.core.services.enviromnent.Enviromnent;
 import it.reply.sytel.adr.core.services.service.AbstractService;
 import it.reply.sytel.adr.dao.IncidentDAO;
+import it.reply.sytel.adr.domain.RemedyConfiguration;
+import it.reply.sytel.adr.remedyAdapter.RemedyClientToClose;
+import it.reply.sytel.adr.remedyAdapter.exc.RemedyBadValueFieldException;
+import it.reply.sytel.adr.repositories.RemedyConfigurationRepository;
 import it.reply.sytel.adr.services.exc.CloseRemedyIncidentException;
-import it.reply.sytel.adr.vo.DynatraceIncidentKey;
+import it.reply.sytel.adr.vo.DynatraceIncident;
 
 public class CloseRemedyIncident extends AbstractService {
 
 	private IncidentDAO incidentDAO;
+	private RemedyClientToClose remedyClient;
+	
+	@Autowired
+    private RemedyConfigurationRepository remedyConfigurationRepository;
+	
 	
 	public CloseRemedyIncident() {
 		super(CloseRemedyIncident.class.getName());
@@ -30,27 +41,46 @@ public class CloseRemedyIncident extends AbstractService {
 		try {
 			Timestamp now = (Timestamp)env.get(ADRConstants.SYSDATE);
 			
-			//prendere tutti i ticket con la data di lastupdate minore dell'ultima datalastupdate
-			//cancellare i record
-			List<DynatraceIncidentKey> dynatraceIncidentKeyList = incidentDAO.getAllDynatraceIncidentNotMoreExist(now);
+			Iterable<RemedyConfiguration> remedyCondifugrationIterable = remedyConfigurationRepository.findAll();
+			RemedyConfiguration remedyConfiguration = ((List<RemedyConfiguration>)remedyCondifugrationIterable).get(0);
 			
-			for (Iterator<DynatraceIncidentKey> iterator = dynatraceIncidentKeyList.iterator(); iterator.hasNext();) {
+			if(remedyConfiguration==null)
+				throw new RemedyBadValueFieldException("The RemedyConfiguration is NULL. Please set the configuration for ITSM Remedy");
+			
+			
+			List<DynatraceIncident> dynatraceIncidentList = incidentDAO.getDynatraceIncidentWithTicketIDAndStatusNewAndEndDate();			
+			
+			log.info("Number of incident to close:["+dynatraceIncidentList.size()+"]");
+			
+			int i=0;
+			
+			for (Iterator<DynatraceIncident> iterator = dynatraceIncidentList.iterator(); iterator.hasNext();) {
 				
-				DynatraceIncidentKey dynatraceIncidentKey = (DynatraceIncidentKey) iterator.next();
+				DynatraceIncident dynatraceIncident = (DynatraceIncident) iterator.next();
 				
-				log.info("dynatraceIncident not more exist:["+dynatraceIncidentKey+"]");
+				log.info("Incident to Close on Remedy:["+dynatraceIncident.getDynatraceIncidentKey()+"]");
 				
-				incidentDAO.deleteDynaraceIncident(dynatraceIncidentKey);
+				HelpDeskQueryServiceResponseDocument helpDeskQueryServiceResponseDocument = remedyClient.getIncidentFromRemedy(dynatraceIncident, remedyConfiguration);
 				
+				String status;
+				
+				if(helpDeskQueryServiceResponseDocument.getHelpDeskQueryServiceResponse().getStatus().intValue()!=ADRConstants.RESOLVED && helpDeskQueryServiceResponseDocument.getHelpDeskQueryServiceResponse().getStatus().intValue()!=ADRConstants.CLOSED) {
+					log.info("Call Remedy for changing the ticket state to Resolved");
+					remedyClient.resolveTicket(dynatraceIncident.getRemedyTicketID(),helpDeskQueryServiceResponseDocument,remedyConfiguration);
+					i++;
+					status=remedyConfiguration.getStatusResolved();
+					
+				}else {
+					log.info("Updating the Remedy Ticket wiht the Resolved or Closed status. Ticket Status:["+helpDeskQueryServiceResponseDocument.getHelpDeskQueryServiceResponse().getStatus().toString()+"]");
+					status=helpDeskQueryServiceResponseDocument.getHelpDeskQueryServiceResponse().getStatus().toString();
+				}
+				
+				incidentDAO.setDynatraceIncidentStatus(dynatraceIncident,status);
+
 			}
 			
-			//N.B.
-			//eventualemente chiudere il ticket su remedy utilizzando l'id dell'incident
-			//e chiudere quelli che hanno l0 startDate ed EndDate valorizzato
-			//1-Fare query su Remedy con l'ID 
-			//2-se lo stato è diverso da risolto o chiuso chiamare la modify con lo stato a Risolto
-			//3-aggiornare lo stato sulla tabella degli incident
-						
+			log.info("Number of incident to closed on Remedy:["+i+"]");
+			
 			return env;
 
 		
@@ -67,6 +97,26 @@ public class CloseRemedyIncident extends AbstractService {
 
 	public void setIncidentDAO(IncidentDAO incidentDAO) {
 		this.incidentDAO = incidentDAO;
+	}
+
+
+	public RemedyClientToClose getRemedyClient() {
+		return remedyClient;
+	}
+
+
+	public void setRemedyClient(RemedyClientToClose remedyClient) {
+		this.remedyClient = remedyClient;
+	}
+
+
+	public RemedyConfigurationRepository getRemedyConfigurationRepository() {
+		return remedyConfigurationRepository;
+	}
+
+
+	public void setRemedyConfigurationRepository(RemedyConfigurationRepository remedyConfigurationRepository) {
+		this.remedyConfigurationRepository = remedyConfigurationRepository;
 	}
 
 	

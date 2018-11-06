@@ -39,7 +39,7 @@ $(document).ready(function() {
 	    // Serialize the data in the form
 	    var serializedData = $( "#newConfigurationId" ).serialize();
 		    
-	    alert("serializedData:["+serializedData+"]");
+// 	    alert("serializedData:["+serializedData+"]");
 	    // Let's disable the inputs for the duration of the Ajax request.
 	    // Note: we disable elements AFTER the form data has been serialized.
 	    // Disabled form elements will not be serialized.

@@ -29,6 +29,10 @@ $(document).ready(function() {
             	{ "data": "action" },
             	{ "data": "create_request" },
             	{ "data": "sede_int" },
+            	{ "data": "statusResolved" },
+            	{ "data": "statusReasonResolved" },
+            	{ "data": "actionResolved" },
+            	{ "data": "resolutionResolved" },
             ],
  	    	 "pageLength": 20,
 				
@@ -144,6 +148,10 @@ $(document).ready(function() {
 				<th>action</th>
 				<th>create_request</th>
 				<th>sede_int</th>
+				<th>statusResolved</th>
+				<th>statusReasonResolved</th>
+				<th>actionResolved</th>
+				<th>resolutionResolved</th>
             </tr>
         </thead>
         <tfoot>
@@ -160,6 +168,10 @@ $(document).ready(function() {
 				<th>action</th>
 				<th>create_request</th>
 				<th>sede_int</th>
+				<th>statusResolved</th>
+				<th>statusReasonResolved</th>
+				<th>actionResolved</th>
+				<th>resolutionResolved</th>
             </tr>
         </tfoot>
     </table>

@@ -50,13 +50,13 @@ $(document).ready(function() {
     });
     
     $('#editbuttonSpan').click(function() {
-    	alert('hello world edit');
+//     	alert('hello world edit');
       
 		var idToEdit=0;
 		
     	$("#example tr.selected td").each(function(index){
     		if(index==1){
-    			alert("Valore:["+$(this).text()+"]");
+//     			alert("Valore:["+$(this).text()+"]");
     			idToEdit= $(this).text();
     		}
     	});

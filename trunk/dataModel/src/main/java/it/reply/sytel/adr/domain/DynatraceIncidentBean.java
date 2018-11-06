@@ -112,6 +112,9 @@ public class DynatraceIncidentBean implements Serializable{
 	@Column
 	private String dashboardname;
 
+	@Column
+	private String remedyresponse;
+	
 	public Long getId() {
 		return id;
 	}
@@ -302,6 +305,14 @@ public class DynatraceIncidentBean implements Serializable{
 		this.remedyticketcreatedate = remedyticketcreatedate;
 	}
 
+	public String getRemedyresponse() {
+		return remedyresponse;
+	}
+
+	public void setRemedyresponse(String remedyresponse) {
+		this.remedyresponse = remedyresponse;
+	}
+
 	@Override
 	public int hashCode() {
 		final int prime = 31;
@@ -320,6 +331,7 @@ public class DynatraceIncidentBean implements Serializable{
 		result = prime * result + ((incidentType == null) ? 0 : incidentType.hashCode());
 		result = prime * result + ((measures == null) ? 0 : measures.hashCode());
 		result = prime * result + ((name == null) ? 0 : name.hashCode());
+		result = prime * result + ((remedyresponse == null) ? 0 : remedyresponse.hashCode());
 		result = prime * result + ((remedyticketcreatedate == null) ? 0 : remedyticketcreatedate.hashCode());
 		result = prime * result + ((remedyticketid == null) ? 0 : remedyticketid.hashCode());
 		result = prime * result + ((remedyticketidstatus == null) ? 0 : remedyticketidstatus.hashCode());
@@ -411,6 +423,11 @@ public class DynatraceIncidentBean implements Serializable{
 				return false;
 		} else if (!name.equals(other.name))
 			return false;
+		if (remedyresponse == null) {
+			if (other.remedyresponse != null)
+				return false;
+		} else if (!remedyresponse.equals(other.remedyresponse))
+			return false;
 		if (remedyticketcreatedate == null) {
 			if (other.remedyticketcreatedate != null)
 				return false;
@@ -468,7 +485,11 @@ public class DynatraceIncidentBean implements Serializable{
 				+ conditions + ", thresholds=" + thresholds + ", actions=" + actions + ", measures=" + measures
 				+ ", datains=" + datains + ", dataupdate=" + dataupdate + ", remedyticketid=" + remedyticketid
 				+ ", remedyticketidstatus=" + remedyticketidstatus + ", remedyticketcreatedate="
-				+ remedyticketcreatedate + ", dashboardname=" + dashboardname + "]";
-	}	
+				+ remedyticketcreatedate + ", dashboardname=" + dashboardname + ", remedyresponse=" + remedyresponse
+				+ "]";
+	}
+
 	
+
+
 }

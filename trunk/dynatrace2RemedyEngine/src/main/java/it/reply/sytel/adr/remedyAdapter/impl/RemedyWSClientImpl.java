@@ -70,7 +70,8 @@ public class RemedyWSClientImpl implements RemedyClient{
 		createInputMap.setCreateRequest(CreateRequestType.Enum.forString(remedyConfiguration.getCreate_request()));
 		
 		createInputMap.setNotes(dynatraceIncident.getDynatraceIncidentKey().getName());
-		createInputMap.setSummary(incidentTypeconfiguration.getIdEvento());
+//		createInputMap.setSummary(incidentTypeconfiguration.getIdEvento());
+		createInputMap.setSummary(incidentTypeconfiguration.getSummary());
 		createInputMap.setSistemaSorgente(incidentTypeconfiguration.getSorgenteSistema());
 		
 		createInputMap.setSedeInt(SedeIntType.Enum.forString(remedyConfiguration.getSede_int()));
@@ -161,6 +162,7 @@ public class RemedyWSClientImpl implements RemedyClient{
 			return getResponse(bytes);
 		
 		} catch (Exception e) {
+			
 			throw new RemedyWSClientException("Exception on calling Remedy WS. CreateInputMap:["+createInputMap.xmlText()+"]",e);
 		}
 	}
@@ -251,5 +253,7 @@ public class RemedyWSClientImpl implements RemedyClient{
 	public void setSoapAction(String soapAction) {
 		this.soapAction = soapAction;
 	}
+
+	
 
 }

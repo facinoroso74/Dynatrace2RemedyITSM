@@ -7,6 +7,7 @@ import java.util.Date;
 
 import it.reply.sytel.adr.domain.DynatraceIncidentBean;
 
+
 public class DynatraceIncidentTableResponse implements Serializable{
   
   /**
@@ -57,7 +58,7 @@ public class DynatraceIncidentTableResponse implements Serializable{
 	    		dynatraceIncidentForTable.setStartEvent(format.format(new Date(dynatraceIncidentBean.getStartevent().getTime()) ));
 	    	dynatraceIncidentForTable.setState(dynatraceIncidentBean.getState());
 	    	dynatraceIncidentForTable.setThresholds(dynatraceIncidentBean.getThresholds());
-	    	
+	    	dynatraceIncidentForTable.setRemedyresponse(dynatraceIncidentBean.getRemedyresponse());
 	        ((ArrayList<DynatraceIncidentForTable>)this.data).add(dynatraceIncidentForTable);
 	    }
 	 }

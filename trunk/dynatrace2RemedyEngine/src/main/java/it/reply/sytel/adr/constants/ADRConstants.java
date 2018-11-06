@@ -19,6 +19,9 @@ public interface ADRConstants {
 //	public static final String DASH_BOARD_CONFIG_LIST = "DASH_BOARD_CONFIG_LIST";
 	public static final String INCIDENT_CONFIGURATION_CONFIG_MAP = "INCIDENT_CONFIGURATION_CONFIG_MAP";
 	//public static final String REMEDY_CONFIGURATION = "REMEDY_CONFIGURATION";
+	public static final int RESOLVED = 5;
+	public static final int CLOSED = 6;
+	public static final String SCHEDULATOR_NAME = "Schedulator";
 
 	
 	/*Remedy Ticket Field Values*/

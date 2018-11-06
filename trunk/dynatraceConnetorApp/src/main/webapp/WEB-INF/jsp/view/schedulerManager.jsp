@@ -23,7 +23,7 @@ $(document).ready(function() {
     		$("#status").val("RUNNING");
     	else
     		$("#status").val("NOT RUNNING");
-    	
+    	$("#retentionDays").val(data.retentionDays);
     	//alert("data.id22-->"+data.configurationId);
        //$('.greeting-id').append(data.id);
        //$('.greeting-content').append(data.content);
@@ -201,7 +201,7 @@ $(document).ready(function() {
 	    // Serialize the data in the form
 	    var serializedData = $( "#newConfigurationId" ).serialize();
 		
-	    alert(serializedData);
+	    //alert(serializedData);
 	   
 	    // Let's disable the inputs for the duration of the Ajax request.
 	    // Note: we disable elements AFTER the form data has been serialized.
@@ -219,7 +219,7 @@ $(document).ready(function() {
 	    request.done(function (response, textStatus, jqXHR){
 	        // Log a message to the console
 	        console.log("Updated! It worked!");
-	        alert("Updated! It worked!");
+	        //alert("Updated! It worked!");
 	        $(location).attr("href",function() {
 				  return "/schedulerManager/";
 			});
@@ -263,6 +263,7 @@ $(document).ready(function() {
 		<tr><td>NAME</td><td><input type="TEXT" id="name" name="name" size="50" disabled></td></tr>
 		<tr><td>CRONTIME</td><td><input type="TEXT" id="crontime" name="crontime" size="50"></td></tr>
 		<tr><td>STATUS</td><td><input type="TEXT" id="status" name="status" size="50" disabled></td></tr>
+		<tr><td>RETENTION_DAYS</td><td><input type="TEXT" id="retentionDays" name="retentionDays" size="50"></td></tr>
 	</table>
 	
 </form>

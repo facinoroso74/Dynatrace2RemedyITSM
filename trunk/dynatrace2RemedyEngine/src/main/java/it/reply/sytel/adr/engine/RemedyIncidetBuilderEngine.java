@@ -38,7 +38,8 @@ public class RemedyIncidetBuilderEngine {
     private CoreService getDynatraceIncident;
     private CoreService createRemedyIncident;
     private CoreService closeRemedyIncident;
-     
+    private CoreService deleteDynatraceIncident;
+    
     public Enviromnent executeFlow(Enviromnent env) throws EngineException{
     	
     	//NMDC.push();
@@ -59,12 +60,15 @@ public class RemedyIncidetBuilderEngine {
 	    	getDynatraceIncident.execute(env);
 	    	
 
-	    	//createRemedyIncident.execute(env);
+	    	createRemedyIncident.execute(env);
 	    	
 	    	
-	    	//closeRemedyIncident.execute(env);
+	    	closeRemedyIncident.execute(env);
 
 	    	
+	    	deleteDynatraceIncident.execute(env);
+	    	
+	    		    	
 	    	if(log.isInfoEnabled()){
 	    		Date end=new Date();
 	        	long executionTime=end.getTime()-begin.getTime();
@@ -127,5 +131,20 @@ public class RemedyIncidetBuilderEngine {
 		this.closeRemedyIncident = closeRemedyIncident;
 	}
 
+
+
+
+	public CoreService getDeleteDynatraceIncident() {
+		return deleteDynatraceIncident;
+	}
+
+
+
+
+	public void setDeleteDynatraceIncident(CoreService deleteDynatraceIncident) {
+		this.deleteDynatraceIncident = deleteDynatraceIncident;
+	}
+
+	
 }
 

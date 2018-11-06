@@ -23,6 +23,7 @@ $(document).ready(function() {
     	$("#dashboard").val(data.dashboard);
     	$('select[name="impact"]').find('option[value="'+data.impact+'"]').attr("selected",true);
     	$('select[name="urgency"]').find('option[value="'+data.urgency+'"]').attr("selected",true);
+    	$("#summary").val(data.summary);
     	$("#sorgenteSistema").val(data.sorgenteSistema);
     	$("#categorizationTier1").val(data.categorizationTier1);
     	$("#categorizationTier2").val(data.categorizationTier2);
@@ -122,10 +123,10 @@ $(document).ready(function() {
 <form id="newConfigurationId" action="" method="POST">
 	<table border="1">
 		<tr BGCOLOR="#CCCCFF"><th>COLUMN_NAME</th><th>VALUE</th></tr>
-		<tr><td>CONFIGURATION_ID</td><td><input type="TEXT" id="configurationId" name="configuration" disabled size="25"></td></tr>
-		<tr><td>ID_EVENTO</td><td><input type="TEXT" id="idEvento" name="idEvento" size="25"></td></tr>
-		<tr><td>DESCRIZIONE</td><td><input type="TEXT" id="descrizione" name="descrizione" size="25"></td></tr>
-		<tr><td>DASHBOARD</td><td><input type="TEXT" id="dashboard" name="dashboard" size="25"></td></tr>
+		<tr><td>CONFIGURATION_ID</td><td><input type="TEXT" id="configurationId" name="configuration" disabled size="50"></td></tr>
+		<tr><td>ID_EVENTO</td><td><input type="TEXT" id="idEvento" name="idEvento" size="50"></td></tr>
+		<tr><td>DESCRIZIONE</td><td><input type="TEXT" id="descrizione" name="descrizione" size="50"></td></tr>
+		<tr><td>DASHBOARD</td><td><input type="TEXT" id="dashboard" name="dashboard" size="50"></td></tr>
 		
 		<tr><td>IMPACT</td><td>
 				<select name="impact">
@@ -143,11 +144,11 @@ $(document).ready(function() {
 	          		<option value="4-Low"/>4-Low</option>
           		</select>
 		</td></tr>
-		
-		<tr><td>SORGENTE_SISTEMA</td><td><input type="TEXT" id="sorgenteSistema" name="sorgenteSistema" size="25"></td></tr>
-		<tr><td>CATEGORIZATION_TIER1</td><td><input type="TEXT" id="categorizationTier1" name="categorizationTier1" size="25"></td></tr>
-		<tr><td>CATEGORIZATION_TIER2</td><td><input type="TEXT" id="categorizationTier2" name="categorizationTier2" size="25"></td></tr>
-		<tr><td>CATEGORIZATION_TIER3</td><td><input type="TEXT" id="categorizationTier3" name="categorizationTier3" size="25"></td></tr>
+		<tr><td>SUMMARY</td><td><input type="TEXT" id="summary" name="summary" size="50"></td></tr>
+		<tr><td>SORGENTE_SISTEMA</td><td><input type="TEXT" id="sorgenteSistema" name="sorgenteSistema" size="50"></td></tr>
+		<tr><td>CATEGORIZATION_TIER1</td><td><input type="TEXT" id="categorizationTier1" name="categorizationTier1" size="50"></td></tr>
+		<tr><td>CATEGORIZATION_TIER2</td><td><input type="TEXT" id="categorizationTier2" name="categorizationTier2" size="50"></td></tr>
+		<tr><td>CATEGORIZATION_TIER3</td><td><input type="TEXT" id="categorizationTier3" name="categorizationTier3" size="50"></td></tr>
 		
 	</table>
 </form>

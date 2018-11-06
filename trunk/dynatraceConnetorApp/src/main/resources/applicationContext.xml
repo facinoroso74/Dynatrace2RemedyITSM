@@ -23,8 +23,8 @@
                                     <entry key="trustPwd"          value="password"/>
                                     <entry key="trustURLString"    value="file:///D:/Dynatrace2RemedyITSM/Dynatrace2RemedyITSM/trunk/resourcesConf/truststore.jks"/>
 <!--                                     <entry key="trustURLString"    value="file:///opt/dynatrace/remedyConnector/config/truststore.jks"/> -->
-                                    <entry key="urlToConnect"      value="http://localhost:8088/mockHPD_IncidentInterface_Create_WSPortTypeSoapBinding"/>
-<!-- 								 	<entry key="urlToConnect"      value="http://red19983:8088/mockHPD_IncidentInterface_Create_WSPortTypeSoapBinding"/> -->
+<!--                                     <entry key="urlToConnect"      value="http://localhost:8088/mockHPD_IncidentInterface_Create_WSPortTypeSoapBinding"/> -->
+								 	<entry key="urlToConnect"      value="https://localhost:8443/arsys/services/ARService?server=adrbmcast&amp;webService=HPD_IncidentInterface_Create_WS_VIP"/>
 									<entry key="maxTotalThread"    value="100"/>
                                     <entry key="soTimeout"         value="50000"/>
                                     <entry key="connTimeout"       value="120000"/>
@@ -50,6 +50,48 @@
 		</property> 
 	</bean>
 	
+	<!-- To add -->
+	<bean id="sharedHttpClientRemedyToClose" class="it.reply.sytel.adr.common.ws.SharedHTTPSClient" lazy-init="true">
+		<property name="contentType" value="text/xml"/> 
+		<property name="protocolHandShake" value="TLSv1.2"/>
+		<property name="httpsClientProperties">
+        	<bean class="it.reply.sytel.adr.common.ws.HttpsClientProperties">
+            	<property name="superMap">
+                	<map>
+                    	<entry key="communication_A1">
+                    		<map>                           
+                                    <entry key="keyPwd"            value=""/>
+                                    <entry key="keystorePwd"       value=""/>
+                                    <entry key="keystoreURLString" value=""/>
+                                    <entry key="trustPwd"          value="password"/>
+                                    <entry key="trustURLString"    value="file:///D:/Dynatrace2RemedyITSM/Dynatrace2RemedyITSM/trunk/resourcesConf/truststore.jks"/>
+<!--                                     <entry key="trustURLString"    value="file:///opt/dynatrace/remedyConnector/config/truststore.jks"/> -->
+<!--                                     <entry key="urlToConnect"      value="http://localhost:8088/mockHPD_IncidentInterface_Create_WSPortTypeSoapBinding"/> -->
+								 	<entry key="urlToConnect"      value="https://localhost:8443/arsys/services/ARService?server=adrbmcast&amp;webService=HPD_IncidentInterface_WS"/>
+									<entry key="maxTotalThread"    value="100"/>
+                                    <entry key="soTimeout"         value="50000"/>
+                                    <entry key="connTimeout"       value="120000"/>
+							</map>
+                    	</entry>
+					</map>
+				</property>
+<!--                  <property name="cryptoService"         ref="localCryptoService"/>  -->
+                <property name="managedConnLifetime"   value="305000"/>
+                <property name="idleConnEvictorPeriod" value="5000"/>
+                
+				<property name="connKAStrategy">
+                	<bean class="it.reply.sytel.adr.common.ws.GKConnectionKeepAliveStrategy" />
+                </property>                         
+                <property name="connReuseStrategy">
+                	<bean class="it.reply.sytel.adr.common.ws.GKConnectionReuseStrategy"/>
+                </property>
+                <property name="retryHandler">
+                	<bean class="it.reply.sytel.adr.common.ws.GKHttpRequestRetryHandler"/>
+                </property>
+                  
+        	</bean>
+		</property> 
+	</bean>
 
 	<bean id="sharedHttpClientDynatrace" class="it.reply.sytel.adr.common.ws.SharedHTTPSClient" lazy-init="true">
 		<property name="contentType" value="text/xml"/> 
@@ -114,6 +156,7 @@
     	
 	</bean>
 	
+	
 	<bean id="remedyClient" class="it.reply.sytel.adr.remedyAdapter.impl.RemedyWSClientImpl"> 
 		<property name="encoding">
 			<value>UTF-8</value>
@@ -126,6 +169,23 @@
 		</property>
 		<property name="sharedHTTPClient">
 			<ref bean="sharedHttpClientRemedy" />
+		</property>
+	
+	</bean>
+	
+	<!-- To add -->
+	<bean id="remedyClientToClose" class="it.reply.sytel.adr.remedyAdapter.impl.RemedyWSClientToCloseImpl"> 
+		<property name="encoding">
+			<value>UTF-8</value>
+		</property>
+		<property name="soapAction">
+			<value></value>
+		</property>
+		<property name="userToken">
+			<value></value>
+		</property>
+		<property name="sharedHTTPClient">
+			<ref bean="sharedHttpClientRemedyToClose" />
 		</property>
 	
 	</bean>
@@ -195,9 +255,24 @@
  		<property name="remedyClient">
  			<ref bean="remedyClient" />
  		</property>
+ 		
 	</bean>
 	
+	<!-- To change-->
 	<bean id="closeRemedyIncident" class="it.reply.sytel.adr.services.impl.CloseRemedyIncident" lazy-init="true">
+		<property name="context">
+			<ref bean="serviceContext" />
+		</property>
+		<property name="incidentDAO">
+			<ref bean="incidentDAO" />
+		</property>
+		<property name="remedyClient">
+ 			<ref bean="remedyClientToClose" />
+ 		</property>
+	</bean>
+	
+	<!-- To add-->
+	<bean id="deleteDynatraceIncident" class="it.reply.sytel.adr.services.impl.DeleteOldRemedyIncident" lazy-init="true">
 		<property name="context">
 			<ref bean="serviceContext" />
 		</property>
@@ -219,6 +294,9 @@
 			<ref bean="closeRemedyIncident"/>
 		</property>
 		
+		<property name="deleteDynatraceIncident">
+			<ref bean="deleteDynatraceIncident"/>
+		</property>
 	</bean>
 
 
