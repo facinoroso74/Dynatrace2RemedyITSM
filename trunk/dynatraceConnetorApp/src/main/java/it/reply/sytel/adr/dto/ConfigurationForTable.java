@@ -16,6 +16,7 @@ public class ConfigurationForTable
   String urgency;
   String summary;
   String sorgenteSistema;
+  String hpdci;
   String categorizationTier1;
   String categorizationTier2;
   String categorizationTier3;
@@ -134,6 +135,23 @@ public void setCategorizationTier3(String categorizationTier3) {
 	this.categorizationTier3 = categorizationTier3;
 }
 
+public String getHpdci() {
+	return hpdci;
+}
+
+public void setHpdci(String hpdci) {
+	this.hpdci = hpdci;
+}
+
+@Override
+public String toString() {
+	return "ConfigurationForTable [checkbox=" + checkbox + ", configurationId=" + configurationId + ", idEvento="
+			+ idEvento + ", descrizione=" + descrizione + ", dashboard=" + dashboard + ", impact=" + impact
+			+ ", urgency=" + urgency + ", summary=" + summary + ", sorgenteSistema=" + sorgenteSistema + ", hpdci="
+			+ hpdci + ", categorizationTier1=" + categorizationTier1 + ", categorizationTier2=" + categorizationTier2
+			+ ", categorizationTier3=" + categorizationTier3 + "]";
+}
+
 @Override
 public int hashCode() {
 	final int prime = 31;
@@ -145,6 +163,7 @@ public int hashCode() {
 	result = prime * result + ((configurationId == null) ? 0 : configurationId.hashCode());
 	result = prime * result + ((dashboard == null) ? 0 : dashboard.hashCode());
 	result = prime * result + ((descrizione == null) ? 0 : descrizione.hashCode());
+	result = prime * result + ((hpdci == null) ? 0 : hpdci.hashCode());
 	result = prime * result + ((idEvento == null) ? 0 : idEvento.hashCode());
 	result = prime * result + ((impact == null) ? 0 : impact.hashCode());
 	result = prime * result + ((sorgenteSistema == null) ? 0 : sorgenteSistema.hashCode());
@@ -197,6 +216,11 @@ public boolean equals(Object obj) {
 			return false;
 	} else if (!descrizione.equals(other.descrizione))
 		return false;
+	if (hpdci == null) {
+		if (other.hpdci != null)
+			return false;
+	} else if (!hpdci.equals(other.hpdci))
+		return false;
 	if (idEvento == null) {
 		if (other.idEvento != null)
 			return false;
@@ -224,16 +248,6 @@ public boolean equals(Object obj) {
 		return false;
 	return true;
 }
-
-@Override
-public String toString() {
-	return "ConfigurationForTable [checkbox=" + checkbox + ", configurationId=" + configurationId + ", idEvento="
-			+ idEvento + ", descrizione=" + descrizione + ", dashboard=" + dashboard + ", impact=" + impact
-			+ ", urgency=" + urgency + ", summary=" + summary + ", sorgenteSistema=" + sorgenteSistema
-			+ ", categorizationTier1=" + categorizationTier1 + ", categorizationTier2=" + categorizationTier2
-			+ ", categorizationTier3=" + categorizationTier3 + "]";
-}
-
 
 
 }

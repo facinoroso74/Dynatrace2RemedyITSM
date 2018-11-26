@@ -26,10 +26,11 @@ $(document).ready(function() {
 	         	{ "data": "impact" },
 	         	{ "data": "urgency" },
 	         	{ "data": "summary" },
+	         	{ "data": "hpdci" },
 	         	{ "data": "sorgenteSistema" },
-	         	{ "data": "categorizationTier1" },
-            	{ "data": "categorizationTier2" },
-            	{ "data": "categorizationTier3" },
+// 	         	{ "data": "categorizationTier1" },
+//             	{ "data": "categorizationTier2" },
+//             	{ "data": "categorizationTier3" },
             ],
  	    	 "pageLength": 20,
  	    	
@@ -84,7 +85,7 @@ $(document).ready(function() {
 		
     	$("#example tr.selected td").each(function(index){
     		if(index==1){
-    			alert("Valore:["+$(this).text()+"]");
+    			//alert("Valore:["+$(this).text()+"]");
     			idToDelete= $(this).text();
     		}
     	});
@@ -102,7 +103,7 @@ $(document).ready(function() {
 		// Callback handler that will be called on success
 		 request.done(function (response, textStatus, jqXHR){
 		        // Log a message to the console
-		        console.log("Hooray, it worked!");
+		        //console.log("Hooray, it worked!");
 		        $(location).attr("href",function() {
 					  return "/incidentConfiguration/";
 				});
@@ -149,10 +150,11 @@ $(document).ready(function() {
                 <th>impact</th>
                 <th>urgency</th>
                 <th>summary</th>
+                <th>hpdci</th>
                 <th>sorgenteSistema</th>
-                 <th>categorizationTier1</th>
-                <th>categorizationTier2</th>
-                <th>categorizationTier3</th>
+<!--                  <th>categorizationTier1</th> -->
+<!--                 <th>categorizationTier2</th> -->
+<!--                 <th>categorizationTier3</th> -->
             </tr>
         </thead>
         <tfoot>
@@ -165,10 +167,11 @@ $(document).ready(function() {
                 <th>impact</th>
                 <th>urgency</th>
                 <th>summary</th>
+                <th>hpdci</th>
                 <th>sorgenteSistema</th>
-                <th>categorizationTier1</th>
-                <th>categorizationTier2</th>
-                <th>categorizationTier3</th>
+<!--                 <th>categorizationTier1</th> -->
+<!--                 <th>categorizationTier2</th> -->
+<!--                 <th>categorizationTier3</th> -->
             </tr>
         </tfoot>
     </table>

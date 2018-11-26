@@ -47,6 +47,8 @@ public class Configuration implements Serializable {
 	@Column
 	String categorizationTier3;
 	
+	@Column
+	String hpdci;
 	
 	public Long getConfigurationId() {
 		return configurationId;
@@ -137,6 +139,14 @@ public class Configuration implements Serializable {
 		this.summary = summary;
 	}
 
+	public String getHpdci() {
+		return hpdci;
+	}
+
+	public void setHpdci(String hpdc) {
+		this.hpdci = hpdc;
+	}
+
 	@Override
 	public int hashCode() {
 		final int prime = 31;
@@ -147,6 +157,7 @@ public class Configuration implements Serializable {
 		result = prime * result + ((configurationId == null) ? 0 : configurationId.hashCode());
 		result = prime * result + ((dashboard == null) ? 0 : dashboard.hashCode());
 		result = prime * result + ((descrizione == null) ? 0 : descrizione.hashCode());
+		result = prime * result + ((hpdci == null) ? 0 : hpdci.hashCode());
 		result = prime * result + ((idEvento == null) ? 0 : idEvento.hashCode());
 		result = prime * result + ((impact == null) ? 0 : impact.hashCode());
 		result = prime * result + ((sorgenteSistema == null) ? 0 : sorgenteSistema.hashCode());
@@ -194,6 +205,11 @@ public class Configuration implements Serializable {
 				return false;
 		} else if (!descrizione.equals(other.descrizione))
 			return false;
+		if (hpdci == null) {
+			if (other.hpdci != null)
+				return false;
+		} else if (!hpdci.equals(other.hpdci))
+			return false;
 		if (idEvento == null) {
 			if (other.idEvento != null)
 				return false;
@@ -228,8 +244,7 @@ public class Configuration implements Serializable {
 				+ descrizione + ", dashboard=" + dashboard + ", impact=" + impact + ", urgency=" + urgency
 				+ ", sorgenteSistema=" + sorgenteSistema + ", summary=" + summary + ", categorizationTier1="
 				+ categorizationTier1 + ", categorizationTier2=" + categorizationTier2 + ", categorizationTier3="
-				+ categorizationTier3 + "]";
+				+ categorizationTier3 + ", hpdc=" + hpdci + "]";
 	}
 
-	
 }

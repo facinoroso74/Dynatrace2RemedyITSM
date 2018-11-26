@@ -108,7 +108,8 @@ public class DynatraceClientImpl implements DynatraceClient{
 				if(log.isDebugEnabled())
 					log.debug("---------FirstIncidentType:["+incidentType+"]----------------");
 				
-				loopOverIncidentoverviewrecordArray(dashboardName,incidentType,dynatraceIncidentMap,incidentoverviewrecordArray[0].getIncidentoverviewrecordArray());
+				if(incidentoverviewrecordArray.length!=0)
+					loopOverIncidentoverviewrecordArray(dashboardName,incidentType,dynatraceIncidentMap,incidentoverviewrecordArray[0].getIncidentoverviewrecordArray());
 			}
 
 			return dynatraceIncidentMap;

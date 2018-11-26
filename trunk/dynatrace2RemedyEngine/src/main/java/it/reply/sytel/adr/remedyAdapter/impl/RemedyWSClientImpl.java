@@ -76,10 +76,12 @@ public class RemedyWSClientImpl implements RemedyClient{
 		
 		createInputMap.setSedeInt(SedeIntType.Enum.forString(remedyConfiguration.getSede_int()));
 		
-		createInputMap.setCategorizationTier1(incidentTypeconfiguration.getCategorizationTier1());
-		createInputMap.setCategorizationTier2(incidentTypeconfiguration.getCategorizationTier2());
-		createInputMap.setCategorizationTier3(incidentTypeconfiguration.getCategorizationTier3());
+		createInputMap.setHPDCI(incidentTypeconfiguration.getHpdci());
 		
+//		createInputMap.setCategorizationTier1(incidentTypeconfiguration.getCategorizationTier1());
+//		createInputMap.setCategorizationTier2(incidentTypeconfiguration.getCategorizationTier2());
+//		createInputMap.setCategorizationTier3(incidentTypeconfiguration.getCategorizationTier3());
+//		
 		
 		//Sede_int
 		

@@ -30,6 +30,7 @@ public class ConfigurationTableResponse
       configurationForTable.setUrgency(configuration.getUrgency());
       configurationForTable.setSummary(configuration.getSummary());
       configurationForTable.setSorgenteSistema(configuration.getSorgenteSistema());
+      configurationForTable.setHpdci(configuration.getHpdci());
       
       configurationForTable.setCategorizationTier1(configuration.getCategorizationTier1());
       configurationForTable.setCategorizationTier2(configuration.getCategorizationTier2());

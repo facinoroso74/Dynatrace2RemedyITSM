@@ -15,10 +15,20 @@
 			<PatternLayout pattern="${sys:CONSOLE_LOG_PATTERN}" />
 		</Console>
 		
-		<File name="MyFile" fileName="all.log" immediateFlush="true" append="false">
-            <PatternLayout pattern="%d{yyy-MM-dd HH:mm:ss.SSS} - [%X{TID}][%t] %-5level %logger{36} - %msg%n"/>
-        </File>
+<!-- 		<File name="MyFile" fileName="all.log" immediateFlush="true" append="false"> -->
+<!--             <PatternLayout pattern="%d{yyy-MM-dd HH:mm:ss.SSS} - [%X{TID}][%t] %-5level %logger{36} - %msg%n"/> -->
+<!--         </File> -->
     	
+    	 <RollingFile name="MyFile" fileName="app-info.log" filePattern="app-info-%d{yyyy-MM-dd}.log">
+            <PatternLayout>
+                <pattern>%d{yyy-MM-dd HH:mm:ss.SSS} - [%X{TID}][%t] %-5level %logger{36} - %msg%n</pattern>
+            </PatternLayout>
+            <Policies>
+<!--                 <TimeBasedTriggeringPolicy interval="1" modulate="true" /> -->
+				<TimeBasedTriggeringPolicy/>
+            </Policies>
+        </RollingFile>
+        
 	</Appenders>
 	
 	<Loggers>

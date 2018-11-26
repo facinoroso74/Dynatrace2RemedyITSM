@@ -24,10 +24,11 @@ $(document).ready(function() {
     	$('select[name="impact"]').find('option[value="'+data.impact+'"]').attr("selected",true);
     	$('select[name="urgency"]').find('option[value="'+data.urgency+'"]').attr("selected",true);
     	$("#summary").val(data.summary);
+    	$("#hpdci").val(data.hpdci);
     	$("#sorgenteSistema").val(data.sorgenteSistema);
-    	$("#categorizationTier1").val(data.categorizationTier1);
-    	$("#categorizationTier2").val(data.categorizationTier2);
-    	$("#categorizationTier3").val(data.categorizationTier3);
+//     	$("#categorizationTier1").val(data.categorizationTier1);
+//     	$("#categorizationTier2").val(data.categorizationTier2);
+//     	$("#categorizationTier3").val(data.categorizationTier3);
     });
     
     $('#saveId').click(function() {
@@ -136,19 +137,22 @@ $(document).ready(function() {
           		  <option value="4-Minor/Localized"/>4-Minor/Localized</option>
           		</select>
 		</td></tr>
-		<tr><td>URGENCY</td><td>
+		<tr>
+			<td>URGENCY</td><td>
 				<select name="urgency"> 
 					<option value="1-Critical"/>1-Critical</option>
 	          		<option value="2-High"/>2-High</option>
 	          		<option value="3-Medium"/>3-Medium</option>
 	          		<option value="4-Low"/>4-Low</option>
           		</select>
-		</td></tr>
+			</td>
+		</tr>
+		<tr><td>HPDCI</td><td><input type="TEXT" id="hpdci" name="hpdci" size="50"></td></tr>
 		<tr><td>SUMMARY</td><td><input type="TEXT" id="summary" name="summary" size="50"></td></tr>
 		<tr><td>SORGENTE_SISTEMA</td><td><input type="TEXT" id="sorgenteSistema" name="sorgenteSistema" size="50"></td></tr>
-		<tr><td>CATEGORIZATION_TIER1</td><td><input type="TEXT" id="categorizationTier1" name="categorizationTier1" size="50"></td></tr>
-		<tr><td>CATEGORIZATION_TIER2</td><td><input type="TEXT" id="categorizationTier2" name="categorizationTier2" size="50"></td></tr>
-		<tr><td>CATEGORIZATION_TIER3</td><td><input type="TEXT" id="categorizationTier3" name="categorizationTier3" size="50"></td></tr>
+<!-- 		<tr><td>CATEGORIZATION_TIER1</td><td><input type="TEXT" id="categorizationTier1" name="categorizationTier1" size="50"></td></tr> -->
+<!-- 		<tr><td>CATEGORIZATION_TIER2</td><td><input type="TEXT" id="categorizationTier2" name="categorizationTier2" size="50"></td></tr> -->
+<!-- 		<tr><td>CATEGORIZATION_TIER3</td><td><input type="TEXT" id="categorizationTier3" name="categorizationTier3" size="50"></td></tr> -->
 		
 	</table>
 </form>

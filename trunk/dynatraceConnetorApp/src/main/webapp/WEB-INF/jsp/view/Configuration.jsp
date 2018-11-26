@@ -27,6 +27,7 @@ $(document).ready(function() {
             	{ "data": "urgency" },
             	{ "data": "summary" },
             	{ "data": "sorgenteSistema" },
+            	{ "data": "hpdci" },
             	{ "data": "categorizationTier1" },
             	{ "data": "categorizationTier2" },
             	{ "data": "categorizationTier3" },
@@ -80,6 +81,7 @@ $(document).ready(function() {
                 <th>urgency</th>
                 <th>summary</th>
                 <th>sorgenteSistema</th>
+                <th>hpdci</th>
                 <th>categorizationTier1</th>
                 <th>categorizationTier2</th>
                 <th>categorizationTier3</th>
@@ -96,6 +98,7 @@ $(document).ready(function() {
                 <th>urgency</th>
                 <th>summary</th>
                 <th>sorgenteSistema</th>
+                <th>hpdci</th>
                 <th>categorizationTier1</th>
                 <th>categorizationTier2</th>
                 <th>categorizationTier3</th>
