@@ -14,7 +14,7 @@ public class ConfigurationForTable
   String dashboard;
   String impact;
   String urgency;
-  String summary;
+  String classificazione;
   String sorgenteSistema;
   String hpdci;
   String categorizationTier1;
@@ -85,12 +85,14 @@ public class ConfigurationForTable
   }
   
   
-  public String getSummary() {
-	return summary;
+ 
+
+public String getClassificazione() {
+	return classificazione;
 }
 
-public void setSummary(String summary) {
-	this.summary = summary;
+public void setClassificazione(String classificazione) {
+	this.classificazione = classificazione;
 }
 
 public String getSorgenteSistema()
@@ -144,15 +146,6 @@ public void setHpdci(String hpdci) {
 }
 
 @Override
-public String toString() {
-	return "ConfigurationForTable [checkbox=" + checkbox + ", configurationId=" + configurationId + ", idEvento="
-			+ idEvento + ", descrizione=" + descrizione + ", dashboard=" + dashboard + ", impact=" + impact
-			+ ", urgency=" + urgency + ", summary=" + summary + ", sorgenteSistema=" + sorgenteSistema + ", hpdci="
-			+ hpdci + ", categorizationTier1=" + categorizationTier1 + ", categorizationTier2=" + categorizationTier2
-			+ ", categorizationTier3=" + categorizationTier3 + "]";
-}
-
-@Override
 public int hashCode() {
 	final int prime = 31;
 	int result = 1;
@@ -160,6 +153,7 @@ public int hashCode() {
 	result = prime * result + ((categorizationTier2 == null) ? 0 : categorizationTier2.hashCode());
 	result = prime * result + ((categorizationTier3 == null) ? 0 : categorizationTier3.hashCode());
 	result = prime * result + ((checkbox == null) ? 0 : checkbox.hashCode());
+	result = prime * result + ((classificazione == null) ? 0 : classificazione.hashCode());
 	result = prime * result + ((configurationId == null) ? 0 : configurationId.hashCode());
 	result = prime * result + ((dashboard == null) ? 0 : dashboard.hashCode());
 	result = prime * result + ((descrizione == null) ? 0 : descrizione.hashCode());
@@ -167,7 +161,6 @@ public int hashCode() {
 	result = prime * result + ((idEvento == null) ? 0 : idEvento.hashCode());
 	result = prime * result + ((impact == null) ? 0 : impact.hashCode());
 	result = prime * result + ((sorgenteSistema == null) ? 0 : sorgenteSistema.hashCode());
-	result = prime * result + ((summary == null) ? 0 : summary.hashCode());
 	result = prime * result + ((urgency == null) ? 0 : urgency.hashCode());
 	return result;
 }
@@ -200,6 +193,11 @@ public boolean equals(Object obj) {
 		if (other.checkbox != null)
 			return false;
 	} else if (!checkbox.equals(other.checkbox))
+		return false;
+	if (classificazione == null) {
+		if (other.classificazione != null)
+			return false;
+	} else if (!classificazione.equals(other.classificazione))
 		return false;
 	if (configurationId == null) {
 		if (other.configurationId != null)
@@ -236,17 +234,21 @@ public boolean equals(Object obj) {
 			return false;
 	} else if (!sorgenteSistema.equals(other.sorgenteSistema))
 		return false;
-	if (summary == null) {
-		if (other.summary != null)
-			return false;
-	} else if (!summary.equals(other.summary))
-		return false;
 	if (urgency == null) {
 		if (other.urgency != null)
 			return false;
 	} else if (!urgency.equals(other.urgency))
 		return false;
 	return true;
+}
+
+@Override
+public String toString() {
+	return "ConfigurationForTable [checkbox=" + checkbox + ", configurationId=" + configurationId + ", idEvento="
+			+ idEvento + ", descrizione=" + descrizione + ", dashboard=" + dashboard + ", impact=" + impact
+			+ ", urgency=" + urgency + ", classificazione=" + classificazione + ", sorgenteSistema=" + sorgenteSistema
+			+ ", hpdci=" + hpdci + ", categorizationTier1=" + categorizationTier1 + ", categorizationTier2="
+			+ categorizationTier2 + ", categorizationTier3=" + categorizationTier3 + "]";
 }
 
 

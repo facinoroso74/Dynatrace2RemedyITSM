@@ -25,7 +25,7 @@ $(document).ready(function() {
 	         	{ "data": "dashboard" },
 	         	{ "data": "impact" },
 	         	{ "data": "urgency" },
-	         	{ "data": "summary" },
+	         	{ "data": "classificazione" },
 	         	{ "data": "hpdci" },
 	         	{ "data": "sorgenteSistema" },
 // 	         	{ "data": "categorizationTier1" },
@@ -149,7 +149,7 @@ $(document).ready(function() {
                 <th>dashboard</th>
                 <th>impact</th>
                 <th>urgency</th>
-                <th>summary</th>
+                <th>classificazione</th>
                 <th>hpdci</th>
                 <th>sorgenteSistema</th>
 <!--                  <th>categorizationTier1</th> -->
@@ -166,7 +166,7 @@ $(document).ready(function() {
                 <th>dashboard</th>
                 <th>impact</th>
                 <th>urgency</th>
-                <th>summary</th>
+                <th>classificazione</th>
                 <th>hpdci</th>
                 <th>sorgenteSistema</th>
 <!--                 <th>categorizationTier1</th> -->

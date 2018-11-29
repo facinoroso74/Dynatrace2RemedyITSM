@@ -96,7 +96,7 @@ $(document).ready(function() {
           		</select>
 		</td></tr>
 		<tr><td>HPDCI</td><td><input type="TEXT" id="hpdci" name="hpdci" size="50"></td></tr>
-		<tr><td>SUMMARY</td><td><input type="TEXT" id="summary" name="summary" size="50"></td></tr>
+		<tr><td>CLASSIFICAZIONE</td><td><input type="TEXT" id="summary" name="summary" size="50"></td></tr>
 		<tr><td>SORGENTE_SISTEMA</td><td><input type="TEXT" id="sorgenteSistema" name="sorgenteSistema" size="50"></td></tr>
 <!-- 		<tr><td>CATEGORIZATION_TIER1</td><td><input type="TEXT" id="categorizationTier1" name="categorizationTier1" size="50"></td></tr> -->
 <!-- 		<tr><td>CATEGORIZATION_TIER2</td><td><input type="TEXT" id="categorizationTier2" name="categorizationTier2" size="50"></td></tr> -->

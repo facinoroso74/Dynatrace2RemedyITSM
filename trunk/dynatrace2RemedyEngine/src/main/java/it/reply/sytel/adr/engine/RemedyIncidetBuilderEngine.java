@@ -56,18 +56,12 @@ public class RemedyIncidetBuilderEngine {
 	    	if(log.isInfoEnabled())
 	    		log.info("Flow RemedyIncidentdBuilder Engine Called...");
 	 	    	
-
-	    	try {
-	    		getDynatraceIncident.execute(env);
-	    	}catch (Exception e) {
-				e.printStackTrace();
-			}
-
+	    	
+	    	getDynatraceIncident.execute(env);
+	
 	    	createRemedyIncident.execute(env);
 	    	
-	    	
 	    	closeRemedyIncident.execute(env);
-
 	    	
 	    	deleteDynatraceIncident.execute(env);
 	    	

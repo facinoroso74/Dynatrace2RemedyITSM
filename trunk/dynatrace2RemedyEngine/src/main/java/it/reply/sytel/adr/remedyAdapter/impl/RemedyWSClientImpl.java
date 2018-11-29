@@ -71,7 +71,9 @@ public class RemedyWSClientImpl implements RemedyClient{
 		
 		createInputMap.setNotes(dynatraceIncident.getDynatraceIncidentKey().getName());
 //		createInputMap.setSummary(incidentTypeconfiguration.getIdEvento());
-		createInputMap.setSummary(incidentTypeconfiguration.getSummary());
+		createInputMap.setSummary(".");
+		createInputMap.setClassificazione(incidentTypeconfiguration.getSummary());
+		
 		createInputMap.setSistemaSorgente(incidentTypeconfiguration.getSorgenteSistema());
 		
 		createInputMap.setSedeInt(SedeIntType.Enum.forString(remedyConfiguration.getSede_int()));

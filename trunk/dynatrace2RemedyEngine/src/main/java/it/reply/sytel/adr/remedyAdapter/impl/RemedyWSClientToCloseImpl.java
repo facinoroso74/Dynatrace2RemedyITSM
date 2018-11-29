@@ -208,7 +208,6 @@ Action = “MODIFY”
 		setInputMap.setServiceType(helpDeskQueryServiceResponseDocument.getHelpDeskQueryServiceResponse().getServiceType());
 		setInputMap.setSummary(helpDeskQueryServiceResponseDocument.getHelpDeskQueryServiceResponse().getSummary());
 		setInputMap.setUrgency(helpDeskQueryServiceResponseDocument.getHelpDeskQueryServiceResponse().getUrgency());
-			
 		setInputMap.setServiceCI(helpDeskQueryServiceResponseDocument.getHelpDeskQueryServiceResponse().getServiceCI());
 		setInputMap.setServiceCIReconID(helpDeskQueryServiceResponseDocument.getHelpDeskQueryServiceResponse().getServiceCIReconID());
 		setInputMap.setHPDCI(helpDeskQueryServiceResponseDocument.getHelpDeskQueryServiceResponse().getHPDCI());

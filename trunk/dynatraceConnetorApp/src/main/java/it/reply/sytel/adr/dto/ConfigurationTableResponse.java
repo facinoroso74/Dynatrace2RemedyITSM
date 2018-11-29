@@ -28,7 +28,7 @@ public class ConfigurationTableResponse
       configurationForTable.setDashboard(configuration.getDashboard());
       configurationForTable.setImpact(configuration.getImpact());
       configurationForTable.setUrgency(configuration.getUrgency());
-      configurationForTable.setSummary(configuration.getSummary());
+      configurationForTable.setClassificazione(configuration.getSummary());
       configurationForTable.setSorgenteSistema(configuration.getSorgenteSistema());
       configurationForTable.setHpdci(configuration.getHpdci());
       
