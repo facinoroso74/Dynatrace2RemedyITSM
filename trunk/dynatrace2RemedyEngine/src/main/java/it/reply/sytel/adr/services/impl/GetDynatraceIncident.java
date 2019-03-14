@@ -107,7 +107,7 @@ public class GetDynatraceIncident extends AbstractService {
 			if(dynatraceIncident.getEndEvent()==null) {
 						
 				//I have to store only the incident for who there is a configuration
-				
+				log.debug("dynatraceIncident.getIncidentType():["+dynatraceIncident.getIncidentType()+"]");
 				String descrizioneToFind=ADRUtility.getDescrizioneFromIncidentType(dynatraceIncident.getIncidentType());
 				log.debug("descrizioneToFind:["+descrizioneToFind+"] for DashBoard:["+dashBoard+"]");
 				
